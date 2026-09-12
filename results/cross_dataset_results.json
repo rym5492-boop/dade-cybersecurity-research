@@ -1,0 +1,53 @@
+{
+  "UNSW-NB15": {
+    "UNSW-NB15": {
+      "accuracy": 0.9215,
+      "f1_score": 0.9402,
+      "roc_auc": 0.9836
+    },
+    "CICIDS2017": {
+      "accuracy": 0.6116,
+      "f1_score": 0.4063,
+      "roc_auc": 0.7172
+    },
+    "CICIoT2023": {
+      "accuracy": 0.6318,
+      "f1_score": 0.7691,
+      "roc_auc": 0.5493
+    }
+  },
+  "CICIDS2017": {
+    "UNSW-NB15": {
+      "accuracy": 0.361,
+      "f1_score": 0.0002,
+      "roc_auc": 0.3154
+    },
+    "CICIDS2017": {
+      "accuracy": 0.9937,
+      "f1_score": 0.9811,
+      "roc_auc": 0.9991
+    },
+    "CICIoT2023": {
+      "accuracy": 0.1737,
+      "f1_score": 0.0,
+      "roc_auc": 0.4713
+    }
+  },
+  "CICIoT2023": {
+    "UNSW-NB15": {
+      "accuracy": 0.6361,
+      "f1_score": 0.7767,
+      "roc_auc": 0.4821
+    },
+    "CICIDS2017": {
+      "accuracy": 0.1751,
+      "f1_score": 0.2905,
+      "roc_auc": 0.5328
+    },
+    "CICIoT2023": {
+      "accuracy": 0.9043,
+      "f1_score": 0.9417,
+      "roc_auc": 0.9603
+    }
+  }
+}

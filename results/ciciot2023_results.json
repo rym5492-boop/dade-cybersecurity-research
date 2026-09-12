@@ -1,0 +1,68 @@
+{
+  "Logistic Regression (baseline)": {
+    "accuracy": 0.9017,
+    "precision": 0.9321,
+    "recall": 0.9503,
+    "f1_score": 0.9411,
+    "roc_auc": 0.9499,
+    "pr_auc": 0.989,
+    "false_positive_rate": 0.3296,
+    "cv_mean_accuracy_subsample": 0.8979,
+    "cv_std_accuracy_subsample": 0.0039,
+    "train_time_sec": 1.7,
+    "confusion_matrix": [
+      [
+        9315,
+        4579
+      ],
+      [
+        3285,
+        62821
+      ]
+    ]
+  },
+  "Random Forest": {
+    "accuracy": 0.967,
+    "precision": 0.9794,
+    "recall": 0.9807,
+    "f1_score": 0.9801,
+    "roc_auc": 0.9928,
+    "pr_auc": 0.9985,
+    "false_positive_rate": 0.098,
+    "cv_mean_accuracy_subsample": 0.9609,
+    "cv_std_accuracy_subsample": 0.002,
+    "train_time_sec": 42.4,
+    "confusion_matrix": [
+      [
+        12533,
+        1361
+      ],
+      [
+        1276,
+        64830
+      ]
+    ]
+  },
+  "HistGradientBoosting": {
+    "accuracy": 0.9676,
+    "precision": 0.9809,
+    "recall": 0.9799,
+    "f1_score": 0.9804,
+    "roc_auc": 0.9943,
+    "pr_auc": 0.9988,
+    "false_positive_rate": 0.0909,
+    "cv_mean_accuracy_subsample": 0.9618,
+    "cv_std_accuracy_subsample": 0.0013,
+    "train_time_sec": 8.7,
+    "confusion_matrix": [
+      [
+        12631,
+        1263
+      ],
+      [
+        1330,
+        64776
+      ]
+    ]
+  }
+}

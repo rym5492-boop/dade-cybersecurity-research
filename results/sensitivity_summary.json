@@ -1,0 +1,32 @@
+{
+  "avg_change_rate_10pct_weight_perturbation": 0.64,
+  "avg_change_rate_20pct_weight_perturbation": 1.82,
+  "max_change_rate_single_criterion_20pct": 3.0,
+  "most_sensitive_criterion": "HI",
+  "threshold_sensitivity": [
+    {
+      "threshold_perturbation": "-10%",
+      "high_threshold": 0.594,
+      "medium_threshold": 0.297,
+      "pct_decisions_changed": 18.5
+    },
+    {
+      "threshold_perturbation": "-5%",
+      "high_threshold": 0.627,
+      "medium_threshold": 0.314,
+      "pct_decisions_changed": 10.5
+    },
+    {
+      "threshold_perturbation": "+5%",
+      "high_threshold": 0.693,
+      "medium_threshold": 0.347,
+      "pct_decisions_changed": 10.5
+    },
+    {
+      "threshold_perturbation": "+10%",
+      "high_threshold": 0.726,
+      "medium_threshold": 0.363,
+      "pct_decisions_changed": 20.0
+    }
+  ]
+}

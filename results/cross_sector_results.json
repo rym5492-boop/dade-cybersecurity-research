@@ -1,0 +1,98 @@
+{
+  "weights": {
+    "healthcare": [
+      0.1,
+      0.1,
+      0.15,
+      0.25,
+      0.05,
+      0.25,
+      0.1
+    ],
+    "finance": [
+      0.1,
+      0.1,
+      0.15,
+      0.15,
+      0.2,
+      0.1,
+      0.2
+    ],
+    "equal": [
+      0.14285714285714285,
+      0.14285714285714285,
+      0.14285714285714285,
+      0.14285714285714285,
+      0.14285714285714285,
+      0.14285714285714285,
+      0.14285714285714285
+    ]
+  },
+  "pct_decisions_differing": {
+    "healthcare_vs_finance": 16.5,
+    "healthcare_vs_equal": 11.5,
+    "finance_vs_equal": 9.0
+  },
+  "illustrative_examples": [
+    {
+      "instance": 3,
+      "MLS": 1.0,
+      "business_impact": 0.914,
+      "historical_incidents": 0.201,
+      "rto_urgency": 0.534,
+      "rpo_urgency": 0.989,
+      "healthcare_score": 0.697,
+      "healthcare_level": "High",
+      "finance_score": 0.655,
+      "finance_level": "Medium"
+    },
+    {
+      "instance": 7,
+      "MLS": 0.0,
+      "business_impact": 0.221,
+      "historical_incidents": 0.666,
+      "rto_urgency": 0.436,
+      "rpo_urgency": 0.455,
+      "healthcare_score": 0.312,
+      "healthcare_level": "Low",
+      "finance_score": 0.37,
+      "finance_level": "Medium"
+    },
+    {
+      "instance": 8,
+      "MLS": 0.97,
+      "business_impact": 0.623,
+      "historical_incidents": 0.381,
+      "rto_urgency": 0.816,
+      "rpo_urgency": 0.49,
+      "healthcare_score": 0.729,
+      "healthcare_level": "High",
+      "finance_score": 0.65,
+      "finance_level": "Medium"
+    },
+    {
+      "instance": 12,
+      "MLS": 0.46,
+      "business_impact": 0.42,
+      "historical_incidents": 0.028,
+      "rto_urgency": 0.424,
+      "rpo_urgency": 0.235,
+      "healthcare_score": 0.384,
+      "healthcare_level": "Medium",
+      "finance_score": 0.306,
+      "finance_level": "Low"
+    },
+    {
+      "instance": 16,
+      "MLS": 1.0,
+      "business_impact": 0.718,
+      "historical_incidents": 0.756,
+      "rto_urgency": 0.266,
+      "rpo_urgency": 0.998,
+      "healthcare_score": 0.655,
+      "healthcare_level": "Medium",
+      "finance_score": 0.756,
+      "finance_level": "High"
+    }
+  ]
+}

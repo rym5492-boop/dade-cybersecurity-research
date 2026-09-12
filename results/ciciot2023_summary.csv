@@ -1,0 +1,4 @@
+,accuracy,precision,recall,f1_score,roc_auc,pr_auc,false_positive_rate,cv_mean_accuracy_subsample,cv_std_accuracy_subsample,train_time_sec,confusion_matrix
+Logistic Regression (baseline),0.9017,0.9321,0.9503,0.9411,0.9499,0.989,0.3296,0.8979,0.0039,1.7,"[[9315, 4579], [3285, 62821]]"
+Random Forest,0.967,0.9794,0.9807,0.9801,0.9928,0.9985,0.098,0.9609,0.002,42.4,"[[12533, 1361], [1276, 64830]]"
+HistGradientBoosting,0.9676,0.9809,0.9799,0.9804,0.9943,0.9988,0.0909,0.9618,0.0013,8.7,"[[12631, 1263], [1330, 64776]]"
