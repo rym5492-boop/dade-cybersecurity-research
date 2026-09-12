@@ -1,0 +1,22 @@
+{
+  "A_ML_only": {
+    "accuracy_vs_ground_truth": 0.83,
+    "f1_vs_ground_truth": 0.8534,
+    "cohen_kappa_vs_ground_truth": 0.6579
+  },
+  "B_BusinessContext_only": {
+    "accuracy_vs_ground_truth": 0.5,
+    "f1_vs_ground_truth": 0.6154,
+    "cohen_kappa_vs_ground_truth": -0.0117
+  },
+  "C_EqualWeight_DADE": {
+    "accuracy_vs_ground_truth": 0.815,
+    "f1_vs_ground_truth": 0.8356,
+    "cohen_kappa_vs_ground_truth": 0.6283
+  },
+  "pairwise_agreement": {
+    "A_vs_B": 0.59,
+    "A_vs_C": 0.875,
+    "B_vs_C": 0.675
+  }
+}

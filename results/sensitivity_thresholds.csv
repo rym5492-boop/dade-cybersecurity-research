@@ -1,0 +1,5 @@
+threshold_perturbation,high_threshold,medium_threshold,pct_decisions_changed
+-10%,0.594,0.297,18.5
+-5%,0.627,0.314,10.5
++5%,0.693,0.347,10.5
++10%,0.726,0.363,20.0
