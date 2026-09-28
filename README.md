@@ -14,7 +14,7 @@ the code itself.
 ## Repository Structure
 
 ```
-dade_repo/
+dade-cybersecurity-research/
 ├── README.md                          <- this file
 ├── requirements.txt                   <- Python package versions
 ├── data/
