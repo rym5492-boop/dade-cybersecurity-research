@@ -1,0 +1,42 @@
+[
+  {
+    "feature": "src_bytes",
+    "gini_importance": 0.1951
+  },
+  {
+    "feature": "dst_bytes",
+    "gini_importance": 0.0983
+  },
+  {
+    "feature": "same_srv_rate",
+    "gini_importance": 0.0712
+  },
+  {
+    "feature": "dst_host_same_srv_rate",
+    "gini_importance": 0.0709
+  },
+  {
+    "feature": "dst_host_srv_count",
+    "gini_importance": 0.0688
+  },
+  {
+    "feature": "flag",
+    "gini_importance": 0.0668
+  },
+  {
+    "feature": "logged_in",
+    "gini_importance": 0.0469
+  },
+  {
+    "feature": "srv_serror_rate",
+    "gini_importance": 0.0441
+  },
+  {
+    "feature": "diff_srv_rate",
+    "gini_importance": 0.0372
+  },
+  {
+    "feature": "serror_rate",
+    "gini_importance": 0.0316
+  }
+]

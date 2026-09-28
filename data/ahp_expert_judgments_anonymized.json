@@ -1,0 +1,27 @@
+{
+  "description": "Anonymized responses of the six subject-matter experts (E1-E6) to the two-part DADE instrument (Tally, September 2026). Names and affiliations were collected only to verify participation and are not included.",
+  "criteria_order": ["TS", "AC", "BI", "HI", "RTO", "RPO", "MLS"],
+  "pair_order": "21 pairs (i<j) in criteria_order: TS-AC, TS-BI, TS-HI, TS-RTO, TS-RPO, TS-MLS, AC-BI, AC-HI, AC-RTO, AC-RPO, AC-MLS, BI-HI, BI-RTO, BI-RPO, BI-MLS, HI-RTO, HI-RPO, HI-MLS, RTO-RPO, RTO-MLS, RPO-MLS",
+  "scale": "Slider 1-9: 5 = equal importance; values below 5 favour the first criterion of the pair, values above 5 favour the second. Distance d = |v - 5| maps to Saaty intensity {0:1, 1:3, 2:5, 3:7, 4:9}.",
+  "profiles": {
+    "E1": {"primary_field": "Cybersecurity / Information Security", "experience_years": "3-7"},
+    "E2": {"primary_field": "Cybersecurity / Information Security", "experience_years": ">15"},
+    "E3": {"primary_field": "Computer Science", "experience_years": ">15"},
+    "E4": {"primary_field": "Cybersecurity / Information Security", "experience_years": "3-7"},
+    "E5": {"primary_field": "Cybersecurity / Information Security", "experience_years": "8-15"},
+    "E6": {"primary_field": "Machine Learning / Data Science", "experience_years": "8-15"}
+  },
+  "pairwise_responses": {
+    "E1": [2,2,5,4,4,4, 2,5,4,4,4, 3,3,4,4, 4,7,7, 5,5, 5],
+    "E2": [5,4,2,1,2,2, 7,3,3,2,1, 2,2,2,2, 5,5,7, 5,5, 5],
+    "E3": [5,5,5,5,5,5, 5,5,5,5,5, 5,5,5,5, 5,5,5, 5,5, 5],
+    "E4": [6,6,3,4,3,4, 6,3,4,3,4, 2,3,2,4, 6,6,7, 4,6, 7],
+    "E5": [5,5,5,5,5,3, 3,2,8,8,3, 2,2,2,8, 8,8,8, 2,8, 8],
+    "E6": [2,2,1,3,2,4, 5,3,3,4,5, 4,5,3,4, 7,7,8, 8,7, 8]
+  },
+  "scenario_votes": {
+    "S1_DoS_public_marketing_site": ["Medium","Medium","Medium","Medium","High","Medium"],
+    "S2_Ransomware_hospital_patient_DB": ["High","High","High","High","High","High"],
+    "S3_Malware_nonproduction_dev_server": ["Medium","Low","High","Low","Medium","Medium"]
+  }
+}

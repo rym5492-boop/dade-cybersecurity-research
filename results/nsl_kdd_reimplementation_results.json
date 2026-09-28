@@ -1,0 +1,23 @@
+{
+  "Random Forest": {
+    "accuracy": 0.999,
+    "precision": 0.999,
+    "recall": 0.999,
+    "f1_score": 0.999,
+    "cv_accuracy": 0.9986
+  },
+  "Decision Tree": {
+    "accuracy": 0.9977,
+    "precision": 0.9977,
+    "recall": 0.9977,
+    "f1_score": 0.9977,
+    "cv_accuracy": 0.9975
+  },
+  "Logistic Regression": {
+    "accuracy": 0.952,
+    "precision": 0.9521,
+    "recall": 0.952,
+    "f1_score": 0.9519,
+    "cv_accuracy": 0.9548
+  }
+}
