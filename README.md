@@ -16,17 +16,23 @@ the code itself.
 ```
 dade_repo/
 ├── README.md                          <- this file
-├── requirements.txt                   <- exact Python package versions
-├── data/                               <- (not included; see "Data" section)
+├── requirements.txt                   <- Python package versions
+├── data/
+│   └── ahp_expert_judgments_anonymized.json  <- six experts' AHP comparisons + scenario votes (no names)
 ├── results/                            <- all JSON/CSV output files from every experiment
 └── src/
-    ├── 01_predictive_layer/           <- ML models on the three modern datasets
+    ├── 01_predictive_layer/           <- ML models (NSL-KDD + three modern datasets)
+    │   ├── 00_nsl_kdd_preliminary.py            <- Table 1 / Figures 2-4 (re-implementation, see note)
     │   ├── 01_unsw_nb15_experiment.py
     │   ├── 02_cicids2017_experiment.py
+    │   ├── 02b_cicids2017_attack_family_holdout.py
     │   ├── 03_ciciot2023_experiment.py
+    │   ├── 03b_ciciot2023_attack_family_holdout.py
     │   ├── 04_probability_calibration.py
     │   └── 05_cross_dataset_validation.py
-    ├── 02_dade_engine/                 <- DADE scoring mechanism and validation
+    ├── 02_dade_engine/                 <- DADE weighting, scoring and validation
+    │   ├── 00_ahp_expert_weights.py              <- AHP weights, CR, AIJ, leave-one-out (Section 4.3)
+    │   ├── 00b_dade_priority_engine.py           <- Equation (1), thresholds, score-to-action mapping
     │   ├── 01_ablation_study.py
     │   ├── 02_sensitivity_analysis.py
     │   └── 03_cross_sector_analysis.py
@@ -155,3 +161,31 @@ finalized upon publication).
 ## Contact
 
 Khalid Khadhear Alenezi — st202506139@stu.nbu.edu.sa
+
+
+### AHP expert weighting (Section 4.3)
+`src/02_dade_engine/00_ahp_expert_weights.py` reads `data/ahp_expert_judgments_anonymized.json`
+(six experts, 21 pairwise comparisons each, collected with a two-part online instrument).
+Slider responses (1-9, 5 = equal) are mapped to Saaty intensities {1, 3, 5, 7, 9}; individual
+weights use the row geometric-mean method; consistency uses CR = CI / RI with RI(7) = 1.32 and an
+acceptance threshold of CR <= 0.10 fixed before analysis. All six matrices are aggregated with
+AIJ (element-wise geometric mean). Output (`results/ahp_weights_results.json`) reproduces the
+paper exactly: group CR = 0.0495; TS 0.262, BI 0.211, AC 0.189, MLS 0.131, RTO 0.083, RPO 0.077,
+HI 0.048. The script also reports leave-one-expert-out stability and inter-expert agreement on
+the validation scenarios. Participant names and affiliations are not included.
+
+### Illustrative calculations (Tables 2 and 4)
+Tables 2 and 4 are illustrative applications of Equation (1) to example inputs.
+`src/02_dade_engine/00b_dade_priority_engine.py` implements the scoring engine used for them
+(normalized criteria, equal or AHP weights, thresholds High >= 0.66 and Low < 0.33, and the
+score-to-action mapping), so any input vector can be scored reproducibly.
+
+### NSL-KDD preliminary experiment (Table 1, Figures 2-4)
+`src/01_predictive_layer/00_nsl_kdd_preliminary.py` re-implements the preliminary NSL-KDD run
+from the protocol stated in the paper (binary labels, label-encoded categorical features,
+standardization, stratified 80/20 split, random_state = 42, 5-fold CV). With scikit-learn 1.8
+it reproduces Table 1 within 0.3 percentage points (Random Forest 0.9990 vs. 0.9992, Decision
+Tree 0.9977 vs. 0.9979, Logistic Regression 0.9520 vs. 0.9548) and the same two most important
+features (src_bytes, dst_bytes). XGBoost requires `pip install xgboost`. The small differences
+reflect library versions and unreported defaults of the original run and do not affect any
+conclusion.
