@@ -3,14 +3,18 @@ Ablation Study (Supervisor Report Section 3.9 / Experiment E5).
 Compares:
   (A) ML-only decision (threshold on MLS alone)
   (B) Business-context-only decision (threshold on business criteria alone, no ML)
-  (C) Equal-weight DADE (current illustrative approach: MLS + business context, equal weights)
-  (D) Expert-weighted DADE -- DEFERRED until real AHP expert elicitation is completed
+  (C) Equal-weight DADE (illustrative baseline approach: MLS + business context, equal weights)
+  (D) Expert-weighted DADE (real AHP group weights from Section 4.3 / 00_ahp_expert_weights.py,
+      applied to the same seven criteria in place of the equal-weight baseline)
 
 This uses the UNSW-NB15 test set predictions from the Random Forest model
 (the best-performing model from Priority 2 experiments) combined with the
 same style of illustrative business-context values used in Section 5.2,
 extended to a larger, more defensible sample (n=200 instead of 12) to allow
 meaningful agreement/accuracy comparisons across ablation conditions.
+
+Requires results/ahp_weights_results.json to already exist
+(run 00_ahp_expert_weights.py first).
 """
 import pandas as pd
 import numpy as np
@@ -22,6 +26,13 @@ import warnings
 warnings.filterwarnings("ignore")
 
 np.random.seed(42)
+
+# ---------- 0. Load real AHP expert group weights (Section 4.3) ----------
+with open("results/ahp_weights_results.json") as f:
+    _ahp = json.load(f)
+AHP_WEIGHTS = _ahp["group"]["weights"]  # {"TS":..,"AC":..,"BI":..,"HI":..,"RTO":..,"RPO":..,"MLS":..}
+_ahp_sum = sum(AHP_WEIGHTS.values())
+AHP_WEIGHTS = {k: v / _ahp_sum for k, v in AHP_WEIGHTS.items()}  # renormalize rounded weights to sum to 1
 
 # ---------- 1. Load data + retrain best model (Random Forest) ----------
 train_df = pd.read_csv("UNSW_NB15_training-set.csv")
@@ -83,8 +94,10 @@ historical_incidents = np.random.uniform(0.0, 1.0, size=n)
 rto_urgency = np.random.uniform(0.2, 1.0, size=n)
 rpo_urgency = np.random.uniform(0.2, 1.0, size=n)
 
+
 def to_binary_decision(score, threshold=0.5):
     return (score >= threshold).astype(int)
+
 
 # (A) ML-only: decision based purely on MLS
 decision_A = to_binary_decision(mls)
@@ -94,19 +107,30 @@ business_only_score = (asset_criticality + business_impact + historical_incident
 decision_B = to_binary_decision(business_only_score)
 
 # (C) Equal-weight DADE: all 7 criteria (MLS, Threat Severity, 5 business criteria), equal weights
-w = 1/7
+w = 1 / 7
 dade_score = (
     w * mls + w * threat_severity + w * asset_criticality + w * business_impact +
     w * historical_incidents + w * rto_urgency + w * rpo_urgency
 )
 decision_C = to_binary_decision(dade_score)
 
+# (D) Expert-weighted DADE: same seven criteria, real AHP group weights (Section 4.3)
+# instead of the equal-weight (1/7) baseline used in (C).
+dade_score_ahp = (
+    AHP_WEIGHTS["MLS"] * mls + AHP_WEIGHTS["TS"] * threat_severity +
+    AHP_WEIGHTS["AC"] * asset_criticality + AHP_WEIGHTS["BI"] * business_impact +
+    AHP_WEIGHTS["HI"] * historical_incidents + AHP_WEIGHTS["RTO"] * rto_urgency +
+    AHP_WEIGHTS["RPO"] * rpo_urgency
+)
+decision_D = to_binary_decision(dade_score_ahp)
+
 # ---------- 3. Evaluate each condition against ground truth (true_label) ----------
-results = {}
+results = {"ahp_weights_used": AHP_WEIGHTS}
 for name, decision, score in [
     ("A_ML_only", decision_A, mls),
     ("B_BusinessContext_only", decision_B, business_only_score),
     ("C_EqualWeight_DADE", decision_C, dade_score),
+    ("D_ExpertWeighted_DADE", decision_D, dade_score_ahp),
 ]:
     acc = accuracy_score(true_label, decision)
     f1 = f1_score(true_label, decision)
@@ -117,10 +141,12 @@ for name, decision, score in [
         "cohen_kappa_vs_ground_truth": round(kappa, 4),
     }
 
-print("="*70)
+print("=" * 70)
 print("ABLATION STUDY RESULTS (n=200 test instances, UNSW-NB15)")
-print("="*70)
+print("=" * 70)
 for name, r in results.items():
+    if name == "ahp_weights_used":
+        continue
     print(f"\n{name}:")
     for k, v in r.items():
         print(f"  {k}: {v}")
@@ -130,14 +156,23 @@ print("\n--- Pairwise agreement between decision conditions ---")
 agree_AB = np.mean(decision_A == decision_B)
 agree_AC = np.mean(decision_A == decision_C)
 agree_BC = np.mean(decision_B == decision_C)
+agree_AD = np.mean(decision_A == decision_D)
+agree_CD = np.mean(decision_C == decision_D)
+agree_BD = np.mean(decision_B == decision_D)
 print(f"A (ML-only) vs B (Business-only) agreement: {agree_AB:.4f}")
 print(f"A (ML-only) vs C (Equal-weight DADE) agreement: {agree_AC:.4f}")
 print(f"B (Business-only) vs C (Equal-weight DADE) agreement: {agree_BC:.4f}")
+print(f"A (ML-only) vs D (Expert-weighted DADE) agreement: {agree_AD:.4f}")
+print(f"B (Business-only) vs D (Expert-weighted DADE) agreement: {agree_BD:.4f}")
+print(f"C (Equal-weight DADE) vs D (Expert-weighted DADE) agreement: {agree_CD:.4f}")
 
 results["pairwise_agreement"] = {
     "A_vs_B": round(agree_AB, 4),
     "A_vs_C": round(agree_AC, 4),
     "B_vs_C": round(agree_BC, 4),
+    "A_vs_D": round(agree_AD, 4),
+    "B_vs_D": round(agree_BD, 4),
+    "C_vs_D": round(agree_CD, 4),
 }
 
 with open("ablation_results.json", "w") as f:
@@ -149,11 +184,18 @@ ablation_df = pd.DataFrame({
     "attack_cat": attack_cat_all[sample_idx],
     "MLS": np.round(mls, 3),
     "Threat_Severity": np.round(threat_severity, 3),
+    "Asset_Criticality": np.round(asset_criticality, 3),
+    "Business_Impact": np.round(business_impact, 3),
+    "Historical_Incidents": np.round(historical_incidents, 3),
+    "RTO_Urgency": np.round(rto_urgency, 3),
+    "RPO_Urgency": np.round(rpo_urgency, 3),
     "Business_Only_Score": np.round(business_only_score, 3),
-    "DADE_Score": np.round(dade_score, 3),
+    "DADE_Score_EqualWeight": np.round(dade_score, 3),
+    "DADE_Score_ExpertWeighted": np.round(dade_score_ahp, 3),
     "Decision_A_ML_only": decision_A,
     "Decision_B_Business_only": decision_B,
-    "Decision_C_DADE": decision_C,
+    "Decision_C_DADE_EqualWeight": decision_C,
+    "Decision_D_DADE_ExpertWeighted": decision_D,
 })
 ablation_df.to_csv("ablation_sample.csv", index=False)
 print("\nSaved ablation_results.json and ablation_sample.csv")
