@@ -1,6 +1,8 @@
 {
-  "individual_experts": {
-    "Expert 1": {
+  "individual": {
+    "E1": {
+      "CR": 0.3544,
+      "consistent": false,
       "weights": {
         "TS": 0.3367,
         "AC": 0.1931,
@@ -9,13 +11,11 @@
         "RTO": 0.0598,
         "RPO": 0.0948,
         "MLS": 0.0948
-      },
-      "lambda_max": 9.8071,
-      "CI": 0.4679,
-      "CR": 0.3544,
-      "consistent": false
+      }
     },
-    "Expert 2": {
+    "E2": {
+      "CR": 0.1061,
+      "consistent": false,
       "weights": {
         "TS": 0.3353,
         "AC": 0.2069,
@@ -24,13 +24,11 @@
         "RTO": 0.04,
         "RPO": 0.0395,
         "MLS": 0.048
-      },
-      "lambda_max": 7.8405,
-      "CI": 0.1401,
-      "CR": 0.1061,
-      "consistent": false
+      }
     },
-    "Expert 3": {
+    "E3": {
+      "CR": 0.0,
+      "consistent": true,
       "weights": {
         "TS": 0.1429,
         "AC": 0.1429,
@@ -39,13 +37,11 @@
         "RTO": 0.1429,
         "RPO": 0.1429,
         "MLS": 0.1429
-      },
-      "lambda_max": 7.0,
-      "CI": 0.0,
-      "CR": 0.0,
-      "consistent": true
+      }
     },
-    "Expert 4": {
+    "E4": {
+      "CR": 0.0786,
+      "consistent": true,
       "weights": {
         "TS": 0.1623,
         "AC": 0.2221,
@@ -54,13 +50,11 @@
         "RTO": 0.0696,
         "RPO": 0.0389,
         "MLS": 0.1186
-      },
-      "lambda_max": 7.6229,
-      "CI": 0.1038,
-      "CR": 0.0786,
-      "consistent": true
+      }
     },
-    "Expert 5": {
+    "E5": {
+      "CR": 0.9134,
+      "consistent": false,
       "weights": {
         "TS": 0.1556,
         "AC": 0.1483,
@@ -69,13 +63,11 @@
         "RTO": 0.1632,
         "RPO": 0.0936,
         "MLS": 0.2373
-      },
-      "lambda_max": 14.2345,
-      "CI": 1.2058,
-      "CR": 0.9134,
-      "consistent": false
+      }
     },
-    "Expert 6": {
+    "E6": {
+      "CR": 0.2325,
+      "consistent": false,
       "weights": {
         "TS": 0.4499,
         "AC": 0.1361,
@@ -84,25 +76,116 @@
         "RTO": 0.0464,
         "RPO": 0.0628,
         "MLS": 0.1554
-      },
-      "lambda_max": 8.8415,
-      "CI": 0.3069,
-      "CR": 0.2325,
-      "consistent": false
+      }
     }
   },
-  "group_aggregation_method": "AIJ (element-wise geometric mean of 6 pairwise-comparison matrices)",
-  "group_weights": {
-    "TS": 0.262,
-    "AC": 0.1887,
-    "BI": 0.2108,
-    "HI": 0.0477,
-    "RTO": 0.0826,
-    "RPO": 0.0774,
-    "MLS": 0.1308
+  "leave_one_out": {
+    "E1": {
+      "CR": 0.0453,
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ],
+      "max_abs_weight_change": 0.015
+    },
+    "E2": {
+      "CR": 0.0661,
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ],
+      "max_abs_weight_change": 0.0249
+    },
+    "E3": {
+      "CR": 0.0721,
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ],
+      "max_abs_weight_change": 0.0245
+    },
+    "E4": {
+      "CR": 0.063,
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RPO",
+        "RTO",
+        "HI"
+      ],
+      "max_abs_weight_change": 0.0253
+    },
+    "E5": {
+      "CR": 0.0341,
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RPO",
+        "RTO",
+        "HI"
+      ],
+      "max_abs_weight_change": 0.0222
+    },
+    "E6": {
+      "CR": 0.0624,
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ],
+      "max_abs_weight_change": 0.0326
+    }
   },
-  "group_lambda_max": 7.3922,
-  "group_CI": 0.0654,
-  "group_CR": 0.0495,
-  "group_consistent": true
+  "group": {
+    "CR": 0.0495,
+    "weights": {
+      "TS": 0.262,
+      "AC": 0.189,
+      "BI": 0.211,
+      "HI": 0.048,
+      "RTO": 0.083,
+      "RPO": 0.077,
+      "MLS": 0.131
+    },
+    "ranking": [
+      "TS",
+      "BI",
+      "AC",
+      "MLS",
+      "RTO",
+      "RPO",
+      "HI"
+    ]
+  },
+  "scenario_agreement": {
+    "per_scenario_P": [
+      0.667,
+      1.0,
+      0.267
+    ],
+    "fleiss_kappa": 0.4
+  }
 }
