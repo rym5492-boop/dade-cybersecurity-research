@@ -1,0 +1,50 @@
+{
+  "S1 - DoS / public marketing site": {
+    "criterion_values": {
+      "TS": 0.7,
+      "AC": 0.2,
+      "BI": 0.35,
+      "HI": 0.0,
+      "RTO": 0.667,
+      "RPO": 0.667,
+      "MLS": 0.9
+    },
+    "ps_equal_weight": 0.498,
+    "priority_level_equal_weight": "Medium",
+    "ps_expert_weight": 0.519,
+    "priority_level_expert_weight": "Medium",
+    "expert_majority_vote": "Medium (5/6)"
+  },
+  "S2 - Ransomware / hospital patient DB": {
+    "criterion_values": {
+      "TS": 1.0,
+      "AC": 1.0,
+      "BI": 1.0,
+      "HI": 0.6,
+      "RTO": 0.986,
+      "RPO": 0.986,
+      "MLS": 0.95
+    },
+    "ps_equal_weight": 0.932,
+    "priority_level_equal_weight": "High",
+    "ps_expert_weight": 0.972,
+    "priority_level_expert_weight": "High",
+    "expert_majority_vote": "High (6/6)"
+  },
+  "S3 - Benign high-confidence malware / non-prod dev server": {
+    "criterion_values": {
+      "TS": 0.4,
+      "AC": 0.1,
+      "BI": 0.05,
+      "HI": 0.0,
+      "RTO": 0.0,
+      "RPO": 0.0,
+      "MLS": 0.99
+    },
+    "ps_equal_weight": 0.22,
+    "priority_level_equal_weight": "Low",
+    "ps_expert_weight": 0.264,
+    "priority_level_expert_weight": "Low",
+    "expert_majority_vote": "Medium (3/6 plurality; Low 2/6, High 1/6)"
+  }
+}
