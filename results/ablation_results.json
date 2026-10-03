@@ -1,4 +1,13 @@
 {
+  "ahp_weights_used": {
+    "TS": 0.26173826173826176,
+    "AC": 0.18881118881118883,
+    "BI": 0.2107892107892108,
+    "HI": 0.04795204795204796,
+    "RTO": 0.08291708291708293,
+    "RPO": 0.07692307692307693,
+    "MLS": 0.13086913086913088
+  },
   "A_ML_only": {
     "accuracy_vs_ground_truth": 0.83,
     "f1_vs_ground_truth": 0.8534,
@@ -14,9 +23,17 @@
     "f1_vs_ground_truth": 0.8356,
     "cohen_kappa_vs_ground_truth": 0.6283
   },
+  "D_ExpertWeighted_DADE": {
+    "accuracy_vs_ground_truth": 0.92,
+    "f1_vs_ground_truth": 0.9231,
+    "cohen_kappa_vs_ground_truth": 0.8398
+  },
   "pairwise_agreement": {
     "A_vs_B": 0.59,
     "A_vs_C": 0.875,
-    "B_vs_C": 0.675
+    "B_vs_C": 0.675,
+    "A_vs_D": 0.85,
+    "B_vs_D": 0.56,
+    "C_vs_D": 0.875
   }
 }
