@@ -15,9 +15,19 @@ meaningful agreement/accuracy comparisons across ablation conditions.
 
 Requires results/ahp_weights_results.json to already exist
 (run 00_ahp_expert_weights.py first).
+
+Run this script from the REPOSITORY ROOT (not from inside src/02_dade_engine),
+with UNSW_NB15_training-set.csv / UNSW_NB15_testing-set.csv placed directly in
+the repository root, e.g.:
+    python src/02_dade_engine/01_ablation_study.py
+All paths below (data/ahp weights in results/, and this script's own output)
+are resolved relative to the repository root regardless of the working
+directory the script is launched from, so results/ always ends up in the
+actual results/ folder.
 """
 import pandas as pd
 import numpy as np
+from pathlib import Path
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, cohen_kappa_score
@@ -27,16 +37,33 @@ warnings.filterwarnings("ignore")
 
 np.random.seed(42)
 
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+RESULTS_DIR = REPO_ROOT / "results"
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
 # ---------- 0. Load real AHP expert group weights (Section 4.3) ----------
-with open("results/ahp_weights_results.json") as f:
+with open(RESULTS_DIR / "ahp_weights_results.json") as f:
     _ahp = json.load(f)
 AHP_WEIGHTS = _ahp["group"]["weights"]  # {"TS":..,"AC":..,"BI":..,"HI":..,"RTO":..,"RPO":..,"MLS":..}
 _ahp_sum = sum(AHP_WEIGHTS.values())
 AHP_WEIGHTS = {k: v / _ahp_sum for k, v in AHP_WEIGHTS.items()}  # renormalize rounded weights to sum to 1
 
+def _find_unsw_file(filename):
+    """Look for the UNSW-NB15 CSV in the repo root, data/, or the current
+    working directory (in that order), so this script works whether it is
+    launched from the repository root or from src/02_dade_engine/."""
+    for candidate in (REPO_ROOT / filename, REPO_ROOT / "data" / filename, Path(filename)):
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(
+        f"Could not find {filename}. Place UNSW_NB15_training-set.csv and "
+        f"UNSW_NB15_testing-set.csv in the repository root or in data/."
+    )
+
+
 # ---------- 1. Load data + retrain best model (Random Forest) ----------
-train_df = pd.read_csv("UNSW_NB15_training-set.csv")
-test_df = pd.read_csv("UNSW_NB15_testing-set.csv")
+train_df = pd.read_csv(_find_unsw_file("UNSW_NB15_training-set.csv"))
+test_df = pd.read_csv(_find_unsw_file("UNSW_NB15_testing-set.csv"))
 
 categorical_cols = ["proto", "service", "state"]
 drop_cols = ["id", "attack_cat", "label"]
@@ -175,7 +202,7 @@ results["pairwise_agreement"] = {
     "C_vs_D": round(agree_CD, 4),
 }
 
-with open("ablation_results.json", "w") as f:
+with open(RESULTS_DIR / "ablation_results.json", "w") as f:
     json.dump(results, f, indent=2)
 
 # Save the raw sample for transparency/reproducibility
@@ -197,5 +224,5 @@ ablation_df = pd.DataFrame({
     "Decision_C_DADE_EqualWeight": decision_C,
     "Decision_D_DADE_ExpertWeighted": decision_D,
 })
-ablation_df.to_csv("ablation_sample.csv", index=False)
-print("\nSaved ablation_results.json and ablation_sample.csv")
+ablation_df.to_csv(RESULTS_DIR / "ablation_sample.csv", index=False)
+print(f"\nSaved {RESULTS_DIR / 'ablation_results.json'} and {RESULTS_DIR / 'ablation_sample.csv'}")
