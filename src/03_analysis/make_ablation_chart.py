@@ -5,14 +5,21 @@ Reads results/ablation_results.json (produced by 01_ablation_study.py) so the
 chart always reflects whichever conditions were actually run -- (A)/(B)/(C),
 or (A)/(B)/(C)/(D) once the expert-weighted condition has been computed with
 the real AHP group weights (Section 4.3).
+
+Paths are resolved relative to the repository root regardless of the working
+directory this script is launched from (repo root or src/03_analysis/).
 """
 import json
+from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open("results/ablation_results.json") as f:
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+RESULTS_DIR = REPO_ROOT / "results"
+
+with open(RESULTS_DIR / "ablation_results.json") as f:
     results = json.load(f)
 
 LABELS = {
@@ -57,5 +64,5 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
 plt.tight_layout()
-plt.savefig("ablation_chart.png", dpi=600, bbox_inches="tight")
-print(f"Saved ablation_chart.png ({len(conditions)} conditions: {', '.join(present)})")
+plt.savefig(RESULTS_DIR / "ablation_chart.png", dpi=600, bbox_inches="tight")
+print(f"Saved {RESULTS_DIR / 'ablation_chart.png'} ({len(conditions)} conditions: {', '.join(present)})")
