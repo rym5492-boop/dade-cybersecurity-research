@@ -1,0 +1,229 @@
+{
+  "individual": {
+    "E1": {
+      "CR_geometric_mean": 0.3544,
+      "CR_eigenvalue": 0.3715,
+      "straight_lined_all_equal": false,
+      "consistent_CR_le_0.10": false
+    },
+    "E2": {
+      "CR_geometric_mean": 0.1061,
+      "CR_eigenvalue": 0.1098,
+      "straight_lined_all_equal": false,
+      "consistent_CR_le_0.10": false
+    },
+    "E3": {
+      "CR_geometric_mean": 0.0,
+      "CR_eigenvalue": 0.0,
+      "straight_lined_all_equal": true,
+      "consistent_CR_le_0.10": true
+    },
+    "E4": {
+      "CR_geometric_mean": 0.0786,
+      "CR_eigenvalue": 0.0789,
+      "straight_lined_all_equal": false,
+      "consistent_CR_le_0.10": true
+    },
+    "E5": {
+      "CR_geometric_mean": 0.9134,
+      "CR_eigenvalue": 0.9777,
+      "straight_lined_all_equal": false,
+      "consistent_CR_le_0.10": false
+    },
+    "E6": {
+      "CR_geometric_mean": 0.2325,
+      "CR_eigenvalue": 0.2429,
+      "straight_lined_all_equal": false,
+      "consistent_CR_le_0.10": false
+    }
+  },
+  "aggregation_variants": {
+    "AIJ_all_six (paper)": {
+      "weights": {
+        "TS": 0.262,
+        "AC": 0.189,
+        "BI": 0.211,
+        "HI": 0.048,
+        "RTO": 0.083,
+        "RPO": 0.077,
+        "MLS": 0.131
+      },
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ],
+      "group_CR": 0.0495
+    },
+    "AIJ_excluding_straight_liner ['E3']": {
+      "weights": {
+        "TS": 0.286,
+        "AC": 0.193,
+        "BI": 0.221,
+        "HI": 0.037,
+        "RTO": 0.072,
+        "RPO": 0.066,
+        "MLS": 0.124
+      },
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ],
+      "group_CR": 0.0721
+    },
+    "AIJ_consistent_only ['E4']": {
+      "weights": {
+        "TS": 0.162,
+        "AC": 0.222,
+        "BI": 0.36,
+        "HI": 0.028,
+        "RTO": 0.07,
+        "RPO": 0.039,
+        "MLS": 0.119
+      },
+      "ranking": [
+        "BI",
+        "AC",
+        "TS",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ],
+      "group_CR": 0.0786
+    },
+    "AIJ_excluding_most_inconsistent [E5]": {
+      "weights": {
+        "TS": 0.284,
+        "AC": 0.193,
+        "BI": 0.215,
+        "HI": 0.051,
+        "RTO": 0.07,
+        "RPO": 0.073,
+        "MLS": 0.113
+      },
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RPO",
+        "RTO",
+        "HI"
+      ],
+      "group_CR": 0.0341
+    },
+    "AIP_all_six": {
+      "weights": {
+        "TS": 0.262,
+        "AC": 0.189,
+        "BI": 0.211,
+        "HI": 0.048,
+        "RTO": 0.083,
+        "RPO": 0.077,
+        "MLS": 0.131
+      },
+      "ranking": [
+        "TS",
+        "BI",
+        "AC",
+        "MLS",
+        "RTO",
+        "RPO",
+        "HI"
+      ]
+    }
+  },
+  "expert_bootstrap_AIJ": {
+    "B": 5000,
+    "weight_95ci": {
+      "TS": [
+        0.184,
+        0.364
+      ],
+      "AC": [
+        0.16,
+        0.212
+      ],
+      "BI": [
+        0.154,
+        0.284
+      ],
+      "HI": [
+        0.03,
+        0.082
+      ],
+      "RTO": [
+        0.052,
+        0.124
+      ],
+      "RPO": [
+        0.05,
+        0.11
+      ],
+      "MLS": [
+        0.083,
+        0.184
+      ]
+    },
+    "probability_rank_1": {
+      "TS": 0.783,
+      "AC": 0.0,
+      "BI": 0.211,
+      "HI": 0.0,
+      "RTO": 0.0,
+      "RPO": 0.0,
+      "MLS": 0.006
+    },
+    "probability_in_top_3": {
+      "TS": 0.991,
+      "AC": 0.951,
+      "BI": 0.972,
+      "HI": 0.0,
+      "RTO": 0.002,
+      "RPO": 0.0,
+      "MLS": 0.084
+    }
+  },
+  "projected_targeted_revision_effect": {
+    "E1": {
+      "CR_before": 0.3544,
+      "CR_if_suggestions_accepted": 0.0575,
+      "questions_sent": [
+        1,
+        2,
+        7,
+        12,
+        17,
+        18
+      ]
+    },
+    "E2": {
+      "CR_before": 0.1061,
+      "CR_if_suggestions_accepted": 0.0053,
+      "questions_sent": [
+        2,
+        7,
+        18
+      ]
+    },
+    "E6": {
+      "CR_before": 0.2325,
+      "CR_if_suggestions_accepted": 0.0957,
+      "questions_sent": [
+        15,
+        17,
+        19
+      ]
+    }
+  }
+}
