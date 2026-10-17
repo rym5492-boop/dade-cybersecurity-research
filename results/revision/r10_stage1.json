@@ -1,0 +1,110 @@
+{
+  "ahp_group_weights": {
+    "TS": 0.262,
+    "AC": 0.1887,
+    "BI": 0.2108,
+    "HI": 0.0477,
+    "RTO": 0.0826,
+    "RPO": 0.0774,
+    "MLS": 0.1308
+  },
+  "ts_true_category_instead_of_predicted_scenarios_changed": 4,
+  "severity_table_perturbation_10pts": {
+    "mean_share_changed": 0.0005,
+    "p95_share_changed": 0.0
+  },
+  "counterfactual_bia_profiles": {
+    "alerts_whose_level_differs_between_profiles": 30,
+    "alerts_spanning_all_three_levels": 14,
+    "alerts_lower_under_high_criticality_than_low_criticality": 0
+  },
+  "level_counts": {
+    "DADE_AHP": {
+      "Low": 5,
+      "Medium": 12,
+      "High": 13
+    },
+    "B1_ML_only": {
+      "Low": 0,
+      "Medium": 8,
+      "High": 22
+    },
+    "B2_equal_weight": {
+      "Low": 5,
+      "Medium": 11,
+      "High": 14
+    },
+    "B3_BIA_only": {
+      "Low": 10,
+      "Medium": 10,
+      "High": 10
+    },
+    "B4_severity_x_impact": {
+      "Low": 8,
+      "Medium": 8,
+      "High": 14
+    },
+    "B5_ML_x_impact": {
+      "Low": 4,
+      "Medium": 6,
+      "High": 20
+    }
+  },
+  "pairwise_agreement_between_methods": {
+    "DADE_AHP vs B1_ML_only": 0.467,
+    "DADE_AHP vs B2_equal_weight": 0.967,
+    "DADE_AHP vs B3_BIA_only": 0.667,
+    "DADE_AHP vs B4_severity_x_impact": 0.667,
+    "DADE_AHP vs B5_ML_x_impact": 0.667,
+    "B1_ML_only vs B2_equal_weight": 0.433,
+    "B1_ML_only vs B3_BIA_only": 0.267,
+    "B1_ML_only vs B4_severity_x_impact": 0.567,
+    "B1_ML_only vs B5_ML_x_impact": 0.533,
+    "B2_equal_weight vs B3_BIA_only": 0.7,
+    "B2_equal_weight vs B4_severity_x_impact": 0.633,
+    "B2_equal_weight vs B5_ML_x_impact": 0.7,
+    "B3_BIA_only vs B4_severity_x_impact": 0.467,
+    "B3_BIA_only vs B5_ML_x_impact": 0.467,
+    "B4_severity_x_impact vs B5_ML_x_impact": 0.633
+  },
+  "dade_monotonicity_violations": 0,
+  "dade_weight_perturbation_20pct": {
+    "mean_share_changed": 0.0072,
+    "p95_share_changed": 0.0333
+  },
+  "dade_threshold_shift_scenarios_changed": {
+    "high-0.05_low-0.05": 3,
+    "high-0.05_low+0.00": 2,
+    "high-0.05_low+0.05": 3,
+    "high+0.00_low-0.05": 1,
+    "high+0.00_low+0.05": 1,
+    "high+0.05_low-0.05": 2,
+    "high+0.05_low+0.00": 1,
+    "high+0.05_low+0.05": 2
+  },
+  "cost_matrix_rows_expert_cols_method_LMH": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      6,
+      3,
+      0
+    ]
+  ],
+  "form_assignment": {
+    "E1": "AB",
+    "E2": "BC",
+    "E3": "CA",
+    "E4": "AB",
+    "E5": "BC",
+    "E6": "CA"
+  }
+}
