@@ -16,6 +16,7 @@ Run from the repository root, with the dataset files in the root or in `data/`.
 | `r06_ahp_robustness.py` | Critical 4, 3.3 | anywhere (expert data in `data/`) | CR by two estimators, straight-lining flag, five aggregation variants, expert-bootstrap CIs and rank probabilities |
 | `r07_cross_dataset_v2.py` | 3.1 | **your machine** (needs CICIDS2017 and CICIoT2023) | Held-out diagonal, unit and semantic harmonisation, prevalence and majority baseline, two adaptation tests |
 | `r08_cicids2017_holdout_v2.py` | 3.1 | **your machine** (needs CICIDS2017) | Thresholds chosen on validation for unseen-family evaluation |
+| `r09_build_scenarios.py` | 3.2, Critical 4/5 | anywhere (UNSW-NB15, needs r03) | 30 balanced hypothetical scenarios anchored on real test flows; forms A/B/C |
 
 Order: r01, r02, r03, then r04 (needs r03), r05, r06; r07 and r08 on the machine that holds the
 CIC datasets.
