@@ -4,7 +4,7 @@ Code and results for the revised paper **"An AHP-Guided Decision-Support Framewo
 Intrusion Detection to Business Continuity Prioritization"** (Khalid Khadhear Alenezi and Mohamed Ayari,
 Northern Border University). DADE is kept as the name of the system.
 
-**Every number in the revised paper comes from the scripts in `src/04_revision` (r01–r11) and their
+**Every number in the revised paper comes from the scripts in `src/04_revision` (r01–r13) and their
 outputs in `results/revision`.** See `src/04_revision/README.md` for what each script does and the order
 to run them. The scripts and results of the earlier draft (`src/01_*`, `src/02_*`, `src/03_*`, `results/*.json`)
 are kept unchanged so that every correction can be audited; the sections further below describe that
@@ -17,7 +17,7 @@ earlier draft and some of its practices were corrected in the revision (see "Wha
 | NSL-KDD | https://www.unb.ca/cic/datasets/nsl.html | `KDDTrain+.txt`, `KDDTest+.txt` | 125,973 / 22,544 |
 | UNSW-NB15 | https://research.unsw.edu.au/projects/unsw-nb15-dataset | `UNSW_NB15_training-set.csv`, `UNSW_NB15_testing-set.csv` | 175,341 / 82,332 |
 | CICIDS2017 (cleaned) | https://www.unb.ca/cic/datasets/ids-2017.html; cleaned version on Kaggle `ericanacletoribeiro/cicids2017-cleaned-and-preprocessed` | `cicids2017_cleaned.csv` | 2,520,751 |
-| CICIoT2023 (class-balanced subsample) | https://www.unb.ca/cic/datasets/iotdataset-2023.html; subsample on Kaggle `kibremogesf/kibremoges` | `balanced_7classes_500000_each.csv` | 2,878,962 |
+| CICIoT2023 (subsample capped at 500,000 rows per class) | https://www.unb.ca/cic/datasets/iotdataset-2023.html; subsample on Kaggle `kibremogesf/kibremoges` | `balanced_7classes_500000_each.csv` | 2,878,962 |
 
 Binary label: NSL-KDD attack = label not `normal`; UNSW-NB15 `label` = 1; CICIDS2017 `Attack Type` not
 `Normal Traffic`; CICIoT2023 `MappedLabel` not `Benign`. Identifier and label columns are never used as features.
@@ -27,6 +27,7 @@ Binary label: NSL-KDD attack = label not `normal`; UNSW-NB15 `label` = 1; CICIDS
 Python 3.13, scikit-learn 1.9, pandas 3.0, numpy 2.5 (cloud run). The first author re-ran r01–r11 on his own
 computer from a fresh copy of this repository on 17 October 2026 and reproduced every reported value; logistic
 regression differed only in the fourth decimal (different scikit-learn patch version). Random seed 42 everywhere.
+The first author ran r12 on the full CICIDS2017 and CICIoT2023 files on 20 October 2026; every count matched Table 4.
 
 ## What changed in the revision (summary)
 
@@ -39,6 +40,8 @@ regression differed only in the fourth decimal (different scikit-learn patch ver
 * Decision quality is evaluated against blinded expert priority labels on 30 scenarios (r09, r10). r10 was
   committed (a5788aa, 17 October 2026) before any label was collected; when the labels arrive they are saved as
   `data/scenario_labels.csv` and r10 is run unchanged.
+  * A secondary panel of four external practitioners, who took no part in the AHP, labelled all 30 scenarios (r13).
+  It was declared in `src/04_revision/PREREG_ADDENDUM_external_panel.md` before their answers were analysed.
 
 ---
 
