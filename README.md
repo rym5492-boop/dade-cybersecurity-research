@@ -40,7 +40,7 @@ The first author ran r12 on the full CICIDS2017 and CICIoT2023 files on 20 Octob
 * Decision quality is evaluated against blinded expert priority labels on 30 scenarios (r09, r10). r10 was
   committed (a5788aa, 17 October 2026) before any label was collected; when the labels arrive they are saved as
   `data/scenario_labels.csv` and r10 is run unchanged.
-  * A secondary panel of four external practitioners, who took no part in the AHP, labelled all 30 scenarios (r13).
+* A secondary panel of four external practitioners, who took no part in the AHP, labelled all 30 scenarios (r13).
   It was declared in `src/04_revision/PREREG_ADDENDUM_external_panel.md` before their answers were analysed.
 
 ---
