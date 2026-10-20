@@ -1,0 +1,118 @@
+{
+  "n_raters": 4,
+  "n_scenarios": 30,
+  "rater_profile": [
+    {
+      "rater_id": "X1",
+      "field": "Cybersecurity",
+      "experience": "8-15",
+      "sector": "Government"
+    },
+    {
+      "rater_id": "X2",
+      "field": "IT/Networks",
+      "experience": "8-15",
+      "sector": "Government"
+    },
+    {
+      "rater_id": "X3",
+      "field": "Cybersecurity",
+      "experience": "8-15",
+      "sector": "Government"
+    },
+    {
+      "rater_id": "X4",
+      "field": "IT/Networks",
+      "experience": "8-15",
+      "sector": "Government"
+    }
+  ],
+  "alpha_all_raters": {
+    "alpha": 0.4879,
+    "ci95": [
+      0.2606,
+      0.6668
+    ]
+  },
+  "reference_label_distribution": {
+    "Low": 3,
+    "Medium": 10,
+    "High": 17
+  },
+  "vote_patterns": {
+    "strict_majority": 21,
+    "tie->higher": 7,
+    "plurality_2-1-1": 2
+  },
+  "plurality_2-1-1_scenarios": [
+    "C04",
+    "C06"
+  ],
+  "tie_2-2_scenarios": [
+    "A03",
+    "A05",
+    "B02",
+    "B03",
+    "B04",
+    "C02",
+    "C08"
+  ],
+  "unanimous_scenarios": 12,
+  "sensitivity_not_preregistered": {
+    "median_rule_differs_from_prereg_rule": [],
+    "alpha_leave_one_rater_out": {
+      "X1": 0.4021,
+      "X2": 0.5822,
+      "X3": 0.3887,
+      "X4": 0.5745
+    },
+    "rater_label_distribution": {
+      "X1": {
+        "Low": 5,
+        "Medium": 11,
+        "High": 14
+      },
+      "X2": {
+        "Low": 1,
+        "Medium": 10,
+        "High": 19
+      },
+      "X3": {
+        "Low": 5,
+        "Medium": 14,
+        "High": 11
+      },
+      "X4": {
+        "Low": 6,
+        "Medium": 9,
+        "High": 15
+      }
+    },
+    "pairwise": {
+      "X1-X2": {
+        "exact": 0.7,
+        "quadratic_kappa": 0.468
+      },
+      "X1-X3": {
+        "exact": 0.767,
+        "quadratic_kappa": 0.777
+      },
+      "X1-X4": {
+        "exact": 0.6,
+        "quadratic_kappa": 0.48
+      },
+      "X2-X3": {
+        "exact": 0.567,
+        "quadratic_kappa": 0.444
+      },
+      "X2-X4": {
+        "exact": 0.5,
+        "quadratic_kappa": 0.305
+      },
+      "X3-X4": {
+        "exact": 0.7,
+        "quadratic_kappa": 0.551
+      }
+    }
+  }
+}
