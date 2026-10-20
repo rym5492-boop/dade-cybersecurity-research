@@ -66,7 +66,11 @@ arrive, update `data/ahp_expert_judgments_anonymized.json`, then re-run r06 and 
    Do not edit `r10_decision_evaluation.py` after the labels arrive; any extra analysis goes in a new file
    and is reported as exploratory.
 
-### Decision log — E3 AHP re-elicitation (2026-10-18)
+### Decision log — E3 AHP re-elicitation (2026-10-18, revised 2026-10-20)
 - E3's original answers: all 21 = 5 ("equal"), so no weights can be derived.
 - E3's re-elicitation (Tally pexRNB, submitted 2026-10-18 10:04 +0300): 20 of 21 answers = 6, one answer = 7. CR = 0.134 (> 0.10). The answers always favour the right-hand criterion, which ranks TS last and MLS first. This is a same-side response pattern.
-- Decision: E3 is excluded from the AHP weights and will not be asked again. This is the r06 variant "AIJ excluding the straight-liner". E3's scenario labels are a separate task and are kept.
+- 18 Oct: E3 was first marked for exclusion. **20 Oct: that decision is withdrawn.** The rule fixed in Section 4.6 before any answer was received is that revised answers replace the originals. Excluding E3 alone would also treat E3 (CR 0.134) differently from E2, whose original answers (CR 0.106) are kept.
+- Primary analysis: E3's repeat replaces the original, as the rule requires. Sensitivity: the variant without E3 (already in r06 as "AIJ excluding the straight-liner").
+- Effect, checked on 20 Oct with E1 and E6 revised and E2 and E5 original: DADE gives the same level for all 30 scenarios with or without E3; under leave-one-expert-out, 1 of 120 decisions differs. This is re-checked once E2 and E5 reply.
+- E1 and E6 accepted every suggested value (CR 0.354 → 0.058 and 0.233 → 0.096). Because the suggestions were shown, their new consistency partly reflects the feedback; the paper says so.
+- E3's scenario labels are a separate task and are kept.
