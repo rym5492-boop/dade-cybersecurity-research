@@ -19,6 +19,8 @@ Run from the repository root, with the dataset files in the root or in `data/`.
 | `r09_build_scenarios.py` | 3.2, Critical 4/5 | anywhere (UNSW-NB15, needs r03) | 30 balanced hypothetical scenarios anchored on real test flows; forms A/B/C |
 | `r10_decision_evaluation.py` | 3.2, Critical 4/5 | anywhere (needs r09; stage 2 needs `data/scenario_labels.csv`) | Pre-registered decision evaluation: DADE vs ML-only, equal-weight, BIA-only, severity x impact and ML x impact baselines; results by sector and traffic type, failure cases; monotonicity and weight/threshold stability; Krippendorff's alpha, leave-one-expert-out comparison, asymmetric cost, paired cluster bootstrap |
 | `r11_unsw_duplicates.py` | 3.1 | anywhere (UNSW-NB15) | Duplicate and train-test overlap audit; CV with duplicate-grouped folds; test metrics on rows unseen in training |
+| `r12_dataset_manifest.py` | 3.1, Week-2 gate | anywhere for NSL-KDD/UNSW-NB15; **your machine** for the CIC files | Rows, attack share and label counts of every dataset file (Table 4) |
+| `r13_external_panel.py` | 3.2 (independent validation) | anywhere (needs `data/external_panel_labels.csv`) | Secondary analysis declared in `PREREG_ADDENDUM_external_panel.md`: Krippendorff's alpha among four external raters, majority reference label per scenario, sensitivity checks |
 
 Order: r01, r02, r03, then r04 (needs r03), r05, r06; r07 and r08 on the machine that holds the
 CIC datasets.
@@ -26,6 +28,28 @@ CIC datasets.
 Data integrity: the UNSW-NB15 files used to produce `results/revision` have the official sizes
 (175,341 / 82,332 rows) and category counts, and re-running the original
 `src/02_dade_engine/01_ablation_study.py` on them reproduces the published ablation numbers exactly.
+
+## Where each number in the revised paper comes from
+
+| Paper item | Script | Output file |
+| --- | --- | --- |
+| Table 4 (data manifest: rows, attack share) | r12 (CIC rows: run on the machine holding the CIC files; run by the author on 20 Oct 2026) | r12_dataset_manifest.json |
+| §4.7 external panel (alpha, reference labels) | r13 | r13_external_panel.json, data/external_reference_labels.csv |
+| Table 4 partitions, §4.1 duplicates | r01, r08, r11 | r01_unsw_detection.json, r08_cicids2017_holdout_v2.json, r11_unsw_duplicates.json |
+| Table 5 (NSL-KDD random vs official split) | r05 | r05_nslkdd.json |
+| Table 6, §5.2 (UNSW-NB15 thresholds, CV–test gap) | r01, r11 | r01_unsw_detection.json, r11_unsw_duplicates.json |
+| §5.3 (predicted category, severity error) | r03 | r03_attack_category.json |
+| Table 7, §5.4 (CICIDS2017 unseen families) | r08 | r08_cicids2017_holdout_v2.json |
+| Figure 2, §5.5 (cross-dataset transfer) | r07 | r07_cross_dataset_v2.json |
+| Table 8, Figure 3, §5.6 (calibration, base-rate shift) | r02 | r02_calibration.json |
+| Table 9, §6.1 (leakage audit of the earlier ablation) | r04 | r04_ablation_leakage_audit.json |
+| Tables 10–11, §6.2 (AHP consistency, aggregation, bootstrap) | r06 | r06_ahp_robustness.json |
+| §6.3 (monotonicity, weight/threshold/severity checks, rule comparison) | r10 (stage 1) | r10_stage1.json, r10_decisions_stage1.csv |
+| Table 12, §4.7 (scenarios) | r09 | r09_scenarios.csv, r09_scenario_cards_ar.md |
+| Table 13, §6.4 (agreement with expert labels) | r10 (stage 2) | r10_stage2.json (after labels arrive) |
+
+E3/E5 (full repeat) and E1/E2/E6 (targeted pairs) were sent AHP revision forms; when their answers
+arrive, update `data/ahp_expert_judgments_anonymized.json`, then re-run r06 and r10.
 
 ## When the expert scenario answers arrive (step-by-step)
 
@@ -36,8 +60,13 @@ Data integrity: the UNSW-NB15 files used to produce `results/revision` have the 
    Each expert's anonymous ID (E1–E6) must match the ID used in `data/ahp_expert_judgments_anonymized.json`.
 3. Run `python r10_decision_evaluation.py` from `src/04_revision`. Stage 2 runs automatically and writes
    `results/revision/r10_stage2.json`.
-4. If the revised AHP answers (E1, E2, E6) have arrived, update `data/ahp_expert_judgments_anonymized.json`
+4. If the revised AHP answers (E1, E2, E6 targeted; E3, E5 full repeat) have arrived, update `data/ahp_expert_judgments_anonymized.json`
    first, then re-run `r06_ahp_robustness.py` and `r10_decision_evaluation.py`.
 5. Copy the numbers into Table 13, the abstract and Section 6.4 of the manuscript, replacing every [PENDING].
    Do not edit `r10_decision_evaluation.py` after the labels arrive; any extra analysis goes in a new file
    and is reported as exploratory.
+
+### Decision log — E3 AHP re-elicitation (2026-10-18)
+- E3's original answers: all 21 = 5 ("equal"), so no weights can be derived.
+- E3's re-elicitation (Tally pexRNB, submitted 2026-10-18 10:04 +0300): 20 of 21 answers = 6, one answer = 7. CR = 0.134 (> 0.10). The answers always favour the right-hand criterion, which ranks TS last and MLS first. This is a same-side response pattern.
+- Decision: E3 is excluded from the AHP weights and will not be asked again. This is the r06 variant "AIJ excluding the straight-liner". E3's scenario labels are a separate task and are kept.
