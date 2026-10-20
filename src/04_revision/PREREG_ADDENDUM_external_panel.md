@@ -20,3 +20,6 @@
 **Fixed rules:**
 - No external answer will be used to tune weights, thresholds or the cost matrix.
 - An incomplete or non-consented response is excluded and reported.
+
+---
+**Timing note (added 20 October 2026; the text above is unchanged).** This addendum was committed on 18 October 2026 at 00:28 (UTC+3). The first external response (X2) had been submitted at 00:26, about two minutes earlier. Nobody opened that response before the commit, and the plan above was not changed after any response. One case was not covered by item 2: a 2–1–1 split with four raters has no strict majority. The plurality label was used (2 of 30 scenarios), and r13 reports that the median rule gives the same labels.
