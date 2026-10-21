@@ -4,7 +4,7 @@ Code and results for the revised paper **"An AHP-Guided Decision-Support Framewo
 Intrusion Detection to Business Continuity Prioritization"** (Khalid Khadhear Alenezi and Mohamed Ayari,
 Northern Border University). DADE is kept as the name of the system.
 
-**Every number in the revised paper comes from the scripts in `src/04_revision` (r01–r13) and their
+**Every number in the revised paper comes from the scripts in `src/04_revision` (r01–r14) and their
 outputs in `results/revision`.** See `src/04_revision/README.md` for what each script does and the order
 to run them. The scripts and results of the earlier draft (`src/01_*`, `src/02_*`, `src/03_*`, `results/*.json`)
 are kept unchanged so that every correction can be audited; the sections further below describe that
@@ -38,9 +38,9 @@ The first author ran r12 on the full CICIDS2017 and CICIoT2023 files on 20 Octob
 * Threat severity is read from a *predicted* attack category; the earlier ablation used the true category (r04).
 * The earlier sensitivity and cross-sector analyses drew business-context values at random and are withdrawn.
 * Decision quality is evaluated against blinded expert priority labels on 30 scenarios (r09, r10). r10 was
-  committed (a5788aa, 17 October 2026) before any label was collected; when the labels arrive they are saved as
-  `data/scenario_labels.csv` and r10 is run unchanged.
-* A secondary panel of four external practitioners, who took no part in the AHP, labelled all 30 scenarios (r13).
+  committed (a5788aa, 17 October 2026) before any label was collected; the 120 labels are in
+  `data/scenario_labels.csv` and r10 was run unchanged (21 October 2026).
+* A secondary panel of four external practitioners, who took no part in the AHP, labelled all 30 scenarios (r13; compared with DADE and the baselines in r14).
   It was declared in `src/04_revision/PREREG_ADDENDUM_external_panel.md` before their answers were analysed.
 
 ---
