@@ -28,6 +28,8 @@ Python 3.13, scikit-learn 1.9, pandas 3.0, numpy 2.5 (cloud run). The first auth
 computer from a fresh copy of this repository on 17 October 2026 and reproduced every reported value; logistic
 regression differed only in the fourth decimal (different scikit-learn patch version). Random seed 42 everywhere.
 The first author ran r12 on the full CICIDS2017 and CICIoT2023 files on 20 October 2026; every count matched Table 4.
+After the expert answers arrived, the first author re-ran the final r06, r10, r13 and r14 on his own computer from a
+fresh copy of this repository on 21 October 2026 and obtained result files identical to those in `results/revision`.
 
 ## What changed in the revision (summary)
 
