@@ -4,7 +4,7 @@ Code and results for the revised paper **"An AHP-Guided Decision-Support Framewo
 Intrusion Detection to Business Continuity Prioritization"** (Khalid Khadhear Alenezi and Mohamed Ayari,
 Northern Border University). DADE is kept as the name of the system.
 
-**Every number in the revised paper comes from the scripts in `src/04_revision` (r01–r14) and their
+**Every number in the revised paper comes from the scripts in `src/04_revision` (r01–r15) and their
 outputs in `results/revision`.** See `src/04_revision/README.md` for what each script does and the order
 to run them. The scripts and results of the earlier draft (`src/01_*`, `src/02_*`, `src/03_*`, `results/*.json`)
 are kept unchanged so that every correction can be audited; the sections further below describe that
