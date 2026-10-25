@@ -23,9 +23,10 @@ Run from the repository root, with the dataset files in the root or in `data/`.
 | `r13_external_panel.py` | 3.2 (independent validation) | anywhere (needs `data/external_panel_labels.csv`) | Secondary analysis declared in `PREREG_ADDENDUM_external_panel.md`: Krippendorff's alpha among four external raters, majority reference label per scenario, sensitivity checks |
 | `r14_final_checks.py` | Critical 4, 3.2 | anywhere (needs r09, r10 stage 1, r13 and `data/scenario_labels.csv`) | Checks declared before the final run, kept out of r10 so r10 stays unchanged: CR of every expert before and after the October revisions, leave-one-expert-out without E3's AHP answers, external panel item 3 (DADE and baselines vs the external reference), exploratory panel-vs-external agreement |
 | `r15_figures.py` | Figures 4–5 | anywhere (needs r06 and r10 stage 2 outputs) | Draws Figure 4 (group AHP weights with bootstrap intervals, with and without E3) and Figure 5 (difference between DADE and each baseline in quadratic κ and mean cost, with 95% intervals) from the result files; computes nothing new |
+| `r16_level_bounds.py` | Thesis §4.4 (not in the paper) | anywhere (expert data in `data/`) | Analytic check, no new experiment: lowest and highest DPS and level attainable on each BIA profile P1–P6 under the fixed cut-offs (MLS and TS at 0, and MLS = 1 with TS = 0.95), with the AHP weights of all six experts and with equal weights |
 
 Order: r01, r02, r03, then r04 (needs r03), r05, r06; r07 and r08 on the machine that holds the
-CIC datasets; r09, r10, r13, then r14; r15 last (figures only).
+CIC datasets; r09, r10, r13, then r14; r15 last (figures only); r16 at any time (needs only the expert data).
 
 Data integrity: the UNSW-NB15 files used to produce `results/revision` have the official sizes
 (175,341 / 82,332 rows) and category counts, and re-running the original
@@ -51,6 +52,7 @@ Data integrity: the UNSW-NB15 files used to produce `results/revision` have the 
 | Table 13, §6.4 (agreement with expert labels, thresholds, failure cases, consensus) | r10 (stage 2) | r10_stage2.json |
 | Table 10 (CR September vs final), §4.6 and §6.4 (without-E3 sensitivity), §6.4 external panel vs methods | r14 | r14_final_checks.json |
 | Figure 4 (§6.2), Figure 5 (§6.4) | r15 | fig4_ahp_weights.png, fig5_decision_differences.png (drawn from r06_ahp_robustness.json and r10_stage2.json) |
+| Thesis §4.4 (bounds on the level for each BIA profile; not in the paper) | r16 | r16_level_bounds.json |
 
 All AHP revision answers arrived (E1, E2, E6 targeted pairs; E3, E5 full repeat). They are in
 `data/ahp_expert_judgments_anonymized.json` (`pairwise_responses`; the September answers are kept in
