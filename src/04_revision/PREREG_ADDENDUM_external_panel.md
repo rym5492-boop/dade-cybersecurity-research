@@ -1,5 +1,7 @@
 # Pre-registration addendum — independent external panel (declared 2026-10-18, before any external answer)
 
+**Correction (added 25 October 2026; the text below is unchanged).** The heading says "before any external answer". As the timing note at the end records, the first external answer had been submitted about two minutes before this file was committed (18 October 2026, 00:28 UTC+3) and, according to the researcher, had not been opened. The plan itself is unchanged.
+
 **Status:** secondary analysis. It does not replace or change any primary analysis fixed in the r10 pre-registration (commit a5788aa).
 
 **Why:** the six panel experts both elicited the AHP weights and labelled the scenarios. Practitioners from outside the faculty, who took no part in the AHP elicitation, give an independent check of the engine's decisions.
