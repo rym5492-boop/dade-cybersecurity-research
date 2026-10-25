@@ -59,8 +59,10 @@ All AHP revision answers arrived (E1, E2, E6 targeted pairs; E3, E5 full repeat)
 
 ## When the expert scenario answers arrive (step-by-step; done 21 Oct 2026)
 
-1. In Tally, open each scenario form (A, B, C) → Submissions → Download CSV.
-2. Give the three CSV files to the assistant (or do it by hand): they are converted into
+1. In Tally, open each expert's personal scenario form → Submissions → Download CSV. There are six
+   forms, one per expert, each holding two of the scenario sets A, B and C as fixed in the protocol
+   (E1 and E4: A and B; E2 and E5: B and C; E3 and E6: C and A).
+2. Give the six CSV files to the assistant (or do it by hand): they are converted into
    `data/scenario_labels.csv` with columns `expert_id, form, scenario_id, label`, following
    `data/scenario_labels_TEMPLATE.csv`. Labels may be written as High/Medium/Low or مرتفع/متوسط/منخفض.
    Each expert's anonymous ID (E1–E6) must match the ID used in `data/ahp_expert_judgments_anonymized.json`.
