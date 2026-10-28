@@ -1,7 +1,8 @@
 """
 R13 - Independent external panel (secondary analysis, PREREG_ADDENDUM_external_panel.md).
 
-Input : data/external_panel_labels.csv (4 raters x 30 scenarios, H/M/L; no names).
+Input : data/external_panel_labels.csv (4 raters x 30 scenarios, H/M/L; no names) and
+        data/external_panel_profile.json (background of the raters as panel totals only).
 Output: results/revision/r13_external_panel.json and data/external_reference_labels.csv
 
 Pre-declared analyses (addendum items 1-2):
@@ -15,6 +16,7 @@ Sensitivity (NOT pre-declared, reported as such): r10's median rule (ties to the
 alpha leaving one rater out, per-rater label distributions, pairwise agreement.
 """
 import itertools
+import json
 from collections import Counter
 
 import numpy as np
@@ -79,8 +81,11 @@ def median_label(votes):                          # r10 rule
     return r[m // 2] if m % 2 else max(r[m // 2 - 1], r[m // 2])
 
 
+with open(REPO_ROOT / "data" / "external_panel_profile.json", encoding="utf-8") as f:
+    PROFILE = json.load(f)
+assert PROFILE["n_raters"] == len(R)
 out = {"n_raters": int(len(R)), "n_scenarios": len(SCEN),
-       "rater_profile": df[["rater_id", "field", "experience", "sector"]].to_dict("records")}
+       "panel_profile": {k: PROFILE[k] for k in ("field_counts", "experience_years_counts", "sector_counts")}}
 out["alpha_all_raters"] = alpha_with_ci(R)
 
 ref, pattern, med = {}, {}, {}

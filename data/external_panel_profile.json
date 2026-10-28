@@ -1,0 +1,14 @@
+{
+  "description": "Background of the four external practitioners (X1-X4), given only as panel totals. Per-rater field, experience band and sector were removed from external_panel_labels.csv on 28 October 2026 to lower the risk of re-identification in a small panel, as was done for the six AHP experts on 25 October 2026.",
+  "n_raters": 4,
+  "field_counts": {
+    "Cybersecurity": 2,
+    "IT/Networks": 2
+  },
+  "experience_years_counts": {
+    "8-15": 4
+  },
+  "sector_counts": {
+    "Government": 4
+  }
+}

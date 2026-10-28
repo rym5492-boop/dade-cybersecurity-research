@@ -1,6 +1,18 @@
 {
   "n_raters": 4,
   "n_scenarios": 30,
+  "panel_profile": {
+    "field_counts": {
+      "Cybersecurity": 2,
+      "IT/Networks": 2
+    },
+    "experience_years_counts": {
+      "8-15": 4
+    },
+    "sector_counts": {
+      "Government": 4
+    }
+  },
   "alpha_all_raters": {
     "alpha": 0.4879,
     "ci95": [
