@@ -26,7 +26,7 @@ scenarios. Every script that draws random numbers uses the seed 42.
 
 ## 2. Clean-room re-run (cloud, 30 October 2026)
 
-A fresh clone of the repository, with only the four files above added, was run from scratch
+A fresh clone of the repository, with only the four files above added, was run from scratch by the AI assistant
 (Python 3.13.18, NumPy 2.5.3, pandas 3.0.5, scikit-learn 1.9.1, SciPy 1.18.1, Matplotlib 3.11.2;
 `requirements-lock.txt`). Every output was compared with the stored one.
 
@@ -40,7 +40,8 @@ A fresh clone of the repository, with only the four files above added, was run f
 | r06 AHP robustness (paper Table 11, Figure 4) | identical |
 | r09 scenarios, r10 decision evaluation (paper Table 13, Figure 5), r11, r13, r14, r16 | identical |
 | r15 figures | images redrawn from identical data; PNG bytes differ only through the plotting library |
-| r07, r08, r12 (CIC files; paper Table 7, Figure 2) | not re-run in the cloud: the CIC files could not be obtained there. Re-run by the author with `reproduce.py` (section 4) |
+| r07, r08, r12 (CIC files; paper Table 7, Figure 2) | not re-run in the cloud: the CIC files could not be obtained there. To be re-run by the author with `reproduce.py` (section 4) |
+| r22 transfer audit | run on UNSW-NB15 only: stored r07 subsets, feature percentiles and the adaptation independence check; the sensitivity runs need the CIC files and are part of the author's re-run |
 
 ## 3. Who executed what
 
@@ -50,7 +51,7 @@ A fresh clone of the repository, with only the four files above added, was run f
 | Scripts r07, r08, r12 (CIC files) | the author | author's computer (library versions not recorded) |
 | Expert and practitioner data collection, form design, consent | the author | form service |
 | Second revision r17–r24 and the clean-room re-run above (30 October 2026) | AI assistant | cloud workspace |
-| Independent re-run of every script, including r07, r08, r12 and r22 | the author, with `reproduce.py` | author's computer; report in `results/reproduction/` |
+| Independent re-run of every script, including r07, r08, r12 and r22 | the author, with `reproduce.py` (not yet done on 30 October 2026; no report in `results/reproduction/` yet) | author's computer; report in `results/reproduction/` |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.

@@ -13,8 +13,9 @@ stored r07 results alone).
      V1  without the two byte-based features (total_bytes, bytes_per_s), i.e. duration and packet size only;
      V2  CICIoT2023 duration read as milliseconds and as microseconds instead of seconds;
      V3  CICIDS2017 bytes doubled as a crude two-direction proxy.
-4. Independence of the target adaptation: the 1% and 5% labelled target samples are drawn from the target
-   training part and the evaluation uses the disjoint 30% test part; the script asserts that no row is shared.
+4. Independence of the target adaptation: in r07 the 1% and 5% labelled target samples are drawn from the target
+   training part and the evaluation uses the disjoint 30% test part; the script repeats those splits on every
+   dataset file present and asserts that no row is shared.
 Outputs: results/revision/r22_cross_dataset_audit.json
 """
 import json
@@ -115,7 +116,20 @@ base = load("V0")
 out["datasets_available"] = sorted(base)
 out["feature_distributions"] = {k: {f: {str(c): [round(float(x), 4) for x in np.percentile(d.loc[d["label"] == c, f], [5, 50, 95])]
                                         for c in (0, 1)} for f in FEATS} for k, d in base.items()}
-out["adaptation_rows_disjoint_from_evaluation_rows"] = True
+chk = {}
+for k, d in base.items():   # the same splits as r07 (seed, stratification, 30% test part)
+    t_tr, t_te = train_test_split(d, test_size=0.30, stratify=d["label"], random_state=SEED)
+    chk[k] = {"target_train_rows": int(len(t_tr)), "target_test_rows": int(len(t_te))}
+    for frac in (0.01, 0.05):
+        lab, _ = train_test_split(t_tr, train_size=frac, stratify=t_tr["label"], random_state=SEED)
+        shared = len(set(lab.index) & set(t_te.index))
+        assert shared == 0, "adaptation and evaluation rows overlap"
+        chk[k][f"adaptation_rows_{int(frac * 100)}pct"] = int(len(lab))
+        chk[k][f"rows_shared_with_evaluation_{int(frac * 100)}pct"] = int(shared)
+out["adaptation_independence_check"] = {
+    "how": "as in r07: the 1% and 5% labelled target samples are drawn from the 70% training part of the target and "
+           "the evaluation uses the 30% test part; checked here on every dataset file present",
+    "by_dataset": chk}
 if len(base) >= 2:
     out["sensitivity"] = {"V0_as_r07": transfer(base, FEATS),
                           "V1_duration_and_packet_size_only": transfer(base, ["duration_s", "avg_packet_size"])}

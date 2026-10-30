@@ -96,5 +96,17 @@
       }
     }
   },
-  "adaptation_rows_disjoint_from_evaluation_rows": true
+  "adaptation_independence_check": {
+    "how": "as in r07: the 1% and 5% labelled target samples are drawn from the 70% training part of the target and the evaluation uses the 30% test part; checked here on every dataset file present",
+    "by_dataset": {
+      "UNSW-NB15": {
+        "target_train_rows": 70000,
+        "target_test_rows": 30000,
+        "adaptation_rows_1pct": 700,
+        "rows_shared_with_evaluation_1pct": 0,
+        "adaptation_rows_5pct": 3500,
+        "rows_shared_with_evaluation_5pct": 0
+      }
+    }
+  }
 }
