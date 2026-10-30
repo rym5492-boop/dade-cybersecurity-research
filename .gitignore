@@ -1,0 +1,7 @@
+data/UNSW_NB15_training-set.csv
+data/UNSW_NB15_testing-set.csv
+data/KDDTrain+.txt
+data/KDDTest+.txt
+data/cicids2017_cleaned.csv
+data/balanced_7classes_500000_each.csv
+__pycache__/
