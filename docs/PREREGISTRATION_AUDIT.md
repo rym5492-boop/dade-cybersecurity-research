@@ -14,7 +14,8 @@ This audit answers item P0-3 of the supervisor's review of 30 October 2026: veri
 | Expert labels committed | 100dca8 | 21 Oct 2026 16:59 | Signed by GitHub |
 | r10 stage 2 run and results committed | 88107c1 | 21 Oct 2026 17:12 | `git diff a5788aa 88107c1 -- src/04_revision/r10_decision_evaluation.py` is empty: r10 ran unchanged |
 
-The commit identifiers above are those of the original repository, which is kept unchanged as private
+The commit identifiers above are those of the original repository (public counterparts: a5788aa → 873c3a7,
+42c1b19 → f6dfd0e, ecee1dd → ca53cd2, 100dca8 → e349cc4, 88107c1 → 5761a88; all others in `docs/COMMIT_MAP.md`), which is kept unchanged as private
 evidence (its history contains participant background data; see `docs/REPRODUCIBILITY.md`, section
 "Repository history"). The public repository holds the same files with that background removed from the
 history; `docs/COMMIT_MAP.md` gives the public identifier of every original commit.
@@ -30,17 +31,23 @@ history; `docs/COMMIT_MAP.md` gives the public identifier of every original comm
 | Cut-offs tuned on one form and tested on the other two | **Planned** | r10 at a5788aa |
 | Stage-1 checks: monotonicity, weight and cut-off perturbation, severity table, counterfactual BIA | **Planned** | r10 at a5788aa |
 | Designation of "DADE versus the detection score alone (B1)" as the single test of hypothesis H1 | **Not in the protocol** | The protocol fixed the comparison with all five baselines but did not single out one; H1's choice of B1 was made later and is reported as such |
-| External panel: alpha, majority reference label, linear kappa and cost against the reference | **Secondary; registered two minutes after the first external answer** | 42c1b19; the answer was not opened before the commit, but this cannot be proven from timestamps alone, so the analysis is labelled secondary and not prospectively registered |
+| External panel: alpha, majority reference label, linear kappa and cost of DADE against the reference | **Secondary; registered two minutes after the first external answer** | 42c1b19; the answer was not opened before the commit, but this cannot be proven from timestamps alone, so the analysis is labelled secondary and not prospectively registered |
+| Baselines B1–B5 scored against the external reference | **Exploratory (context)** | The addendum names DADE only; r14 scores the baselines "for context" (committed 21 Oct 2026 17:09) |
+| Plurality label for a 2-1-1 split of the four practitioners (2 scenarios) | **Exploratory** | The addendum covers 2 to 2 ties only; the rule was added in r13 on 20 October, after the external answers |
+| E3's repeated AHP answers kept in the group weights | **Decided after part of the labels** | E3 was first marked for exclusion after the repeat arrived on 18 October; the exclusion was withdrawn on 20 October, after four experts and all practitioners had labelled; the weights without E3 are reported as a variant |
 | r14 checks (CR before and after the feedback round, leave-one-expert-out without E3, quadratic kappa against the external reference) | **Exploratory** | committed 21 Oct 2026 17:09, after the labels |
 | r16 level bounds per profile | **Exploratory (analytic)** | committed 26 Oct 2026 |
 | r17–r22 (second revision: base-rate policies, threshold study, ablations, error propagation, panel audit, transfer audit) | **Exploratory (post hoc)** | written on 30 Oct 2026 in response to the review, after all labels were known |
 
-No threshold, weight or cost-matrix entry used in the primary analysis was changed after the labels were
-collected. The thresholds tuned in r18 are evaluated only on scenarios or raters not used to tune them.
+No cut-off or cost-matrix entry used in the primary analysis was changed after the labels were collected.
+The group AHP weights were not fixed before labelling: they were completed on 21 October 2026 from revised
+answers gathered while labelling was under way (18 to 20 October), and the decision to keep E3's repeated
+answers was taken on 20 October; both weight variants are reported. The thresholds tuned in r18 are evaluated
+only on scenarios or raters not used to tune them.
 
 ## Immutable records to keep
 
 - The original repository, unchanged and private, with its GitHub-signed commits.
 - A Git bundle of the original repository (SHA-256 recorded in `docs/REPRODUCIBILITY.md`).
-- The form definitions and the submission exports of every form, kept by the author offline (they contain
-  names and are not published).
+- The form definitions and the submission records of every form, kept in the form account (they contain names
+  and are not published); how long they are kept is to be set with the university's research ethics committee.

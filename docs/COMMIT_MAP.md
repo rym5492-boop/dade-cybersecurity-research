@@ -1,6 +1,6 @@
 # Map from the original repository to this public repository
 
-The original repository is kept unchanged and private because its history contained the field, experience band and sector of each participant code. This public repository has the same commits, messages, dates and final files; only those background fields were removed from the history (git filter-branch, 30 October 2026). The final file tree of the original (commit da272ed) and of its public counterpart (4b4fb01) are identical (tree 3968be6).
+The original repository is kept unchanged and private because its history contained the field and experience band of each expert and practitioner code and the sector of each practitioner. This public repository has the same commits, messages, dates and final files; only those background fields were removed from the history (git filter-branch, 30 October 2026). The final file tree of the original (commit da272ed) and of its public counterpart (4b4fb01) are identical (tree 3968be6).
 
 | Original | Public | Date (UTC+3) | Message |
 | --- | --- | --- | --- |

@@ -1,0 +1,1031 @@
+{
+ "source": "Crossref REST API",
+ "filter": "from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article",
+ "rows_screened": 20,
+ "queries": [
+  {
+   "query": "security alert prioritization triage business impact",
+   "url": "https://api.crossref.org/works?query=security%20alert%20prioritization%20triage%20business%20impact&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:31+00:00",
+   "total_results": 2119515,
+   "top20": [
+    {
+     "doi": "10.37547/tajet/volume08issue06-04",
+     "title": "AI-Augmented Security Operations Centers: Predictive Threat Prioritization Using Business Impact Modeling and Machine Learning",
+     "year": 2026,
+     "venue": "The American Journal of Engineering and Technology"
+    },
+    {
+     "doi": "10.5220/0013100800003899",
+     "title": "Prioritization of Exploit Codes on GitHub for Better Vulnerability Triage",
+     "year": 2025,
+     "venue": "Proceedings of the 11th International Conference on Information Systems Security and Privacy"
+    },
+    {
+     "doi": "10.3390/electronics15184084",
+     "title": "Dual-Threshold Conformal Deferral for Trustworthy Security Alert Triage",
+     "year": 2026,
+     "venue": "Electronics"
+    },
+    {
+     "doi": "10.1109/ths.2016.7568907",
+     "title": "Learning to rank for alert triage",
+     "year": 2016,
+     "venue": "2016 IEEE Symposium on Technologies for Homeland Security (HST)"
+    },
+    {
+     "doi": "10.36348/sjet.2024.v09i07.008",
+     "title": "Alert Prioritization Techniques in Security Monitoring: A Focus on Severity Averaging and Alert Entities",
+     "year": 2024,
+     "venue": "Saudi Journal of Engineering and Technology"
+    },
+    {
+     "doi": "10.1016/j.cose.2023.103583",
+     "title": "Combating alert fatigue with AlertPro: Context-aware alert prioritization using reinforcement learning for multi-step attack detection",
+     "year": 2024,
+     "venue": "Computers &amp; Security"
+    },
+    {
+     "doi": "10.22214/ijraset.2025.73727",
+     "title": "Enhancing Alert Prioritization in Enterprise Security Operations via Factor Graph Modeling",
+     "year": 2025,
+     "venue": "International Journal for Research in Applied Science and Engineering Technology"
+    },
+    {
+     "doi": "10.1016/j.cose.2024.103854",
+     "title": "Off-policy actor-critic deep reinforcement learning methods for alert prioritization in intrusion detection systems",
+     "year": 2024,
+     "venue": "Computers &amp; Security"
+    },
+    {
+     "doi": "10.1016/j.cose.2024.104270",
+     "title": "CyberShapley: Explanation, prioritization, and triage of cybersecurity alerts using informative graph representation",
+     "year": 2025,
+     "venue": "Computers &amp; Security"
+    },
+    {
+     "doi": "10.59543/jidmis.v3.1765",
+     "title": "Adaptive Behavioral Validation for Cloud Security Posture Management with AI-Driven Alert Prioritization",
+     "year": 2026,
+     "venue": "Journal of Intelligent Decision Making and Information Science"
+    },
+    {
+     "doi": "10.14722/ndss.2019.23349",
+     "title": "NoDoze: Combatting Threat Alert Fatigue with Automated Provenance Triage",
+     "year": 2019,
+     "venue": "Proceedings 2019 Network and Distributed System Security Symposium"
+    },
+    {
+     "doi": "10.55041/ijsrem61191",
+     "title": "MCP-Driven RAG Architecture for Automated Alert Triage in Security Operations Centers",
+     "year": 2026,
+     "venue": "INTERNATIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT"
+    },
+    {
+     "doi": "10.18034/ra.v4i2.304",
+     "title": "The Impact of the Wage Freeze on Business/Civil Service in Zambia",
+     "year": 2016,
+     "venue": "ABC Research Alert"
+    },
+    {
+     "doi": "10.1109/icaiset66439.2026.11541715",
+     "title": "Hierarchical Explainable Risk Scoring for Security Alert Prioritization in Security Operations Centers",
+     "year": 2026,
+     "venue": "2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)"
+    },
+    {
+     "doi": "10.3390/app16041884",
+     "title": "Unsupervised Learning Framework for Cyber Threat Detection, Anomaly Identification, and Alert Prioritization",
+     "year": 2026,
+     "venue": "Applied Sciences"
+    },
+    {
+     "doi": "10.51173/ijds.v3i2.84",
+     "title": "An Explainable AI Based Alert Triage Framework for Security Operations Centres: Architecture, Evaluation, And Analyst Centred Design",
+     "year": 2026,
+     "venue": "InfoTech Spectrum: Iraqi Journal of Data Science"
+    },
+    {
+     "doi": "10.1109/gcon69192.2026.11649152",
+     "title": "A Human Centric Risk-Based Security Alert Prioritization Using Splunk",
+     "year": 2026,
+     "venue": "2026 IEEE Guwahati Subsection Conference (GCON)"
+    },
+    {
+     "doi": "10.18034/ra.v9i3.584",
+     "title": "The Impact of COVID – 19 on Employee’s Job Security and Job Satisfaction of Bangladesh",
+     "year": 2021,
+     "venue": "ABC Research Alert"
+    },
+    {
+     "doi": "10.1016/j.mlwa.2026.100984",
+     "title": "A leakage-free benchmark of offline policy learning for SOC alert triage",
+     "year": 2026,
+     "venue": "Machine Learning with Applications"
+    },
+    {
+     "doi": "10.18034/abcra.v9i3.584",
+     "title": "The Impact of COVID – 19 on Employee’s Job Security and Job Satisfaction of Bangladesh",
+     "year": 2021,
+     "venue": "ABC Research Alert"
+    }
+   ]
+  },
+  {
+   "query": "cyber incident prioritization asset criticality recovery time objective",
+   "url": "https://api.crossref.org/works?query=cyber%20incident%20prioritization%20asset%20criticality%20recovery%20time%20objective&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:32+00:00",
+   "total_results": 1239003,
+   "top20": [
+    {
+     "doi": "10.32620/reks.2025.4.15",
+     "title": "Integrating CVSS, national criticality levels,  and MCDA for multi-factor cyber  incident prioritization",
+     "year": 2025,
+     "venue": "Radioelectronic and Computer Systems"
+    },
+    {
+     "doi": "10.21275/sr231003163025",
+     "title": "AI-Enhanced Cyber Incident Response and Recovery",
+     "year": 2023,
+     "venue": "International Journal of Science and Research (IJSR)"
+    },
+    {
+     "doi": "10.1109/ghtc.2015.7343992",
+     "title": "Water asset replacement maintenance prioritization procedure based on criticality and optimisation of energy consumption",
+     "year": 2015,
+     "venue": "2015 IEEE Global Humanitarian Technology Conference (GHTC)"
+    },
+    {
+     "doi": "10.1002/eng2.12555",
+     "title": "A practical application of methodologies to determine asset criticality and work order prioritization",
+     "year": 2022,
+     "venue": "Engineering Reports"
+    },
+    {
+     "doi": "10.1109/csr61664.2024.10679477",
+     "title": "Towards Developing an Asset-Criticality Identification Framework in Smart Grids",
+     "year": 2024,
+     "venue": "2024 IEEE International Conference on Cyber Security and Resilience (CSR)"
+    },
+    {
+     "doi": "10.21275/sr241217215432",
+     "title": "Disaster Recovery Plan in Utility Industry for Virtual Asset Management - A Comprehensive Overview to Avoid Cyber Attack",
+     "year": 2024,
+     "venue": "International Journal of Science and Research (IJSR)"
+    },
+    {
+     "doi": "10.36548/jtcsst.2024.1.004",
+     "title": "A Robust Machine Learning Model for Cyber Incident Classification and Prioritization",
+     "year": 2024,
+     "venue": "Journal of Trends in Computer Science and Smart Technology"
+    },
+    {
+     "doi": "10.69554/vxks8698",
+     "title": "Enabling cyber incident collaboration in UK local government through fast-time communication",
+     "year": 2022,
+     "venue": "Cyber Security: A Peer-Reviewed Journal"
+    },
+    {
+     "doi": "10.24251/hicss.2017.729",
+     "title": "Asset Criticality in Mission Reconfigurable Cyber Systems and its Contribution to Key Cyber Terrain",
+     "year": 2017,
+     "venue": "Proceedings of the Annual Hawaii International Conference on System Sciences"
+    },
+    {
+     "doi": "10.46254/na10.20250201",
+     "title": "Introducing Smart Asset Criticality (SAC) and How it Differs from Conventional Asset Criticality",
+     "year": 2025,
+     "venue": "Proceedings of the International Conference on Industrial Engineering and Operations Management"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054635",
+     "title": "Table of contents",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.1109/acit65614.2025.11185835",
+     "title": "A Weighted Expert-Based Method for Asset Criticality Assessment in Cyber Risk Evaluation",
+     "year": 2025,
+     "venue": "2025 15th International Conference on Advanced Computer Information Technologies (ACIT)"
+    },
+    {
+     "doi": "10.1109/access.2026.3735972",
+     "title": "Bayesian and Multi-Objective Decision Support for Incident Mitigation in Cyber–Physical Systems",
+     "year": 2026,
+     "venue": "IEEE Access"
+    },
+    {
+     "doi": "10.64751/ajmimc.2026.v5.n2(1).292",
+     "title": "Self-Attentive Semantic Distillation for Autonomous Criticality Mapping in Clinical Cyber Incident Reports",
+     "year": 2026,
+     "venue": "American Journal of Management and IOT Medical Computing"
+    },
+    {
+     "doi": "10.62915/2474-4921.1167",
+     "title": "The Need for Disaster Recovery and Incident Response: Understanding Disaster Recovery for Natural Disasters Versus Cyber-Attacks",
+     "year": 2019,
+     "venue": "The Kennesaw Journal of Undergraduate Research"
+    },
+    {
+     "doi": "10.69554/ucrn5868",
+     "title": "Developing cyber resilience through cyber incident response capability improvement : Presenting the cyber incident response capability development life cycle model",
+     "year": 2025,
+     "venue": "Cyber Security: A Peer-Reviewed Journal"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054637",
+     "title": "ThreatVectors: contextual workflows and visualizations for rapid cyber event triage",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054636",
+     "title": "Security operations centre: situation awareness, threat intelligence and cybercrime",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.47392/irjaem.2026.0081",
+     "title": "A Bayesian Network-Based Framework for Cyber Risk Assessment and Asset Prioritization",
+     "year": 2026,
+     "venue": "International Research Journal on Advanced Engineering and Management (IRJAEM)"
+    },
+    {
+     "doi": "10.1061/9780784486382.040",
+     "title": "Going beyond NASSCO PACP Guidelines for Sewer Condition Assessment and Criticality Prioritization",
+     "year": 2025,
+     "venue": "Pipelines 2025"
+    }
+   ]
+  },
+  {
+   "query": "national cyber incident scoring system",
+   "url": "https://api.crossref.org/works?query=national%20cyber%20incident%20scoring%20system&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:33+00:00",
+   "total_results": 8317058,
+   "top20": [
+    {
+     "doi": "10.5220/0005688301050116",
+     "title": "A Collaborative Analysis System for Cross-organization Cyber Incident Handling",
+     "year": 2016,
+     "venue": "Proceedings of the 2nd International Conference on Information Systems Security and Privacy"
+    },
+    {
+     "doi": "10.1109/cyconus.2016.7836618",
+     "title": "International cyber incident repository system: Information sharing on a global scale",
+     "year": 2016,
+     "venue": "2016 International Conference on Cyber Conflict (CyCon U.S.)"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054638",
+     "title": "Robust anti – swing control of 3D crane system using GA – FUZZY",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.13052/2245-1439.833",
+     "title": "SPINZ: A Speculating Incident Zone System for Incident Handling",
+     "year": 2018,
+     "venue": "Journal of Cyber Security and Mobility"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054635",
+     "title": "Table of contents",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.1109/iccc68994.2026.11511606",
+     "title": "Table Tennis Scoring System: Single-Camera, Real-Time Scoring System with Hybrid Image Processing",
+     "year": 2026,
+     "venue": "2026 IEEE 13th International Joint Conference on Cybernetics and Computational Cybernetics, Cyber-Medical Systems (ICCC)"
+    },
+    {
+     "doi": "10.69554/ucrn5868",
+     "title": "Developing cyber resilience through cyber incident response capability improvement : Presenting the cyber incident response capability development life cycle model",
+     "year": 2025,
+     "venue": "Cyber Security: A Peer-Reviewed Journal"
+    },
+    {
+     "doi": "10.1109/ascc.2015.7244767",
+     "title": "A prototype of cyber incident diagnosis mechanism for cyber attacks early recognition support system",
+     "year": 2015,
+     "venue": "2015 10th Asian Control Conference (ASCC)"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054637",
+     "title": "ThreatVectors: contextual workflows and visualizations for rapid cyber event triage",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.24251/hicss.2021.242",
+     "title": "Identifying Expertise Gaps in Cyber Incident Response: Cyber Defender Needs vs. Technological Development",
+     "year": 2021,
+     "venue": "Proceedings of the Annual Hawaii International Conference on System Sciences"
+    },
+    {
+     "doi": "10.31673/2409-7292.2021.031723",
+     "title": "Advanced IBM Qradar Incident Forensics enterprise information system cyber incident investigation technology",
+     "year": 2021,
+     "venue": "Modern information security"
+    },
+    {
+     "doi": "10.1115/icone25-67577",
+     "title": "Analysis of Cyber Security Incident in South Korean Nuclear Power Plant and Cyber Security Solutions for Nuclear Power Industrial Control System",
+     "year": 2017,
+     "venue": "Volume 4: Nuclear Safety, Security, Non-Proliferation and Cyber Security; Risk Management"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054636",
+     "title": "Security operations centre: situation awareness, threat intelligence and cybercrime",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.1109/gec61857.2024.10881876",
+     "title": "A Comprehensive Analysis of NGFWs for Cyber-Physical System Security After the CrowdStrike Incident",
+     "year": 2024,
+     "venue": "2024 Global Energy Conference (GEC)"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054639",
+     "title": "Dynamic adaptation and reconfiguration of security in mobile devices",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.1016/j.csa.2023.100034",
+     "title": "Security analysis of cyber physical system using digital forensic incident response",
+     "year": 2024,
+     "venue": "Cyber Security and Applications"
+    },
+    {
+     "doi": "10.1109/cyberincident.2017.8054640",
+     "title": "A case study about the use and evaluation of cyber deceptive methods against highly targeted attacks",
+     "year": 2017,
+     "venue": "2017 International Conference On Cyber Incident Response, Coordination, Containment &amp; Control (Cyber Incident)"
+    },
+    {
+     "doi": "10.1109/icauc68182.2026.11441049",
+     "title": "AI-Enabled Cyber Incident Management System: APK Analysis, Phishing Detection, and Cyber Threat Reporting",
+     "year": 2026,
+     "venue": "2026 International Conference on AI-Driven Smart Systems and Ubiquitous Computing (ICAUC)"
+    },
+    {
+     "doi": "10.1109/cybersa.2015.7166126",
+     "title": "Establishing national cyber situational awareness through incident information clustering",
+     "year": 2015,
+     "venue": "2015 International Conference on Cyber Situational Awareness, Data Analytics and Assessment (CyberSA)"
+    },
+    {
+     "doi": "10.21275/sr231003163025",
+     "title": "AI-Enhanced Cyber Incident Response and Recovery",
+     "year": 2023,
+     "venue": "International Journal of Science and Research (IJSR)"
+    }
+   ]
+  },
+  {
+   "query": "cyber risk matrix likelihood impact",
+   "url": "https://api.crossref.org/works?query=cyber%20risk%20matrix%20likelihood%20impact&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:33+00:00",
+   "total_results": 2324698,
+   "top20": [
+    {
+     "doi": "10.34190/iccws.18.1.1084",
+     "title": "Risk likelihood of planned and unplanned cyber-attacks in small business sectors:  A cybersecurity concern",
+     "year": 2023,
+     "venue": "International Conference on Cyber Warfare and Security"
+    },
+    {
+     "doi": "10.1057/s41283-022-00095-w",
+     "title": "Heterogeneity in cyber loss severity and its impact on cyber risk measurement",
+     "year": 2022,
+     "venue": "Risk Management"
+    },
+    {
+     "doi": "10.1109/eurospw55150.2022.00021",
+     "title": "Reviewing Estimates of Cybercrime Victimisation and Cyber Risk Likelihood",
+     "year": 2022,
+     "venue": "2022 IEEE European Symposium on Security and Privacy Workshops (EuroS&amp;PW)"
+    },
+    {
+     "doi": "10.22360/springsim.2018.anss.020",
+     "title": "Assessing the Impact of Cyberloafing on Cyber Risk",
+     "year": 2018,
+     "venue": "Annual Simulation Symposium (ANSS 2018)"
+    },
+    {
+     "doi": "10.34190/eccws.22.1.1184",
+     "title": "Determination of the end device risk likelihood using the Bayesian network tools",
+     "year": 2023,
+     "venue": "European Conference on Cyber Warfare and Security"
+    },
+    {
+     "doi": "10.48072/2525-7579.roge.2024.3987",
+     "title": "RISK MATRIX - CYBER OT",
+     "year": 2024,
+     "venue": "Proceedings of the Rio Oil and Gas"
+    },
+    {
+     "doi": "10.69591/jcai.v1i1.13",
+     "title": "Cyber Risk and Impact of Cyber Crimes on User's Online Victimization",
+     "year": 2023,
+     "venue": "Journal of Computing and Artificial Intelligence"
+    },
+    {
+     "doi": "10.63913/jcl.v1i3.6",
+     "title": "Quantifying the Financial Impact of Cyber Incidents: A Machine Learning Approach to Inform Legal Standards and Risk Management",
+     "year": 2025,
+     "venue": "Journal of Cyber Law"
+    },
+    {
+     "doi": "10.63913/jcl.v1i3.48",
+     "title": "Quantifying the Financial Impact of Cyber Incidents: A Machine Learning Approach to Inform Legal Standards and Risk Management",
+     "year": 2025,
+     "venue": "Journal of Cyber Law"
+    },
+    {
+     "doi": "10.1109/icimcis68501.2025.11327236",
+     "title": "Customer Voice Impact Matrix Using BERT and BERTopic for Eco Friendly Product Improvement Matrix",
+     "year": 2025,
+     "venue": "2025 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS)"
+    },
+    {
+     "doi": "10.29119/1641-3466.2023.179.32",
+     "title": "Assessing the impact of cyber risk perception on cyber insurance purchase decisions",
+     "year": 2023,
+     "venue": "Scientific Papers of Silesian University of Technology Organization and Management Series"
+    },
+    {
+     "doi": "10.1057/s41288-020-00171-w",
+     "title": "Analysis of the impact of cyber events for cyber insurance",
+     "year": 2020,
+     "venue": "The Geneva Papers on Risk and Insurance - Issues and Practice"
+    },
+    {
+     "doi": "10.1109/mcsi.2018.00036",
+     "title": "Identifying and Modeling the Impact of Cyber Threats in the Field of Cyber Risk Insurance",
+     "year": 2018,
+     "venue": "2018 5th International Conference on Mathematics and Computers in Sciences and Industry (MCSI)"
+    },
+    {
+     "doi": "10.1051/matecconf/201821004032",
+     "title": "Possibilities of modelling the impact of cyber threats in cyber risk insurance",
+     "year": 2018,
+     "venue": "MATEC Web of Conferences"
+    },
+    {
+     "doi": "10.1016/j.risk.2024.100001",
+     "title": "Optimism bias and its impact on cyber risk management decisions",
+     "year": 2025,
+     "venue": "Risk Sciences"
+    },
+    {
+     "doi": "10.34190/iccws.21.1.4378",
+     "title": "Quantifying the Economic Impact of Ransomware: Cyber Risk Modeling with Gamma Regression",
+     "year": 2026,
+     "venue": "International Conference on Cyber Warfare and Security"
+    },
+    {
+     "doi": "10.1109/cycon.2016.7529428",
+     "title": "Determining extremist organisations' likelihood of conducting cyber attacks",
+     "year": 2016,
+     "venue": "2016 8th International Conference on Cyber Conflict (CyCon)"
+    },
+    {
+     "doi": "10.1016/j.procs.2024.11.135",
+     "title": "Economic Impact of Cyber Attacks and Effective Cyber Risk Management Strategies: A light literature review and case study analysis",
+     "year": 2024,
+     "venue": "Procedia Computer Science"
+    },
+    {
+     "doi": "10.37727/jkdas.2017.19.6.2871",
+     "title": "A Discussion for Test of Covariance Matrix with Likelihood Ratio Principle",
+     "year": 2017,
+     "venue": "The Korean Data Analysis Society"
+    },
+    {
+     "doi": "10.1115/msec2023-102037",
+     "title": "Sustainable Product Design Decision-Making Through Integrated Risk Likelihood and Impact Analyses",
+     "year": 2023,
+     "venue": "Volume 1: Additive Manufacturing; Advanced Materials Manufacturing; Biomanufacturing; Life Cycle Engineering"
+    }
+   ]
+  },
+  {
+   "query": "cost-sensitive alert prioritization security operations center",
+   "url": "https://api.crossref.org/works?query=cost-sensitive%20alert%20prioritization%20security%20operations%20center&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:34+00:00",
+   "total_results": 1602634,
+   "top20": [
+    {
+     "doi": "10.22214/ijraset.2025.73727",
+     "title": "Enhancing Alert Prioritization in Enterprise Security Operations via Factor Graph Modeling",
+     "year": 2025,
+     "venue": "International Journal for Research in Applied Science and Engineering Technology"
+    },
+    {
+     "doi": "10.14722/wosoc.2024.23001",
+     "title": "SOC Service Areas: Identification, Prioritization, and Implementation",
+     "year": 2024,
+     "venue": "Proceedings 2024 Workshop on Security Operation Center Operations and Construction"
+    },
+    {
+     "doi": "10.1109/icaiset66439.2026.11541715",
+     "title": "Hierarchical Explainable Risk Scoring for Security Alert Prioritization in Security Operations Centers",
+     "year": 2026,
+     "venue": "2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)"
+    },
+    {
+     "doi": "10.36348/sjet.2024.v09i07.008",
+     "title": "Alert Prioritization Techniques in Security Monitoring: A Focus on Severity Averaging and Alert Entities",
+     "year": 2024,
+     "venue": "Saudi Journal of Engineering and Technology"
+    },
+    {
+     "doi": "10.1016/j.cose.2023.103583",
+     "title": "Combating alert fatigue with AlertPro: Context-aware alert prioritization using reinforcement learning for multi-step attack detection",
+     "year": 2024,
+     "venue": "Computers &amp; Security"
+    },
+    {
+     "doi": "10.11610/isij.5550",
+     "title": "Testbed of an Integrated Network Operations Center and a Security Operations Center Based on Open-Source Tools",
+     "year": 2024,
+     "venue": "Information &amp; Security: An International Journal"
+    },
+    {
+     "doi": "10.1016/j.cose.2024.103854",
+     "title": "Off-policy actor-critic deep reinforcement learning methods for alert prioritization in intrusion detection systems",
+     "year": 2024,
+     "venue": "Computers &amp; Security"
+    },
+    {
+     "doi": "10.37547/tajet/volume08issue06-04",
+     "title": "AI-Augmented Security Operations Centers: Predictive Threat Prioritization Using Business Impact Modeling and Machine Learning",
+     "year": 2026,
+     "venue": "The American Journal of Engineering and Technology"
+    },
+    {
+     "doi": "10.59543/jidmis.v3.1765",
+     "title": "Adaptive Behavioral Validation for Cloud Security Posture Management with AI-Driven Alert Prioritization",
+     "year": 2026,
+     "venue": "Journal of Intelligent Decision Making and Information Science"
+    },
+    {
+     "doi": "10.1287/opre.2020.1983",
+     "title": "Technical Note—Pricing and Prioritization in a Duopoly with Self-Selecting, Heterogeneous, Time-Sensitive Customers Under Low Utilization",
+     "year": 2020,
+     "venue": "Operations Research"
+    },
+    {
+     "doi": "10.3390/app16041884",
+     "title": "Unsupervised Learning Framework for Cyber Threat Detection, Anomaly Identification, and Alert Prioritization",
+     "year": 2026,
+     "venue": "Applied Sciences"
+    },
+    {
+     "doi": "10.1109/gcon69192.2026.11649152",
+     "title": "A Human Centric Risk-Based Security Alert Prioritization Using Splunk",
+     "year": 2026,
+     "venue": "2026 IEEE Guwahati Subsection Conference (GCON)"
+    },
+    {
+     "doi": "10.64388/irev9i11-1717339",
+     "title": "Design and Implementation of a Cost Effective GSM-Based Security Alert System",
+     "year": 2026,
+     "venue": "Iconic Research and Engineering Journals"
+    },
+    {
+     "doi": "10.1109/icsft66733.2026.11507831",
+     "title": "AI-Based Asynchronous Alert Enrichment Framework for Scalable Security Operations Centers",
+     "year": 2026,
+     "venue": "2026 International Conference on Smart Futuristic Technology"
+    },
+    {
+     "doi": "10.21275/sr24907112459",
+     "title": "Data Center Optimization for Telecom: Implementing Cost-Effective Strategies to Optimize Data Center Operations in Telecom, Focusing on Efficiency Improvements and Cost Reduction Initiatives, Aligned with Your Data Center Optimization Expertise",
+     "year": 2019,
+     "venue": "International Journal of Science and Research (IJSR)"
+    },
+    {
+     "doi": "10.1109/icaic67076.2026.11395735",
+     "title": "Toward Context-Aware Alert Classification in Security Operations Centers Using LLMs",
+     "year": 2026,
+     "venue": "2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC)"
+    },
+    {
+     "doi": "10.1108/jqme-05-2026-0105",
+     "title": "AI-driven predictive maintenance framework for public-service fleets: a cost-sensitive explainable prioritization and optimization approach",
+     "year": 2026,
+     "venue": "Journal of Quality in Maintenance Engineering"
+    },
+    {
+     "doi": "10.1145/3564625.3567997",
+     "title": "RAPID: Real-Time Alert Investigation with Context-aware Prioritization for Efficient Threat Discovery",
+     "year": 2022,
+     "venue": "Proceedings of the 38th Annual Computer Security Applications Conference"
+    },
+    {
+     "doi": "10.14722/wosoc.2026.23010",
+     "title": "Cognitive Threat Detection for SOC Operations: Automating Manipulation Tactic Analysis in Election Security",
+     "year": 2026,
+     "venue": "Proceedings 2026 Workshop on Security Operation Center Operations and Construction"
+    },
+    {
+     "doi": "10.14722/wosoc.2026.23016",
+     "title": "Experiences of Using Agentic AI to Fill Tooling Gaps in a Security Operations Centers",
+     "year": 2026,
+     "venue": "Proceedings 2026 Workshop on Security Operation Center Operations and Construction"
+    }
+   ]
+  },
+  {
+   "query": "human-in-the-loop alert triage intrusion detection",
+   "url": "https://api.crossref.org/works?query=human-in-the-loop%20alert%20triage%20intrusion%20detection&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:34+00:00",
+   "total_results": 2132636,
+   "top20": [
+    {
+     "doi": "10.55248/gengpi.07.0426.10818",
+     "title": "Rule-Based Logical Intrusion Detection System with GSM Alert for Smart Home Security",
+     "year": 2026,
+     "venue": "International Journal of Research Publication and Reviews"
+    },
+    {
+     "doi": "10.5220/0013180700003899",
+     "title": "Evaluating Explainable AI for Deep Learning-Based Network Intrusion Detection System Alert Classification",
+     "year": 2025,
+     "venue": "Proceedings of the 11th International Conference on Information Systems Security and Privacy"
+    },
+    {
+     "doi": "10.1109/icst50505.2020.9732867",
+     "title": "Modeling Study of Priority Intrusion Response Selected on Intrusion Detection System Alert",
+     "year": 2020,
+     "venue": "2020 6th International Conference on Science and Technology (ICST)"
+    },
+    {
+     "doi": "10.5373/jardcs/v11sp11/20193032",
+     "title": "Novel Pattern Matching based Alert Classification Approach For Intrusion Detection System",
+     "year": 2019,
+     "venue": "Journal of Advanced Research in Dynamical and Control Systems"
+    },
+    {
+     "doi": "10.3390/electronics15122739",
+     "title": "From Detection to Triage: Explainable Suspicious Flow Prioritization for Multiclass Intrusion Detection Using CSE-CIC-IDS2018",
+     "year": 2026,
+     "venue": "Electronics"
+    },
+    {
+     "doi": "10.1007/s10586-026-06611-x",
+     "title": "CLATS: a closed-loop adaptive triage system for operations-aware clinical alert optimization",
+     "year": 2026,
+     "venue": "Cluster Computing"
+    },
+    {
+     "doi": "10.1016/j.promfg.2019.06.197",
+     "title": "Alert Correlation for Cyber-Manufacturing Intrusion Detection",
+     "year": 2019,
+     "venue": "Procedia Manufacturing"
+    },
+    {
+     "doi": "10.5220/0014562700005024",
+     "title": "WISE: Wildlife Intrusion Surveillance and Edge Intelligence - An IoT-Enabled Real-Time Detection and Alert System for Smart Agriculture",
+     "year": 2025,
+     "venue": "Proceedings of the 1st International Conference on Computational and Cognitive Systems Science"
+    },
+    {
+     "doi": "10.55041/ijsrem12491",
+     "title": "Bank Locker Intrusion Detection and Alert System",
+     "year": 2022,
+     "venue": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT"
+    },
+    {
+     "doi": "10.1109/thms.2022.3203021",
+     "title": "Privacy-Preserving, Thermal Vision With Human in the Loop Fall Detection Alert System",
+     "year": 2023,
+     "venue": "IEEE Transactions on Human-Machine Systems"
+    },
+    {
+     "doi": "10.31525/ct1-nct04142879",
+     "title": "Automated Detection and Triage of Large Vessel Occlusions Using Artificial Intelligence for Early and Rapid Treatment (ALERT)",
+     "year": 2019,
+     "venue": "Case Medical Research"
+    },
+    {
+     "doi": "10.1145/3184898",
+     "title": "A Systematic Mapping Study on Intrusion Alert Analysis in Intrusion Detection Systems",
+     "year": 2018,
+     "venue": "ACM Computing Surveys"
+    },
+    {
+     "doi": "10.3390/safety11040120",
+     "title": "Uncertainty-Aware Adaptive Intrusion Detection Using Hybrid CNN-LSTM with cWGAN-GP Augmentation and Human-in-the-Loop Feedback",
+     "year": 2025,
+     "venue": "Safety"
+    },
+    {
+     "doi": "10.1007/s42454-020-00017-9",
+     "title": "Blacksite: human-in-the-loop artificial immune system for intrusion detection in internet of things",
+     "year": 2021,
+     "venue": "Human-Intelligent Systems Integration"
+    },
+    {
+     "doi": "10.1109/icc51166.2024.10622433",
+     "title": "Leveraging Human-In-The-Loop Machine Learning and GAN-Synthesized Data for Intrusion Detection in Unmanned Aerial Vehicle Networks",
+     "year": 2024,
+     "venue": "ICC 2024 - IEEE International Conference on Communications"
+    },
+    {
+     "doi": "10.24200/sci.2023.58059.5550",
+     "title": "Forecasting Intrusion in Critical Power Systems Infrastructure Using Advanced Autoregressive Moving Average (AARMA) Based Intrusion Detection for Efficacious Alert System",
+     "year": 2023,
+     "venue": "Scientia Iranica"
+    },
+    {
+     "doi": "10.1109/icces67310.2025.11337043",
+     "title": "Wild Animal Intrusion Detection and Alert System using Machine Vision",
+     "year": 2025,
+     "venue": "2025 10th International Conference on Communication and Electronics Systems (ICCES)"
+    },
+    {
+     "doi": "10.22214/ijraset.2023.56367",
+     "title": "FaceBreach Alert: Multi-Modal Intrusion Detection emphasizing Face Recognition",
+     "year": 2023,
+     "venue": "International Journal for Research in Applied Science and Engineering Technology"
+    },
+    {
+     "doi": "10.1002/sec.1173",
+     "title": "A test of intrusion alert filtering based on network information",
+     "year": 2015,
+     "venue": "Security and Communication Networks"
+    },
+    {
+     "doi": "10.22219/repositor.v2i3.30504",
+     "title": "Pengelompokan Notifikasi Alert Intrusion Detection System Snort Pada Bot Telegram Menggunakan Algoritma K-Means",
+     "year": 2024,
+     "venue": "Jurnal Repositor"
+    }
+   ]
+  },
+  {
+   "query": "business continuity cyber resilience machine learning decision support",
+   "url": "https://api.crossref.org/works?query=business%20continuity%20cyber%20resilience%20machine%20learning%20decision%20support&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:35+00:00",
+   "total_results": 3316138,
+   "top20": [
+    {
+     "doi": "10.1109/iccr61006.2024.10532999",
+     "title": "Navigating the Cyber Landscape: A Framework for Transitioning from Business Continuity to Digital Resilience",
+     "year": 2024,
+     "venue": "2024 2nd International Conference on Cyber Resilience (ICCR)"
+    },
+    {
+     "doi": "10.69554/lmgo9459",
+     "title": "Integrating cyber resilience: A critical component of comprehensive business resilience",
+     "year": 2025,
+     "venue": "Journal of Business Continuity &amp; Emergency Planning"
+    },
+    {
+     "doi": "10.69554/prjy4917",
+     "title": "Building organisational cyber resilience: A strategic knowledge-based view of cyber security management",
+     "year": 2015,
+     "venue": "Journal of Business Continuity &amp; Emergency Planning"
+    },
+    {
+     "doi": "10.69554/ztmd5738",
+     "title": "Enhancing business continuity with expert insights: Lessons from a large-scale cyber resilience simulation",
+     "year": 2025,
+     "venue": "Journal of Business Continuity &amp; Emergency Planning"
+    },
+    {
+     "doi": "10.1108/crr-10-2021-0034",
+     "title": "Cyber resilience in supply chain system security using machine learning for threat predictions",
+     "year": 2022,
+     "venue": "Continuity &amp; Resilience Review"
+    },
+    {
+     "doi": "10.69554/ofgo9123",
+     "title": "Exercising cyber resilience: The Finnish experience",
+     "year": 2022,
+     "venue": "Journal of Business Continuity &amp; Emergency Planning"
+    },
+    {
+     "doi": "10.69554/zlzm8911",
+     "title": "Redefining cyber resilience : Through the risk register lens",
+     "year": 2024,
+     "venue": "Journal of Business Continuity &amp; Emergency Planning"
+    },
+    {
+     "doi": "10.1108/crr-09-2022-0016",
+     "title": "Always-on business: integrating business continuity and business resilience",
+     "year": 2023,
+     "venue": "Continuity &amp; Resilience Review"
+    },
+    {
+     "doi": "10.1016/j.dss.2024.114253",
+     "title": "Cyber resilience framework for online retail using explainable deep learning approaches and blockchain-based consensus protocol",
+     "year": 2024,
+     "venue": "Decision Support Systems"
+    },
+    {
+     "doi": "10.1504/ijbcrm.2025.10070402",
+     "title": "Estimating Cyber Attack Risk from Healthcare Employee Behaviour using a HEXACO Machine Learning Model",
+     "year": 2025,
+     "venue": "International Journal of Business Continuity and Risk Management"
+    },
+    {
+     "doi": "10.1109/icmlt69916.2026.11688625",
+     "title": "Leveraging Machine Learning Algorithms in Decision Support Systems for Business Enterprises",
+     "year": 2026,
+     "venue": "2026 11th International Conference on Machine Learning Technologies (ICMLT)"
+    },
+    {
+     "doi": "10.63200/jebmass.v4i4.269",
+     "title": "OPERATIONAL CYBER RESILIENCE SEBAGAI VARIABEL MEDIASI ANTARA DIGITAL TRANSFORMATION DAN BUSINESS CONTINUITY PADA PT XYZ",
+     "year": 2026,
+     "venue": "JOURNAL OF ECONOMICS, BUSINESS, MANAGEMENT, ACCOUNTING AND SOCIAL SCIENCES"
+    },
+    {
+     "doi": "10.37547/tajas/volume08issue06-01",
+     "title": "Modeling the Economic Impact of Ransomware Attacks: A Predictive Analytics Framework for Business Continuity Optimization and Cyber Resilience Investment Planning",
+     "year": 2026,
+     "venue": "The American Journal of Applied Sciences"
+    },
+    {
+     "doi": "10.5171/2023.4239423",
+     "title": "Cyber Resilience Strategy as A Key Element of Building A GIS Business Continuity Plan",
+     "year": 2023,
+     "venue": "Communications of International Proceedings"
+    },
+    {
+     "doi": "10.1504/ijbcrm.2025.148357",
+     "title": "Estimating cyber attack risk from healthcare employee behaviour using a HEXACO machine learning model",
+     "year": 2025,
+     "venue": "International Journal of Business Continuity and Risk Management"
+    },
+    {
+     "doi": "10.2172/1884405",
+     "title": "Cyber Decision Support System for Industrial Control Systems.",
+     "year": 2021,
+     "venue": "Proposed for presentation at the SNL workshop on Machine Learning and Deep Learning 2021 held July 19-22, 2021 in Albuquerque, NM."
+    },
+    {
+     "doi": "10.1016/j.dss.2022.113880",
+     "title": "ProcessGAN: Supporting the creation of business process improvement ideas through generative machine learning",
+     "year": 2023,
+     "venue": "Decision Support Systems"
+    },
+    {
+     "doi": "10.1016/j.dss.2018.12.006",
+     "title": "A decision support methodology for a disaster-caused business continuity management",
+     "year": 2019,
+     "venue": "Decision Support Systems"
+    },
+    {
+     "doi": "10.1016/j.dss.2024.114194",
+     "title": "Explainable artificial intelligence and agile decision-making in supply chain cyber resilience",
+     "year": 2024,
+     "venue": "Decision Support Systems"
+    },
+    {
+     "doi": "10.17485/ijst/v17i10.148",
+     "title": "MaliceSpotter: Revolutionizing Cyber Security with Machine Learning for Phishing Resilience",
+     "year": 2024,
+     "venue": "Indian Journal Of Science And Technology"
+    }
+   ]
+  },
+  {
+   "query": "analytic hierarchy process cybersecurity risk prioritization",
+   "url": "https://api.crossref.org/works?query=analytic%20hierarchy%20process%20cybersecurity%20risk%20prioritization&filter=from-pub-date:2015-01-01,until-pub-date:2026-10-30,type:journal-article,type:proceedings-article&rows=20&sort=relevance&select=DOI,title,issued,container-title,type",
+   "requested_utc": "2026-10-30T10:40:35+00:00",
+   "total_results": 1646313,
+   "top20": [
+    {
+     "doi": "10.13033/ijahp.v8i3.442",
+     "title": "PRIORITIZATION OF PERFORMANCE MEASURES USING ANALYTIC HIERARCHY PROCESS",
+     "year": 2016,
+     "venue": "International Journal of the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.5220/0013197300003929",
+     "title": "Cybersecurity Risk Assessment Through Analytic Hierarchy Process: Integrating Multicriteria and Sensitivity Analysis",
+     "year": 2025,
+     "venue": "Proceedings of the 27th International Conference on Enterprise Information Systems"
+    },
+    {
+     "doi": "10.13033/ijahp.v16i3.1237",
+     "title": "EVALUATION AND PRIORITIZATION OF MUTUAL FUNDS USING INTUITIONISTIC FUZZY ANALYTIC HIERARCHY PROCESS",
+     "year": 2025,
+     "venue": "International Journal of the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.1109/ic3.2018.8530569",
+     "title": "Requirement Risk Prioritization Using Analytic Hierarchy Process: A Gateway to Identify Risky Requirements",
+     "year": 2018,
+     "venue": "2018 Eleventh International Conference on Contemporary Computing (IC3)"
+    },
+    {
+     "doi": "10.1108/bpmj-10-2024-1003",
+     "title": "Risk prioritization in enterprise supply chains: application of fuzzy analytic hierarchy process",
+     "year": 2025,
+     "venue": "Business Process Management Journal"
+    },
+    {
+     "doi": "10.13033/ijahp.v8i1.365",
+     "title": "PRIORITIZATION OF SMALL BUSINESS ENTERPRISE OWNER CONCERNS ABOUT THE AFFORDABLE CARE ACT USING THE ANALYTIC HIERARCHY PROCESS",
+     "year": 2016,
+     "venue": "International Journal of the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.13033/ijahp.v10i3.586",
+     "title": "PRIORITIZATION OF ALTERNATIVES BASED ON ANALYTIC HIERARCHY PROCESS USING INTERVAL TYPE-2 FUZZY SETS AND PROBABILITY-THEORETICAL INTERVAL COMPARISON",
+     "year": 2018,
+     "venue": "International Journal of the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.1038/s41598-026-46519-5",
+     "title": "An integrated hybrid HAZOP and fuzzy analytic hierarchy process framework for enhanced safety risk prioritization in process industries",
+     "year": 2026,
+     "venue": "Scientific Reports"
+    },
+    {
+     "doi": "10.5958/2455-7110.2018.00028.9",
+     "title": "Collection of software requisite prioritization with analytic hierarchy process",
+     "year": 2018,
+     "venue": "Global Sci-Tech"
+    },
+    {
+     "doi": "10.13033/ijahp.v10i1.563",
+     "title": "AN AHP BASED PRIORITIZATION MODEL FOR RISK EVALUATION FACTORS IN THE AUTOMOTIVE INDUSTRY",
+     "year": 2018,
+     "venue": "International Journal of the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.13033/isahp.y2016.050",
+     "title": "CRITICAL PROCESSES PRIORITIZATION IN A SANITARY COMPANY USING ANALYTIC HIERARCHY PROCESS",
+     "year": 2016,
+     "venue": "Proceedings of the International Symposium on the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.20535/tacs.2664-29132025.2.338865",
+     "title": "Automating Cybersecurity Decision‑Making with AI and the Analytic Hierarchy Process",
+     "year": 2025,
+     "venue": "Theoretical and Applied Cybersecurity"
+    },
+    {
+     "doi": "10.5592/co/2crocee.2023.133",
+     "title": "APPLICATION OF ANALYTIC HIERARCHY PROCESS (AHP) IN EARTHQUAKE RISK ASSESSMENT",
+     "year": 2023,
+     "venue": "2nd Croatian Conference on Earthquake Engineering ‒ 2CroCEE"
+    },
+    {
+     "doi": "10.13033/ijahp.v8i1.304",
+     "title": "APPLYING THE ANALYTIC HIERARCHY PROCESS TO OIL SANDS ENVIRONMENTAL COMPLIANCE RISK MANAGEMENT",
+     "year": 2016,
+     "venue": "International Journal of the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.35341/afet.1137083",
+     "title": "Production of Flood Risk Maps of Inebolu Basin Using Different Fuzzy Analytic Hierarchy Process Methods",
+     "year": 2023,
+     "venue": "Afet ve Risk Dergisi"
+    },
+    {
+     "doi": "10.13033/isahp.y2016.095",
+     "title": "PRIORITIZATION OF PERFORMANCE MEASURES USING AHP",
+     "year": 2016,
+     "venue": "Proceedings of the International Symposium on the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.33642/ijbass.v5n8p4",
+     "title": "System Change Controls: A Prioritization Approach Using Analytic Hierarchy Process",
+     "year": 2019,
+     "venue": "International Journal of Business and Applied Social Science"
+    },
+    {
+     "doi": "10.3390/sym17020204",
+     "title": "Prioritization of Human-Centric and Sustainable City Criteria by Proportional Spherical Fuzzy Analytic Hierarchy Process",
+     "year": 2025,
+     "venue": "Symmetry"
+    },
+    {
+     "doi": "10.13033/ijahp.v7i3.293",
+     "title": "EVALUATION AND PRIORITIZATION OF FACTORS AFFECTING ENERGY EXPENDITURE OF WORKERS ENGAGED IN MANUAL MATERIAL HANDLING USING ANALYTICAL HIERARCHY PROCESS",
+     "year": 2015,
+     "venue": "International Journal of the Analytic Hierarchy Process"
+    },
+    {
+     "doi": "10.3390/su17052314",
+     "title": "Which Factors Are More Important in Land Consolidation Block Planning? An Analytic Hierarchy Process Approach for Prioritization",
+     "year": 2025,
+     "venue": "Sustainability"
+    }
+   ]
+  }
+ ]
+}

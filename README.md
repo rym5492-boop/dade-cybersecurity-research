@@ -1,14 +1,21 @@
-# DADE — Reproducibility Package (revised version, October 2026)
+# DADE: code, data and results (second revision, 30 October 2026)
 
-Code and results for the revised paper **"An AHP-Guided Decision-Support Framework Linking Network
-Intrusion Detection to Business Continuity Prioritization"** (Khalid Khadhear Alenezi and Mohamed Ayari,
-Northern Border University). DADE is kept as the name of the system.
+Code and results for the journal manuscript **"Intrusion detection and business impact analysis for
+continuity prioritization: a leakage-audited evaluation of an analytic hierarchy process rule against simpler
+baselines"** (Khalid Khadhear Alenezi and Mohamed Ayari, Northern Border University) and for the MSc thesis
+on the same study. DADE is used only as the name of the decision rule; it implies no dynamic or adaptive
+behaviour.
 
-**Every number in the revised paper comes from the scripts in `src/04_revision` (r01–r15) and their
-outputs in `results/revision`.** See `src/04_revision/README.md` for what each script does and the order
-to run them. The scripts and results of the earlier draft (`src/01_*`, `src/02_*`, `src/03_*`, `results/*.json`)
-are kept unchanged so that every correction can be audited; the sections further below describe that
-earlier draft and some of its practices were corrected in the revision (see "What changed").
+**Every number in the manuscript and the thesis comes from the scripts in `src/04_revision` (r01 to r24) and
+their outputs in `results/revision`,** except the group consistency ratio of the September AHP answers
+(0.050), which comes from the earlier analysis file `results/ahp_weights_results.json`. The figures and related-work coverage records of the manuscript are made
+by `src/05_manuscript`. See `src/04_revision/README.md` for what each script does and the order to run them,
+`docs/REPRODUCIBILITY.md` for dataset hashes, the split manifest, the clean-room re-run and who executed what,
+`docs/PREREGISTRATION_AUDIT.md` for planned versus exploratory analyses, and `docs/COMMIT_MAP.md` for the
+original commit identifiers quoted in the thesis and the manuscript. The scripts and results of the earlier
+draft (`src/01_*`, `src/02_*`, `src/03_*`, `results/*.json`) are kept unchanged so that every correction can be
+audited; the sections further below describe that earlier draft, and some of its practices were corrected in
+the revision (see "What changed").
 
 ## Data (download and place in `data/` or the repository root)
 
@@ -22,14 +29,15 @@ earlier draft and some of its practices were corrected in the revision (see "Wha
 Binary label: NSL-KDD attack = label not `normal`; UNSW-NB15 `label` = 1; CICIDS2017 `Attack Type` not
 `Normal Traffic`; CICIoT2023 `MappedLabel` not `Benign`. Identifier and label columns are never used as features.
 
-## Environment used for the revision
+## Environment and re-runs
 
-Python 3.13, scikit-learn 1.9, pandas 3.0, numpy 2.5 (cloud run). The first author re-ran r01–r11 on his own
-computer from a fresh copy of this repository on 17 October 2026 and reproduced every reported value; logistic
-regression differed only in the fourth decimal (different scikit-learn patch version). Random seed 42 everywhere.
-The first author ran r12 on the full CICIDS2017 and CICIoT2023 files on 20 October 2026; every count matched Table 4.
-After the expert answers arrived, the first author re-ran the final r06, r10, r13 and r14 on his own computer from a
-fresh copy of this repository on 21 October 2026 and obtained result files identical to those in `results/revision`.
+Python 3.13.18, NumPy 2.5.3, pandas 3.0.5, scikit-learn 1.9.1, SciPy 1.18.1, Matplotlib 3.11.2
+(`requirements-lock.txt`); random seed 42 everywhere. `python src/04_revision/reproduce.py` checks the dataset
+hashes, re-runs every analysis script whose data are present, compares each output with the stored one and
+writes a dated report to `results/reproduction/`. Only such logged reports count as evidence of
+reproduction: the re-runs the first author reported on 17, 21 and 24 October 2026 left no report and are not
+used as evidence. The clean-room re-run of 30 October 2026 and the pending re-run by the first author are
+described in `docs/REPRODUCIBILITY.md`.
 
 ## What changed in the revision (summary)
 
@@ -40,10 +48,11 @@ fresh copy of this repository on 21 October 2026 and obtained result files ident
 * Threat severity is read from a *predicted* attack category; the earlier ablation used the true category (r04).
 * The earlier sensitivity and cross-sector analyses drew business-context values at random and are withdrawn.
 * Decision quality is evaluated against blinded expert priority labels on 30 scenarios (r09, r10). r10 was
-  committed (a5788aa, 17 October 2026) before any label was collected; the 120 labels are in
+  committed (original a5788aa, public 873c3a7, 17 October 2026) before any label was collected; the 120 labels are in
   `data/scenario_labels.csv` and r10 was run unchanged (21 October 2026).
 * A secondary panel of four external practitioners, who took no part in the AHP, labelled all 30 scenarios (r13; compared with DADE and the baselines in r14).
-  It was declared in `src/04_revision/PREREG_ADDENDUM_external_panel.md` before their answers were analysed.
+  It was declared in `src/04_revision/PREREG_ADDENDUM_external_panel.md`, committed two minutes after the first external answer
+  arrived and before the answers were analysed, so this analysis is reported as secondary (`docs/PREREGISTRATION_AUDIT.md`).
 
 ---
 

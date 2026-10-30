@@ -30,6 +30,8 @@ A fresh clone of the repository, with only the four files above added, was run f
 (Python 3.13.18, NumPy 2.5.3, pandas 3.0.5, scikit-learn 1.9.1, SciPy 1.18.1, Matplotlib 3.11.2;
 `requirements-lock.txt`). Every output was compared with the stored one.
 
+Paper table and figure numbers in this section are those of the paper version of 24 October 2026.
+
 | Script | Result of the comparison |
 | --- | --- |
 | r01 UNSW-NB15 detection (paper Table 6) | identical except the three run times; stored test scores identical |
@@ -49,12 +51,17 @@ A fresh clone of the repository, with only the four files above added, was run f
 | --- | --- | --- |
 | Scripts r01–r06, r09–r11, r13–r16 (first revision, 16–28 October 2026) | AI assistant, on instructions and review of the author | cloud workspace |
 | Scripts r07, r08, r12 (CIC files) | the author | author's computer (library versions not recorded) |
-| Expert and practitioner data collection, form design, consent | the author | form service |
+| Expert and practitioner data collection, form content, consent | the author | form service |
+| Building the online forms and closing them on 25 October 2026 (with read access to the form account, which holds the named responses) | AI assistant, at the author's request | form service, through a connector |
 | Second revision r17–r24 and the clean-room re-run above (30 October 2026) | AI assistant | cloud workspace |
+| Manuscript figures and related-work coverage search (`src/05_manuscript`, 30 October 2026) | AI assistant | cloud workspace |
 | Independent re-run of every script, including r07, r08, r12 and r22 | the author, with `reproduce.py` (not yet done on 30 October 2026; no report in `results/reproduction/` yet) | author's computer; report in `results/reproduction/` |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.
+The re-runs the author reported on 17, 21 and 24 October 2026 left no report or log in this repository and are
+not used as evidence. Scripts r17 to r24 were first run on 30 October 2026, so the clean-room comparison above
+does not cover them.
 
 ## 4. Re-running everything yourself
 
@@ -63,14 +70,14 @@ pip install -r requirements-lock.txt
 python src/04_revision/reproduce.py
 ```
 The script records the user, machine and versions, checks the SHA-256 of each dataset file, copies the stored
-results, runs every script whose data are present, compares each output with the stored version and writes
+results, runs every analysis script (r01 to r22) whose data are present, compares each output with the stored version and writes
 `results/reproduction/<date>/REPRODUCTION_REPORT.md`. Scripts whose data are missing are skipped and their
 stored results are kept.
 
 ## 5. Repository history
 
-Until 25 and 28 October 2026 the data files recorded, for each expert and practitioner code, the field,
-experience band and sector. These were then reduced to panel totals, but the old versions stayed in the
+Until 25 and 28 October 2026 the data files recorded the field and experience band of each expert and
+practitioner code and the sector of each practitioner. These were then reduced to panel totals, but the old versions stayed in the
 history, where a reader could link a code to a person in a small panel. The original repository is therefore
 kept unchanged and private as evidence (its GitHub-signed commits date the pre-registration), and this public
 repository carries the same history with only those fields removed. `docs/COMMIT_MAP.md` maps every
