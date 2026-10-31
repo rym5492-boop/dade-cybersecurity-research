@@ -1,0 +1,5 @@
+Saved results\revision\r21_panel_audit.json
+{'scenarios_with_split_vote': 18, 'scenarios_unanimous': 12, 'scenarios_where_consensus_changes_in_over_20pct_of_rater_bootstraps': 14} {'scenarios_with_split_vote': 18, 'scenarios_unanimous': 12, 'scenarios_where_consensus_changes_in_over_20pct_of_rater_bootstraps': 15}
+{'crosstab_rows_expert_cols_practitioner_LMH': [[3, 2, 0], [0, 4, 2], [0, 4, 15]], 'quadratic_kappa_between_consensus_labels': 0.7414, 'exact_agreement': 0.7333, 'scenarios_experts_higher': 4, 'scenarios_practitioners_higher': 4, 'sign_test_p_two_sided': 1.0}
+{'exact': {'icc1_within_scenario': 0.1212, 'labels_per_scenario': 4.0, 'design_effect': 1.364, 'effective_n_of_120': 88.0}, 'cost': {'icc1_within_scenario': 0.2343, 'labels_per_scenario': 4.0, 'design_effect': 1.703, 'effective_n_of_120': 70.5}}
+

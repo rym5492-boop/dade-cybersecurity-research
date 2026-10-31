@@ -1,0 +1,6 @@
+FIT 122738  VAL 26301  CAL 26302  TEST 82332
+LogisticRegression     acc 0.8093  bal 0.7910  FPR 0.3904  recall 0.9724  CV 0.9353  (178.8s)
+RandomForest           acc 0.8720  bal 0.8591  FPR 0.2685  recall 0.9866  CV 0.9599  (56.1s)
+HistGradientBoosting   acc 0.8731  bal 0.8607  FPR 0.2618  recall 0.9831  CV 0.9560  (14.3s)
+Saved results\revision\r01_unsw_detection.json
+

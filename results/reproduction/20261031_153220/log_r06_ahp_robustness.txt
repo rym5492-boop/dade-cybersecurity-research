@@ -1,0 +1,48 @@
+Saved results\revision\r06_ahp_robustness.json
+{
+"E1": {
+"CR_geometric_mean": 0.0575,
+"CR_eigenvalue": 0.058,
+"straight_lined_all_equal": false,
+"consistent_CR_le_0.10": true
+},
+"E2": {
+"CR_geometric_mean": 0.0053,
+"CR_eigenvalue": 0.0053,
+"straight_lined_all_equal": false,
+"consistent_CR_le_0.10": true
+},
+"E3": {
+"CR_geometric_mean": 0.134,
+"CR_eigenvalue": 0.1344,
+"straight_lined_all_equal": false,
+"consistent_CR_le_0.10": false
+},
+"E4": {
+"CR_geometric_mean": 0.0786,
+"CR_eigenvalue": 0.0789,
+"straight_lined_all_equal": false,
+"consistent_CR_le_0.10": true
+},
+"E5": {
+"CR_geometric_mean": 0.0747,
+"CR_eigenvalue": 0.0755,
+"straight_lined_all_equal": false,
+"consistent_CR_le_0.10": true
+},
+"E6": {
+"CR_geometric_mean": 0.0957,
+"CR_eigenvalue": 0.0961,
+"straight_lined_all_equal": false,
+"consistent_CR_le_0.10": true
+}
+}
+AIJ_all_six (paper)                           0.0184  ['TS', 'BI', 'AC', 'MLS', 'RTO', 'RPO', 'HI']  {'TS': 0.237, 'AC': 0.183, 'BI': 0.235, 'HI': 0.061, 'RTO': 0.094, 'RPO': 0.079, 'MLS': 0.111}
+AIJ_excluding_straight_liner []               0.0184  ['TS', 'BI', 'AC', 'MLS', 'RTO', 'RPO', 'HI']  {'TS': 0.237, 'AC': 0.183, 'BI': 0.235, 'HI': 0.061, 'RTO': 0.094, 'RPO': 0.079, 'MLS': 0.111}
+AIJ_consistent_only ['E1', 'E2', 'E4', 'E5', 'E6'] 0.0155  ['TS', 'BI', 'AC', 'MLS', 'RTO', 'RPO', 'HI']  {'TS': 0.293, 'AC': 0.197, 'BI': 0.252, 'HI': 0.047, 'RTO': 0.075, 'RPO': 0.057, 'MLS': 0.08}
+AIJ_excluding_most_inconsistent [E3]          0.0155  ['TS', 'BI', 'AC', 'MLS', 'RTO', 'RPO', 'HI']  {'TS': 0.293, 'AC': 0.197, 'BI': 0.252, 'HI': 0.047, 'RTO': 0.075, 'RPO': 0.057, 'MLS': 0.08}
+AIP_all_six                                   -       ['TS', 'BI', 'AC', 'MLS', 'RTO', 'RPO', 'HI']  {'TS': 0.237, 'AC': 0.183, 'BI': 0.235, 'HI': 0.061, 'RTO': 0.094, 'RPO': 0.079, 'MLS': 0.111}
+bootstrap CI: {'TS': [0.126, 0.352], 'AC': [0.131, 0.225], 'BI': [0.154, 0.316], 'HI': [0.033, 0.107], 'RTO': [0.058, 0.143], 'RPO': [0.046, 0.141], 'MLS': [0.052, 0.214]}
+P(rank1): {'TS': 0.473, 'AC': 0.0, 'BI': 0.48, 'HI': 0.0, 'RTO': 0.0, 'RPO': 0.0, 'MLS': 0.047}
+projected: {'E1': {'CR_before': np.float64(0.0575), 'CR_if_suggestions_accepted': np.float64(0.0575), 'questions_sent': [1, 2, 7, 12, 17, 18]}, 'E2': {'CR_before': np.float64(0.0053), 'CR_if_suggestions_accepted': np.float64(0.0053), 'questions_sent': [2, 7, 18]}, 'E6': {'CR_before': np.float64(0.0957), 'CR_if_suggestions_accepted': np.float64(0.0957), 'questions_sent': [15, 17, 19]}}
+

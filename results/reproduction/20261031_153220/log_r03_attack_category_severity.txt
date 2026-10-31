@@ -1,0 +1,4 @@
+validation: acc 0.7628  macroF1 0.6053  severity MAE 0.0561  exact 0.7628
+test: acc 0.6742  macroF1 0.4954  severity MAE 0.1064  exact 0.6742
+Saved results\revision\r03_attack_category.json
+

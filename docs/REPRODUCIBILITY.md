@@ -1,4 +1,4 @@
-# Reproducibility record (30 October 2026)
+# Reproducibility record (30 and 31 October 2026)
 
 Answers item P0-6 of the supervisor's review of 30 October 2026: data and code provenance, an independent
 re-run from a fresh environment, and a record of who executed what.
@@ -16,8 +16,11 @@ UNSW-NB15 files; the training file has 175,341 rows and the testing file 82,332,
 | UNSW_NB15_testing-set.csv | 82,332 | 734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559 |
 | KDDTrain+.txt | 125,973 | 1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95 |
 | KDDTest+.txt | 22,544 | fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84 |
-| cicids2017_cleaned.csv | 2,520,751 | recorded by `reproduce.py` on the author's computer |
-| balanced_7classes_500000_each.csv | 2,878,962 | recorded by `reproduce.py` on the author's computer |
+| cicids2017_cleaned.csv | 2,520,751 | 0ce5a39edffcde3f… (first 16 characters, as printed in the author's re-run report of 31 October 2026) |
+| balanced_7classes_500000_each.csv | 2,878,962 | e09635e13f7562d0… (idem) |
+
+The author's own UNSW-NB15 files (re-run of 31 October 2026, section 2b) are another copy: their SHA-256 begin with
+0ebd9eb06d53ae22 (training) and 7ec02e7e44d72bd2 (testing), but every result computed from them was identical.
 
 Split manifest: `results/revision/splits/unsw_fit_val_cal_ids.csv` lists the `id` of every row of the
 UNSW-NB15 training file and whether it belongs to FIT (122,738 rows), VAL (26,301) or CAL (26,302); the parts
@@ -42,8 +45,23 @@ Paper table and figure numbers in this section are those of the paper version of
 | r06 AHP robustness (paper Table 11, Figure 4) | identical |
 | r09 scenarios, r10 decision evaluation (paper Table 13, Figure 5), r11, r13, r14, r16 | identical |
 | r15 figures | images redrawn from identical data; PNG bytes differ only through the plotting library |
-| r07, r08, r12 (CIC files; paper Table 7, Figure 2) | not re-run in the cloud: the CIC files could not be obtained there. To be re-run by the author with `reproduce.py` (section 4) |
-| r22 transfer audit | run on UNSW-NB15 only: stored r07 subsets, feature percentiles and the adaptation independence check; the sensitivity runs need the CIC files and are part of the author's re-run |
+| r07, r08, r12 (CIC files; paper Table 7, Figure 2) | not re-run in the cloud: the CIC files could not be obtained there; re-run by the author (section 2b) |
+| r22 transfer audit | run on UNSW-NB15 only in the cloud; complete run by the author (section 2b) |
+
+## 2b. Independent re-run by the author (31 October 2026)
+
+The first author ran `python src/04_revision/reproduce.py` on his own computer (Windows 11, Python 3.13.17 with the
+locked versions above) on a fresh download of this repository, with all six dataset files. The unedited report and
+the console log of every script are in `results/reproduction/20261031_153220/`.
+
+| Scripts | Result of the comparison |
+| --- | --- |
+| r02–r04, r06–r08, r10–r14, r16–r21 | every JSON result identical, including the CIC scripts r07, r08, r12 and the second-revision scripts r17–r21 |
+| r01, r05 | identical except Logistic Regression, which differs in the fourth decimal (for example test accuracy 0.8092 stored, 0.8093 re-run), as in the cloud re-run; Random Forest, Decision Tree and HGB identical |
+| r09, r10, r18 CSV and Markdown outputs | identical after normalising Windows line endings |
+| score files (`.npz`) | identical arrays, except the Logistic Regression scores of r01 |
+| r15 figures | images redrawn; bytes differ |
+| r22 | the CIC parts (adaptation independence on all three datasets, sensitivity variants V1–V3) were run for the first time; `results/revision/r22_cross_dataset_audit.json` now holds this complete run |
 
 ## 3. Who executed what
 
@@ -55,7 +73,7 @@ Paper table and figure numbers in this section are those of the paper version of
 | Building the online forms and closing them on 25 October 2026 (with read access to the form account, which holds the named responses) | AI assistant, at the author's request | form service, through a connector |
 | Second revision r17–r24 and the clean-room re-run above (30 October 2026) | AI assistant | cloud workspace |
 | Manuscript figures and related-work coverage search (`src/05_manuscript`, 30 October 2026) | AI assistant | cloud workspace |
-| Independent re-run of every script, including r07, r08, r12 and r22 | the author, with `reproduce.py` (not yet done on 30 October 2026; no report in `results/reproduction/` yet) | author's computer; report in `results/reproduction/` |
+| Independent re-run of every analysis script r01–r22, including r07, r08, r12 and r22 (31 October 2026) | the author, with `reproduce.py` | author's computer; report in `results/reproduction/20261031_153220/` |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.

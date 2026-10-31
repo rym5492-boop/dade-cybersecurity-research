@@ -1,0 +1,8 @@
+Saved results\revision\r18_threshold_study.json
+DADE_AHP {'FIXED': (0.6, 0.7344), 'COST': (0.4393, 0.8979), 'RECALL90': (0.3997, 0.885), 'NESTED': (0.411, 0.8951)}
+B5_ML_x_impact {'FIXED': (0.4167, 0.9219), 'COST': (0.4386, 0.8956), 'RECALL90': (0.6157, 0.8703), 'NESTED': (0.4196, 0.9214)}
+B1_ML_only {'FIXED': (0.6083, 0.8906), 'COST': (0.7525, 0.8893), 'RECALL90': (0.6688, 0.8859), 'NESTED': (0.6672, 0.8847)}
+B2_equal_weight {'FIXED': (0.5833, 0.7344), 'COST': (0.4432, 0.8979), 'RECALL90': (0.4114, 0.8848), 'NESTED': (0.4235, 0.8923)}
+B4 0.7417
+external {'DADE_AHP': {'FIXED': 0.7083, 'COST': 0.575, 'RECALL90': 0.575}, 'B1_ML_only': {'FIXED': 0.55, 'COST': 0.5333, 'RECALL90': 0.5333}, 'B2_equal_weight': {'FIXED': 0.7083, 'COST': 0.575, 'RECALL90': 0.575}, 'B3_BIA_only': {'FIXED': 1.3667, 'COST': 0.6167, 'RECALL90': 0.6167}, 'B5_ML_x_impact': {'FIXED': 0.4917, 'COST': 0.5417, 'RECALL90': 0.6833}, 'B4_severity_x_impact': {'FIXED': 0.9583}}
+

@@ -1,0 +1,1246 @@
+{
+  "detector": "HistGradientBoosting (FIT) + isotonic calibration (CAL)",
+  "calibration_split_prevalence": 0.6806,
+  "n_benign_in_every_draw": 37000,
+  "validation_threshold_fpr1pct": 0.9123,
+  "ranking_unchanged_by_correction": {
+    "0.01": {
+      "roc_auc_raw_mean": 0.9848,
+      "roc_auc_corrected_mean": 0.9848,
+      "pr_auc_raw_mean": 0.846,
+      "pr_auc_corrected_mean": 0.846
+    },
+    "0.05": {
+      "roc_auc_raw_mean": 0.9852,
+      "roc_auc_corrected_mean": 0.9852,
+      "pr_auc_raw_mean": 0.9141,
+      "pr_auc_corrected_mean": 0.9141
+    },
+    "0.10": {
+      "roc_auc_raw_mean": 0.9852,
+      "roc_auc_corrected_mean": 0.9852,
+      "pr_auc_raw_mean": 0.9378,
+      "pr_auc_corrected_mean": 0.9378
+    },
+    "0.50": {
+      "roc_auc_raw_mean": 0.985,
+      "roc_auc_corrected_mean": 0.985,
+      "pr_auc_raw_mean": 0.9858,
+      "pr_auc_corrected_mean": 0.9858
+    }
+  },
+  "prevalence": {
+    "0.01": {
+      "n_attacks_per_draw": 374,
+      "n_flows_per_draw": 37374,
+      "draws": 10,
+      "equivalent_uncorrected_threshold_of_P2": 0.99528,
+      "em_estimated_prevalence": {
+        "mean": 0.0219,
+        "min": 0.0216,
+        "max": 0.0226
+      },
+      "policies": {
+        "P1_uncorrected_0.5": {
+          "precision": {
+            "mean": 0.0337,
+            "min": 0.0334,
+            "max": 0.034
+          },
+          "recall": {
+            "mean": 0.9872,
+            "min": 0.9786,
+            "max": 0.9973
+          },
+          "fpr": {
+            "mean": 0.2861,
+            "min": 0.2861,
+            "max": 0.2861
+          },
+          "alerts_per_1000_flows": {
+            "mean": 293.1503,
+            "min": 293.0647,
+            "max": 293.252
+          },
+          "tp": {
+            "mean": 369.2,
+            "min": 366.0,
+            "max": 373.0
+          },
+          "fp": {
+            "mean": 10587.0,
+            "min": 10587.0,
+            "max": 10587.0
+          },
+          "fn": {
+            "mean": 4.8,
+            "min": 1.0,
+            "max": 8.0
+          },
+          "tn": {
+            "mean": 26413.0,
+            "min": 26413.0,
+            "max": 26413.0
+          }
+        },
+        "P2_oracle_prior_0.5": {
+          "precision": {
+            "mean": 0.8664,
+            "min": 0.8635,
+            "max": 0.8719
+          },
+          "recall": {
+            "mean": 0.7981,
+            "min": 0.7781,
+            "max": 0.8369
+          },
+          "fpr": {
+            "mean": 0.0012,
+            "min": 0.0012,
+            "max": 0.0012
+          },
+          "alerts_per_1000_flows": {
+            "mean": 9.2176,
+            "min": 9.017,
+            "max": 9.6056
+          },
+          "tp": {
+            "mean": 298.5,
+            "min": 291.0,
+            "max": 313.0
+          },
+          "fp": {
+            "mean": 46.0,
+            "min": 46.0,
+            "max": 46.0
+          },
+          "fn": {
+            "mean": 75.5,
+            "min": 61.0,
+            "max": 83.0
+          },
+          "tn": {
+            "mean": 36954.0,
+            "min": 36954.0,
+            "max": 36954.0
+          }
+        },
+        "P3_em_prior_0.5": {
+          "precision": {
+            "mean": 0.8326,
+            "min": 0.8291,
+            "max": 0.8373
+          },
+          "recall": {
+            "mean": 0.8112,
+            "min": 0.7914,
+            "max": 0.8396
+          },
+          "fpr": {
+            "mean": 0.0016,
+            "min": 0.0016,
+            "max": 0.0016
+          },
+          "alerts_per_1000_flows": {
+            "mean": 9.7501,
+            "min": 9.5521,
+            "max": 10.0337
+          },
+          "tp": {
+            "mean": 303.4,
+            "min": 296.0,
+            "max": 314.0
+          },
+          "fp": {
+            "mean": 61.0,
+            "min": 61.0,
+            "max": 61.0
+          },
+          "fn": {
+            "mean": 70.6,
+            "min": 60.0,
+            "max": 78.0
+          },
+          "tn": {
+            "mean": 36939.0,
+            "min": 36939.0,
+            "max": 36939.0
+          }
+        },
+        "P4a_prior_x5_0.5": {
+          "precision": {
+            "mean": 0.667,
+            "min": 0.6624,
+            "max": 0.6756
+          },
+          "recall": {
+            "mean": 0.8409,
+            "min": 0.8235,
+            "max": 0.8743
+          },
+          "fpr": {
+            "mean": 0.0042,
+            "min": 0.0042,
+            "max": 0.0042
+          },
+          "alerts_per_1000_flows": {
+            "mean": 12.6157,
+            "min": 12.4418,
+            "max": 12.9502
+          },
+          "tp": {
+            "mean": 314.5,
+            "min": 308.0,
+            "max": 327.0
+          },
+          "fp": {
+            "mean": 157.0,
+            "min": 157.0,
+            "max": 157.0
+          },
+          "fn": {
+            "mean": 59.5,
+            "min": 47.0,
+            "max": 66.0
+          },
+          "tn": {
+            "mean": 36843.0,
+            "min": 36843.0,
+            "max": 36843.0
+          }
+        },
+        "P4b_prior_div5_0.5": {
+          "precision": {
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "recall": {
+            "mean": 0.5321,
+            "min": 0.4973,
+            "max": 0.5695
+          },
+          "fpr": {
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "alerts_per_1000_flows": {
+            "mean": 5.3246,
+            "min": 4.9767,
+            "max": 5.6991
+          },
+          "tp": {
+            "mean": 199.0,
+            "min": 186.0,
+            "max": 213.0
+          },
+          "fp": {
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "fn": {
+            "mean": 175.0,
+            "min": 161.0,
+            "max": 188.0
+          },
+          "tn": {
+            "mean": 37000.0,
+            "min": 37000.0,
+            "max": 37000.0
+          }
+        },
+        "P5_validation_fpr1pct": {
+          "precision": {
+            "mean": 0.2201,
+            "min": 0.2138,
+            "max": 0.2239
+          },
+          "recall": {
+            "mean": 0.9045,
+            "min": 0.8717,
+            "max": 0.9251
+          },
+          "fpr": {
+            "mean": 0.0324,
+            "min": 0.0324,
+            "max": 0.0324
+          },
+          "alerts_per_1000_flows": {
+            "mean": 41.1329,
+            "min": 40.8038,
+            "max": 41.3389
+          },
+          "tp": {
+            "mean": 338.3,
+            "min": 326.0,
+            "max": 346.0
+          },
+          "fp": {
+            "mean": 1199.0,
+            "min": 1199.0,
+            "max": 1199.0
+          },
+          "fn": {
+            "mean": 35.7,
+            "min": 28.0,
+            "max": 48.0
+          },
+          "tn": {
+            "mean": 35801.0,
+            "min": 35801.0,
+            "max": 35801.0
+          }
+        }
+      },
+      "first_draw_counts": {
+        "P1_uncorrected_0.5": {
+          "tp": 369,
+          "fp": 10587,
+          "fn": 5,
+          "tn": 26413
+        },
+        "P2_oracle_prior_0.5": {
+          "tp": 300,
+          "fp": 46,
+          "fn": 74,
+          "tn": 36954
+        },
+        "P3_em_prior_0.5": {
+          "tp": 309,
+          "fp": 61,
+          "fn": 65,
+          "tn": 36939
+        },
+        "P4a_prior_x5_0.5": {
+          "tp": 315,
+          "fp": 157,
+          "fn": 59,
+          "tn": 36843
+        },
+        "P4b_prior_div5_0.5": {
+          "tp": 196,
+          "fp": 0,
+          "fn": 178,
+          "tn": 37000
+        },
+        "P5_validation_fpr1pct": {
+          "tp": 343,
+          "fp": 1199,
+          "fn": 31,
+          "tn": 35801
+        }
+      }
+    },
+    "0.05": {
+      "n_attacks_per_draw": 1947,
+      "n_flows_per_draw": 38947,
+      "draws": 10,
+      "equivalent_uncorrected_threshold_of_P2": 0.9759,
+      "em_estimated_prevalence": {
+        "mean": 0.0863,
+        "min": 0.0852,
+        "max": 0.0872
+      },
+      "policies": {
+        "P1_uncorrected_0.5": {
+          "precision": {
+            "mean": 0.1535,
+            "min": 0.1532,
+            "max": 0.1543
+          },
+          "recall": {
+            "mean": 0.9864,
+            "min": 0.9836,
+            "max": 0.9918
+          },
+          "fpr": {
+            "mean": 0.2861,
+            "min": 0.2861,
+            "max": 0.2861
+          },
+          "alerts_per_1000_flows": {
+            "mean": 321.1416,
+            "min": 321.0003,
+            "max": 321.4111
+          },
+          "tp": {
+            "mean": 1920.5,
+            "min": 1915.0,
+            "max": 1931.0
+          },
+          "fp": {
+            "mean": 10587.0,
+            "min": 10587.0,
+            "max": 10587.0
+          },
+          "fn": {
+            "mean": 26.5,
+            "min": 16.0,
+            "max": 32.0
+          },
+          "tn": {
+            "mean": 26413.0,
+            "min": 26413.0,
+            "max": 26413.0
+          }
+        },
+        "P2_oracle_prior_0.5": {
+          "precision": {
+            "mean": 0.9132,
+            "min": 0.9119,
+            "max": 0.9144
+          },
+          "recall": {
+            "mean": 0.8484,
+            "min": 0.8351,
+            "max": 0.8618
+          },
+          "fpr": {
+            "mean": 0.0042,
+            "min": 0.0042,
+            "max": 0.0042
+          },
+          "alerts_per_1000_flows": {
+            "mean": 46.4426,
+            "min": 45.7802,
+            "max": 47.1153
+          },
+          "tp": {
+            "mean": 1651.8,
+            "min": 1626.0,
+            "max": 1678.0
+          },
+          "fp": {
+            "mean": 157.0,
+            "min": 157.0,
+            "max": 157.0
+          },
+          "fn": {
+            "mean": 295.2,
+            "min": 269.0,
+            "max": 321.0
+          },
+          "tn": {
+            "mean": 36843.0,
+            "min": 36843.0,
+            "max": 36843.0
+          }
+        },
+        "P3_em_prior_0.5": {
+          "precision": {
+            "mean": 0.8376,
+            "min": 0.7697,
+            "max": 0.8834
+          },
+          "recall": {
+            "mean": 0.8663,
+            "min": 0.8439,
+            "max": 0.8916
+          },
+          "fpr": {
+            "mean": 0.0092,
+            "min": 0.006,
+            "max": 0.0139
+          },
+          "alerts_per_1000_flows": {
+            "mean": 51.9989,
+            "min": 47.8599,
+            "max": 57.7965
+          },
+          "tp": {
+            "mean": 1686.6,
+            "min": 1643.0,
+            "max": 1736.0
+          },
+          "fp": {
+            "mean": 338.6,
+            "min": 221.0,
+            "max": 515.0
+          },
+          "fn": {
+            "mean": 260.4,
+            "min": 211.0,
+            "max": 304.0
+          },
+          "tn": {
+            "mean": 36661.4,
+            "min": 36485.0,
+            "max": 36779.0
+          }
+        },
+        "P4a_prior_x5_0.5": {
+          "precision": {
+            "mean": 0.4719,
+            "min": 0.4685,
+            "max": 0.4736
+          },
+          "recall": {
+            "mean": 0.9279,
+            "min": 0.9153,
+            "max": 0.9343
+          },
+          "fpr": {
+            "mean": 0.0546,
+            "min": 0.0546,
+            "max": 0.0546
+          },
+          "alerts_per_1000_flows": {
+            "mean": 98.3028,
+            "min": 97.6712,
+            "max": 98.6212
+          },
+          "tp": {
+            "mean": 1806.6,
+            "min": 1782.0,
+            "max": 1819.0
+          },
+          "fp": {
+            "mean": 2022.0,
+            "min": 2022.0,
+            "max": 2022.0
+          },
+          "fn": {
+            "mean": 140.4,
+            "min": 128.0,
+            "max": 165.0
+          },
+          "tn": {
+            "mean": 34978.0,
+            "min": 34978.0,
+            "max": 34978.0
+          }
+        },
+        "P4b_prior_div5_0.5": {
+          "precision": {
+            "mean": 0.9716,
+            "min": 0.9712,
+            "max": 0.9721
+          },
+          "recall": {
+            "mean": 0.8076,
+            "min": 0.7966,
+            "max": 0.8233
+          },
+          "fpr": {
+            "mean": 0.0012,
+            "min": 0.0012,
+            "max": 0.0012
+          },
+          "alerts_per_1000_flows": {
+            "mean": 41.5539,
+            "min": 41.0044,
+            "max": 42.3396
+          },
+          "tp": {
+            "mean": 1572.4,
+            "min": 1551.0,
+            "max": 1603.0
+          },
+          "fp": {
+            "mean": 46.0,
+            "min": 46.0,
+            "max": 46.0
+          },
+          "fn": {
+            "mean": 374.6,
+            "min": 344.0,
+            "max": 396.0
+          },
+          "tn": {
+            "mean": 36954.0,
+            "min": 36954.0,
+            "max": 36954.0
+          }
+        },
+        "P5_validation_fpr1pct": {
+          "precision": {
+            "mean": 0.5959,
+            "min": 0.5916,
+            "max": 0.5982
+          },
+          "recall": {
+            "mean": 0.9083,
+            "min": 0.8921,
+            "max": 0.9168
+          },
+          "fpr": {
+            "mean": 0.0324,
+            "min": 0.0324,
+            "max": 0.0324
+          },
+          "alerts_per_1000_flows": {
+            "mean": 76.1907,
+            "min": 75.3845,
+            "max": 76.6169
+          },
+          "tp": {
+            "mean": 1768.4,
+            "min": 1737.0,
+            "max": 1785.0
+          },
+          "fp": {
+            "mean": 1199.0,
+            "min": 1199.0,
+            "max": 1199.0
+          },
+          "fn": {
+            "mean": 178.6,
+            "min": 162.0,
+            "max": 210.0
+          },
+          "tn": {
+            "mean": 35801.0,
+            "min": 35801.0,
+            "max": 35801.0
+          }
+        }
+      },
+      "first_draw_counts": {
+        "P1_uncorrected_0.5": {
+          "tp": 1925,
+          "fp": 10587,
+          "fn": 22,
+          "tn": 26413
+        },
+        "P2_oracle_prior_0.5": {
+          "tp": 1641,
+          "fp": 157,
+          "fn": 306,
+          "tn": 36843
+        },
+        "P3_em_prior_0.5": {
+          "tp": 1658,
+          "fp": 221,
+          "fn": 289,
+          "tn": 36779
+        },
+        "P4a_prior_x5_0.5": {
+          "tp": 1804,
+          "fp": 2022,
+          "fn": 143,
+          "tn": 34978
+        },
+        "P4b_prior_div5_0.5": {
+          "tp": 1554,
+          "fp": 46,
+          "fn": 393,
+          "tn": 36954
+        },
+        "P5_validation_fpr1pct": {
+          "tp": 1762,
+          "fp": 1199,
+          "fn": 185,
+          "tn": 35801
+        }
+      }
+    },
+    "0.10": {
+      "n_attacks_per_draw": 4111,
+      "n_flows_per_draw": 41111,
+      "draws": 10,
+      "equivalent_uncorrected_threshold_of_P2": 0.95045,
+      "em_estimated_prevalence": {
+        "mean": 0.1544,
+        "min": 0.1536,
+        "max": 0.1551
+      },
+      "policies": {
+        "P1_uncorrected_0.5": {
+          "precision": {
+            "mean": 0.2771,
+            "min": 0.2766,
+            "max": 0.2776
+          },
+          "recall": {
+            "mean": 0.9872,
+            "min": 0.9847,
+            "max": 0.9898
+          },
+          "fpr": {
+            "mean": 0.2861,
+            "min": 0.2861,
+            "max": 0.2861
+          },
+          "alerts_per_1000_flows": {
+            "mean": 356.238,
+            "min": 355.9874,
+            "max": 356.4983
+          },
+          "tp": {
+            "mean": 4058.3,
+            "min": 4048.0,
+            "max": 4069.0
+          },
+          "fp": {
+            "mean": 10587.0,
+            "min": 10587.0,
+            "max": 10587.0
+          },
+          "fn": {
+            "mean": 52.7,
+            "min": 42.0,
+            "max": 63.0
+          },
+          "tn": {
+            "mean": 26413.0,
+            "min": 26413.0,
+            "max": 26413.0
+          }
+        },
+        "P2_oracle_prior_0.5": {
+          "precision": {
+            "mean": 0.8747,
+            "min": 0.8738,
+            "max": 0.8754
+          },
+          "recall": {
+            "mean": 0.878,
+            "min": 0.8708,
+            "max": 0.8837
+          },
+          "fpr": {
+            "mean": 0.014,
+            "min": 0.014,
+            "max": 0.014
+          },
+          "alerts_per_1000_flows": {
+            "mean": 100.377,
+            "min": 99.657,
+            "max": 100.9462
+          },
+          "tp": {
+            "mean": 3609.6,
+            "min": 3580.0,
+            "max": 3633.0
+          },
+          "fp": {
+            "mean": 517.0,
+            "min": 517.0,
+            "max": 517.0
+          },
+          "fn": {
+            "mean": 501.4,
+            "min": 478.0,
+            "max": 531.0
+          },
+          "tn": {
+            "mean": 36483.0,
+            "min": 36483.0,
+            "max": 36483.0
+          }
+        },
+        "P3_em_prior_0.5": {
+          "precision": {
+            "mean": 0.8696,
+            "min": 0.8688,
+            "max": 0.8703
+          },
+          "recall": {
+            "mean": 0.8801,
+            "min": 0.873,
+            "max": 0.8864
+          },
+          "fpr": {
+            "mean": 0.0147,
+            "min": 0.0146,
+            "max": 0.0147
+          },
+          "alerts_per_1000_flows": {
+            "mean": 101.2016,
+            "min": 100.4841,
+            "max": 101.8462
+          },
+          "tp": {
+            "mean": 3618.0,
+            "min": 3589.0,
+            "max": 3644.0
+          },
+          "fp": {
+            "mean": 542.5,
+            "min": 542.0,
+            "max": 543.0
+          },
+          "fn": {
+            "mean": 493.0,
+            "min": 467.0,
+            "max": 522.0
+          },
+          "tn": {
+            "mean": 36457.5,
+            "min": 36457.0,
+            "max": 36458.0
+          }
+        },
+        "P4a_prior_x5_0.5": {
+          "precision": {
+            "mean": 0.3903,
+            "min": 0.3893,
+            "max": 0.3916
+          },
+          "recall": {
+            "mean": 0.9676,
+            "min": 0.9633,
+            "max": 0.9728
+          },
+          "fpr": {
+            "mean": 0.1679,
+            "min": 0.1679,
+            "max": 0.1679
+          },
+          "alerts_per_1000_flows": {
+            "mean": 247.8801,
+            "min": 247.452,
+            "max": 248.4007
+          },
+          "tp": {
+            "mean": 3977.6,
+            "min": 3960.0,
+            "max": 3999.0
+          },
+          "fp": {
+            "mean": 6213.0,
+            "min": 6213.0,
+            "max": 6213.0
+          },
+          "fn": {
+            "mean": 133.4,
+            "min": 112.0,
+            "max": 151.0
+          },
+          "tn": {
+            "mean": 30787.0,
+            "min": 30787.0,
+            "max": 30787.0
+          }
+        },
+        "P4b_prior_div5_0.5": {
+          "precision": {
+            "mean": 0.9821,
+            "min": 0.9819,
+            "max": 0.9823
+          },
+          "recall": {
+            "mean": 0.8145,
+            "min": 0.8066,
+            "max": 0.8222
+          },
+          "fpr": {
+            "mean": 0.0016,
+            "min": 0.0016,
+            "max": 0.0016
+          },
+          "alerts_per_1000_flows": {
+            "mean": 82.9316,
+            "min": 82.1435,
+            "max": 83.7002
+          },
+          "tp": {
+            "mean": 3348.4,
+            "min": 3316.0,
+            "max": 3380.0
+          },
+          "fp": {
+            "mean": 61.0,
+            "min": 61.0,
+            "max": 61.0
+          },
+          "fn": {
+            "mean": 762.6,
+            "min": 731.0,
+            "max": 795.0
+          },
+          "tn": {
+            "mean": 36939.0,
+            "min": 36939.0,
+            "max": 36939.0
+          }
+        },
+        "P5_validation_fpr1pct": {
+          "precision": {
+            "mean": 0.7568,
+            "min": 0.7556,
+            "max": 0.7578
+          },
+          "recall": {
+            "mean": 0.9074,
+            "min": 0.9017,
+            "max": 0.9127
+          },
+          "fpr": {
+            "mean": 0.0324,
+            "min": 0.0324,
+            "max": 0.0324
+          },
+          "alerts_per_1000_flows": {
+            "mean": 119.8998,
+            "min": 119.3355,
+            "max": 120.4301
+          },
+          "tp": {
+            "mean": 3730.2,
+            "min": 3707.0,
+            "max": 3752.0
+          },
+          "fp": {
+            "mean": 1199.0,
+            "min": 1199.0,
+            "max": 1199.0
+          },
+          "fn": {
+            "mean": 380.8,
+            "min": 359.0,
+            "max": 404.0
+          },
+          "tn": {
+            "mean": 35801.0,
+            "min": 35801.0,
+            "max": 35801.0
+          }
+        }
+      },
+      "first_draw_counts": {
+        "P1_uncorrected_0.5": {
+          "tp": 4060,
+          "fp": 10587,
+          "fn": 51,
+          "tn": 26413
+        },
+        "P2_oracle_prior_0.5": {
+          "tp": 3626,
+          "fp": 517,
+          "fn": 485,
+          "tn": 36483
+        },
+        "P3_em_prior_0.5": {
+          "tp": 3636,
+          "fp": 543,
+          "fn": 475,
+          "tn": 36457
+        },
+        "P4a_prior_x5_0.5": {
+          "tp": 3979,
+          "fp": 6213,
+          "fn": 132,
+          "tn": 30787
+        },
+        "P4b_prior_div5_0.5": {
+          "tp": 3375,
+          "fp": 61,
+          "fn": 736,
+          "tn": 36939
+        },
+        "P5_validation_fpr1pct": {
+          "tp": 3738,
+          "fp": 1199,
+          "fn": 373,
+          "tn": 35801
+        }
+      }
+    },
+    "0.50": {
+      "n_attacks_per_draw": 37000,
+      "n_flows_per_draw": 74000,
+      "draws": 10,
+      "equivalent_uncorrected_threshold_of_P2": 0.68063,
+      "em_estimated_prevalence": {
+        "mean": 0.5871,
+        "min": 0.5869,
+        "max": 0.5873
+      },
+      "policies": {
+        "P1_uncorrected_0.5": {
+          "precision": {
+            "mean": 0.7752,
+            "min": 0.7751,
+            "max": 0.7753
+          },
+          "recall": {
+            "mean": 0.9866,
+            "min": 0.9863,
+            "max": 0.9871
+          },
+          "fpr": {
+            "mean": 0.2861,
+            "min": 0.2861,
+            "max": 0.2861
+          },
+          "alerts_per_1000_flows": {
+            "mean": 636.3743,
+            "min": 636.2162,
+            "max": 636.6351
+          },
+          "tp": {
+            "mean": 36504.7,
+            "min": 36493.0,
+            "max": 36524.0
+          },
+          "fp": {
+            "mean": 10587.0,
+            "min": 10587.0,
+            "max": 10587.0
+          },
+          "fn": {
+            "mean": 495.3,
+            "min": 476.0,
+            "max": 507.0
+          },
+          "tn": {
+            "mean": 26413.0,
+            "min": 26413.0,
+            "max": 26413.0
+          }
+        },
+        "P2_oracle_prior_0.5": {
+          "precision": {
+            "mean": 0.8521,
+            "min": 0.8521,
+            "max": 0.8522
+          },
+          "recall": {
+            "mean": 0.9675,
+            "min": 0.9672,
+            "max": 0.968
+          },
+          "fpr": {
+            "mean": 0.1679,
+            "min": 0.1679,
+            "max": 0.1679
+          },
+          "alerts_per_1000_flows": {
+            "mean": 567.6878,
+            "min": 567.5405,
+            "max": 567.973
+          },
+          "tp": {
+            "mean": 35795.9,
+            "min": 35785.0,
+            "max": 35817.0
+          },
+          "fp": {
+            "mean": 6213.0,
+            "min": 6213.0,
+            "max": 6213.0
+          },
+          "fn": {
+            "mean": 1204.1,
+            "min": 1183.0,
+            "max": 1215.0
+          },
+          "tn": {
+            "mean": 30787.0,
+            "min": 30787.0,
+            "max": 30787.0
+          }
+        },
+        "P3_em_prior_0.5": {
+          "precision": {
+            "mean": 0.8099,
+            "min": 0.8098,
+            "max": 0.81
+          },
+          "recall": {
+            "mean": 0.9786,
+            "min": 0.9782,
+            "max": 0.9792
+          },
+          "fpr": {
+            "mean": 0.2297,
+            "min": 0.2297,
+            "max": 0.2297
+          },
+          "alerts_per_1000_flows": {
+            "mean": 604.1662,
+            "min": 603.9324,
+            "max": 604.4324
+          },
+          "tp": {
+            "mean": 36209.3,
+            "min": 36192.0,
+            "max": 36229.0
+          },
+          "fp": {
+            "mean": 8499.0,
+            "min": 8499.0,
+            "max": 8499.0
+          },
+          "fn": {
+            "mean": 790.7,
+            "min": 771.0,
+            "max": 808.0
+          },
+          "tn": {
+            "mean": 28501.0,
+            "min": 28501.0,
+            "max": 28501.0
+          }
+        },
+        "P4a_prior_x5_0.5": {
+          "precision": {
+            "mean": 0.7027,
+            "min": 0.7027,
+            "max": 0.7028
+          },
+          "recall": {
+            "mean": 0.9997,
+            "min": 0.9997,
+            "max": 0.9998
+          },
+          "fpr": {
+            "mean": 0.4229,
+            "min": 0.4229,
+            "max": 0.4229
+          },
+          "alerts_per_1000_flows": {
+            "mean": 711.3203,
+            "min": 711.2973,
+            "max": 711.3514
+          },
+          "tp": {
+            "mean": 36990.7,
+            "min": 36989.0,
+            "max": 36993.0
+          },
+          "fp": {
+            "mean": 15647.0,
+            "min": 15647.0,
+            "max": 15647.0
+          },
+          "fn": {
+            "mean": 9.3,
+            "min": 7.0,
+            "max": 11.0
+          },
+          "tn": {
+            "mean": 21353.0,
+            "min": 21353.0,
+            "max": 21353.0
+          }
+        },
+        "P4b_prior_div5_0.5": {
+          "precision": {
+            "mean": 0.9843,
+            "min": 0.9843,
+            "max": 0.9844
+          },
+          "recall": {
+            "mean": 0.8783,
+            "min": 0.8777,
+            "max": 0.8789
+          },
+          "fpr": {
+            "mean": 0.014,
+            "min": 0.014,
+            "max": 0.014
+          },
+          "alerts_per_1000_flows": {
+            "mean": 446.15,
+            "min": 445.8378,
+            "max": 446.4595
+          },
+          "tp": {
+            "mean": 32498.1,
+            "min": 32475.0,
+            "max": 32521.0
+          },
+          "fp": {
+            "mean": 517.0,
+            "min": 517.0,
+            "max": 517.0
+          },
+          "fn": {
+            "mean": 4501.9,
+            "min": 4479.0,
+            "max": 4525.0
+          },
+          "tn": {
+            "mean": 36483.0,
+            "min": 36483.0,
+            "max": 36483.0
+          }
+        },
+        "P5_validation_fpr1pct": {
+          "precision": {
+            "mean": 0.9655,
+            "min": 0.9654,
+            "max": 0.9655
+          },
+          "recall": {
+            "mean": 0.9064,
+            "min": 0.9055,
+            "max": 0.9071
+          },
+          "fpr": {
+            "mean": 0.0324,
+            "min": 0.0324,
+            "max": 0.0324
+          },
+          "alerts_per_1000_flows": {
+            "mean": 469.3811,
+            "min": 468.9324,
+            "max": 469.7297
+          },
+          "tp": {
+            "mean": 33535.2,
+            "min": 33502.0,
+            "max": 33561.0
+          },
+          "fp": {
+            "mean": 1199.0,
+            "min": 1199.0,
+            "max": 1199.0
+          },
+          "fn": {
+            "mean": 3464.8,
+            "min": 3439.0,
+            "max": 3498.0
+          },
+          "tn": {
+            "mean": 35801.0,
+            "min": 35801.0,
+            "max": 35801.0
+          }
+        }
+      },
+      "first_draw_counts": {
+        "P1_uncorrected_0.5": {
+          "tp": 36524,
+          "fp": 10587,
+          "fn": 476,
+          "tn": 26413
+        },
+        "P2_oracle_prior_0.5": {
+          "tp": 35808,
+          "fp": 6213,
+          "fn": 1192,
+          "tn": 30787
+        },
+        "P3_em_prior_0.5": {
+          "tp": 36229,
+          "fp": 8499,
+          "fn": 771,
+          "tn": 28501
+        },
+        "P4a_prior_x5_0.5": {
+          "tp": 36989,
+          "fp": 15647,
+          "fn": 11,
+          "tn": 21353
+        },
+        "P4b_prior_div5_0.5": {
+          "tp": 32509,
+          "fp": 517,
+          "fn": 4491,
+          "tn": 36483
+        },
+        "P5_validation_fpr1pct": {
+          "tp": 33529,
+          "fp": 1199,
+          "fn": 3471,
+          "tn": 35801
+        }
+      }
+    }
+  }
+}

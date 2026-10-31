@@ -1,0 +1,6 @@
+0.01 {'P1_uncorrected_0.5': (0.0337, 0.9872), 'P2_oracle_prior_0.5': (0.8664, 0.7981), 'P3_em_prior_0.5': (0.8326, 0.8112), 'P4a_prior_x5_0.5': (0.667, 0.8409), 'P4b_prior_div5_0.5': (1.0, 0.5321), 'P5_validation_fpr1pct': (0.2201, 0.9045)} EM prior 0.0219
+0.05 {'P1_uncorrected_0.5': (0.1535, 0.9864), 'P2_oracle_prior_0.5': (0.9132, 0.8484), 'P3_em_prior_0.5': (0.8376, 0.8663), 'P4a_prior_x5_0.5': (0.4719, 0.9279), 'P4b_prior_div5_0.5': (0.9716, 0.8076), 'P5_validation_fpr1pct': (0.5959, 0.9083)} EM prior 0.0863
+0.10 {'P1_uncorrected_0.5': (0.2771, 0.9872), 'P2_oracle_prior_0.5': (0.8747, 0.878), 'P3_em_prior_0.5': (0.8696, 0.8801), 'P4a_prior_x5_0.5': (0.3903, 0.9676), 'P4b_prior_div5_0.5': (0.9821, 0.8145), 'P5_validation_fpr1pct': (0.7568, 0.9074)} EM prior 0.1544
+0.50 {'P1_uncorrected_0.5': (0.7752, 0.9866), 'P2_oracle_prior_0.5': (0.8521, 0.9675), 'P3_em_prior_0.5': (0.8099, 0.9786), 'P4a_prior_x5_0.5': (0.7027, 0.9997), 'P4b_prior_div5_0.5': (0.9843, 0.8783), 'P5_validation_fpr1pct': (0.9655, 0.9064)} EM prior 0.5871
+Saved results\revision\r17_base_rate_thresholds.json
+

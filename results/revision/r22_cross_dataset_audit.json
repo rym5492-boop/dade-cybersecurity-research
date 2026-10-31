@@ -41,7 +41,10 @@
       "balanced_accuracy_mean": 0.5084
     }
   },
+  "cicids2017_has_backward_bytes": false,
   "datasets_available": [
+    "CICIDS2017",
+    "CICIoT2023",
     "UNSW-NB15"
   ],
   "feature_distributions": {
@@ -94,6 +97,106 @@
           493.0
         ]
       }
+    },
+    "CICIDS2017": {
+      "duration_s": {
+        "0": [
+          0.0,
+          0.0399,
+          115.231
+        ],
+        "1": [
+          0.0,
+          5.9397,
+          100.2938
+        ]
+      },
+      "total_bytes": {
+        "0": [
+          0.0,
+          68.0,
+          2362.9
+        ],
+        "1": [
+          0.0,
+          30.0,
+          686.0
+        ]
+      },
+      "bytes_per_s": {
+        "0": [
+          0.0,
+          1196.2775,
+          777119.7889
+        ],
+        "1": [
+          0.0,
+          4.3044,
+          45454.5455
+        ]
+      },
+      "avg_packet_size": {
+        "0": [
+          0.0,
+          77.6667,
+          506.7361
+        ],
+        "1": [
+          2.7833,
+          814.5625,
+          1454.125
+        ]
+      }
+    },
+    "CICIoT2023": {
+      "duration_s": {
+        "0": [
+          0.6828,
+          26.4431,
+          107.8525
+        ],
+        "1": [
+          0.0,
+          0.1549,
+          244.8387
+        ]
+      },
+      "total_bytes": {
+        "0": [
+          383.05,
+          3156.4,
+          22669.39
+        ],
+        "1": [
+          441.0,
+          890.6,
+          12666.44
+        ]
+      },
+      "bytes_per_s": {
+        "0": [
+          7.1712,
+          149.2959,
+          12672.2968
+        ],
+        "1": [
+          4.8779,
+          8803.4769,
+          6140472000.0
+        ]
+      },
+      "avg_packet_size": {
+        "0": [
+          66.4028,
+          304.1376,
+          1840.1503
+        ],
+        "1": [
+          50.0,
+          94.6145,
+          1261.6945
+        ]
+      }
     }
   },
   "adaptation_independence_check": {
@@ -106,6 +209,154 @@
         "rows_shared_with_evaluation_1pct": 0,
         "adaptation_rows_5pct": 3500,
         "rows_shared_with_evaluation_5pct": 0
+      },
+      "CICIDS2017": {
+        "target_train_rows": 70000,
+        "target_test_rows": 30000,
+        "adaptation_rows_1pct": 700,
+        "rows_shared_with_evaluation_1pct": 0,
+        "adaptation_rows_5pct": 3500,
+        "rows_shared_with_evaluation_5pct": 0
+      },
+      "CICIoT2023": {
+        "target_train_rows": 70000,
+        "target_test_rows": 30000,
+        "adaptation_rows_1pct": 700,
+        "rows_shared_with_evaluation_1pct": 0,
+        "adaptation_rows_5pct": 3500,
+        "rows_shared_with_evaluation_5pct": 0
+      }
+    }
+  },
+  "sensitivity": {
+    "V0_as_r07": {
+      "UNSW-NB15 -> CICIDS2017": {
+        "balanced_accuracy": 0.5395,
+        "roc_auc": 0.5974
+      },
+      "UNSW-NB15 -> CICIoT2023": {
+        "balanced_accuracy": 0.4773,
+        "roc_auc": 0.4282
+      },
+      "CICIDS2017 -> UNSW-NB15": {
+        "balanced_accuracy": 0.5001,
+        "roc_auc": 0.2784
+      },
+      "CICIDS2017 -> CICIoT2023": {
+        "balanced_accuracy": 0.4998,
+        "roc_auc": 0.4588
+      },
+      "CICIoT2023 -> UNSW-NB15": {
+        "balanced_accuracy": 0.4976,
+        "roc_auc": 0.6606
+      },
+      "CICIoT2023 -> CICIDS2017": {
+        "balanced_accuracy": 0.3363,
+        "roc_auc": 0.2953
+      }
+    },
+    "V1_duration_and_packet_size_only": {
+      "UNSW-NB15 -> CICIDS2017": {
+        "balanced_accuracy": 0.5262,
+        "roc_auc": 0.5295
+      },
+      "UNSW-NB15 -> CICIoT2023": {
+        "balanced_accuracy": 0.5606,
+        "roc_auc": 0.5725
+      },
+      "CICIDS2017 -> UNSW-NB15": {
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.4125
+      },
+      "CICIDS2017 -> CICIoT2023": {
+        "balanced_accuracy": 0.4791,
+        "roc_auc": 0.24
+      },
+      "CICIoT2023 -> UNSW-NB15": {
+        "balanced_accuracy": 0.4961,
+        "roc_auc": 0.7147
+      },
+      "CICIoT2023 -> CICIDS2017": {
+        "balanced_accuracy": 0.3384,
+        "roc_auc": 0.352
+      }
+    },
+    "V2_CICIoT_duration_ms": {
+      "UNSW-NB15 -> CICIDS2017": {
+        "balanced_accuracy": 0.5395,
+        "roc_auc": 0.5974
+      },
+      "UNSW-NB15 -> CICIoT2023": {
+        "balanced_accuracy": 0.6613,
+        "roc_auc": 0.6421
+      },
+      "CICIDS2017 -> UNSW-NB15": {
+        "balanced_accuracy": 0.5001,
+        "roc_auc": 0.2784
+      },
+      "CICIDS2017 -> CICIoT2023": {
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.6837
+      },
+      "CICIoT2023 -> UNSW-NB15": {
+        "balanced_accuracy": 0.6032,
+        "roc_auc": 0.791
+      },
+      "CICIoT2023 -> CICIDS2017": {
+        "balanced_accuracy": 0.5019,
+        "roc_auc": 0.5963
+      }
+    },
+    "V2_CICIoT_duration_us": {
+      "UNSW-NB15 -> CICIDS2017": {
+        "balanced_accuracy": 0.5395,
+        "roc_auc": 0.5974
+      },
+      "UNSW-NB15 -> CICIoT2023": {
+        "balanced_accuracy": 0.5542,
+        "roc_auc": 0.4204
+      },
+      "CICIDS2017 -> UNSW-NB15": {
+        "balanced_accuracy": 0.5001,
+        "roc_auc": 0.2784
+      },
+      "CICIDS2017 -> CICIoT2023": {
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.4253
+      },
+      "CICIoT2023 -> UNSW-NB15": {
+        "balanced_accuracy": 0.5008,
+        "roc_auc": 0.3431
+      },
+      "CICIoT2023 -> CICIDS2017": {
+        "balanced_accuracy": 0.5409,
+        "roc_auc": 0.5949
+      }
+    },
+    "V3_CICIDS_bytes_doubled": {
+      "UNSW-NB15 -> CICIDS2017": {
+        "balanced_accuracy": 0.4965,
+        "roc_auc": 0.5522
+      },
+      "UNSW-NB15 -> CICIoT2023": {
+        "balanced_accuracy": 0.4773,
+        "roc_auc": 0.4282
+      },
+      "CICIDS2017 -> UNSW-NB15": {
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.355
+      },
+      "CICIDS2017 -> CICIoT2023": {
+        "balanced_accuracy": 0.4994,
+        "roc_auc": 0.5041
+      },
+      "CICIoT2023 -> UNSW-NB15": {
+        "balanced_accuracy": 0.4976,
+        "roc_auc": 0.6606
+      },
+      "CICIoT2023 -> CICIDS2017": {
+        "balanced_accuracy": 0.3351,
+        "roc_auc": 0.2924
       }
     }
   }

@@ -1,0 +1,112 @@
+{
+  "stored_r07_subsets": {
+    "all_six": {
+      "directions": [
+        "UNSW-NB15 -> CICIDS2017",
+        "UNSW-NB15 -> CICIoT2023",
+        "CICIDS2017 -> UNSW-NB15",
+        "CICIDS2017 -> CICIoT2023",
+        "CICIoT2023 -> UNSW-NB15",
+        "CICIoT2023 -> CICIDS2017"
+      ],
+      "balanced_accuracy_min": 0.3363,
+      "balanced_accuracy_max": 0.5395,
+      "balanced_accuracy_mean": 0.4751
+    },
+    "without_CICIDS2017": {
+      "directions": [
+        "UNSW-NB15 -> CICIoT2023",
+        "CICIoT2023 -> UNSW-NB15"
+      ],
+      "balanced_accuracy_min": 0.4773,
+      "balanced_accuracy_max": 0.4976,
+      "balanced_accuracy_mean": 0.4874
+    },
+    "without_CICIoT2023": {
+      "directions": [
+        "UNSW-NB15 -> CICIDS2017",
+        "CICIDS2017 -> UNSW-NB15"
+      ],
+      "balanced_accuracy_min": 0.5001,
+      "balanced_accuracy_max": 0.5395,
+      "balanced_accuracy_mean": 0.5198
+    },
+    "UNSW_NB15_source_only": {
+      "directions": [
+        "UNSW-NB15 -> CICIDS2017",
+        "UNSW-NB15 -> CICIoT2023"
+      ],
+      "balanced_accuracy_min": 0.4773,
+      "balanced_accuracy_max": 0.5395,
+      "balanced_accuracy_mean": 0.5084
+    }
+  },
+  "datasets_available": [
+    "UNSW-NB15"
+  ],
+  "feature_distributions": {
+    "UNSW-NB15": {
+      "duration_s": {
+        "0": [
+          0.0,
+          0.0512,
+          2.3138
+        ],
+        "1": [
+          0.0,
+          0.0,
+          2.9977
+        ]
+      },
+      "total_bytes": {
+        "0": [
+          90.0,
+          2022.0,
+          68602.0
+        ],
+        "1": [
+          114.0,
+          200.0,
+          31056.4
+        ]
+      },
+      "bytes_per_s": {
+        "0": [
+          903.4187,
+          198738.9063,
+          46000000.0
+        ],
+        "1": [
+          796.9961,
+          12666666.6667,
+          72511428.5714
+        ]
+      },
+      "avg_packet_size": {
+        "0": [
+          23.0,
+          104.0,
+          478.5
+        ],
+        "1": [
+          28.5,
+          50.0,
+          493.0
+        ]
+      }
+    }
+  },
+  "adaptation_independence_check": {
+    "how": "as in r07: the 1% and 5% labelled target samples are drawn from the 70% training part of the target and the evaluation uses the 30% test part; checked here on every dataset file present",
+    "by_dataset": {
+      "UNSW-NB15": {
+        "target_train_rows": 70000,
+        "target_test_rows": 30000,
+        "adaptation_rows_1pct": 700,
+        "rows_shared_with_evaluation_1pct": 0,
+        "adaptation_rows_5pct": 3500,
+        "rows_shared_with_evaluation_5pct": 0
+      }
+    }
+  }
+}

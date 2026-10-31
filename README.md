@@ -36,8 +36,8 @@ Python 3.13.18, NumPy 2.5.3, pandas 3.0.5, scikit-learn 1.9.1, SciPy 1.18.1, Mat
 hashes, re-runs every analysis script whose data are present, compares each output with the stored one and
 writes a dated report to `results/reproduction/`. Only such logged reports count as evidence of
 reproduction: the re-runs the first author reported on 17, 21 and 24 October 2026 left no report and are not
-used as evidence. The clean-room re-run of 30 October 2026 and the pending re-run by the first author are
-described in `docs/REPRODUCIBILITY.md`.
+used as evidence. The clean-room re-run of 30 October 2026 and the first author's re-run of 31 October 2026
+(report in `results/reproduction/20261031_153220/`) are described in `docs/REPRODUCIBILITY.md`.
 
 ## What changed in the revision (summary)
 
