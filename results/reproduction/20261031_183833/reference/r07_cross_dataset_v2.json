@@ -1,0 +1,326 @@
+{
+  "note": "diagonal = held-out 30%; off-diagonal = full target test split",
+  "matrix": {
+    "UNSW-NB15": {
+      "UNSW-NB15": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.9148,
+          "balanced_accuracy": 0.9004,
+          "macro_f1": 0.9063,
+          "roc_auc": 0.9796,
+          "share_predicted_attack": 0.6634,
+          "threshold": 0.5
+        }
+      },
+      "CICIDS2017": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.4491,
+          "balanced_accuracy": 0.5395,
+          "macro_f1": 0.4209,
+          "roc_auc": 0.5974,
+          "share_predicted_attack": 0.6103,
+          "threshold": 0.5
+        },
+        "threshold_from_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.6635,
+          "balanced_accuracy": 0.5933,
+          "macro_f1": 0.552,
+          "roc_auc": 0.5974,
+          "share_predicted_attack": 0.3322,
+          "threshold": 0.76
+        },
+        "retrain_with_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.9301,
+          "balanced_accuracy": 0.9169,
+          "macro_f1": 0.8848,
+          "roc_auc": 0.9749,
+          "share_predicted_attack": 0.2039,
+          "threshold": 0.5
+        },
+        "retrain_with_5pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.9607,
+          "balanced_accuracy": 0.944,
+          "macro_f1": 0.9319,
+          "roc_auc": 0.9872,
+          "share_predicted_attack": 0.1807,
+          "threshold": 0.5
+        }
+      },
+      "CICIoT2023": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.7456,
+          "balanced_accuracy": 0.4773,
+          "macro_f1": 0.4676,
+          "roc_auc": 0.4282,
+          "share_predicted_attack": 0.8963,
+          "threshold": 0.5
+        },
+        "threshold_from_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.3909,
+          "balanced_accuracy": 0.5203,
+          "macro_f1": 0.3785,
+          "roc_auc": 0.4282,
+          "share_predicted_attack": 0.3151,
+          "threshold": 0.8
+        },
+        "retrain_with_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.8377,
+          "balanced_accuracy": 0.6128,
+          "macro_f1": 0.6358,
+          "roc_auc": 0.8601,
+          "share_predicted_attack": 0.9181,
+          "threshold": 0.5
+        },
+        "retrain_with_5pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.8459,
+          "balanced_accuracy": 0.641,
+          "macro_f1": 0.6677,
+          "roc_auc": 0.8952,
+          "share_predicted_attack": 0.906,
+          "threshold": 0.5
+        }
+      }
+    },
+    "CICIDS2017": {
+      "UNSW-NB15": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.3611,
+          "balanced_accuracy": 0.5001,
+          "macro_f1": 0.2655,
+          "roc_auc": 0.2784,
+          "share_predicted_attack": 0.0002,
+          "threshold": 0.5
+        },
+        "threshold_from_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.3681,
+          "balanced_accuracy": 0.4775,
+          "macro_f1": 0.3222,
+          "roc_auc": 0.2784,
+          "share_predicted_attack": 0.1007,
+          "threshold": 0.02
+        },
+        "retrain_with_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.7671,
+          "balanced_accuracy": 0.8028,
+          "macro_f1": 0.765,
+          "roc_auc": 0.9144,
+          "share_predicted_attack": 0.4557,
+          "threshold": 0.5
+        },
+        "retrain_with_5pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.8537,
+          "balanced_accuracy": 0.8607,
+          "macro_f1": 0.8466,
+          "roc_auc": 0.9437,
+          "share_predicted_attack": 0.5751,
+          "threshold": 0.5
+        }
+      },
+      "CICIDS2017": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.9895,
+          "balanced_accuracy": 0.976,
+          "macro_f1": 0.9812,
+          "roc_auc": 0.9981,
+          "share_predicted_attack": 0.1643,
+          "threshold": 0.5
+        }
+      },
+      "CICIoT2023": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.1739,
+          "balanced_accuracy": 0.4998,
+          "macro_f1": 0.1484,
+          "roc_auc": 0.4588,
+          "share_predicted_attack": 0.0006,
+          "threshold": 0.5
+        },
+        "threshold_from_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.2691,
+          "balanced_accuracy": 0.4865,
+          "macro_f1": 0.2689,
+          "roc_auc": 0.4588,
+          "share_predicted_attack": 0.158,
+          "threshold": 0.02
+        },
+        "retrain_with_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.7475,
+          "balanced_accuracy": 0.8181,
+          "macro_f1": 0.6916,
+          "roc_auc": 0.8517,
+          "share_predicted_attack": 0.5995,
+          "threshold": 0.5
+        },
+        "retrain_with_5pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.7922,
+          "balanced_accuracy": 0.8205,
+          "macro_f1": 0.7258,
+          "roc_auc": 0.8723,
+          "share_predicted_attack": 0.6658,
+          "threshold": 0.5
+        }
+      }
+    },
+    "CICIoT2023": {
+      "UNSW-NB15": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.6335,
+          "balanced_accuracy": 0.4976,
+          "macro_f1": 0.396,
+          "roc_auc": 0.6606,
+          "share_predicted_attack": 0.9881,
+          "threshold": 0.5
+        },
+        "threshold_from_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.6991,
+          "balanced_accuracy": 0.7106,
+          "macro_f1": 0.6916,
+          "roc_auc": 0.6606,
+          "share_predicted_attack": 0.5174,
+          "threshold": 0.98
+        },
+        "retrain_with_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.824,
+          "balanced_accuracy": 0.7729,
+          "macro_f1": 0.7907,
+          "roc_auc": 0.9092,
+          "share_predicted_attack": 0.7597,
+          "threshold": 0.5
+        },
+        "retrain_with_5pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.6391,
+          "majority_baseline_accuracy": 0.6391,
+          "accuracy": 0.8748,
+          "balanced_accuracy": 0.8441,
+          "macro_f1": 0.8578,
+          "roc_auc": 0.9563,
+          "share_predicted_attack": 0.706,
+          "threshold": 0.5
+        }
+      },
+      "CICIDS2017": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.1483,
+          "balanced_accuracy": 0.3363,
+          "macro_f1": 0.1451,
+          "roc_auc": 0.2953,
+          "share_predicted_attack": 0.8923,
+          "threshold": 0.5
+        },
+        "threshold_from_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.1752,
+          "balanced_accuracy": 0.5032,
+          "macro_f1": 0.153,
+          "roc_auc": 0.2953,
+          "share_predicted_attack": 0.9931,
+          "threshold": 0.28
+        },
+        "retrain_with_1pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.8533,
+          "balanced_accuracy": 0.8793,
+          "macro_f1": 0.7919,
+          "roc_auc": 0.9626,
+          "share_predicted_attack": 0.288,
+          "threshold": 0.5
+        },
+        "retrain_with_5pct_target": {
+          "n": 30000,
+          "prevalence_attack": 0.1689,
+          "majority_baseline_accuracy": 0.8311,
+          "accuracy": 0.9163,
+          "balanced_accuracy": 0.9229,
+          "macro_f1": 0.8689,
+          "roc_auc": 0.9811,
+          "share_predicted_attack": 0.2299,
+          "threshold": 0.5
+        }
+      },
+      "CICIoT2023": {
+        "no_adaptation": {
+          "n": 30000,
+          "prevalence_attack": 0.8263,
+          "majority_baseline_accuracy": 0.8263,
+          "accuracy": 0.8618,
+          "balanced_accuracy": 0.7364,
+          "macro_f1": 0.7475,
+          "roc_auc": 0.9164,
+          "share_predicted_attack": 0.8464,
+          "threshold": 0.5
+        }
+      }
+    }
+  }
+}

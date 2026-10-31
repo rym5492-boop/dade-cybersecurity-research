@@ -1,0 +1,92 @@
+{
+  "weights_ahp_all_six": {
+    "TS": 0.2365,
+    "AC": 0.1832,
+    "BI": 0.2346,
+    "HI": 0.0612,
+    "RTO": 0.0944,
+    "RPO": 0.079,
+    "MLS": 0.1111
+  },
+  "ahp_all_six": {
+    "P1": {
+      "min_dps": 0.6034,
+      "min_level": "Medium",
+      "max_dps": 0.9392,
+      "max_level": "High"
+    },
+    "P2": {
+      "min_dps": 0.5921,
+      "min_level": "Medium",
+      "max_dps": 0.9279,
+      "max_level": "High"
+    },
+    "P3": {
+      "min_dps": 0.4556,
+      "min_level": "Medium",
+      "max_dps": 0.7914,
+      "max_level": "High"
+    },
+    "P4": {
+      "min_dps": 0.2956,
+      "min_level": "Low",
+      "max_dps": 0.6314,
+      "max_level": "Medium"
+    },
+    "P5": {
+      "min_dps": 0.1676,
+      "min_level": "Low",
+      "max_dps": 0.5033,
+      "max_level": "Medium"
+    },
+    "P6": {
+      "min_dps": 0.0367,
+      "min_level": "Low",
+      "max_dps": 0.3725,
+      "max_level": "Medium"
+    }
+  },
+  "equal_weights": {
+    "P1": {
+      "min_dps": 0.6,
+      "min_level": "Medium",
+      "max_dps": 0.8786,
+      "max_level": "High"
+    },
+    "P2": {
+      "min_dps": 0.5929,
+      "min_level": "Medium",
+      "max_dps": 0.8714,
+      "max_level": "High"
+    },
+    "P3": {
+      "min_dps": 0.4571,
+      "min_level": "Medium",
+      "max_dps": 0.7357,
+      "max_level": "High"
+    },
+    "P4": {
+      "min_dps": 0.2857,
+      "min_level": "Low",
+      "max_dps": 0.5643,
+      "max_level": "Medium"
+    },
+    "P5": {
+      "min_dps": 0.1786,
+      "min_level": "Low",
+      "max_dps": 0.4571,
+      "max_level": "Medium"
+    },
+    "P6": {
+      "min_dps": 0.0857,
+      "min_level": "Low",
+      "max_dps": 0.3643,
+      "max_level": "Medium"
+    }
+  },
+  "cutoffs": {
+    "high": 0.66,
+    "low": 0.33
+  },
+  "ts_max": 0.95
+}

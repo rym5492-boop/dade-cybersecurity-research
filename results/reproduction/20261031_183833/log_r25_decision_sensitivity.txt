@@ -1,0 +1,18 @@
+Saved results\revision\r25_decision_sensitivity.json
+protocol             DADE 0.600  B5 0.417  diff +0.183 [-0.0335, 0.425]  cheapest B5_ML_x_impact
+symmetric_linear     DADE 0.267  B5 0.308  diff -0.042 [-0.15, 0.05]  cheapest DADE_AHP
+symmetric_quadratic  DADE 0.300  B5 0.325  diff -0.025 [-0.15, 0.0917]  cheapest B2_equal_weight
+under_x1.0           DADE 0.267  B5 0.308  diff -0.042 [-0.15, 0.05]  cheapest DADE_AHP
+under_x1.5           DADE 0.358  B5 0.342  diff +0.017 [-0.1167, 0.1376]  cheapest B5_ML_x_impact
+under_x2.0           DADE 0.450  B5 0.375  diff +0.075 [-0.0833, 0.2333]  cheapest B5_ML_x_impact
+under_x2.5           DADE 0.542  B5 0.408  diff +0.133 [-0.0625, 0.3375]  cheapest B5_ML_x_impact
+under_x3.0           DADE 0.633  B5 0.442  diff +0.192 [-0.05, 0.4417]  cheapest B5_ML_x_impact
+under_x4.0           DADE 0.817  B5 0.508  diff +0.308 [-0.0167, 0.6502]  cheapest B5_ML_x_impact
+{'B2_equal_weight': {'quadratic_kappa': {'mean': 0.0039, 'ci95': [-0.077, 0.0831], 'n_resamples': 2000}, 'mean_cost': {'mean': 0.0181, 'ci95': [-0.0678, 0.1557], 'n_resamples': 2000}}, 'B5_ML_x_impact': {'quadratic_kappa': {'mean': 0.0373, 'ci95': [-0.1433, 0.2196], 'n_resamples': 2000}, 'mean_cost': {'mean': 0.1839, 'ci95': [-0.1213, 0.6017], 'n_resamples': 2000}}}
+pi_train 0.6806
+uncorrected_high_decisions {'DADE_AHP': 14, 'B1_ML_only': 22, 'B2_equal_weight': 14, 'B3_BIA_only': 10, 'B4_severity_x_impact': 14, 'B5_ML_x_impact': 20}
+prior_0.5 {'decisions_changed_of_30': {'DADE_AHP': 2, 'B1_ML_only': 11, 'B2_equal_weight': 4, 'B3_BIA_only': 0, 'B4_severity_x_impact': 0, 'B5_ML_x_impact': 5}, 'high_decisions': {'DADE_AHP': 13, 'B1_ML_only': 15, 'B2_equal_weight': 12, 'B3_BIA_only': 10, 'B4_severity_x_impact': 14, 'B5_ML_x_impact': 17}, 'scenario_mls_range': [0.1933, 1.0]}
+prior_0.1 {'decisions_changed_of_30': {'DADE_AHP': 4, 'B1_ML_only': 21, 'B2_equal_weight': 8, 'B3_BIA_only': 0, 'B4_severity_x_impact': 0, 'B5_ML_x_impact': 15}, 'high_decisions': {'DADE_AHP': 12, 'B1_ML_only': 9, 'B2_equal_weight': 9, 'B3_BIA_only': 10, 'B4_severity_x_impact': 14, 'B5_ML_x_impact': 9}, 'scenario_mls_range': [0.0259, 1.0]}
+prior_0.05 {'decisions_changed_of_30': {'DADE_AHP': 5, 'B1_ML_only': 21, 'B2_equal_weight': 9, 'B3_BIA_only': 0, 'B4_severity_x_impact': 0, 'B5_ML_x_impact': 17}, 'high_decisions': {'DADE_AHP': 11, 'B1_ML_only': 9, 'B2_equal_weight': 9, 'B3_BIA_only': 10, 'B4_severity_x_impact': 14, 'B5_ML_x_impact': 7}, 'scenario_mls_range': [0.0125, 1.0]}
+prior_0.01 {'decisions_changed_of_30': {'DADE_AHP': 5, 'B1_ML_only': 25, 'B2_equal_weight': 11, 'B3_BIA_only': 0, 'B4_severity_x_impact': 0, 'B5_ML_x_impact': 20}, 'high_decisions': {'DADE_AHP': 11, 'B1_ML_only': 5, 'B2_equal_weight': 7, 'B3_BIA_only': 10, 'B4_severity_x_impact': 14, 'B5_ML_x_impact': 5}, 'scenario_mls_range': [0.0024, 1.0]}
+
