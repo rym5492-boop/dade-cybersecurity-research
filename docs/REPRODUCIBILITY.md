@@ -16,11 +16,12 @@ UNSW-NB15 files; the training file has 175,341 rows and the testing file 82,332,
 | UNSW_NB15_testing-set.csv | 82,332 | 734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559 |
 | KDDTrain+.txt | 125,973 | 1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95 |
 | KDDTest+.txt | 22,544 | fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84 |
-| cicids2017_cleaned.csv | 2,520,751 | 0ce5a39edffcde3f… (first 16 characters, as printed in the author's re-run report of 31 October 2026) |
+| cicids2017_cleaned.csv | 2,520,751 | 0ce5a39edffcde3f… (first 16 characters only, as printed in the author's re-run report of 31 October 2026) |
 | balanced_7classes_500000_each.csv | 2,878,962 | e09635e13f7562d0… (idem) |
 
 The author's own UNSW-NB15 files (re-run of 31 October 2026, section 2b) are another copy: their SHA-256 begin with
-0ebd9eb06d53ae22 (training) and 7ec02e7e44d72bd2 (testing), but every result computed from them was identical.
+0ebd9eb06d53ae22 (training) and 7ec02e7e44d72bd2 (testing); every result computed from them was identical except
+Logistic Regression in r01 (section 2b).
 
 Split manifest: `results/revision/splits/unsw_fit_val_cal_ids.csv` lists the `id` of every row of the
 UNSW-NB15 training file and whether it belongs to FIT (122,738 rows), VAL (26,301) or CAL (26,302); the parts
@@ -57,9 +58,10 @@ the console log of every script are in `results/reproduction/20261031_153220/`.
 | Scripts | Result of the comparison |
 | --- | --- |
 | r02–r04, r06–r08, r10–r14, r16–r21 | every JSON result identical, including the CIC scripts r07, r08, r12 and the second-revision scripts r17–r21 |
-| r01, r05 | identical except Logistic Regression, which differs in the fourth decimal (for example test accuracy 0.8092 stored, 0.8093 re-run), as in the cloud re-run; Random Forest, Decision Tree and HGB identical |
+| r05 | identical except Logistic Regression, which differs in the fourth decimal, as in the cloud re-run |
+| r01 | Random Forest and HGB identical; Logistic Regression differs by up to 0.006 (for example FPR at the F1 threshold 0.3906 stored, 0.3849 re-run; that threshold 0.50 and 0.52), which is new in this run and changes some rounded Logistic Regression values by up to 0.6 percentage points (at the F1 threshold, which moved from 0.50 to 0.52) and by 0.1 point at 0.5 and at the 1% FPR threshold; DADE does not use this model |
 | r09, r10, r18 CSV and Markdown outputs | identical after normalising Windows line endings |
-| score files (`.npz`) | identical arrays, except the Logistic Regression scores of r01 |
+| score files (`.npz`) | identical arrays (Random Forest and HGB scores of r01 within 2.2e-16), except the Logistic Regression scores of r01 |
 | r15 figures | images redrawn; bytes differ |
 | r22 | the CIC parts (adaptation independence on all three datasets, sensitivity variants V1–V3) were run for the first time; `results/revision/r22_cross_dataset_audit.json` now holds this complete run |
 
