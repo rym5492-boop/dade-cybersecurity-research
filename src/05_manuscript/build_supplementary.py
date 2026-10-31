@@ -52,7 +52,7 @@ doc.add_paragraph("Intrusion detection and business impact analysis for continui
                   "a leakage-audited evaluation of an analytic hierarchy process rule against simpler baselines. "
                   "K.K. Alenezi, M. Ayari. Table S1 comes from the related-work coverage search (results/manuscript) and Table S2 "
                   "from the coding check of Table 1 described in Section 2.5 of the paper; every other value is read from the "
-                  f"result files of the public repository (version of 30 October 2026, commit {FINAL_COMMIT}) by "
+                  f"result files of the public repository (commit {FINAL_COMMIT}) by "
                   "src/05_manuscript/build_supplementary.py; "
                   "the file named under each table gives the source.")
 
