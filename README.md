@@ -39,7 +39,8 @@ writes a dated report to `results/reproduction/`. Only such logged reports count
 reproduction: the re-runs the first author reported on 17, 21 and 24 October 2026 left no report and are not
 used as evidence. The clean-room re-run of 30 October 2026 and the first author's re-run of 31 October 2026
 (report in `results/reproduction/20261031_153220/`, with his output files and a content comparison) are described in
-`docs/REPRODUCIBILITY.md`. Scripts r25 and r26 were added after his re-run:
+`docs/REPRODUCIBILITY.md`. Scripts r25 and r26 were added after that re-run;
+he re-ran them the same evening with identical results (`results/reproduction/20261031_183833/`):
 `python src/04_revision/reproduce.py --only=r25_decision_sensitivity,r26_ttl_and_label_conflicts`.
 
 ## What changed in the revision (summary)

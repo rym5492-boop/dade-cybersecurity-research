@@ -77,7 +77,8 @@ the console log of every script are in `results/reproduction/20261031_153220/`.
 | Second revision r17–r24 and the clean-room re-run above (30 October 2026) | AI assistant | cloud workspace |
 | Manuscript figures and related-work coverage search (`src/05_manuscript`, 30 October 2026) | AI assistant | cloud workspace |
 | Independent re-run of every analysis script r01–r22, including r07, r08, r12 and r22 (31 October 2026) | the author, with `reproduce.py` | author's computer; report in `results/reproduction/20261031_153220/` |
-| Scripts r25 and r26, `compare_outputs.py`, `hash_line_endings.py` and the content comparison of the author's re-run (31 October 2026) | AI assistant | cloud workspace; r25 and r26 await the author's re-run |
+| Scripts r25 and r26, `compare_outputs.py`, `hash_line_endings.py` and the content comparison of the author's re-run (31 October 2026) | AI assistant | cloud workspace |
+| Independent re-run of r25 and r26 (31 October 2026, 18:38) | the author, with `reproduce.py --only=...` | author's computer; report in `results/reproduction/20261031_183833/`, committed from his account (6fa0142); both outputs identical |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.
