@@ -111,8 +111,8 @@ table("Table S1. Coverage search in the Crossref REST API (30 October 2026). Fil
             "coverage_screening_2026-10-30.csv; the raw responses are in crossref_coverage_search_2026-10-30.json. "
             "Screening was done by one screener (the AI assistant, under the first author's direction) with the rules "
             "in src/05_manuscript/coverage_screening.py. Only Crossref was searched. Two titles combine incident "
-            "prioritization with business impact or criticality levels and were screened by title only, not read in full or "
-            "coded: " + "; ".join(f"{' '.join(x['title'].split())} ({x['year']}), https://doi.org/{x['doi']}" for x in
+            "prioritization with business impact or criticality levels; they are cited and described from their abstracts in "
+            "Section 2.5 of the paper (full texts could not be opened) and are not coded in Table 1: " + "; ".join(f"{' '.join(x['title'].split())} ({x['year']}), https://doi.org/{x['doi']}" for x in
                                   (next(y for y in scr if y["doi"] == d) for d in COMBINED)) + "."),
       widths=[1.2, 8.5, 4.0, 2.4, 1.6, 1.6, 1.6])
 
