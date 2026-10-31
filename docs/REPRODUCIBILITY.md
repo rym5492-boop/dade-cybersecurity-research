@@ -19,9 +19,10 @@ UNSW-NB15 files; the training file has 175,341 rows and the testing file 82,332,
 | cicids2017_cleaned.csv | 2,520,751 | 0ce5a39edffcde3f… (first 16 characters only, as printed in the author's re-run report of 31 October 2026) |
 | balanced_7classes_500000_each.csv | 2,878,962 | e09635e13f7562d0… (idem) |
 
-The author's own UNSW-NB15 files (re-run of 31 October 2026, section 2b) are another copy: their SHA-256 begin with
-0ebd9eb06d53ae22 (training) and 7ec02e7e44d72bd2 (testing); every result computed from them was identical except
-Logistic Regression in r01 (section 2b).
+The author's own UNSW-NB15 files (re-run of 31 October 2026, section 2b) have other SHA-256 values, beginning with
+0ebd9eb06d53ae22 (training) and 7ec02e7e44d72bd2 (testing). They are the recorded files with LF instead of CRLF line
+endings: `python src/04_revision/hash_line_endings.py data/UNSW_NB15_training-set.csv data/UNSW_NB15_testing-set.csv`
+prints exactly these values for the LF version (log in `results/reproduction/20261031_153220/CONTENT_COMPARISON.md`).
 
 Split manifest: `results/revision/splits/unsw_fit_val_cal_ids.csv` lists the `id` of every row of the
 UNSW-NB15 training file and whether it belongs to FIT (122,738 rows), VAL (26,301) or CAL (26,302); the parts
@@ -60,8 +61,8 @@ the console log of every script are in `results/reproduction/20261031_153220/`.
 | r02–r04, r06–r08, r10–r14, r16–r21 | every JSON result identical, including the CIC scripts r07, r08, r12 and the second-revision scripts r17–r21 |
 | r05 | identical except Logistic Regression, which differs in the fourth decimal, as in the cloud re-run |
 | r01 | Random Forest and HGB identical; Logistic Regression differs by up to 0.006 (for example FPR at the F1 threshold 0.3906 stored, 0.3849 re-run; that threshold 0.50 and 0.52), which is new in this run and changes some rounded Logistic Regression values by up to 0.6 percentage points (at the F1 threshold, which moved from 0.50 to 0.52) and by 0.1 point at 0.5 and at the 1% FPR threshold; DADE does not use this model |
-| r09, r10, r18 CSV and Markdown outputs | identical after normalising Windows line endings |
-| score files (`.npz`) | identical arrays (Random Forest and HGB scores of r01 within 2.2e-16), except the Logistic Regression scores of r01 |
+| r09, r10, r18 CSV and Markdown outputs | same content, checked by `src/04_revision/compare_outputs.py` on the output files the author sent (`results/reproduction/20261031_153220/outputs/`; log `CONTENT_COMPARISON.md` in the same folder); the report's "file differs (check by eye)" came from a byte comparison |
+| score files (`.npz`) | same arrays within 1e-9 (same check), except the Logistic Regression scores of r01, which differ by up to 0.19 for single test flows |
 | r15 figures | images redrawn; bytes differ |
 | r22 | the CIC parts (adaptation independence on all three datasets, sensitivity variants V1–V3) were run for the first time; `results/revision/r22_cross_dataset_audit.json` now holds this complete run |
 
@@ -88,9 +89,11 @@ does not cover them.
 ```
 pip install -r requirements-lock.txt
 python src/04_revision/reproduce.py
+python src/04_revision/reproduce.py --only=r25_decision_sensitivity,r26_ttl_and_label_conflicts   # the two scripts added on 31 October 2026
 ```
 The script records the user, machine and versions, checks the SHA-256 of each dataset file, copies the stored
-results, runs every analysis script (r01 to r22) whose data are present, compares each output with the stored version and writes
+results, runs every analysis script (r01 to r22, r25, r26) whose data are present, compares each output with the stored version
+(JSON values within 1e-9; CSV, NPZ and text files by content with `compare_outputs.py`) and writes
 `results/reproduction/<date>/REPRODUCTION_REPORT.md`. Scripts whose data are missing are skipped and their
 stored results are kept.
 

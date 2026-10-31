@@ -30,9 +30,13 @@ Run from the repository root, with the dataset files in the root or in `data/`.
 | `r20_error_propagation.py` | Experiments | anywhere (needs r03, r17) | Monte Carlo propagation of detector and BIA uncertainty into the decisions of DADE and B1-B5 |
 | `r21_panel_audit.py` | P0-4, evidence item 5 | anywhere | Per-rater variability, pairwise agreement, per-scenario consensus uncertainty, consensus-rule sensitivity, expert vs practitioner panels, effective sample size |
 | `r22_cross_dataset_audit.py` | P0-7 | **your machine** for the CIC parts | Subsets of the stored transfer results; feature distributions by dataset; sensitivity to byte features, CICIoT2023 duration unit and forward-only bytes; adaptation rows disjoint from evaluation rows |
+| `r25_decision_sensitivity.py` | Further review, 31 Oct | anywhere | Exploratory: cost-matrix variants, two-way (scenario and expert) bootstrap, and the effect of correcting the scenario MLS to deployment priors on every rule's decisions |
+| `r26_ttl_and_label_conflicts.py` | Further review, 31 Oct | UNSW-NB15 files | Exploratory: HGB without the TTL features, TTL-only tree, and label conflicts between identical training and test rows |
 | `r23_provenance_manifest.py` | P0-6 | anywhere | SHA-256 of the dataset files, FIT/VAL/CAL row ids, scenario test rows, versions |
 | `r24_figures_revision2.py` | Figures 6-9 | anywhere | Workflow, threshold trade-off, ablation and error-propagation figures from the result files |
 | `reproduce.py` | P0-6 | your machine | Runs every script, checks dataset hashes and compares every output with the stored one; writes a dated report |
+| `compare_outputs.py` | P0-6 | anywhere | Compares two result folders by content (JSON values, parsed CSV, NPZ arrays, text without line endings); used by reproduce.py |
+| `hash_line_endings.py` | P0-6 | anywhere | SHA-256 of a file as stored, with LF and with CRLF line endings |
 
 Order: r01, r02, r03, then r04 (needs r03), r05, r06; r07 and r08 on the machine that holds the
 CIC datasets; r09, r10, r13, then r14; r15 last (figures only); r16 at any time (needs only the expert data).

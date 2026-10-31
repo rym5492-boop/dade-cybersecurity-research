@@ -38,6 +38,7 @@ history; `docs/COMMIT_MAP.md` gives the public identifier of every original comm
 | r14 checks (CR before and after the feedback round, leave-one-expert-out without E3, quadratic kappa against the external reference) | **Exploratory** | committed 21 Oct 2026 17:09, after the labels |
 | r16 level bounds per profile | **Exploratory (analytic)** | committed 26 Oct 2026 |
 | r17–r22 (second revision: base-rate policies, threshold study, ablations, error propagation, panel audit, transfer audit) | **Exploratory (post hoc)** | written on 30 Oct 2026 in response to the review, after all labels were known |
+| r25, r26 (cost-matrix variants, two-way bootstrap, base rate at the decision layer; TTL features and label conflicts) | **Exploratory (post hoc)** | written on 31 Oct 2026 after a further review of the manuscript, after all labels were known |
 
 No cut-off or cost-matrix entry used in the primary analysis was changed after the labels were collected.
 The group AHP weights were not fixed before labelling: they were completed on 21 October 2026 from revised

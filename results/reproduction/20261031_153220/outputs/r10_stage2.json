@@ -1,0 +1,1051 @@
+{
+  "n_labels": 120,
+  "experts": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "label_distribution": {
+    "High": 64,
+    "Medium": 35,
+    "Low": 21
+  },
+  "krippendorff_alpha_ordinal": {
+    "alpha": 0.5971,
+    "ci95": [
+      0.3353,
+      0.7609
+    ]
+  },
+  "alpha_per_form": {
+    "A": 0.5372,
+    "B": 0.6851,
+    "C": 0.4328
+  },
+  "primary_leave_one_expert_out": {
+    "DADE_AHP": {
+      "n": 120,
+      "exact_agreement": 0.75,
+      "macro_f1": 0.7519,
+      "quadratic_kappa": 0.7425,
+      "high_recall": 0.7344,
+      "under_prioritisation": 0.175,
+      "over_escalation": 0.075,
+      "mean_cost": 0.6
+    },
+    "B1_ML_only": {
+      "n": 120,
+      "exact_agreement": 0.575,
+      "macro_f1": 0.3694,
+      "quadratic_kappa": 0.3178,
+      "high_recall": 0.8906,
+      "under_prioritisation": 0.0583,
+      "over_escalation": 0.3667,
+      "mean_cost": 0.6083
+    },
+    "B2_equal_weight": {
+      "n": 120,
+      "exact_agreement": 0.7333,
+      "macro_f1": 0.7401,
+      "quadratic_kappa": 0.7411,
+      "high_recall": 0.7344,
+      "under_prioritisation": 0.1667,
+      "over_escalation": 0.1,
+      "mean_cost": 0.5833
+    },
+    "B3_BIA_only": {
+      "n": 120,
+      "exact_agreement": 0.525,
+      "macro_f1": 0.524,
+      "quadratic_kappa": 0.5455,
+      "high_recall": 0.4844,
+      "under_prioritisation": 0.4,
+      "over_escalation": 0.075,
+      "mean_cost": 1.2833
+    },
+    "B4_severity_x_impact": {
+      "n": 120,
+      "exact_agreement": 0.6833,
+      "macro_f1": 0.6453,
+      "quadratic_kappa": 0.6983,
+      "high_recall": 0.7656,
+      "under_prioritisation": 0.225,
+      "over_escalation": 0.0917,
+      "mean_cost": 0.7417
+    },
+    "B5_ML_x_impact": {
+      "n": 120,
+      "exact_agreement": 0.7,
+      "macro_f1": 0.643,
+      "quadratic_kappa": 0.7114,
+      "high_recall": 0.9219,
+      "under_prioritisation": 0.0667,
+      "over_escalation": 0.2333,
+      "mean_cost": 0.4167
+    }
+  },
+  "primary_paired_bootstrap_DADE_minus_baseline": {
+    "B1_ML_only": {
+      "quadratic_kappa": {
+        "diff": 0.4123,
+        "ci95": [
+          0.1758,
+          0.6501
+        ]
+      },
+      "mean_cost": {
+        "diff": -0.0083,
+        "ci95": [
+          -0.325,
+          0.325
+        ]
+      },
+      "high_recall": {
+        "diff": -0.1549,
+        "ci95": [
+          -0.3538,
+          0.0333
+        ]
+      },
+      "under_prioritisation": {
+        "diff": 0.1145,
+        "ci95": [
+          0.0083,
+          0.225
+        ]
+      }
+    },
+    "B2_equal_weight": {
+      "quadratic_kappa": {
+        "diff": 0.0033,
+        "ci95": [
+          -0.0545,
+          0.0632
+        ]
+      },
+      "mean_cost": {
+        "diff": 0.0172,
+        "ci95": [
+          -0.0502,
+          0.1167
+        ]
+      },
+      "high_recall": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "under_prioritisation": {
+        "diff": 0.0084,
+        "ci95": [
+          0.0,
+          0.025
+        ]
+      }
+    },
+    "B3_BIA_only": {
+      "quadratic_kappa": {
+        "diff": 0.193,
+        "ci95": [
+          0.0749,
+          0.3179
+        ]
+      },
+      "mean_cost": {
+        "diff": -0.6754,
+        "ci95": [
+          -1.1083,
+          -0.2833
+        ]
+      },
+      "high_recall": {
+        "diff": 0.2419,
+        "ci95": [
+          0.0615,
+          0.4572
+        ]
+      },
+      "under_prioritisation": {
+        "diff": -0.2227,
+        "ci95": [
+          -0.3667,
+          -0.0917
+        ]
+      }
+    },
+    "B4_severity_x_impact": {
+      "quadratic_kappa": {
+        "diff": 0.0413,
+        "ci95": [
+          -0.0374,
+          0.1259
+        ]
+      },
+      "mean_cost": {
+        "diff": -0.1407,
+        "ci95": [
+          -0.4667,
+          0.1917
+        ]
+      },
+      "high_recall": {
+        "diff": -0.032,
+        "ci95": [
+          -0.25,
+          0.1698
+        ]
+      },
+      "under_prioritisation": {
+        "diff": -0.0499,
+        "ci95": [
+          -0.175,
+          0.0833
+        ]
+      }
+    },
+    "B5_ML_x_impact": {
+      "quadratic_kappa": {
+        "diff": 0.0353,
+        "ci95": [
+          -0.0787,
+          0.1705
+        ]
+      },
+      "mean_cost": {
+        "diff": 0.1879,
+        "ci95": [
+          -0.0333,
+          0.4419
+        ]
+      },
+      "high_recall": {
+        "diff": -0.1946,
+        "ci95": [
+          -0.381,
+          -0.0506
+        ]
+      },
+      "under_prioritisation": {
+        "diff": 0.1108,
+        "ci95": [
+          0.0248,
+          0.2083
+        ]
+      }
+    }
+  },
+  "primary_by_profile_criticality": {
+    "high": {
+      "DADE_AHP": {
+        "n": 40,
+        "exact_agreement": 0.825,
+        "mean_cost": 0.2
+      },
+      "B1_ML_only": {
+        "n": 40,
+        "exact_agreement": 0.825,
+        "mean_cost": 0.45
+      },
+      "B2_equal_weight": {
+        "n": 40,
+        "exact_agreement": 0.775,
+        "mean_cost": 0.25
+      },
+      "B3_BIA_only": {
+        "n": 40,
+        "exact_agreement": 0.775,
+        "mean_cost": 0.25
+      },
+      "B4_severity_x_impact": {
+        "n": 40,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.65
+      },
+      "B5_ML_x_impact": {
+        "n": 40,
+        "exact_agreement": 0.775,
+        "mean_cost": 0.25
+      }
+    },
+    "low": {
+      "DADE_AHP": {
+        "n": 40,
+        "exact_agreement": 0.725,
+        "mean_cost": 0.7
+      },
+      "B1_ML_only": {
+        "n": 40,
+        "exact_agreement": 0.2,
+        "mean_cost": 0.975
+      },
+      "B2_equal_weight": {
+        "n": 40,
+        "exact_agreement": 0.725,
+        "mean_cost": 0.6
+      },
+      "B3_BIA_only": {
+        "n": 40,
+        "exact_agreement": 0.5,
+        "mean_cost": 1.5
+      },
+      "B4_severity_x_impact": {
+        "n": 40,
+        "exact_agreement": 0.6,
+        "mean_cost": 1.075
+      },
+      "B5_ML_x_impact": {
+        "n": 40,
+        "exact_agreement": 0.625,
+        "mean_cost": 0.7
+      }
+    },
+    "medium": {
+      "DADE_AHP": {
+        "n": 40,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.9
+      },
+      "B1_ML_only": {
+        "n": 40,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.4
+      },
+      "B2_equal_weight": {
+        "n": 40,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.9
+      },
+      "B3_BIA_only": {
+        "n": 40,
+        "exact_agreement": 0.3,
+        "mean_cost": 2.1
+      },
+      "B4_severity_x_impact": {
+        "n": 40,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.5
+      },
+      "B5_ML_x_impact": {
+        "n": 40,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.3
+      }
+    }
+  },
+  "primary_by_profile": {
+    "P1": {
+      "DADE_AHP": {
+        "n": 20,
+        "exact_agreement": 0.8,
+        "mean_cost": 0.25
+      },
+      "B1_ML_only": {
+        "n": 20,
+        "exact_agreement": 0.8,
+        "mean_cost": 0.55
+      },
+      "B2_equal_weight": {
+        "n": 20,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.35
+      },
+      "B3_BIA_only": {
+        "n": 20,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.35
+      },
+      "B4_severity_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.65,
+        "mean_cost": 0.95
+      },
+      "B5_ML_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.35
+      }
+    },
+    "P2": {
+      "DADE_AHP": {
+        "n": 20,
+        "exact_agreement": 0.85,
+        "mean_cost": 0.15
+      },
+      "B1_ML_only": {
+        "n": 20,
+        "exact_agreement": 0.85,
+        "mean_cost": 0.35
+      },
+      "B2_equal_weight": {
+        "n": 20,
+        "exact_agreement": 0.85,
+        "mean_cost": 0.15
+      },
+      "B3_BIA_only": {
+        "n": 20,
+        "exact_agreement": 0.85,
+        "mean_cost": 0.15
+      },
+      "B4_severity_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.85,
+        "mean_cost": 0.35
+      },
+      "B5_ML_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.85,
+        "mean_cost": 0.15
+      }
+    },
+    "P3": {
+      "DADE_AHP": {
+        "n": 20,
+        "exact_agreement": 0.9,
+        "mean_cost": 0.3
+      },
+      "B1_ML_only": {
+        "n": 20,
+        "exact_agreement": 0.9,
+        "mean_cost": 0.3
+      },
+      "B2_equal_weight": {
+        "n": 20,
+        "exact_agreement": 0.9,
+        "mean_cost": 0.3
+      },
+      "B3_BIA_only": {
+        "n": 20,
+        "exact_agreement": 0.1,
+        "mean_cost": 2.7
+      },
+      "B4_severity_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.9,
+        "mean_cost": 0.1
+      },
+      "B5_ML_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.9,
+        "mean_cost": 0.1
+      }
+    },
+    "P4": {
+      "DADE_AHP": {
+        "n": 20,
+        "exact_agreement": 0.5,
+        "mean_cost": 1.5
+      },
+      "B1_ML_only": {
+        "n": 20,
+        "exact_agreement": 0.5,
+        "mean_cost": 0.5
+      },
+      "B2_equal_weight": {
+        "n": 20,
+        "exact_agreement": 0.5,
+        "mean_cost": 1.5
+      },
+      "B3_BIA_only": {
+        "n": 20,
+        "exact_agreement": 0.5,
+        "mean_cost": 1.5
+      },
+      "B4_severity_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.5,
+        "mean_cost": 0.9
+      },
+      "B5_ML_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.5,
+        "mean_cost": 0.5
+      }
+    },
+    "P5": {
+      "DADE_AHP": {
+        "n": 20,
+        "exact_agreement": 0.65,
+        "mean_cost": 0.95
+      },
+      "B1_ML_only": {
+        "n": 20,
+        "exact_agreement": 0.3,
+        "mean_cost": 0.7
+      },
+      "B2_equal_weight": {
+        "n": 20,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.7
+      },
+      "B3_BIA_only": {
+        "n": 20,
+        "exact_agreement": 0.3,
+        "mean_cost": 2.2
+      },
+      "B4_severity_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.45,
+        "mean_cost": 1.65
+      },
+      "B5_ML_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.8
+      }
+    },
+    "P6": {
+      "DADE_AHP": {
+        "n": 20,
+        "exact_agreement": 0.8,
+        "mean_cost": 0.45
+      },
+      "B1_ML_only": {
+        "n": 20,
+        "exact_agreement": 0.1,
+        "mean_cost": 1.25
+      },
+      "B2_equal_weight": {
+        "n": 20,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.5
+      },
+      "B3_BIA_only": {
+        "n": 20,
+        "exact_agreement": 0.7,
+        "mean_cost": 0.8
+      },
+      "B4_severity_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.5
+      },
+      "B5_ML_x_impact": {
+        "n": 20,
+        "exact_agreement": 0.55,
+        "mean_cost": 0.6
+      }
+    }
+  },
+  "primary_by_true_traffic_type": {
+    "Analysis": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 1.0,
+        "mean_cost": 0.0
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.6667,
+        "mean_cost": 0.3333
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 1.0,
+        "mean_cost": 0.0
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.6667,
+        "mean_cost": 1.0
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 1.0,
+        "mean_cost": 0.0
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 1.0,
+        "mean_cost": 0.0
+      }
+    },
+    "Backdoor": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 1.1667
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 0.5
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 1.1667
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.3333,
+        "mean_cost": 1.9167
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.25,
+        "mean_cost": 1.9167
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.5
+      }
+    },
+    "DoS": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.5,
+        "mean_cost": 1.5
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 0.5833
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.4167,
+        "mean_cost": 1.25
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.25,
+        "mean_cost": 2.0833
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.4167,
+        "mean_cost": 1.75
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.4167,
+        "mean_cost": 0.9167
+      }
+    },
+    "Exploits": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.9167,
+        "mean_cost": 0.1667
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.25
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.9167,
+        "mean_cost": 0.1667
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 1.1667
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.9167,
+        "mean_cost": 0.1667
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.9167,
+        "mean_cost": 0.1667
+      }
+    },
+    "Fuzzers": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.3333
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.5,
+        "mean_cost": 1.0833
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.3333
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.4167,
+        "mean_cost": 1.3333
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.6667
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 0.4167
+      }
+    },
+    "Generic": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 0.9167
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.4167,
+        "mean_cost": 0.9167
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 0.9167
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.3333,
+        "mean_cost": 1.6667
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 1.25
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 0.5833
+      }
+    },
+    "Normal": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.8333,
+        "mean_cost": 0.1667
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.5,
+        "mean_cost": 0.5
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.8333,
+        "mean_cost": 0.1667
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.8333,
+        "mean_cost": 0.3333
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.5,
+        "mean_cost": 0.8333
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.5,
+        "mean_cost": 0.6667
+      }
+    },
+    "Reconnaissance": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.6667,
+        "mean_cost": 0.75
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.4167,
+        "mean_cost": 1.1667
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.6667,
+        "mean_cost": 0.75
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.6667,
+        "mean_cost": 0.75
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.6667,
+        "mean_cost": 0.4167
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.5,
+        "mean_cost": 0.5
+      }
+    },
+    "Shellcode": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.75
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.5833,
+        "mean_cost": 0.4167
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.75
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.75
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.9167,
+        "mean_cost": 0.0833
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.9167,
+        "mean_cost": 0.0833
+      }
+    },
+    "Worms": {
+      "DADE_AHP": {
+        "n": 12,
+        "exact_agreement": 0.9167,
+        "mean_cost": 0.25
+      },
+      "B1_ML_only": {
+        "n": 12,
+        "exact_agreement": 0.75,
+        "mean_cost": 0.3333
+      },
+      "B2_equal_weight": {
+        "n": 12,
+        "exact_agreement": 0.8333,
+        "mean_cost": 0.3333
+      },
+      "B3_BIA_only": {
+        "n": 12,
+        "exact_agreement": 0.4167,
+        "mean_cost": 1.8333
+      },
+      "B4_severity_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.8333,
+        "mean_cost": 0.3333
+      },
+      "B5_ML_x_impact": {
+        "n": 12,
+        "exact_agreement": 0.8333,
+        "mean_cost": 0.3333
+      }
+    }
+  },
+  "secondary_consensus": {
+    "DADE_AHP": {
+      "n": 30,
+      "exact_agreement": 0.7667,
+      "macro_f1": 0.792,
+      "quadratic_kappa": 0.7977,
+      "high_recall": 0.6842,
+      "under_prioritisation": 0.2,
+      "over_escalation": 0.0333,
+      "mean_cost": 0.6333
+    },
+    "B1_ML_only": {
+      "n": 30,
+      "exact_agreement": 0.6,
+      "macro_f1": 0.3554,
+      "quadratic_kappa": 0.2932,
+      "high_recall": 0.8421,
+      "under_prioritisation": 0.1,
+      "over_escalation": 0.3,
+      "mean_cost": 0.6667
+    },
+    "B2_equal_weight": {
+      "n": 30,
+      "exact_agreement": 0.7667,
+      "macro_f1": 0.792,
+      "quadratic_kappa": 0.7977,
+      "high_recall": 0.6842,
+      "under_prioritisation": 0.2,
+      "over_escalation": 0.0333,
+      "mean_cost": 0.6333
+    },
+    "B3_BIA_only": {
+      "n": 30,
+      "exact_agreement": 0.5,
+      "macro_f1": 0.4708,
+      "quadratic_kappa": 0.5909,
+      "high_recall": 0.4737,
+      "under_prioritisation": 0.4667,
+      "over_escalation": 0.0333,
+      "mean_cost": 1.4
+    },
+    "B4_severity_x_impact": {
+      "n": 30,
+      "exact_agreement": 0.7667,
+      "macro_f1": 0.7297,
+      "quadratic_kappa": 0.7525,
+      "high_recall": 0.7368,
+      "under_prioritisation": 0.2333,
+      "over_escalation": 0.0,
+      "mean_cost": 0.7333
+    },
+    "B5_ML_x_impact": {
+      "n": 30,
+      "exact_agreement": 0.8,
+      "macro_f1": 0.6966,
+      "quadratic_kappa": 0.8185,
+      "high_recall": 0.9474,
+      "under_prioritisation": 0.0667,
+      "over_escalation": 0.1333,
+      "mean_cost": 0.3
+    }
+  },
+  "dade_failure_cases": [
+    {
+      "scenario_id": "A03",
+      "consensus": "High",
+      "dade": "Medium",
+      "votes": {
+        "Low": 0,
+        "Medium": 1,
+        "High": 3
+      },
+      "true_category": "Backdoor",
+      "shown_category": "DoS",
+      "profile": "P4",
+      "MLS": 1.0,
+      "dade_score": 0.572
+    },
+    {
+      "scenario_id": "A08",
+      "consensus": "High",
+      "dade": "Medium",
+      "votes": {
+        "Low": 0,
+        "Medium": 2,
+        "High": 2
+      },
+      "true_category": "Reconnaissance",
+      "shown_category": "Reconnaissance",
+      "profile": "P3",
+      "MLS": 0.428,
+      "dade_score": 0.598
+    },
+    {
+      "scenario_id": "A10",
+      "consensus": "High",
+      "dade": "Medium",
+      "votes": {
+        "Low": 0,
+        "Medium": 2,
+        "High": 2
+      },
+      "true_category": "DoS",
+      "shown_category": "Fuzzers",
+      "profile": "P5",
+      "MLS": 0.801,
+      "dade_score": 0.339
+    },
+    {
+      "scenario_id": "B02",
+      "consensus": "High",
+      "dade": "Medium",
+      "votes": {
+        "Low": 0,
+        "Medium": 2,
+        "High": 2
+      },
+      "true_category": "DoS",
+      "shown_category": "DoS",
+      "profile": "P4",
+      "MLS": 0.997,
+      "dade_score": 0.572
+    },
+    {
+      "scenario_id": "B04",
+      "consensus": "High",
+      "dade": "Medium",
+      "votes": {
+        "Low": 0,
+        "Medium": 2,
+        "High": 2
+      },
+      "true_category": "Generic",
+      "shown_category": "Generic",
+      "profile": "P4",
+      "MLS": 0.996,
+      "dade_score": 0.548
+    },
+    {
+      "scenario_id": "C03",
+      "consensus": "High",
+      "dade": "Medium",
+      "votes": {
+        "Low": 0,
+        "Medium": 1,
+        "High": 3
+      },
+      "true_category": "Shellcode",
+      "shown_category": "Shellcode",
+      "profile": "P4",
+      "MLS": 0.882,
+      "dade_score": 0.606
+    },
+    {
+      "scenario_id": "C05",
+      "consensus": "Medium",
+      "dade": "High",
+      "votes": {
+        "Low": 0,
+        "Medium": 3,
+        "High": 1
+      },
+      "true_category": "DoS",
+      "shown_category": "Normal",
+      "profile": "P1",
+      "MLS": 0.532,
+      "dade_score": 0.663
+    }
+  ],
+  "threshold_tuning_by_form": {
+    "A": {
+      "thresholds": [
+        0.48,
+        0.2
+      ],
+      "test_mean_cost_tuned": 0.15,
+      "test_mean_cost_fixed": 0.5
+    },
+    "B": {
+      "thresholds": [
+        0.4,
+        0.3
+      ],
+      "test_mean_cost_tuned": 0.35,
+      "test_mean_cost_fixed": 0.65
+    },
+    "C": {
+      "thresholds": [
+        0.46,
+        0.26
+      ],
+      "test_mean_cost_tuned": 0.25,
+      "test_mean_cost_fixed": 0.75
+    }
+  }
+}

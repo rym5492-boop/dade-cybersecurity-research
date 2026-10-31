@@ -1,4 +1,4 @@
-"""Supplementary material (Tables S1 to S10) generated from the stored result files only.
+"""Supplementary material (Tables S1 to S10, with parts a to e) generated from the stored result files only.
 
 Every number is read from repo_filtered/results/revision/*.json, from results/ahp_weights_results.json (September
 AHP answers, earlier analysis) or from the coverage-search files in results/manuscript; values are rounded half up. Output: paper2/supplementary/Alenezi_IJCIP_Supplementary.docx
@@ -96,6 +96,7 @@ rows = []
 for i, q in enumerate(cov["queries"], 1):
     c = Counter(x["category"] for x in scr if x["query"] == f"Q{i}")
     rows.append([f"Q{i}", q["query"], q["requested_utc"], f"{q['total_results']:,}", c.get("TRIAGE", 0), c.get("CONTEXT", 0), c.get("OTHER", 0) + c.get("CITED", 0)])
+COMBINED = ["10.32620/reks.2025.4.15", "10.37547/tajet/volume08issue06-04"]   # titles combining both topics
 uniq = {}
 for x in scr:
     uniq.setdefault(x["doi"], x["category"])
@@ -109,7 +110,10 @@ table("Table S1. Coverage search in the Crossref REST API (30 October 2026). Fil
             "Crossref matches any query term, so total hits do not measure recall. Every record and decision is in "
             "coverage_screening_2026-10-30.csv; the raw responses are in crossref_coverage_search_2026-10-30.json. "
             "Screening was done by one screener (the AI assistant, under the first author's direction) with the rules "
-            "in src/05_manuscript/coverage_screening.py. Only Crossref was searched."),
+            "in src/05_manuscript/coverage_screening.py. Only Crossref was searched. Two titles combine incident "
+            "prioritization with business impact or criticality levels and were screened by title only, not read in full or "
+            "coded: " + "; ".join(f"{' '.join(x['title'].split())} ({x['year']}), https://doi.org/{x['doi']}" for x in
+                                  (next(y for y in scr if y["doi"] == d) for d in COMBINED)) + "."),
       widths=[1.2, 8.5, 4.0, 2.4, 1.6, 1.6, 1.6])
 
 # ---------------------------------------------------------------- S2 coding evidence
@@ -151,16 +155,16 @@ for m in ["DADE_AHP", "B1_ML_only", "B2_equal_weight", "B3_BIA_only", "B5_ML_x_i
                      r(a["mean_cost"]), r(a["high_recall"]), r(a["escalation_rate"]), r(a["quadratic_kappa"]),
                      f"{r(b['mean_cost']['mean'])} ({rng(b['mean_cost']['p2.5'], b['mean_cost']['p97.5'])})",
                      r(b["high_recall"]["mean"]), r(b["escalation_rate"]["mean"]), r(b["quadratic_kappa"]["mean"]),
-                     (f"{r(e['mean_cost'])} / {r(e['high_recall'])} [{', '.join(r(x) for x in e['thresholds'])}]" if e else "")])
+                     (f"{r(e['mean_cost'])} / {r(e['high_recall'])} / {r(e['escalation_rate'])} [{', '.join(r(x) for x in e['thresholds'])}]" if e else "")])
 b4 = t18["S1_leave_one_form_out"]["B4_severity_x_impact"]["FIXED"]; e4 = t18["external_practitioners_with_locked_thresholds"]["B4_severity_x_impact"]["FIXED"]
 rows.append([NAME["B4_severity_x_impact"], "none", "", r(b4["mean_cost"]), r(b4["high_recall"]), r(b4["escalation_rate"]),
              r(b4["quadratic_kappa"]), r(b4["mean_cost"]), r(b4["high_recall"]), r(b4["escalation_rate"]), r(b4["quadratic_kappa"]),
-             f"{r(e4['mean_cost'])} / {r(e4['high_recall'])}"])
-table("Table S3. Threshold policies scored on held-out scenarios (S1 leave-one-form-out; S2 grouped 5-fold x 100) and "
+             f"{r(e4['mean_cost'])} / {r(e4['high_recall'])} / {r(e4['escalation_rate'])}"])
+table("Table S3. Threshold policies scored on held-out scenarios (LOFO: leave-one-form-out; CV5x100: grouped 5-fold x 100) and "
       "on the 120 practitioner labels with cut-offs locked from the 120 expert labels (r18_threshold_study.json, "
       "r18_locked_thresholds.json).",
-      ["Method", "Policy", "S1 High cut-off, median (range)", "S1 cost", "S1 recall", "S1 escal.", "S1 kappa",
-       "S2 cost (2.5 to 97.5 pct)", "S2 recall", "S2 escal.", "S2 kappa", "External cost / recall [cut-offs]"], rows,
+      ["Method", "Policy", "LOFO High cut-off, median (range)", "LOFO cost", "LOFO recall", "LOFO escal.", "LOFO kappa",
+       "CV5x100 cost (2.5 to 97.5 pct)", "CV5x100 recall", "CV5x100 escal.", "CV5x100 kappa", "External cost / recall / escal. [cut-offs]"], rows,
       note="The external check reuses the 30 scenarios; the practitioners' labels were known from 20 October 2026, so it is "
            "independent in raters only. NESTED share of chosen policies is in the result file.")
 
@@ -197,6 +201,50 @@ rows = [["AIJ, all six (used; equal to AIP)"] + [r(var["AIJ_all_six (paper)"]["w
 table("Table S4c. Group AHP weights under aggregation variants, with expert-bootstrap 95% intervals (5,000 resamples; "
       "r06_ahp_robustness.json; September row from results/ahp_weights_results.json of the earlier analysis).",
       ["Variant"] + C7 + ["Group CR"], rows)
+
+# ---------------------------------------------------------------- S4d paired differences, cost matrices, two-way bootstrap
+t10 = J("r10_stage2.json")["primary_paired_bootstrap_DADE_minus_baseline"]
+ci = lambda d, nd=2: f"{r(d['diff'], nd)} ({rng(*d['ci95'], nd)})"
+rows = [[NAME[b], ci(v["quadratic_kappa"]), ci(v["mean_cost"]), ci(v["high_recall"]), ci(v["under_prioritisation"])] for b, v in t10.items()]
+table("Table S4d. DADE minus each baseline against the 120 expert labels (leave-one-expert-out weights, fixed cut-offs): "
+      "bootstrap mean and 95% interval over 2,000 resamples of scenarios (r10_stage2.json, planned analysis). These are the "
+      "differences shown in Fig. 2 of the paper.",
+      ["Baseline", "Quadratic kappa", "Mean cost", "High recall", "Under-prioritization"], rows)
+t25 = J("r25_decision_sensitivity.json")
+VN = {"protocol": "Protocol, Eq. (6): [[0,1,2],[2,0,1],[6,3,0]]", "symmetric_linear": "Symmetric linear |i - j|",
+      "symmetric_quadratic": "Symmetric quadratic (i - j)^2"}
+rows = []
+for k, v in t25["A_cost_matrix_sensitivity"].items():
+    nm = VN[k] if k in VN else f"Under-prioritization x{k.split('_x')[1]} over-escalation, linear in levels"
+    mc = v["mean_cost"]
+    rows.append([nm] + [r(mc[m]) for m in M] + [ci(v["DADE_minus_B5"]), ci(v["DADE_minus_B2"]), ci(v["DADE_minus_B1"]), NAME[v["cheapest"]]])
+table("Table S4d (continued). Mean misprioritization cost under other cost matrices (rows: rater's label; columns: method's "
+      "level; Low, Medium, High), same 120 leave-one-expert-out decisions, with DADE minus baseline and 95% intervals from "
+      "2,000 resamples of scenarios (r25_decision_sensitivity.json, exploratory, 31 October 2026).",
+      ["Cost matrix"] + [NAME[m] for m in M] + ["DADE - B5", "DADE - B2", "DADE - B1", "Cheapest"], rows,
+      note="Under x1.0 equals the symmetric linear matrix. No interval for DADE - B5 excludes zero. Differences here are point "
+           "differences with their own resamples, so the protocol row can differ in the second decimal from the bootstrap means above.")
+tw = t25["B_two_way_bootstrap_DADE_minus"]
+rows = [[NAME[b], f"{r(v['quadratic_kappa']['mean'])} ({rng(*v['quadratic_kappa']['ci95'])})",
+         f"{r(v['mean_cost']['mean'])} ({rng(*v['mean_cost']['ci95'])})", v["mean_cost"]["n_resamples"]] for b, v in tw.items()]
+table("Table S4d (continued). Two-way bootstrap: experts and scenarios both resampled with replacement (2,000 resamples; "
+      "r25_decision_sensitivity.json, exploratory). Mean and 95% interval of DADE minus the baseline.",
+      ["Baseline", "Quadratic kappa", "Mean cost", "Resamples"], rows)
+
+# ---------------------------------------------------------------- S4e by criticality, all methods
+bc = t19["A_by_criticality"]
+rows = []
+for lvl in ["high", "medium", "low"]:
+    for m in M:
+        v = bc[lvl]["methods"][m]
+        rows.append([lvl, NAME[m], r(v["high_recall"]["value"]), r(v["escalation_rate"]["value"]),
+                     f"{r(v['mean_cost']['value'])} ({rng(*v['mean_cost']['ci95'])})", r(v["under_prioritisation"]["value"])])
+dist = "; ".join(f"{lvl}: " + ", ".join(f"{bc[lvl]['label_distribution'].get(c, 0)} {c}" for c in ("High", "Medium", "Low"))
+                 for lvl in ["high", "medium", "low"])
+table("Table S4e. High-priority recall, escalation rate, mean cost (95% interval) and under-prioritization by criticality "
+      "of the profile, 40 expert labels each (r19_ablation_and_paired.json, A_by_criticality, exploratory).",
+      ["Criticality", "Method", "High recall", "Escalation", "Mean cost (95% CI)", "Under-prioritization"], rows,
+      note="Expert labels per criticality level: " + dist + ". High: P1, P2; medium: P3, P4; low: P5, P6.")
 
 # ---------------------------------------------------------------- S5 error propagation
 t20 = J("r20_error_propagation.json")
@@ -288,12 +336,29 @@ for m in ["HistGradientBoosting", "RandomForest"]:
         rows.append([m, meth, r(v["brier"], 3), r(v["log_loss"], 3), f"{r(v['ece_15bins'],3)} ({rng(*v['ece_95ci'],3)})"])
 table("Table S8d. Calibration on the UNSW-NB15 test file, maps fitted on CAL (r02_calibration.json).",
       ["Model", "Method", "Brier", "Log loss", "ECE, 15 bins (95% CI)"], rows)
+t26 = J("r26_ttl_and_label_conflicts.json")
+rows = []
+for k, nm in [("A_hgb_all_features", "HGB, all features"), ("A_hgb_without_ttl", "HGB without sttl, dttl, ct_state_ttl"),
+              ("A_tree_depth4_ttl_only", "Depth-4 tree on the three TTL features only")]:
+    for th in ["default_0.5", "val_fpr_1pct"]:
+        v = t26[k]["test"][th]
+        rows.append([nm, th, r(v["threshold"], 4), r(t26[k]["test_roc_auc"], 3), pct(v["accuracy"]), pct(v["attack_recall"]), pct(v["false_positive_rate"])])
+lc = t26["B_label_conflicts"]
+table("Table S8e. UNSW-NB15 testbed TTL features and label conflicts between the training and test files "
+      "(r26_ttl_and_label_conflicts.json, exploratory, 31 October 2026; FIT for training, thresholds on VAL).",
+      ["Model", "Threshold rule", "Threshold", "Test ROC-AUC", "Accuracy", "Recall", "FPR"], rows,
+      note=(f"Label conflicts: {lc['test_rows_identical_to_a_training_row']:,} test rows have all feature values equal to a "
+            f"training row; of the {lc['benign_test_rows_identical_to_a_training_row']:,} benign ones, "
+            f"{lc['of_which_majority_attack_in_training']} are labeled attack in most of their training copies and "
+            f"{lc['of_which_any_attack_in_training']} in at least one; of the {lc['attack_test_rows_identical_to_a_training_row']:,} "
+            f"attack ones, {lc['of_which_majority_benign_in_training']} are mostly benign in training. Training-file rows by sttl "
+            "value (attack share): " + "; ".join(f"{k}: {v['rows']:,} ({pct(v['attack_share'])})" for k, v in t26["A_training_file_sttl"].items()) + "."))
 
 # ---------------------------------------------------------------- S9 base rate
 t17 = J("r17_base_rate_thresholds.json")
 rows = []
-pol_names = {"P1_uncorrected_0.5": "P1 uncorrected 0.5", "P2_oracle_prior_0.5": "P2 oracle prior", "P3_em_prior_0.5": "P3 EM prior",
-             "P4a_prior_x5_0.5": "P4a prior x5", "P4b_prior_div5_0.5": "P4b prior /5", "P5_validation_fpr1pct": "P5 validation threshold"}
+pol_names = {"P1_uncorrected_0.5": "BR1 uncorrected 0.5", "P2_oracle_prior_0.5": "BR2 oracle prior", "P3_em_prior_0.5": "BR3 EM prior",
+             "P4a_prior_x5_0.5": "BR4a prior x5", "P4b_prior_div5_0.5": "BR4b prior /5", "P5_validation_fpr1pct": "BR5 validation threshold"}
 for prev, v in t17["prevalence"].items():
     for p, nm in pol_names.items():
         if p not in v["policies"]:
@@ -317,9 +382,20 @@ table("Table S9. Base-rate policies, mean and range over ten draws per prevalenc
       + t17["detector"] + f"; training prior {t17['calibration_split_prevalence']}; {t17['n_benign_in_every_draw']:,} benign flows in every draw; "
       f"validation threshold {t17['validation_threshold_fpr1pct']}.",
       ["Prevalence", "Policy", "Threshold", "Precision (range)", "Recall (range)", "FPR", "Alerts per 1,000 flows", "TP / FP / FN / TN (means)"], rows,
-      note=f"Thresholds are on the uncorrected isotonic score: P1 uses 0.5, P5 the validation threshold, and P2 to P4 the value of Eq. (4) of the paper with each policy's prior; "
-           f"* with the mean EM estimate (it varies between draws). P4a multiplies the prevalence by 5, capped at 0.99, so at 50% it uses 0.99. "
-           f"Equivalent uncorrected threshold of P2 as stored: {eq}. EM-estimated prevalence: {em}. Ranking before / after correction: {rk}.")
+      note=f"Thresholds are on the uncorrected isotonic score: BR1 uses 0.5, BR5 the validation threshold, and BR2 to BR4 the value of Eq. (4) of the paper with each policy's prior; "
+           f"* with the mean EM estimate (it varies between draws). BR4a multiplies the prevalence by 5, capped at 0.99, so at 50% it uses 0.99. "
+           f"Policy keys in the result file keep the earlier names P1 to P5. Equivalent uncorrected threshold of BR2 as stored: {eq}. EM-estimated prevalence: {em}. Ranking before / after correction: {rk}.")
+
+bc_ = t25["C_base_rate_at_decision_layer"]
+rows = [["uncorrected (training prior " + str(bc_["pi_train"]) + ")"] + ["0 / " + str(bc_["uncorrected_high_decisions"][m]) for m in M]]
+for k, v in bc_.items():
+    if k.startswith("prior_"):
+        rows.append([k.replace("prior_", "deployment prior ")] + [f"{v['decisions_changed_of_30'][m]} / {v['high_decisions'][m]}" for m in M])
+table("Table S9b. Base rate at the decision layer: the 30 scenario MLS values corrected by Eq. (3) of the paper from the "
+      "training prior to each deployment prior, every rule re-applied with the group weights and fixed cut-offs "
+      "(r25_decision_sensitivity.json, exploratory). Cells: decisions changed of 30 / High decisions.",
+      ["Scenario MLS"] + [NAME[m] for m in M], rows,
+      note="Costs are not reported, because the labels refer to the uncorrected MLS that the raters saw. B3 and B4 do not use the MLS.")
 
 # ---------------------------------------------------------------- S10 leakage audit
 t04 = J("r04_ablation_leakage_audit.json")

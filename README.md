@@ -1,4 +1,4 @@
-# DADE: code, data and results (second revision, 30 October 2026)
+# DADE: code, data and results (second revision, 30 and 31 October 2026)
 
 Code and results for the journal manuscript **"Intrusion detection and business impact analysis for
 continuity prioritization: a leakage-audited evaluation of an analytic hierarchy process rule against simpler
@@ -6,7 +6,8 @@ baselines"** (Khalid Khadhear Alenezi and Mohamed Ayari, Northern Border Univers
 on the same study. DADE is used only as the name of the decision rule; it implies no dynamic or adaptive
 behaviour.
 
-**Every number in the manuscript and the thesis comes from the scripts in `src/04_revision` (r01 to r24) and
+**Every number in the manuscript and the thesis comes from the analysis scripts in `src/04_revision` (r01 to r22, r25,
+r26; r23 writes the provenance manifest and r24 draws figures) and
 their outputs in `results/revision`,** except the group consistency ratio of the September AHP answers
 (0.050), which comes from the earlier analysis file `results/ahp_weights_results.json`. The figures and related-work coverage records of the manuscript are made
 by `src/05_manuscript`. See `src/04_revision/README.md` for what each script does and the order to run them,
@@ -37,7 +38,9 @@ hashes, re-runs every analysis script whose data are present, compares each outp
 writes a dated report to `results/reproduction/`. Only such logged reports count as evidence of
 reproduction: the re-runs the first author reported on 17, 21 and 24 October 2026 left no report and are not
 used as evidence. The clean-room re-run of 30 October 2026 and the first author's re-run of 31 October 2026
-(report in `results/reproduction/20261031_153220/`) are described in `docs/REPRODUCIBILITY.md`.
+(report in `results/reproduction/20261031_153220/`, with his output files and a content comparison) are described in
+`docs/REPRODUCIBILITY.md`. Scripts r25 and r26 were added after his re-run:
+`python src/04_revision/reproduce.py --only=r25_decision_sensitivity,r26_ttl_and_label_conflicts`.
 
 ## What changed in the revision (summary)
 

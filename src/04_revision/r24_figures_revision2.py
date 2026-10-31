@@ -31,9 +31,9 @@ def save(fig, name):
 steps = [("1  Alert on\na network flow", "IDS or flow sensor"),
          ("2  Attack probability\n(MLS) and predicted\ncategory", "HGB on FIT, isotonic\nmap on CAL; category\nclassifier, no true label"),
          ("3  Service linkage", "flow \u2192 asset \u2192 service\n(asset inventory\nor CMDB)"),
-         ("4  BIA record\nof the service", "AC, BI, RTO, RPO:\nBIA register;\nHI: incident log"),
-         ("5  Weighted score\n(DPS)", "AHP weights approved\nbefore use; severity of\npredicted category"),
-         ("6  Priority level", "cut-offs fixed in\nadvance, or locked\nafter tuning"),
+         ("4  BIA record\nof the service", "AC, BI, RTO, RPO: BIA\nregister; HI: incident log\n(hypothetical here)"),
+         ("5  Weighted score\n(DPS)", "AHP group weights;\nseverity of the\npredicted category"),
+         ("6  Priority level", "cut-offs fixed in\nadvance, or tuned on\nlabeled cases"),
          ("7  Human decision\nand action", "analyst approves or\noverrides; reason\nlogged; playbook")]
 fig, ax = plt.subplots(figsize=(7.2, 3.9))
 ax.set_xlim(0, 4); ax.set_ylim(0, 2.4); ax.axis("off")
@@ -59,12 +59,15 @@ save(fig, "fig6_workflow")
 T = pd.read_csv(OUT_DIR / "r18_tradeoff_curves.csv")
 names = {"DADE_AHP": "DADE (AHP weights)", "B1_ML_only": "B1 detector only", "B2_equal_weight": "B2 equal weights",
          "B3_BIA_only": "B3 BIA only"}
-styles = {"DADE_AHP": (ACCENT, "-"), "B1_ML_only": (ACCENT2, "--"), "B2_equal_weight": (INK, ":"), "B3_BIA_only": (MUTED, "-.")}
+styles = {"DADE_AHP": (ACCENT, "-"), "B1_ML_only": ("#9f7aea", "--"), "B2_equal_weight": (INK, ":"), "B3_BIA_only": (MUTED, "-.")}
 fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.6), sharex=True)
 for m, d in T.groupby("method"):
     c, ls = styles[m]
     for ax, col in zip(axs, ["high_recall", "escalation_rate", "mean_cost"]):
         ax.plot(d["high_cutoff"], d[col], ls, color=c, lw=1.1, label=names[m])
+b5 = json.load(open(OUT_DIR / "r19_ablation_and_paired.json"))["A_metrics_with_ci"]["B5_ML_x_impact"]
+for ax, col in zip(axs, ["high_recall", "escalation_rate", "mean_cost"]):
+    ax.axhline(b5[col]["value"], color=ACCENT2, lw=0.9, ls=(0, (1, 1)), label="B5 detector \u00d7 impact (fixed)" if col == "high_recall" else None)
 for ax, t in zip(axs, ["High-priority recall", "Share of alerts escalated to High", "Mean misprioritization cost"]):
     ax.set_title(t, fontsize=8); ax.axvline(0.66, color=GRID, lw=2, zorder=0); ax.set_xlabel("High cut-off")
     ax.grid(axis="y", color=GRID, lw=0.5)
@@ -80,7 +83,7 @@ lab = {"equal_weights": "AHP replaced by equal weights", "without_MLS": "without
        "without_detector_inputs_MLS_TS": "without MLS and TS", "without_AC": "without AC", "without_BI": "without BI",
        "without_HI": "without HI", "without_RTO": "without RTO", "without_RPO": "without RPO", "without_all_BIA": "without all five BIA criteria"}
 fig, axs = plt.subplots(1, 2, figsize=(7.2, 2.8), sharey=True)
-for ax, key, title in zip(axs, ["mean_cost", "quadratic_kappa"], ["Mean cost: full DADE minus variant", "Quadratic kappa: full DADE minus variant"]):
+for ax, key, title in zip(axs, ["mean_cost", "quadratic_kappa"], ["Mean cost: full DADE minus variant\n(< 0: removing the input raises cost)", "Quadratic kappa: full DADE minus variant\n(> 0: removing the input lowers kappa)"]):
     for i, k in enumerate(order):
         d = r19[k]["paired_full_minus_variant"][key]
         ax.errorbar(d["diff"], i, xerr=[[d["diff"] - d["ci95"][0]], [d["ci95"][1] - d["diff"]]], fmt="o", color=ACCENT, ms=3, lw=0.8, capsize=1.5)

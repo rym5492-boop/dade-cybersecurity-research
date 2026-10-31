@@ -6,14 +6,15 @@ independently reproduced").
 Usage, from the repository root, with the dataset files in data/ (see the main README):
     python src/04_revision/reproduce.py            # every script whose data are present
     python src/04_revision/reproduce.py --cic-only # only r07, r08, r12, r22 (the scripts that need the CIC files)
+    python src/04_revision/reproduce.py --only=r25_decision_sensitivity,r26_ttl_and_label_conflicts
 
 What it does:
   1. records who ran it, where and with which software versions;
   2. checks the SHA-256 of the dataset files against the values recorded in r23_provenance_manifest.json;
   3. copies results/revision to results/reproduction/<timestamp>/reference (the stored results);
   4. runs every script in order and keeps its console output;
-  5. compares every output file with the stored version (numbers equal within 1e-9; run times ignored) and
-     writes results/reproduction/<timestamp>/REPRODUCTION_REPORT.md.
+  5. compares every output file with the stored version (numbers equal within 1e-9; run times ignored; CSV, NPZ
+     and text files by content, see compare_outputs.py) and writes results/reproduction/<timestamp>/REPRODUCTION_REPORT.md.
 Nothing is uploaded anywhere. Commit the report folder only if you want it to be public.
 """
 import datetime
@@ -28,6 +29,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from compare_outputs import compare as content_compare
+
 ROOT = Path(__file__).resolve().parents[2]
 REV = ROOT / "results" / "revision"
 SRC = ROOT / "src" / "04_revision"
@@ -36,7 +39,7 @@ ORDER = ["r01_unsw_detection", "r02_calibration", "r03_attack_category_severity"
          "r09_build_scenarios", "r10_decision_evaluation", "r11_unsw_duplicates", "r12_dataset_manifest",
          "r13_external_panel", "r14_final_checks", "r15_figures", "r16_level_bounds", "r17_base_rate_thresholds",
          "r18_threshold_study", "r19_ablation_and_paired", "r20_error_propagation", "r21_panel_audit",
-         "r22_cross_dataset_audit"]
+         "r22_cross_dataset_audit", "r25_decision_sensitivity", "r26_ttl_and_label_conflicts"]
 CIC = {"r07_cross_dataset_v2", "r08_cicids2017_holdout_v2", "r12_dataset_manifest", "r22_cross_dataset_audit"}
 IGNORE_KEYS = ("seconds", "platform", "python")
 UNSW = ["UNSW_NB15_training-set.csv", "UNSW_NB15_testing-set.csv"]
@@ -46,7 +49,8 @@ NEEDS = {"r01_unsw_detection": UNSW, "r02_calibration": UNSW, "r03_attack_catego
          "r08_cicids2017_holdout_v2": ["cicids2017_cleaned.csv"], "r09_build_scenarios": UNSW, "r11_unsw_duplicates": UNSW,
          "r12_dataset_manifest": UNSW + ["KDDTrain+.txt", "KDDTest+.txt", "cicids2017_cleaned.csv", "balanced_7classes_500000_each.csv"],
          "r17_base_rate_thresholds": UNSW,
-         "r22_cross_dataset_audit": UNSW + ["cicids2017_cleaned.csv", "balanced_7classes_500000_each.csv"]}
+         "r22_cross_dataset_audit": UNSW + ["cicids2017_cleaned.csv", "balanced_7classes_500000_each.csv"],
+         "r26_ttl_and_label_conflicts": UNSW}
 
 
 def sha256(p):
@@ -84,7 +88,9 @@ def compare(ref, new):
             elif x != y:
                 diff.append((k, x, y))
         return "identical" if not diff else f"{len(diff)} values differ, e.g. {diff[:3]}"
-    return "byte-identical" if ref.read_bytes() == new.read_bytes() else "file differs (binary or text; check by eye)"
+    if ref.read_bytes() == new.read_bytes():
+        return "byte-identical"
+    return content_compare(ref, new)       # CSV, NPZ and text compared by content (compare_outputs.py)
 
 
 def main():
