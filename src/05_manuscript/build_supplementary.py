@@ -160,11 +160,11 @@ b4 = t18["S1_leave_one_form_out"]["B4_severity_x_impact"]["FIXED"]; e4 = t18["ex
 rows.append([NAME["B4_severity_x_impact"], "none", "", r(b4["mean_cost"]), r(b4["high_recall"]), r(b4["escalation_rate"]),
              r(b4["quadratic_kappa"]), r(b4["mean_cost"]), r(b4["high_recall"]), r(b4["escalation_rate"]), r(b4["quadratic_kappa"]),
              f"{r(e4['mean_cost'])} / {r(e4['high_recall'])} / {r(e4['escalation_rate'])}"])
-table("Table S3. Threshold policies scored on held-out scenarios (LOFO: leave-one-form-out; CV5x100: grouped 5-fold x 100) and "
+table("Table S3. Threshold policies scored on held-out scenarios (LOFO: leave-one-form-out; CV5×100: grouped 5-fold x 100) and "
       "on the 120 practitioner labels with cut-offs locked from the 120 expert labels (r18_threshold_study.json, "
       "r18_locked_thresholds.json).",
       ["Method", "Policy", "LOFO High cut-off, median (range)", "LOFO cost", "LOFO recall", "LOFO escal.", "LOFO kappa",
-       "CV5x100 cost (2.5 to 97.5 pct)", "CV5x100 recall", "CV5x100 escal.", "CV5x100 kappa", "External cost / recall / escal. [cut-offs]"], rows,
+       "CV5×100 cost (2.5 to 97.5 pct)", "CV5×100 recall", "CV5×100 escal.", "CV5×100 kappa", "External cost / recall / escal. [cut-offs]"], rows,
       note="The external check reuses the 30 scenarios; the practitioners' labels were known from 20 October 2026, so it is "
            "independent in raters only. NESTED share of chosen policies is in the result file.")
 
