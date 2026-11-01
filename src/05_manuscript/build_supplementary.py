@@ -123,7 +123,7 @@ ev = [
     ("Hernández-Bejarano et al.", "Author copy", "Vision paper: ML-supported cyber-resilience framework for continuity; recovery discussed conceptually; no implementation or validation."),
     ("Verma et al. (2025)", "Abstract only", "Conceptual review of resilience concepts and strategies; service continuity discussed; no empirical test."),
     ("Islam et al.", "Full text", "Regression and neural model predict EPSS on CVEjoin; SHAP and LIME produced; service tiers with recovery-time requirements (qualitative); controls prioritized, not evaluated."),
-    ("Wang et al.", "Abstract only", "Pythagorean fuzzy AHP-TOPSIS; expert pairwise judgments as inputs; Kendall's W 0.952 reported among methods; expert code P from the abstract."),
+    ("Wang et al.", "Full text (read 1 November 2026)", "Pythagorean fuzzy AHP weights ten indicators from five experts' linguistic pairwise judgments (CR below 0.1); Pythagorean fuzzy TOPSIS ranks nine threat scenarios of an aircraft network taken from DO-356A (hypothetical case, no traffic or incident data, no ML); Kendall's W 0.952 measures concordance among the same five experts' rankings, not agreement with independent raters, so expert stays P; no cost or continuity criteria."),
     ("Olaore and Alkhwaldi", "Full text", "MCDA over eight criteria to rank frameworks; ML is a conceptual input, no model executed; no expert panel."),
     ("Papastergiou et al.", "Full text", "CodeBERT exploitability prediction on CVEjoin; SHAP; controls and insurance decision; single 5G pilot."),
     ("Mohamed et al.", "arXiv version", "Weighted-sum ranking of ATT&CK mitigations; lab test with three machines; transparent weights."),
