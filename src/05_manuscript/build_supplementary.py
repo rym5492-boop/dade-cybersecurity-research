@@ -106,13 +106,13 @@ table("Table S1. Coverage search in the Crossref REST API (30 October 2026). Fil
       ["Query", "Query string (query=)", "Requested (UTC)", "Total hits", "Triage", "Context", "Other"], rows,
       note=(f"Unique records screened: {len(uniq)}; TRIAGE (alert or incident prioritization, triage or scoring): "
             f"{cu.get('TRIAGE', 0)}; CONTEXT (asset, business-impact or continuity context in cyber decision support): "
-            f"{cu.get('CONTEXT', 0)}; OTHER: {cu.get('OTHER', 0)}. None of the screened records is coded in Table 1. "
+            f"{cu.get('CONTEXT', 0)}; OTHER: {cu.get('OTHER', 0)}. Apart from the two titles named below, none of the screened records is coded in Table 1. "
             "Crossref matches any query term, so total hits do not measure recall. Every record and decision is in "
             "coverage_screening_2026-10-30.csv; the raw responses are in crossref_coverage_search_2026-10-30.json. "
             "Screening was done by one screener (the AI assistant, under the first author's direction) with the rules "
             "in src/05_manuscript/coverage_screening.py. Only Crossref was searched. Two titles combine incident "
-            "prioritization with business impact or criticality levels; they are cited and described from their abstracts in "
-            "Section 2.5 of the paper (full texts could not be opened) and are not coded in Table 1: " + "; ".join(f"{' '.join(x['title'].split())} ({x['year']}), https://doi.org/{x['doi']}" for x in
+            "prioritization with business impact or criticality levels; their full texts were read on 1 November 2026 (PDFs obtained by the first author), and they are cited in "
+            "Section 2.5 and coded in Table 1 (evidence in Table S2): " + "; ".join(f"{' '.join(x['title'].split())} ({x['year']}), https://doi.org/{x['doi']}" for x in
                                   (next(y for y in scr if y["doi"] == d) for d in COMBINED)) + "."),
       widths=[1.2, 8.5, 4.0, 2.4, 1.6, 1.6, 1.6])
 
@@ -138,6 +138,9 @@ ev = [
     ("Kim et al.", "Author copy", "Active learning chooses which alerts an error-prone analyst investigates under a budget; simulation on an LLDOS-based attack graph."),
     ("van Ede et al. (DeepCASE)", "Full text", "Attention-based contextual analysis; 10.5 million events from 20 organizations; retrospective; operator labels as reference."),
     ("Freitas et al.", "Full text (arXiv version)", "Copilot Guided Response deployed in production; triage and containment recommendations; analysts confirm each one; no business inputs."),
+    ("Uzlov et al.", "Full text (read 1 November 2026)", "National criticality level, then CVSS, then hierarchical tie-breaking on national impact, losses, sector and downtime; static expert-set weights; demonstrated in software on synthetic CERT-UA incidents drawn from 2023 statistics, with no accuracy, agreement or outcome measure; pilot implementations are claimed but no pilot data are reported, so external validation is N; experts may edit incidents (HITL P); no ML."),
+    ("Chowdhury et al.", "Full text (read 1 November 2026)", "Random Forest, XGBoost and logistic regression on stratified 70:30 splits of CICIDS2017 and UNSW-NB15; priority = threat probability times a weighted business-impact score (asset criticality, operational dependency, financial loss); Top-K and NDCG against an ML-only baseline and MTTD and MTTR reductions are reported, but the paper does not describe how impact values were assigned to the benchmark flows, what reference ranking was used or how MTTD and MTTR were measured, so business context is P; no expert comparison; explainability proposed; analysts review alerts (HITL P)."),
+    ("This study (DADE)", "This paper", "Business context P: the BIA profiles are hypothetical. Expert P: the experts who gave the labels also set the weights (scored leave-one-expert-out). Cost P: the cost matrix is used in evaluation only. HITL P: analyst overrides are part of the workflow but were not built. Evidence level L1 for decisions (hypothetical scenarios), L2 for detection (benchmark data)."),
 ]
 table("Table S2. Evidence for the coding of Table 1 (verification report of 30 October 2026; Crossref checked for "
       "correction or retraction notices, none found).", ["Study", "Text used", "Evidence for the codes"],
