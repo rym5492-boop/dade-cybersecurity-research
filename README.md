@@ -18,6 +18,14 @@ draft (`src/01_*`, `src/02_*`, `src/03_*`, `results/*.json`) are kept unchanged 
 audited; the sections further below describe that earlier draft, and some of its practices were corrected in
 the revision (see "What changed").
 
+## Forms, licences and citation
+
+The full text of every expert judgment form and consent statement (Arabic original with English
+translation, thesis Appendix F) is in `docs/forms/`. Code under `src/` is under the MIT licence (`LICENSE`);
+results, documentation and forms are under CC BY 4.0 (`LICENSES.md`); the public datasets are not included
+and keep their providers' terms. Citation metadata are in `CITATION.cff` and `.zenodo.json`; the steps for an
+archived release with a DOI are in `docs/ZENODO_DEPOSIT.md`.
+
 ## Data (download and place in `data/` or the repository root)
 
 | Dataset | Official source | Files used | Rows |

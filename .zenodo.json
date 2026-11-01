@@ -1,0 +1,16 @@
+{
+  "title": "DADE: code, data and results for a leakage-audited evaluation of intrusion detection and business impact analysis for continuity prioritization (revision 2)",
+  "upload_type": "software",
+  "description": "<p>Code, coded rating data, results, reproduction reports and the full text of the expert judgment forms and consent statements (Arabic with English translation; docs/forms) for the manuscript \"Intrusion detection and business impact analysis for continuity prioritization: a leakage-audited evaluation of an analytic hierarchy process rule against simpler baselines\" and for the MSc thesis on the same study (Northern Border University). The four public datasets are not included; see README.md for their sources and SHA-256 hashes. Code is under the MIT licence; results, documentation and forms are under CC BY 4.0 (LICENSES.md). The rating files contain coded raters only; the named form exports are not deposited.</p>",
+  "creators": [
+    {"name": "Alenezi, Khalid Khadhear", "affiliation": "Northern Border University"},
+    {"name": "Ayari, Mohamed", "affiliation": "Northern Border University"}
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": ["intrusion detection", "business impact analysis", "business continuity", "analytic hierarchy process", "alert prioritization", "reproducibility"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/rym5492-boop/dade-cybersecurity-research", "relation": "isSupplementTo", "scheme": "url"}
+  ],
+  "version": "revision-2"
+}
