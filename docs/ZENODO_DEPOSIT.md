@@ -12,3 +12,5 @@ metadata are read from `.zenodo.json` in the repository root.
 
 What is not deposited: the original private repository, its Git bundle and the named form exports. They are
 kept unchanged and offline by the first author, under the control of the research ethics determination.
+
+Done on 1 November 2026: release v2.0-revision2 of commit 310b029, DOI 10.5281/zenodo.23856795.

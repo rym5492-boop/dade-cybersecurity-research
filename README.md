@@ -20,6 +20,8 @@ the revision (see "What changed").
 
 ## Forms, licences and citation
 
+Archived version: release v2.0-revision2 (commit 310b029) on Zenodo, https://doi.org/10.5281/zenodo.23856795.
+
 The full text of every expert judgment form and consent statement (Arabic original with English
 translation, thesis Appendix F) is in `docs/forms/`. Code under `src/` is under the MIT licence (`LICENSE`);
 results, documentation and forms are under CC BY 4.0 (`LICENSES.md`); the public datasets are not included
