@@ -1,0 +1,54 @@
+{
+  "source": "data/label_submission_times.csv (form-service submission times, UTC)",
+  "experts": {
+    "E1": {
+      "scenario_forms": "A+B",
+      "ahp_revision": "targeted review of 6 pairs",
+      "labels_submitted_ksa": "2026-10-18 02:24:24",
+      "ahp_revision_submitted_ksa": "2026-10-18 01:43:26",
+      "minutes_from_revision_to_labels": 40.97
+    },
+    "E2": {
+      "scenario_forms": "B+C",
+      "ahp_revision": "targeted review of 3 pairs",
+      "labels_submitted_ksa": "2026-10-20 23:58:04",
+      "ahp_revision_submitted_ksa": "2026-10-20 23:27:04",
+      "minutes_from_revision_to_labels": 31.0
+    },
+    "E3": {
+      "scenario_forms": "A+C",
+      "ahp_revision": "full repeat",
+      "labels_submitted_ksa": "2026-10-18 10:08:26",
+      "ahp_revision_submitted_ksa": "2026-10-18 10:04:51",
+      "minutes_from_revision_to_labels": 3.58
+    },
+    "E4": {
+      "scenario_forms": "A+B",
+      "ahp_revision": "none (consistent; not asked to revise)",
+      "labels_submitted_ksa": "2026-10-18 03:02:41"
+    },
+    "E5": {
+      "scenario_forms": "B+C",
+      "ahp_revision": "full repeat",
+      "labels_submitted_ksa": "2026-10-20 20:11:50",
+      "ahp_revision_submitted_ksa": "2026-10-20 20:07:56",
+      "minutes_from_revision_to_labels": 3.9
+    },
+    "E6": {
+      "scenario_forms": "A+C",
+      "ahp_revision": "targeted review of 3 pairs",
+      "labels_submitted_ksa": "2026-10-18 09:41:53",
+      "ahp_revision_submitted_ksa": "2026-10-18 09:17:08",
+      "minutes_from_revision_to_labels": 24.75
+    }
+  },
+  "feedback_round": {
+    "n_experts": 5,
+    "min_minutes": 3.58,
+    "max_minutes": 40.97,
+    "range_in_whole_minutes": [
+      4,
+      41
+    ]
+  }
+}

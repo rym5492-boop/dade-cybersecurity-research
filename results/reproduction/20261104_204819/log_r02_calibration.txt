@@ -1,0 +1,12 @@
+RandomForest {'uncalibrated': {'brier': 0.0818, 'ece_15bins': 0.0864, 'log_loss': 0.2454, 'ece_95ci': [0.0845, 0.0883]}, 'sigmoid': {'brier': 0.0937, 'ece_15bins': 0.0964, 'log_loss': 0.3101, 'ece_95ci': [0.0943, 0.0986]}, 'isotonic': {'brier': 0.0845, 'ece_15bins': 0.0916, 'log_loss': 0.2576, 'ece_95ci': [0.0897, 0.0936]}}
+   attack_prevalence_0.01 isotonic precision raw 0.0366 ECE raw 0.25 -> corrected 0.0071
+   attack_prevalence_0.05 isotonic precision raw 0.1654 ECE raw 0.2382 -> corrected 0.0223
+   attack_prevalence_0.1 isotonic precision raw 0.2951 ECE raw 0.2237 -> corrected 0.0353
+   attack_prevalence_0.5 isotonic precision raw 0.79 ECE raw 0.1065 -> corrected 0.0638
+HistGradientBoosting {'uncalibrated': {'brier': 0.0809, 'ece_15bins': 0.0933, 'log_loss': 0.2315, 'ece_95ci': [0.0915, 0.0952]}, 'sigmoid': {'brier': 0.0813, 'ece_15bins': 0.0934, 'log_loss': 0.2366, 'ece_95ci': [0.0916, 0.0954]}, 'isotonic': {'brier': 0.0831, 'ece_15bins': 0.0945, 'log_loss': 0.2376, 'ece_95ci': [0.0926, 0.0965]}}
+   attack_prevalence_0.01 isotonic precision raw 0.0337 ECE raw 0.246 -> corrected 0.0049
+   attack_prevalence_0.05 isotonic precision raw 0.1535 ECE raw 0.2347 -> corrected 0.0203
+   attack_prevalence_0.1 isotonic precision raw 0.2771 ECE raw 0.2206 -> corrected 0.034
+   attack_prevalence_0.5 isotonic precision raw 0.7752 ECE raw 0.1087 -> corrected 0.0692
+Saved results\revision\r02_calibration.json
+

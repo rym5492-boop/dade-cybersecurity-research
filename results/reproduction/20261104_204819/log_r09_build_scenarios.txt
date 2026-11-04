@@ -1,0 +1,33 @@
+   scenario_id   true_category  shown_category  p_malicious confidence_tier profile
+0          A01          Normal       Shellcode        0.919            high      P1
+1          A02           Worms           Worms        0.996            high      P3
+2          A03        Backdoor             DoS        1.000            high      P4
+3          A04         Generic       Shellcode        0.813        moderate      P5
+4          A05         Fuzzers         Fuzzers        0.703        moderate      P6
+5          A06        Analysis        Backdoor        1.000            high      P2
+6          A07       Shellcode       Shellcode        0.914            high      P1
+7          A08  Reconnaissance  Reconnaissance        0.428             low      P3
+8          A09        Exploits        Exploits        1.000            high      P2
+9          A10             DoS         Fuzzers        0.801        moderate      P5
+10         B01        Exploits         Fuzzers        0.515             low      P6
+11         B02             DoS             DoS        0.997            high      P4
+12         B03          Normal        Exploits        0.338             low      P5
+13         B04         Generic         Generic        0.996            high      P4
+14         B05        Backdoor         Fuzzers        0.801        moderate      P1
+15         B06         Fuzzers        Backdoor        1.000            high      P3
+16         B07       Shellcode         Fuzzers        0.360             low      P5
+17         B08        Analysis          Normal        0.515             low      P6
+18         B09  Reconnaissance  Reconnaissance        0.801        moderate      P2
+19         B10           Worms           Worms        0.703        moderate      P2
+20         C01        Analysis        Exploits        0.703        moderate      P3
+21         C02         Generic         Fuzzers        0.572             low      P1
+22         C03       Shellcode       Shellcode        0.882        moderate      P4
+23         C04        Backdoor        Analysis        1.000            high      P5
+24         C05             DoS          Normal        0.532             low      P1
+25         C06  Reconnaissance  Reconnaissance        0.997            high      P6
+26         C07           Worms       Shellcode        0.958            high      P6
+27         C08          Normal         Fuzzers        0.703        moderate      P4
+28         C09         Fuzzers         Fuzzers        0.411             low      P2
+29         C10        Exploits        Exploits        0.813        moderate      P3
+Saved results/revision/r09_scenarios.csv and r09_scenario_cards_ar.md
+

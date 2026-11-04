@@ -1,0 +1,45 @@
+Saved results\revision\r22_cross_dataset_audit.json
+{
+ "all_six": {
+  "directions": [
+   "UNSW-NB15 -> CICIDS2017",
+   "UNSW-NB15 -> CICIoT2023",
+   "CICIDS2017 -> UNSW-NB15",
+   "CICIDS2017 -> CICIoT2023",
+   "CICIoT2023 -> UNSW-NB15",
+   "CICIoT2023 -> CICIDS2017"
+  ],
+  "balanced_accuracy_min": 0.3363,
+  "balanced_accuracy_max": 0.5395,
+  "balanced_accuracy_mean": 0.4751
+ },
+ "without_CICIDS2017": {
+  "directions": [
+   "UNSW-NB15 -> CICIoT2023",
+   "CICIoT2023 -> UNSW-NB15"
+  ],
+  "balanced_accuracy_min": 0.4773,
+  "balanced_accuracy_max": 0.4976,
+  "balanced_accuracy_mean": 0.4874
+ },
+ "without_CICIoT2023": {
+  "directions": [
+   "UNSW-NB15 -> CICIDS2017",
+   "CICIDS2017 -> UNSW-NB15"
+  ],
+  "balanced_accuracy_min": 0.5001,
+  "balanced_accuracy_max": 0.5395,
+  "balanced_accuracy_mean": 0.5198
+ },
+ "UNSW_NB15_source_only": {
+  "directions": [
+   "UNSW-NB15 -> CICIDS2017",
+   "UNSW-NB15 -> CICIoT2023"
+  ],
+  "balanced_accuracy_min": 0.4773,
+  "balanced_accuracy_max": 0.5395,
+  "balanced_accuracy_mean": 0.5084
+ }
+}
+datasets available: ['CICIDS2017', 'CICIoT2023', 'UNSW-NB15']
+

@@ -1,0 +1,6 @@
+held-out families: ['Bots', 'Brute Force']
+train 280000  val 60000  seen-test 60000  unseen-test 22196 (held-out attacks 11098, fresh benign 11098)
+seen_family_test {'default_0.5': (0.9986, np.float64(0.0006)), 'val_max_f1': (0.9988, np.float64(0.0006)), 'val_fpr_1pct': (0.9999, np.float64(0.0104)), 'val_fpr_5pct': (1.0, np.float64(0.0521))}
+unseen_family_test {'default_0.5': (0.002, np.float64(0.0007)), 'val_max_f1': (0.0023, np.float64(0.0008)), 'val_fpr_1pct': (0.5023, np.float64(0.0112)), 'val_fpr_5pct': (0.8248, np.float64(0.0556))}
+Saved results\revision\r08_cicids2017_holdout_v2.json
+

@@ -1,0 +1,21 @@
+Saved results\revision\r04_ablation_leakage_audit.json
+reproduces published: True
+
+paper_sample_n200
+  A_ML_only                        acc 0.8300  kappa 0.6579  
+  C_equal_weight__TS_oracle        acc 0.8150  kappa 0.6283  [0.765, 0.865]
+  D_AHP_weight__TS_oracle          acc 0.9200  kappa 0.8398  [0.885, 0.955]
+  C_equal_weight__TS_predicted     acc 0.7850  kappa 0.5675  [0.73, 0.84]
+  D_AHP_weight__TS_predicted       acc 0.8050  kappa 0.6077  [0.75, 0.86]
+  C_equal_weight__TS_none          acc 0.6500  kappa 0.2921  [0.5849, 0.715]
+  D_AHP_weight__TS_none            acc 0.7100  kappa 0.4141  [0.65, 0.775]
+
+full_test_n82332
+  A_ML_only                        acc 0.8706  kappa 0.7323  
+  C_equal_weight__TS_oracle        acc 0.8416  kappa 0.6732  
+  D_AHP_weight__TS_oracle          acc 0.9248  kappa 0.8474  
+  C_equal_weight__TS_predicted     acc 0.7990  kappa 0.5814  
+  D_AHP_weight__TS_predicted       acc 0.8413  kappa 0.6721  
+  C_equal_weight__TS_none          acc 0.7027  kappa 0.3701  
+  D_AHP_weight__TS_none            acc 0.6986  kappa 0.3603  
+

@@ -1,0 +1,8 @@
+NSL-KDD KDDTrain+ 125973 0.4654
+NSL-KDD KDDTest+ 22544 0.5692
+UNSW-NB15 training 175341 0.6806
+UNSW-NB15 testing 82332 0.5506
+CICIDS2017 cleaned 2520751 0.1689
+CICIoT2023 balanced subsample 2878962 0.8263
+Saved results\revision\r12_dataset_manifest.json
+

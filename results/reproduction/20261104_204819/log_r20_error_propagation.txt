@@ -1,0 +1,5 @@
+D_detector {'DADE_AHP': (np.float64(0.207), np.float64(0.819)), 'B1_ML_only': (np.float64(0.326), np.float64(0.828)), 'B2_equal_weight': (np.float64(0.185), np.float64(0.838)), 'B3_BIA_only': (np.float64(0.0), np.float64(1.283)), 'B4_severity_x_impact': (np.float64(0.405), np.float64(0.884)), 'B5_ML_x_impact': (np.float64(0.164), np.float64(0.579))}
+B_bia {'DADE_AHP': (np.float64(0.097), np.float64(0.631)), 'B1_ML_only': (np.float64(0.0), np.float64(0.608)), 'B2_equal_weight': (np.float64(0.124), np.float64(0.754)), 'B3_BIA_only': (np.float64(0.122), np.float64(1.131)), 'B4_severity_x_impact': (np.float64(0.084), np.float64(0.697)), 'B5_ML_x_impact': (np.float64(0.086), np.float64(0.423))}
+DB_both {'DADE_AHP': (np.float64(0.232), np.float64(0.808)), 'B1_ML_only': (np.float64(0.324), np.float64(0.823)), 'B2_equal_weight': (np.float64(0.245), np.float64(0.892)), 'B3_BIA_only': (np.float64(0.12), np.float64(1.136)), 'B4_severity_x_impact': (np.float64(0.425), np.float64(0.817)), 'B5_ML_x_impact': (np.float64(0.217), np.float64(0.577))}
+Saved results\revision\r20_error_propagation.json
+

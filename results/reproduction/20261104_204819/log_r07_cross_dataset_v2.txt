@@ -1,0 +1,12 @@
+WARNING: CICIDS2017 file has no backward-bytes column; total_bytes = forward only
+UNSW-NB15   -> UNSW-NB15   no_adaptation: bal 0.900 AUC 0.9796
+UNSW-NB15   -> CICIDS2017  no_adaptation: bal 0.539 AUC 0.5974 | threshold_from_1pct_target: bal 0.593 AUC 0.5974 | retrain_with_1pct_target: bal 0.917 AUC 0.9749 | retrain_with_5pct_target: bal 0.944 AUC 0.9872
+UNSW-NB15   -> CICIoT2023  no_adaptation: bal 0.477 AUC 0.4282 | threshold_from_1pct_target: bal 0.520 AUC 0.4282 | retrain_with_1pct_target: bal 0.613 AUC 0.8601 | retrain_with_5pct_target: bal 0.641 AUC 0.8952
+CICIDS2017  -> UNSW-NB15   no_adaptation: bal 0.500 AUC 0.2784 | threshold_from_1pct_target: bal 0.477 AUC 0.2784 | retrain_with_1pct_target: bal 0.803 AUC 0.9144 | retrain_with_5pct_target: bal 0.861 AUC 0.9437
+CICIDS2017  -> CICIDS2017  no_adaptation: bal 0.976 AUC 0.9981
+CICIDS2017  -> CICIoT2023  no_adaptation: bal 0.500 AUC 0.4588 | threshold_from_1pct_target: bal 0.486 AUC 0.4588 | retrain_with_1pct_target: bal 0.818 AUC 0.8517 | retrain_with_5pct_target: bal 0.821 AUC 0.8723
+CICIoT2023  -> UNSW-NB15   no_adaptation: bal 0.498 AUC 0.6606 | threshold_from_1pct_target: bal 0.711 AUC 0.6606 | retrain_with_1pct_target: bal 0.773 AUC 0.9092 | retrain_with_5pct_target: bal 0.844 AUC 0.9563
+CICIoT2023  -> CICIDS2017  no_adaptation: bal 0.336 AUC 0.2953 | threshold_from_1pct_target: bal 0.503 AUC 0.2953 | retrain_with_1pct_target: bal 0.879 AUC 0.9626 | retrain_with_5pct_target: bal 0.923 AUC 0.9811
+CICIoT2023  -> CICIoT2023  no_adaptation: bal 0.736 AUC 0.9164
+Saved results\revision\r07_cross_dataset_v2.json
+

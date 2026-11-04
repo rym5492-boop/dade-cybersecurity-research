@@ -1,0 +1,3 @@
+Saved results\revision\r11_unsw_duplicates.json
+{'features_compared': 42, 'train_rows': 175341, 'train_share_duplicate_of_another_train_row': 0.4238, 'train_unique_signatures': 101040, 'train_signatures_with_conflicting_labels': 229, 'cv5_accuracy_stratified': {'mean': 0.956, 'sd': 0.0014}, 'cv5_accuracy_grouped_by_duplicate': {'mean': 0.9539, 'sd': 0.0011}, 'cv_minus_test_gap_pp': {'stratified': 8.09, 'grouped': 7.88}}
+

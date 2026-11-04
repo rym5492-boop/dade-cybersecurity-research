@@ -1,0 +1,1451 @@
+{
+  "experts": {
+    "raters": {
+      "E1": {
+        "n": 20,
+        "label_distribution": {
+          "Low": 3,
+          "Medium": 5,
+          "High": 12
+        },
+        "kappa_with_consensus_of_others": 0.5703,
+        "kappa_with_DADE": 0.5745,
+        "kappa_with_B5": 0.6653,
+        "mean_cost_DADE": 0.9
+      },
+      "E2": {
+        "n": 20,
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 6,
+          "High": 9
+        },
+        "kappa_with_consensus_of_others": 0.8,
+        "kappa_with_DADE": 0.72,
+        "kappa_with_B5": 0.8175,
+        "mean_cost_DADE": 0.65
+      },
+      "E3": {
+        "n": 20,
+        "label_distribution": {
+          "Low": 2,
+          "Medium": 2,
+          "High": 16
+        },
+        "kappa_with_consensus_of_others": 0.6354,
+        "kappa_with_DADE": 0.537,
+        "kappa_with_B5": 0.3548,
+        "mean_cost_DADE": 1.2
+      },
+      "E4": {
+        "n": 20,
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 6,
+          "High": 9
+        },
+        "kappa_with_consensus_of_others": 0.7857,
+        "kappa_with_DADE": 0.96,
+        "kappa_with_B5": 0.8175,
+        "mean_cost_DADE": 0.05
+      },
+      "E5": {
+        "n": 20,
+        "label_distribution": {
+          "Low": 3,
+          "Medium": 11,
+          "High": 6
+        },
+        "kappa_with_consensus_of_others": 0.6983,
+        "kappa_with_DADE": 0.7475,
+        "kappa_with_B5": 0.6567,
+        "mean_cost_DADE": 0.4
+      },
+      "E6": {
+        "n": 20,
+        "label_distribution": {
+          "Low": 3,
+          "Medium": 5,
+          "High": 12
+        },
+        "kappa_with_consensus_of_others": 0.6465,
+        "kappa_with_DADE": 0.8729,
+        "kappa_with_B5": 0.6951,
+        "mean_cost_DADE": 0.4
+      }
+    },
+    "pairwise": {
+      "E1-E2": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.6512,
+        "exact_agreement": 0.7
+      },
+      "E1-E3": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.4828,
+        "exact_agreement": 0.7
+      },
+      "E1-E4": {
+        "n_shared": 20,
+        "quadratic_kappa": 0.5669,
+        "exact_agreement": 0.6
+      },
+      "E1-E5": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.4286,
+        "exact_agreement": 0.5
+      },
+      "E1-E6": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.5455,
+        "exact_agreement": 0.7
+      },
+      "E2-E3": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.5833,
+        "exact_agreement": 0.6
+      },
+      "E2-E4": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.8889,
+        "exact_agreement": 0.8
+      },
+      "E2-E5": {
+        "n_shared": 20,
+        "quadratic_kappa": 0.7706,
+        "exact_agreement": 0.75
+      },
+      "E2-E6": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.4898,
+        "exact_agreement": 0.5
+      },
+      "E3-E4": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.5833,
+        "exact_agreement": 0.6
+      },
+      "E3-E5": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.3243,
+        "exact_agreement": 0.5
+      },
+      "E3-E6": {
+        "n_shared": 20,
+        "quadratic_kappa": 0.5588,
+        "exact_agreement": 0.7
+      },
+      "E4-E5": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.8571,
+        "exact_agreement": 0.8
+      },
+      "E4-E6": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.7826,
+        "exact_agreement": 0.8
+      },
+      "E5-E6": {
+        "n_shared": 10,
+        "quadratic_kappa": 0.2683,
+        "exact_agreement": 0.4
+      }
+    },
+    "scenarios": {
+      "A01": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Normal",
+        "shown_category": "Shellcode",
+        "MLS": 0.919
+      },
+      "A02": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Worms",
+        "shown_category": "Worms",
+        "MLS": 0.996
+      },
+      "A03": {
+        "votes_LMH": [
+          0,
+          1,
+          3
+        ],
+        "consensus": "High",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.049,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Backdoor",
+        "shown_category": "DoS",
+        "MLS": 1.0
+      },
+      "A04": {
+        "votes_LMH": [
+          0,
+          3,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.255,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P5",
+        "true_category": "Generic",
+        "shown_category": "Shellcode",
+        "MLS": 0.813
+      },
+      "A05": {
+        "votes_LMH": [
+          3,
+          1,
+          0
+        ],
+        "consensus": "Low",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.268,
+        "split": true,
+        "DADE": "Low",
+        "B5": "Medium",
+        "profile": "P6",
+        "true_category": "Fuzzers",
+        "shown_category": "Fuzzers",
+        "MLS": 0.703
+      },
+      "A06": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Analysis",
+        "shown_category": "Backdoor",
+        "MLS": 1.0
+      },
+      "A07": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Shellcode",
+        "shown_category": "Shellcode",
+        "MLS": 0.914
+      },
+      "A08": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.318,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Reconnaissance",
+        "shown_category": "Reconnaissance",
+        "MLS": 0.428
+      },
+      "A09": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Exploits",
+        "shown_category": "Exploits",
+        "MLS": 1.0
+      },
+      "A10": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.33,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P5",
+        "true_category": "DoS",
+        "shown_category": "Fuzzers",
+        "MLS": 0.801
+      },
+      "B01": {
+        "votes_LMH": [
+          3,
+          1,
+          0
+        ],
+        "consensus": "Low",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.26,
+        "split": true,
+        "DADE": "Low",
+        "B5": "Low",
+        "profile": "P6",
+        "true_category": "Exploits",
+        "shown_category": "Fuzzers",
+        "MLS": 0.515
+      },
+      "B02": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.292,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "DoS",
+        "shown_category": "DoS",
+        "MLS": 0.997
+      },
+      "B03": {
+        "votes_LMH": [
+          2,
+          2,
+          0
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.324,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Low",
+        "profile": "P5",
+        "true_category": "Normal",
+        "shown_category": "Exploits",
+        "MLS": 0.338
+      },
+      "B04": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.321,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Generic",
+        "shown_category": "Generic",
+        "MLS": 0.996
+      },
+      "B05": {
+        "votes_LMH": [
+          1,
+          0,
+          3
+        ],
+        "consensus": "High",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.046,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Backdoor",
+        "shown_category": "Fuzzers",
+        "MLS": 0.801
+      },
+      "B06": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Fuzzers",
+        "shown_category": "Backdoor",
+        "MLS": 1.0
+      },
+      "B07": {
+        "votes_LMH": [
+          4,
+          0,
+          0
+        ],
+        "consensus": "Low",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "Low",
+        "B5": "Low",
+        "profile": "P5",
+        "true_category": "Shellcode",
+        "shown_category": "Fuzzers",
+        "MLS": 0.36
+      },
+      "B08": {
+        "votes_LMH": [
+          4,
+          0,
+          0
+        ],
+        "consensus": "Low",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "Low",
+        "B5": "Low",
+        "profile": "P6",
+        "true_category": "Analysis",
+        "shown_category": "Normal",
+        "MLS": 0.515
+      },
+      "B09": {
+        "votes_LMH": [
+          0,
+          1,
+          3
+        ],
+        "consensus": "High",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.051,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Reconnaissance",
+        "shown_category": "Reconnaissance",
+        "MLS": 0.801
+      },
+      "B10": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Worms",
+        "shown_category": "Worms",
+        "MLS": 0.703
+      },
+      "C01": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Analysis",
+        "shown_category": "Exploits",
+        "MLS": 0.703
+      },
+      "C02": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.307,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Generic",
+        "shown_category": "Fuzzers",
+        "MLS": 0.572
+      },
+      "C03": {
+        "votes_LMH": [
+          0,
+          1,
+          3
+        ],
+        "consensus": "High",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.052,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Shellcode",
+        "shown_category": "Shellcode",
+        "MLS": 0.882
+      },
+      "C04": {
+        "votes_LMH": [
+          0,
+          3,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.244,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P5",
+        "true_category": "Backdoor",
+        "shown_category": "Analysis",
+        "MLS": 1.0
+      },
+      "C05": {
+        "votes_LMH": [
+          0,
+          3,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.269,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "DoS",
+        "shown_category": "Normal",
+        "MLS": 0.532
+      },
+      "C06": {
+        "votes_LMH": [
+          3,
+          1,
+          0
+        ],
+        "consensus": "Low",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.264,
+        "split": true,
+        "DADE": "Low",
+        "B5": "Medium",
+        "profile": "P6",
+        "true_category": "Reconnaissance",
+        "shown_category": "Reconnaissance",
+        "MLS": 0.997
+      },
+      "C07": {
+        "votes_LMH": [
+          1,
+          2,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.31,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P6",
+        "true_category": "Worms",
+        "shown_category": "Shellcode",
+        "MLS": 0.958
+      },
+      "C08": {
+        "votes_LMH": [
+          0,
+          4,
+          0
+        ],
+        "consensus": "Medium",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Normal",
+        "shown_category": "Fuzzers",
+        "MLS": 0.703
+      },
+      "C09": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.32,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Fuzzers",
+        "shown_category": "Fuzzers",
+        "MLS": 0.411
+      },
+      "C10": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Exploits",
+        "shown_category": "Exploits",
+        "MLS": 0.813
+      }
+    },
+    "consensus_rule_sensitivity": {
+      "median_tie_up_used": {
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 6,
+          "High": 19
+        },
+        "DADE": {
+          "quadratic_kappa": 0.7977,
+          "high_recall": 0.6842,
+          "mean_cost": 0.6333
+        },
+        "B5": {
+          "quadratic_kappa": 0.8185,
+          "high_recall": 0.9474,
+          "mean_cost": 0.3
+        }
+      },
+      "median_tie_down": {
+        "label_distribution": {
+          "Low": 6,
+          "Medium": 11,
+          "High": 13
+        },
+        "DADE": {
+          "quadratic_kappa": 0.8225,
+          "high_recall": 0.8462,
+          "mean_cost": 0.3333
+        },
+        "B5": {
+          "quadratic_kappa": 0.7467,
+          "high_recall": 1.0,
+          "mean_cost": 0.3
+        }
+      },
+      "rounded_mean": {
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 6,
+          "High": 19
+        },
+        "DADE": {
+          "quadratic_kappa": 0.7977,
+          "high_recall": 0.6842,
+          "mean_cost": 0.6333
+        },
+        "B5": {
+          "quadratic_kappa": 0.8185,
+          "high_recall": 0.9474,
+          "mean_cost": 0.3
+        }
+      },
+      "plurality_tie_up": {
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 6,
+          "High": 19
+        },
+        "DADE": {
+          "quadratic_kappa": 0.7977,
+          "high_recall": 0.6842,
+          "mean_cost": 0.6333
+        },
+        "B5": {
+          "quadratic_kappa": 0.8185,
+          "high_recall": 0.9474,
+          "mean_cost": 0.3
+        }
+      }
+    },
+    "summary": {
+      "scenarios_with_split_vote": 18,
+      "scenarios_unanimous": 12,
+      "scenarios_where_consensus_changes_in_over_20pct_of_rater_bootstraps": 14
+    }
+  },
+  "practitioners": {
+    "raters": {
+      "X1": {
+        "n": 30,
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 11,
+          "High": 14
+        },
+        "kappa_with_consensus_of_others": 0.6452,
+        "kappa_with_DADE": 0.6319,
+        "kappa_with_B5": 0.7904,
+        "mean_cost_DADE": 0.7333
+      },
+      "X2": {
+        "n": 30,
+        "label_distribution": {
+          "Low": 1,
+          "Medium": 10,
+          "High": 19
+        },
+        "kappa_with_consensus_of_others": 0.4444,
+        "kappa_with_DADE": 0.3972,
+        "kappa_with_B5": 0.5161,
+        "mean_cost_DADE": 1.2
+      },
+      "X3": {
+        "n": 30,
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 14,
+          "High": 11
+        },
+        "kappa_with_consensus_of_others": 0.717,
+        "kappa_with_DADE": 0.8408,
+        "kappa_with_B5": 0.6429,
+        "mean_cost_DADE": 0.2333
+      },
+      "X4": {
+        "n": 30,
+        "label_distribution": {
+          "Low": 6,
+          "Medium": 9,
+          "High": 15
+        },
+        "kappa_with_consensus_of_others": 0.4904,
+        "kappa_with_DADE": 0.5954,
+        "kappa_with_B5": 0.5763,
+        "mean_cost_DADE": 0.6667
+      }
+    },
+    "pairwise": {
+      "X1-X2": {
+        "n_shared": 30,
+        "quadratic_kappa": 0.4681,
+        "exact_agreement": 0.7
+      },
+      "X1-X3": {
+        "n_shared": 30,
+        "quadratic_kappa": 0.7771,
+        "exact_agreement": 0.7667
+      },
+      "X1-X4": {
+        "n_shared": 30,
+        "quadratic_kappa": 0.4798,
+        "exact_agreement": 0.6
+      },
+      "X2-X3": {
+        "n_shared": 30,
+        "quadratic_kappa": 0.4444,
+        "exact_agreement": 0.5667
+      },
+      "X2-X4": {
+        "n_shared": 30,
+        "quadratic_kappa": 0.3046,
+        "exact_agreement": 0.5
+      },
+      "X3-X4": {
+        "n_shared": 30,
+        "quadratic_kappa": 0.5509,
+        "exact_agreement": 0.7
+      }
+    },
+    "scenarios": {
+      "A01": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Normal",
+        "shown_category": "Shellcode",
+        "MLS": 0.919
+      },
+      "A02": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Worms",
+        "shown_category": "Worms",
+        "MLS": 0.996
+      },
+      "A03": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.303,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Backdoor",
+        "shown_category": "DoS",
+        "MLS": 1.0
+      },
+      "A04": {
+        "votes_LMH": [
+          0,
+          4,
+          0
+        ],
+        "consensus": "Medium",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P5",
+        "true_category": "Generic",
+        "shown_category": "Shellcode",
+        "MLS": 0.813
+      },
+      "A05": {
+        "votes_LMH": [
+          2,
+          2,
+          0
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.32,
+        "split": true,
+        "DADE": "Low",
+        "B5": "Medium",
+        "profile": "P6",
+        "true_category": "Fuzzers",
+        "shown_category": "Fuzzers",
+        "MLS": 0.703
+      },
+      "A06": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Analysis",
+        "shown_category": "Backdoor",
+        "MLS": 1.0
+      },
+      "A07": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Shellcode",
+        "shown_category": "Shellcode",
+        "MLS": 0.914
+      },
+      "A08": {
+        "votes_LMH": [
+          0,
+          4,
+          0
+        ],
+        "consensus": "Medium",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Reconnaissance",
+        "shown_category": "Reconnaissance",
+        "MLS": 0.428
+      },
+      "A09": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Exploits",
+        "shown_category": "Exploits",
+        "MLS": 1.0
+      },
+      "A10": {
+        "votes_LMH": [
+          0,
+          3,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.255,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P5",
+        "true_category": "DoS",
+        "shown_category": "Fuzzers",
+        "MLS": 0.801
+      },
+      "B01": {
+        "votes_LMH": [
+          3,
+          1,
+          0
+        ],
+        "consensus": "Low",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.264,
+        "split": true,
+        "DADE": "Low",
+        "B5": "Low",
+        "profile": "P6",
+        "true_category": "Exploits",
+        "shown_category": "Fuzzers",
+        "MLS": 0.515
+      },
+      "B02": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.314,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "DoS",
+        "shown_category": "DoS",
+        "MLS": 0.997
+      },
+      "B03": {
+        "votes_LMH": [
+          2,
+          2,
+          0
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.34,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Low",
+        "profile": "P5",
+        "true_category": "Normal",
+        "shown_category": "Exploits",
+        "MLS": 0.338
+      },
+      "B04": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.301,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Generic",
+        "shown_category": "Generic",
+        "MLS": 0.996
+      },
+      "B05": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Backdoor",
+        "shown_category": "Fuzzers",
+        "MLS": 0.801
+      },
+      "B06": {
+        "votes_LMH": [
+          1,
+          0,
+          3
+        ],
+        "consensus": "High",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.057,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Fuzzers",
+        "shown_category": "Backdoor",
+        "MLS": 1.0
+      },
+      "B07": {
+        "votes_LMH": [
+          3,
+          0,
+          1
+        ],
+        "consensus": "Low",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.254,
+        "split": true,
+        "DADE": "Low",
+        "B5": "Low",
+        "profile": "P5",
+        "true_category": "Shellcode",
+        "shown_category": "Fuzzers",
+        "MLS": 0.36
+      },
+      "B08": {
+        "votes_LMH": [
+          4,
+          0,
+          0
+        ],
+        "consensus": "Low",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "Low",
+        "B5": "Low",
+        "profile": "P6",
+        "true_category": "Analysis",
+        "shown_category": "Normal",
+        "MLS": 0.515
+      },
+      "B09": {
+        "votes_LMH": [
+          0,
+          4,
+          0
+        ],
+        "consensus": "Medium",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Reconnaissance",
+        "shown_category": "Reconnaissance",
+        "MLS": 0.801
+      },
+      "B10": {
+        "votes_LMH": [
+          0,
+          1,
+          3
+        ],
+        "consensus": "High",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.045,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Worms",
+        "shown_category": "Worms",
+        "MLS": 0.703
+      },
+      "C01": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Analysis",
+        "shown_category": "Exploits",
+        "MLS": 0.703
+      },
+      "C02": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.321,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "Generic",
+        "shown_category": "Fuzzers",
+        "MLS": 0.572
+      },
+      "C03": {
+        "votes_LMH": [
+          0,
+          1,
+          3
+        ],
+        "consensus": "High",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.05,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Shellcode",
+        "shown_category": "Shellcode",
+        "MLS": 0.882
+      },
+      "C04": {
+        "votes_LMH": [
+          1,
+          1,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.302,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P5",
+        "true_category": "Backdoor",
+        "shown_category": "Analysis",
+        "MLS": 1.0
+      },
+      "C05": {
+        "votes_LMH": [
+          0,
+          3,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.274,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P1",
+        "true_category": "DoS",
+        "shown_category": "Normal",
+        "MLS": 0.532
+      },
+      "C06": {
+        "votes_LMH": [
+          1,
+          2,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.305,
+        "split": true,
+        "DADE": "Low",
+        "B5": "Medium",
+        "profile": "P6",
+        "true_category": "Reconnaissance",
+        "shown_category": "Reconnaissance",
+        "MLS": 0.997
+      },
+      "C07": {
+        "votes_LMH": [
+          0,
+          3,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.246,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "Medium",
+        "profile": "P6",
+        "true_category": "Worms",
+        "shown_category": "Shellcode",
+        "MLS": 0.958
+      },
+      "C08": {
+        "votes_LMH": [
+          0,
+          2,
+          2
+        ],
+        "consensus": "High",
+        "consensus_share": 0.5,
+        "p_consensus_changes_under_rater_bootstrap": 0.311,
+        "split": true,
+        "DADE": "Medium",
+        "B5": "High",
+        "profile": "P4",
+        "true_category": "Normal",
+        "shown_category": "Fuzzers",
+        "MLS": 0.703
+      },
+      "C09": {
+        "votes_LMH": [
+          0,
+          3,
+          1
+        ],
+        "consensus": "Medium",
+        "consensus_share": 0.75,
+        "p_consensus_changes_under_rater_bootstrap": 0.263,
+        "split": true,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P2",
+        "true_category": "Fuzzers",
+        "shown_category": "Fuzzers",
+        "MLS": 0.411
+      },
+      "C10": {
+        "votes_LMH": [
+          0,
+          0,
+          4
+        ],
+        "consensus": "High",
+        "consensus_share": 1.0,
+        "p_consensus_changes_under_rater_bootstrap": 0.0,
+        "split": false,
+        "DADE": "High",
+        "B5": "High",
+        "profile": "P3",
+        "true_category": "Exploits",
+        "shown_category": "Exploits",
+        "MLS": 0.813
+      }
+    },
+    "consensus_rule_sensitivity": {
+      "median_tie_up_used": {
+        "label_distribution": {
+          "Low": 3,
+          "Medium": 10,
+          "High": 17
+        },
+        "DADE": {
+          "quadratic_kappa": 0.6405,
+          "high_recall": 0.6471,
+          "mean_cost": 0.8333
+        },
+        "B5": {
+          "quadratic_kappa": 0.7936,
+          "high_recall": 0.9412,
+          "mean_cost": 0.3
+        }
+      },
+      "median_tie_down": {
+        "label_distribution": {
+          "Low": 5,
+          "Medium": 14,
+          "High": 11
+        },
+        "DADE": {
+          "quadratic_kappa": 0.7771,
+          "high_recall": 0.9091,
+          "mean_cost": 0.3333
+        },
+        "B5": {
+          "quadratic_kappa": 0.7024,
+          "high_recall": 1.0,
+          "mean_cost": 0.3333
+        }
+      },
+      "rounded_mean": {
+        "label_distribution": {
+          "Low": 2,
+          "Medium": 12,
+          "High": 16
+        },
+        "DADE": {
+          "quadratic_kappa": 0.6154,
+          "high_recall": 0.6875,
+          "mean_cost": 0.8
+        },
+        "B5": {
+          "quadratic_kappa": 0.7783,
+          "high_recall": 1.0,
+          "mean_cost": 0.2667
+        }
+      },
+      "plurality_tie_up": {
+        "label_distribution": {
+          "Low": 3,
+          "Medium": 10,
+          "High": 17
+        },
+        "DADE": {
+          "quadratic_kappa": 0.6405,
+          "high_recall": 0.6471,
+          "mean_cost": 0.8333
+        },
+        "B5": {
+          "quadratic_kappa": 0.7936,
+          "high_recall": 0.9412,
+          "mean_cost": 0.3
+        }
+      }
+    },
+    "summary": {
+      "scenarios_with_split_vote": 18,
+      "scenarios_unanimous": 12,
+      "scenarios_where_consensus_changes_in_over_20pct_of_rater_bootstraps": 15
+    }
+  },
+  "panel_difference": {
+    "crosstab_rows_expert_cols_practitioner_LMH": [
+      [
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        4,
+        15
+      ]
+    ],
+    "quadratic_kappa_between_consensus_labels": 0.7414,
+    "exact_agreement": 0.7333,
+    "scenarios_experts_higher": 4,
+    "scenarios_practitioners_higher": 4,
+    "sign_test_p_two_sided": 1.0
+  },
+  "effective_sample_size_DADE": {
+    "exact": {
+      "icc1_within_scenario": 0.1212,
+      "labels_per_scenario": 4.0,
+      "design_effect": 1.364,
+      "effective_n_of_120": 88.0
+    },
+    "cost": {
+      "icc1_within_scenario": 0.2343,
+      "labels_per_scenario": 4.0,
+      "design_effect": 1.703,
+      "effective_n_of_120": 70.5
+    }
+  }
+}
