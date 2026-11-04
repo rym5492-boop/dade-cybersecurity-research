@@ -81,6 +81,7 @@ the console log of every script are in `results/reproduction/20261031_153220/`.
 | Independent re-run of r25 and r26 (31 October 2026, 18:38) | the author, with `reproduce.py --only=...` | author's computer; report in `results/reproduction/20261031_183833/`, committed from his account (6fa0142); both outputs identical |
 | Reading the submission times of the October AHP revisions and of the experts' scenario labels from the form service (read only; names not recorded), and `data/label_submission_times.csv` with `label_timing.py` (4 November 2026) | AI assistant, at the author's request | form service through a connector; cloud workspace |
 | `ahp_min_changes.py`, the fewest changes E5's September answers needed (4 November 2026) | AI assistant, at the author's request | cloud workspace |
+| Recording the specifications of the author's computer (`docs/author_computer_hardware.md`, 4 November 2026) | the author ran the command; the AI assistant transcribed the output | author's computer |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.
