@@ -1,0 +1,75 @@
+{
+  "note": "Thresholds chosen on the 120 expert labels with the group weights, written before the external practitioners' labels are scored.",
+  "thresholds": {
+    "DADE_AHP": {
+      "FIXED": [
+        0.66,
+        0.33
+      ],
+      "COST": [
+        0.54,
+        0.32
+      ],
+      "RECALL90": [
+        0.54,
+        0.32
+      ]
+    },
+    "B1_ML_only": {
+      "FIXED": [
+        0.66,
+        0.33
+      ],
+      "COST": [
+        0.56,
+        0.38
+      ],
+      "RECALL90": [
+        0.56,
+        0.38
+      ]
+    },
+    "B2_equal_weight": {
+      "FIXED": [
+        0.66,
+        0.33
+      ],
+      "COST": [
+        0.5,
+        0.32
+      ],
+      "RECALL90": [
+        0.5,
+        0.32
+      ]
+    },
+    "B3_BIA_only": {
+      "FIXED": [
+        0.66,
+        0.33
+      ],
+      "COST": [
+        0.4,
+        0.24
+      ],
+      "RECALL90": [
+        0.4,
+        0.24
+      ]
+    },
+    "B5_ML_x_impact": {
+      "FIXED": [
+        0.66,
+        0.33
+      ],
+      "COST": [
+        0.72,
+        0.32
+      ],
+      "RECALL90": [
+        0.88,
+        0.32
+      ]
+    }
+  }
+}

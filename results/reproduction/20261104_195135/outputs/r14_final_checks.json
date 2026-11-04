@@ -1,0 +1,131 @@
+{
+  "individual_CR": {
+    "E1": {
+      "september": 0.3544,
+      "final": 0.0575
+    },
+    "E2": {
+      "september": 0.1061,
+      "final": 0.0053
+    },
+    "E3": {
+      "september": 0.0,
+      "final": 0.134
+    },
+    "E4": {
+      "september": 0.0786,
+      "final": 0.0786
+    },
+    "E5": {
+      "september": 0.9134,
+      "final": 0.0747
+    },
+    "E6": {
+      "september": 0.2325,
+      "final": 0.0957
+    }
+  },
+  "loeo_DADE_with_E3_ahp": {
+    "n": 120,
+    "exact_agreement": 0.75,
+    "linear_kappa": 0.6679,
+    "quadratic_kappa": 0.7425,
+    "high_recall": 0.7344,
+    "under_prioritisation": 0.175,
+    "over_escalation": 0.075,
+    "mean_cost": 0.6
+  },
+  "loeo_DADE_without_E3_ahp": {
+    "n": 120,
+    "exact_agreement": 0.75,
+    "linear_kappa": 0.6623,
+    "quadratic_kappa": 0.7271,
+    "high_recall": 0.7344,
+    "under_prioritisation": 0.1833,
+    "over_escalation": 0.0667,
+    "mean_cost": 0.6333
+  },
+  "loeo_decisions_differing": 3,
+  "group_weight_decisions_differing_without_E3": {
+    "A10": {
+      "with_E3": "Medium",
+      "without_E3": "Low"
+    },
+    "C05": {
+      "with_E3": "High",
+      "without_E3": "Medium"
+    }
+  },
+  "external_reference_vs_methods": {
+    "DADE_AHP": {
+      "n": 30,
+      "exact_agreement": 0.6333,
+      "linear_kappa": 0.503,
+      "quadratic_kappa": 0.6405,
+      "high_recall": 0.6471,
+      "under_prioritisation": 0.2667,
+      "over_escalation": 0.1,
+      "mean_cost": 0.8333
+    },
+    "B1_ML_only": {
+      "n": 30,
+      "exact_agreement": 0.6667,
+      "linear_kappa": 0.4141,
+      "quadratic_kappa": 0.5342,
+      "high_recall": 0.9412,
+      "under_prioritisation": 0.0333,
+      "over_escalation": 0.3,
+      "mean_cost": 0.4
+    },
+    "B2_equal_weight": {
+      "n": 30,
+      "exact_agreement": 0.6333,
+      "linear_kappa": 0.503,
+      "quadratic_kappa": 0.6405,
+      "high_recall": 0.6471,
+      "under_prioritisation": 0.2667,
+      "over_escalation": 0.1,
+      "mean_cost": 0.8333
+    },
+    "B3_BIA_only": {
+      "n": 30,
+      "exact_agreement": 0.3667,
+      "linear_kappa": 0.25,
+      "quadratic_kappa": 0.45,
+      "high_recall": 0.4118,
+      "under_prioritisation": 0.5333,
+      "over_escalation": 0.1,
+      "mean_cost": 1.6
+    },
+    "B4_severity_x_impact": {
+      "n": 30,
+      "exact_agreement": 0.6667,
+      "linear_kappa": 0.5109,
+      "quadratic_kappa": 0.5604,
+      "high_recall": 0.7059,
+      "under_prioritisation": 0.2667,
+      "over_escalation": 0.0667,
+      "mean_cost": 0.9667
+    },
+    "B5_ML_x_impact": {
+      "n": 30,
+      "exact_agreement": 0.8,
+      "linear_kappa": 0.7078,
+      "quadratic_kappa": 0.7936,
+      "high_recall": 0.9412,
+      "under_prioritisation": 0.0667,
+      "over_escalation": 0.1333,
+      "mean_cost": 0.3
+    }
+  },
+  "exploratory_panel_consensus_vs_external_reference": {
+    "n": 30,
+    "exact_agreement": 0.7333,
+    "linear_kappa": 0.6273,
+    "quadratic_kappa": 0.7414,
+    "high_recall": 0.8824,
+    "under_prioritisation": 0.1333,
+    "over_escalation": 0.1333,
+    "mean_cost": 0.4667
+  }
+}

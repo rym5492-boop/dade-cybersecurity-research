@@ -1,0 +1,60 @@
+{
+  "expert": "E5",
+  "estimator": "geometric-mean CR, as in r06 and the thesis",
+  "threshold": 0.1,
+  "CR_september": 0.9134,
+  "lower_bound": {
+    "k": 7,
+    "sets_checked": 116280,
+    "smallest_CR_reachable_with_k_changes_any_value_in_1/9_to_9": 0.1018,
+    "pairs_of_that_set (question numbers)": [
+      6,
+      9,
+      10,
+      11,
+      13,
+      14,
+      19
+    ],
+    "k_changes_are_enough": false
+  },
+  "eight_changes": {
+    "question: [september, changed]": {
+      "3": [
+        5,
+        2
+      ],
+      "7": [
+        3,
+        6
+      ],
+      "10": [
+        8,
+        5
+      ],
+      "13": [
+        2,
+        5
+      ],
+      "15": [
+        8,
+        1
+      ],
+      "18": [
+        8,
+        5
+      ],
+      "20": [
+        8,
+        1
+      ],
+      "21": [
+        8,
+        4
+      ]
+    },
+    "CR_after": 0.0866,
+    "consistent": true
+  },
+  "fewest_changes_needed": 8
+}

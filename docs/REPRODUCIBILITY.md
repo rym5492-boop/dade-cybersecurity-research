@@ -66,6 +66,16 @@ the console log of every script are in `results/reproduction/20261031_153220/`.
 | r15 figures | images redrawn; bytes differ |
 | r22 | the CIC parts (adaptation independence on all three datasets, sensitivity variants V1–V3) were run for the first time; `results/revision/r22_cross_dataset_audit.json` now holds this complete run |
 
+## 2c. Clean-room re-run (cloud, 4 November 2026)
+
+The cloud re-run of 30 October 2026 (section 2) kept no output files. On 4 November 2026 the AI assistant repeated it
+with `reproduce.py` on a fresh clone of this repository (commit 0562efc), with the same Python and library versions
+and the same four NSL-KDD and UNSW-NB15 files. Every output of r01 to r06, r09 to r11, r13 to r21, r25 and r26 was
+identical to the stored one, except the figures of r15 (redrawn) and Logistic Regression in r05, which classified 8 of
+the 12,833 attacks of the NSL-KDD test file differently, as on 30 October, without changing any percentage printed in
+the thesis. The CIC scripts were skipped (files not available in the cloud). Report, logs, stored reference and outputs:
+`results/reproduction/20261104_195135/` (see its `NOTE.md`).
+
 ## 3. Who executed what
 
 | Work | Executed by | Where |
@@ -82,6 +92,7 @@ the console log of every script are in `results/reproduction/20261031_153220/`.
 | Reading the submission times of the October AHP revisions and of the experts' scenario labels from the form service (read only; names not recorded), and `data/label_submission_times.csv` with `label_timing.py` (4 November 2026) | AI assistant, at the author's request | form service through a connector; cloud workspace |
 | `ahp_min_changes.py`, the fewest changes E5's September answers needed (4 November 2026) | AI assistant, at the author's request | cloud workspace |
 | Recording the specifications of the author's computer (`docs/author_computer_hardware.md`, 4 November 2026) | the author ran the command; the AI assistant transcribed the output | author's computer |
+| Clean-room re-run of r01–r06, r09–r11, r13–r21, r25, r26 with `reproduce.py` (4 November 2026; section 2c) | AI assistant, at the author's request | cloud workspace; report in `results/reproduction/20261104_195135/` |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.
