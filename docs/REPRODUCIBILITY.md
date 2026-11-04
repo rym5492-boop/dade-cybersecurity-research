@@ -76,6 +76,18 @@ the 12,833 attacks of the NSL-KDD test file differently, as on 30 October, witho
 the thesis. The CIC scripts were skipped (files not available in the cloud). Report, logs, stored reference and outputs:
 `results/reproduction/20261104_195135/` (see its `NOTE.md`).
 
+## 2d. Independent re-run by the author (4 November 2026)
+
+The first author downloaded the repository from GitHub at commit a3f3d47, added all six dataset files and ran
+`python src/04_revision/reproduce.py` on his own computer (Windows 11, Python 3.13.17 with the locked versions). The
+unedited report, the console log of every script and the stored reference are in
+`results/reproduction/20261104_204819/`, committed from his account (ac5f66e). All 24 scripts ran without error,
+including the CIC scripts r07, r08, r12 and r22. Every result was identical to the stored one except Logistic
+Regression in r01 and r05, which differed exactly as in his re-run of 31 October 2026 (61 and 15 values; section 2b);
+the UNSW-NB15 hashes differ only through line endings (section 1). In the same copy he also ran `label_timing.py`
+(3.58 to 40.97 minutes) and `ahp_min_changes.py` (fewest changes 8), with the same results as the stored files; their
+console output was shared as screenshots and is not stored here.
+
 ## 3. Who executed what
 
 | Work | Executed by | Where |
@@ -93,6 +105,7 @@ the thesis. The CIC scripts were skipped (files not available in the cloud). Rep
 | `ahp_min_changes.py`, the fewest changes E5's September answers needed (4 November 2026) | AI assistant, at the author's request | cloud workspace |
 | Recording the specifications of the author's computer (`docs/author_computer_hardware.md`, 4 November 2026) | the author ran the command; the AI assistant transcribed the output | author's computer |
 | Clean-room re-run of r01–r06, r09–r11, r13–r21, r25, r26 with `reproduce.py` (4 November 2026; section 2c) | AI assistant, at the author's request | cloud workspace; report in `results/reproduction/20261104_195135/` |
+| Independent re-run of every analysis script r01–r22, r25, r26, including the CIC scripts, and of `label_timing.py` and `ahp_min_changes.py` (4 November 2026; section 2d) | the author, with `reproduce.py` | author's computer; report in `results/reproduction/20261104_204819/`, committed from his account (ac5f66e) |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.
