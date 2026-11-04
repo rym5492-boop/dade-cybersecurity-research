@@ -8,10 +8,14 @@ authors:
   - family-names: Ayari
     given-names: Mohamed
     affiliation: "Department of Computer Science, College of Science, Northern Border University"
-version: "revision-2"
+version: "v2.0-revision2"
+doi: 10.5281/zenodo.23856795
+type: software
 date-released: "2026-11-01"
 repository-code: "https://github.com/rym5492-boop/dade-cybersecurity-research"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 keywords:
   - intrusion detection
   - business impact analysis

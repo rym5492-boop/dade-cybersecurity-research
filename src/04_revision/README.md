@@ -4,7 +4,12 @@ These scripts replace the analyses the review flagged. The original scripts in
 `src/01_predictive_layer` and `src/02_dade_engine` are kept unchanged so every
 change can be audited. All outputs go to `results/revision/`.
 
-Run from the repository root, with the dataset files in the root or in `data/`.
+Run each script from `src/04_revision` (or all of them with `python src/04_revision/reproduce.py` from the
+repository root), with the dataset files in the root or in `data/`.
+
+> Note (4 November 2026): the table below and the number map further down were written for scripts r01 to r16
+> and for the table numbers of the paper version of 24 October 2026. Scripts r17 to r26 and their outputs are
+> listed in thesis Appendix E (Table E.2) and in `docs/REPRODUCIBILITY.md`.
 
 | Script | Review item | Runs where | What it fixes |
 | --- | --- | --- | --- |

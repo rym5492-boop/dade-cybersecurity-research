@@ -1,15 +1,15 @@
-# DADE: code, data and results (second revision, 30 and 31 October 2026)
+# DADE: code, data and results (second revision, 30 October to 1 November 2026)
 
 Code and results for the journal manuscript **"Intrusion detection and business impact analysis for
 continuity prioritization: a leakage-audited evaluation of an analytic hierarchy process rule against simpler
 baselines"** (Khalid Khadhear Alenezi and Mohamed Ayari, Northern Border University) and for the MSc thesis
-on the same study. DADE is used only as the name of the decision rule; it implies no dynamic or adaptive
-behaviour.
+on the same study. In the manuscript DADE is used only as the name of the decision rule; the thesis (Section 1.6) defines the
+narrow senses in which the rule is called dynamic and adaptive.
 
-**Every number in the manuscript and the thesis comes from the analysis scripts in `src/04_revision` (r01 to r22, r25,
+**Every number in the manuscript comes from the analysis scripts in `src/04_revision` (r01 to r22, r25,
 r26; r23 writes the provenance manifest and r24 draws figures) and
 their outputs in `results/revision`,** except the group consistency ratio of the September AHP answers
-(0.050), which comes from the earlier analysis file `results/ahp_weights_results.json`. The figures and related-work coverage records of the manuscript are made
+(0.050), which comes from the earlier analysis file `results/ahp_weights_results.json`. The thesis also cites a few values of the earlier analysis (files in `results/`), each named where it is used. The figures and related-work coverage records of the manuscript are made
 by `src/05_manuscript`. See `src/04_revision/README.md` for what each script does and the order to run them,
 `docs/REPRODUCIBILITY.md` for dataset hashes, the split manifest, the clean-room re-run and who executed what,
 `docs/PREREGISTRATION_AUDIT.md` for planned versus exploratory analyses, and `docs/COMMIT_MAP.md` for the
@@ -71,6 +71,10 @@ he re-ran them the same evening with identical results (`results/reproduction/20
 ---
 
 # Earlier draft (kept for audit)
+
+> The text below describes the earlier draft of September 2026 and is kept unchanged for audit. Several of its
+> practices were withdrawn in the revision (see "What changed" above), and the files at the top level of
+> `results/` are outputs of that draft, not of the revised analysis in `results/revision/`.
 
 DADE: Dynamic Adaptive Decision Engine — Reproducibility Package
 This repository contains the complete, reproducible code pipeline for the paper
@@ -242,4 +246,4 @@ from the protocol stated in the paper (binary labels, label-encoded categorical 
 standardization, stratified 80/20 split, random_state = 42, 5-fold CV). With scikit-learn 1.8
 it reproduces Table 1 within 0.3 percentage points (Random Forest 0.9990 vs. 0.9992, Decision
 Tree 0.9977 vs. 0.9979, Logistic Regression 0.9520 vs. 0.9548) and the same two most important
-features (src_bytes, dst_bytes). XGBoost requires `pip install xgb
+features (src_bytes, dst_bytes). XGBoost requires `pip install xgboost`.

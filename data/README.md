@@ -3,7 +3,7 @@
 Place the downloaded dataset files here or in the repository root (see the main README for sources and file
 names). The dataset files are not stored in the repository because of their size.
 
-The anonymized expert data used by the revision scripts are stored here:
+The pseudonymized (coded) expert data used by the revision scripts are stored here:
 
 | File | Content | Used by |
 | --- | --- | --- |
