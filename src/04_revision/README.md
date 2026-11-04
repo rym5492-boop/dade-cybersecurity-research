@@ -41,6 +41,7 @@ The thesis lists the same scripts and their main output files in Appendix E (Tab
 | `compare_outputs.py` | P0-6 | anywhere | Compares two result folders by content (JSON values, parsed CSV, NPZ arrays, text without line endings); used by reproduce.py |
 | `hash_line_endings.py` | P0-6 | anywhere | SHA-256 of a file as stored, with LF and with CRLF line endings |
 | `label_timing.py` | Thesis §3.4 and Table 3.8 (added 4 Nov 2026) | anywhere (needs only `data/`) | Minutes between each expert's October AHP revision and the same expert's scenario labels, from `data/label_submission_times.csv`; checks the revision times against the revision log |
+| `ahp_min_changes.py` | Thesis §3.4 (added 4 Nov 2026) | anywhere (needs only `data/`) | Fewest changed pairs that would have brought E5's September AHP answers to CR ≤ 0.10: no set of 7 pairs can, even with any value in [1/9, 9] (convex minimization over all 116,280 sets), and one set of 8 changes on the 1–9 scale does (CR 0.087) |
 
 Order: as in `reproduce.py`: r01 to r22, then r25 and r26. r04 needs r03; r10 needs r09; r14 needs r09, r10 and
 r13; r20 needs r03 and r17. r07, r08, r12 and the CIC parts of r22 run on the machine that holds the CIC datasets.
@@ -77,6 +78,7 @@ The table follows the numbering of the manuscript version of 4 November 2026. Th
 | Table 10, Fig. 8, §6.4 (calibration and base rate) | r02, r17, r25 | r02_calibration.json, r17_base_rate_thresholds.json, r25_decision_sensitivity.json |
 | Thesis §4.4 (bounds on the level of each BIA profile) | r16 | r16_level_bounds.json |
 | Thesis §3.4 and Table 3.8 (labels 4 to 41 minutes after the AHP revision) | label_timing.py | label_timing.json |
+| Thesis §3.4 (E5 would have needed at least eight changes) | ahp_min_changes.py | ahp_min_changes_E5.json |
 
 Figs. 1 to 8 of the manuscript are written by `src/05_manuscript/make_figures.py` (to `results/manuscript/figures`):
 Figs. 1, 3, 4 and 6 are copies of the figures drawn by r24, and Figs. 2, 5, 7 and 8 are drawn there from r10, r06,
