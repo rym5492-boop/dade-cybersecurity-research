@@ -7,9 +7,7 @@ change can be audited. All outputs go to `results/revision/`.
 Run each script from `src/04_revision` (or all of them with `python src/04_revision/reproduce.py` from the
 repository root), with the dataset files in the root or in `data/`.
 
-> Note (4 November 2026): the table below and the number map further down were written for scripts r01 to r16
-> and for the table numbers of the paper version of 24 October 2026. Scripts r17 to r26 and their outputs are
-> listed in thesis Appendix E (Table E.2) and in `docs/REPRODUCIBILITY.md`.
+The thesis lists the same scripts and their main output files in Appendix E (Table E.2).
 
 | Script | Review item | Runs where | What it fixes |
 | --- | --- | --- | --- |
@@ -43,34 +41,45 @@ repository root), with the dataset files in the root or in `data/`.
 | `compare_outputs.py` | P0-6 | anywhere | Compares two result folders by content (JSON values, parsed CSV, NPZ arrays, text without line endings); used by reproduce.py |
 | `hash_line_endings.py` | P0-6 | anywhere | SHA-256 of a file as stored, with LF and with CRLF line endings |
 
-Order: r01, r02, r03, then r04 (needs r03), r05, r06; r07 and r08 on the machine that holds the
-CIC datasets; r09, r10, r13, then r14; r15 last (figures only); r16 at any time (needs only the expert data).
+Order: as in `reproduce.py`: r01 to r22, then r25 and r26. r04 needs r03; r10 needs r09; r14 needs r09, r10 and
+r13; r20 needs r03 and r17. r07, r08, r12 and the CIC parts of r22 run on the machine that holds the CIC datasets.
+r15 and r24 only draw figures and r23 only writes the provenance manifest, so they can run last.
 
 Data integrity: the UNSW-NB15 files used to produce `results/revision` have the official sizes
 (175,341 / 82,332 rows) and category counts, and re-running the original
 `src/02_dade_engine/01_ablation_study.py` on them reproduces the published ablation numbers exactly.
 
-## Where each number in the revised paper comes from
+## Where each number of the manuscript comes from
 
-| Paper item | Script | Output file |
+The table follows the numbering of the manuscript version of 4 November 2026. The map for the version of
+24 October 2026 is in the archived release (commit 310b029). Files are in `results/revision/` unless a path is given.
+
+| Manuscript item | Script | Output file |
 | --- | --- | --- |
-| Table 4 (data manifest: rows, attack share) | r12 (CIC rows: run on the machine holding the CIC files; run by the author on 20 Oct 2026) | r12_dataset_manifest.json |
-| §4.7 external panel (alpha, reference labels) | r13 | r13_external_panel.json, data/external_reference_labels.csv |
-| Table 4 partitions, §4.1 duplicates | r01, r08, r11 | r01_unsw_detection.json, r08_cicids2017_holdout_v2.json, r11_unsw_duplicates.json |
-| Table 5 (NSL-KDD random vs official split) | r05 | r05_nslkdd.json |
-| Table 6, §5.2 (UNSW-NB15 thresholds, CV–test gap) | r01, r11 | r01_unsw_detection.json, r11_unsw_duplicates.json |
-| §5.3 (predicted category, severity error) | r03 | r03_attack_category.json |
-| Table 7, §5.4 (CICIDS2017 unseen families) | r08 | r08_cicids2017_holdout_v2.json |
-| Figure 2, §5.5 (cross-dataset transfer) | r07 | r07_cross_dataset_v2.json |
-| Table 8, Figure 3, §5.6 (calibration, base-rate shift) | r02 | r02_calibration.json |
-| Table 9, §6.1 (leakage audit of the earlier ablation) | r04 | r04_ablation_leakage_audit.json |
-| Tables 10–11, §6.2 (AHP consistency, aggregation, bootstrap) | r06 | r06_ahp_robustness.json |
-| §6.3 (monotonicity, weight/threshold/severity checks, rule comparison) | r10 (stage 1) | r10_stage1.json, r10_decisions_stage1.csv |
-| Table 12, §4.7 (scenarios) | r09 | r09_scenarios.csv, r09_scenario_cards_ar.md |
-| Table 13, §6.4 (agreement with expert labels, thresholds, failure cases, consensus) | r10 (stage 2) | r10_stage2.json |
-| Table 10 (CR September vs final), §4.6 and §6.4 (without-E3 sensitivity), §6.4 external panel vs methods | r14 | r14_final_checks.json |
-| Figure 4 (§6.2), Figure 5 (§6.4) | r15 | fig4_ahp_weights.png, fig5_decision_differences.png (drawn from r06_ahp_robustness.json and r10_stage2.json) |
-| Thesis §4.4 (bounds on the level for each BIA profile; not in the paper) | r16 | r16_level_bounds.json |
+| Table 1, Supplementary Tables S1 and S2 (related work, coverage search) | `src/05_manuscript/crossref_coverage_search.py`, `coverage_screening.py`, `build_supplementary.py` | `results/manuscript/crossref_coverage_search_2026-10-30.json`, `results/manuscript/coverage_screening_2026-10-30.csv` |
+| Table 2 (group AHP weights) | r06 | r06_ahp_robustness.json |
+| Table 3, §4.1 (datasets, partitions, hash prefixes) | r12, r23; partitions from r01, r05, r07 and r08 | r12_dataset_manifest.json, r23_provenance_manifest.json, splits/ |
+| Table 4, §4.1 (BIA profiles and scenarios) | r09 | r09_scenarios.csv, r09_scenario_cards_ar.md |
+| Table 5, §4.9 (planned and exploratory analyses) | none | `docs/PREREGISTRATION_AUDIT.md` |
+| §4.10 (execution record) | reproduce.py | `results/reproduction/` |
+| Table 6, Fig. 2, §5.1 (primary comparison) | r10 (stage 2); escalation rates r19; other cost matrices and two-way bootstrap r25 | r10_stage2.json, r19_ablation_and_paired.json, r25_decision_sensitivity.json |
+| Tables 7 and 8, §5.2 (scenario-level confusion, criticality) | r19; attainable levels r16 | r19_ablation_and_paired.json, r16_level_bounds.json |
+| Table 9, Fig. 3, §5.3 (thresholds on held-out scenarios and independent raters) | r18 | r18_threshold_study.json, r18_locked_thresholds.json, r18_tradeoff_curves.csv |
+| Figs. 4 and 5, §5.4 (ablations, weights) | r19 (ablations, equal weights, aggregation); r06 (weights) | r19_ablation_and_paired.json, r06_ahp_robustness.json |
+| Fig. 6, §5.5 (propagation of detector and BIA uncertainty) | r20 | r20_error_propagation.json |
+| §5.6 (label reference) | r21 | r21_panel_audit.json |
+| §5.7 (external practitioners) | r13, r14, r21 | r13_external_panel.json, r14_final_checks.json, r21_panel_audit.json |
+| §5.8, Supplementary Table S10 (leakage audit of the earlier result) | r04 | r04_ablation_leakage_audit.json |
+| §6.1 (official splits, duplicates, TTL features, predicted category) | r05, r01, r11, r26, r03 | r05_nslkdd.json, r01_unsw_detection.json, r11_unsw_duplicates.json, r26_ttl_and_label_conflicts.json, r03_attack_category.json |
+| §6.2 (unseen attack families) | r08 | r08_cicids2017_holdout_v2.json |
+| Fig. 7, §6.3 (transfer between datasets) | r07, r22 | r07_cross_dataset_v2.json, r22_cross_dataset_audit.json |
+| Table 10, Fig. 8, §6.4 (calibration and base rate) | r02, r17, r25 | r02_calibration.json, r17_base_rate_thresholds.json, r25_decision_sensitivity.json |
+| Thesis §4.4 (bounds on the level of each BIA profile) | r16 | r16_level_bounds.json |
+
+Figs. 1 to 8 of the manuscript are written by `src/05_manuscript/make_figures.py` (to `results/manuscript/figures`):
+Figs. 1, 3, 4 and 6 are copies of the figures drawn by r24, and Figs. 2, 5, 7 and 8 are drawn there from r10, r06,
+r07 and r02. The supplementary tables are built by `src/05_manuscript/build_supplementary.py`, which names the
+source file under each table.
 
 All AHP revision answers arrived (E1, E2, E6 targeted pairs; E3, E5 full repeat). They are in
 `data/ahp_expert_judgments_anonymized.json` (`pairwise_responses`; the September answers are kept in

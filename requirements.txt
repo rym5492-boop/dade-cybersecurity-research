@@ -2,3 +2,4 @@ pandas>=2.0
 numpy>=1.26
 scikit-learn>=1.8
 matplotlib>=3.7
+python-docx>=1.1  # only for src/05_manuscript/build_supplementary.py
