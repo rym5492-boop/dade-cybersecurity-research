@@ -90,10 +90,10 @@ console output was shared as screenshots and is not stored here.
 
 ## 2e. Independent recomputation (cloud, 23 November 2026)
 
-For the final supervisory review the AI assistant recomputed Tables 6, 7 and 10 (benign counts and thresholds),
-Section 5.7 and the fixed-cut-off external columns of Table 9 from the raw inputs with code written from the
+For the final supervisory review the AI assistant recomputed Tables 6, 7 and 9 (benign counts and thresholds),
+Section 5.7 and the fixed-cut-off external columns of Table 8 from the raw inputs with code written from the
 manuscript's definitions (`src/06_verification`; output in `results/verification/`), and re-ran r20 in a separate
-copy at full precision; the r20 output file was identical to the stored one. Every value agreed. Three values that
+copy at full precision; the r20 output file was identical to the stored one. Every value agreed. r03 was corrected (a floating-point comparison; `src/06_verification/README.md`). Three values that
 the manuscript had rounded twice were corrected there (see `src/06_verification/README.md`), and the supplementary
 builder now rounds once, from counts where they are stored.
 

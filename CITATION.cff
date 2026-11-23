@@ -8,7 +8,7 @@ authors:
   - family-names: Ayari
     given-names: Mohamed
     affiliation: "Department of Information Technology, Faculty of Computing and Information Technology, Northern Border University"
-version: "v2.0-revision2"
+version: "v2.1-revision3"
 doi: 10.5281/zenodo.23856795
 type: software
 date-released: "2026-11-01"

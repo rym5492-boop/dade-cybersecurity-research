@@ -202,6 +202,15 @@ table("Table S3. Threshold policies scored on held-out scenarios (LOFO: leave-on
       note="The external check reuses the 30 scenarios; the practitioners' labels were known from 20 October 2026, so it is "
            "independent in raters only. NESTED share of chosen policies is in the result file.")
 
+tf = J("r10_stage2.json")["threshold_tuning_by_form"]
+table("Table S3 (continued). Planned one-form check (r10, committed before any label): DADE cut-offs chosen by minimum cost "
+      "on one form's ten consensus labels with the group weights, scored on the other two forms' twenty consensus labels "
+      "(r10_stage2.json, threshold_tuning_by_form).",
+      ["Tuned on form", "Cut-offs chosen (High, Low)", "Cost on the other forms, tuned", "Cost on the other forms, fixed 0.66 and 0.33"],
+      [[f, f"{r(v['thresholds'][0])}, {r(v['thresholds'][1])}", r(v["test_mean_cost_tuned"]), r(v["test_mean_cost_fixed"])]
+       for f, v in sorted(tf.items())] +
+      [["Mean", "", r(sum(v["test_mean_cost_tuned"] for v in tf.values()) / 3), r(sum(v["test_mean_cost_fixed"] for v in tf.values()) / 3)]])
+
 # ---------------------------------------------------------------- S4 ablations and aggregation
 t19 = J("r19_ablation_and_paired.json")
 rows = []

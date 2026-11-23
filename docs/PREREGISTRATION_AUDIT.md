@@ -52,3 +52,10 @@ only on scenarios or raters not used to tune them.
 - A Git bundle of the original repository (SHA-256 recorded in `docs/REPRODUCIBILITY.md`).
 - The form definitions and the submission records of every form, kept in the form account (they contain names
   and are not published); how long they are kept is to be set with the university's research ethics committee.
+
+## Note added on 23 November 2026
+
+The commit message "Withdraw E3 exclusion; follow pre-registered rule" (public 1a775e0, original 9fc42c2) overstates the
+record: the rule that revised AHP answers replace the originals was reported by the first author as set before any
+revision arrived, but it was first written into the repository on 20 and 21 October 2026. The data file's
+`revision_log.rule` now says so, as the manuscript (Section 4.5) does.

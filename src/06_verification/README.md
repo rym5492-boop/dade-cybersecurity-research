@@ -15,8 +15,8 @@ Output: `results/verification/recompute_decision_layer.json` (about 20 seconds; 
 - Table 6 (all six methods, 120 expert labels, leave-one-expert-out AHP weights) and the 30 stored scenario levels;
 - Table 7 (confusion against the expert consensus) and the consensus counts;
 - Section 5.7 (DADE and the baselines against the practitioners' reference labels, panel agreement) and the
-  fixed-cut-off external columns of Table 9;
-- Table 10: false and true negatives at each threshold, the threshold of Eq. (4) for the true and the EM prior, the
+  fixed-cut-off external columns of Table 8;
+- Table 9 of the manuscript (base-rate policies): false and true negatives at each threshold, the threshold of Eq. (4) for the true and the EM prior, the
   expected true positives, and the equivalence of re-applying 0.5 to corrected scores and Eq. (4);
 - the split manifest (every training row in exactly one of FIT, VAL and CAL; attack share per split), the use of
   the predicted, not the true, category for TS in all 30 scenarios, and scenario flows identical to a training row.
@@ -28,4 +28,11 @@ BIA perturbations (0.097483 in a full-precision re-run of r20 whose output file 
 printed 9.8%, now 9.7%). It also found that one scenario flow (C08, benign) is identical to a CAL row labelled
 Fuzzers, and none to a FIT row.
 
-Executed by the AI assistant in a cloud workspace at the author's request; the author has not re-run this script.
+On the same day r03 was corrected: it compared floating-point differences, so severity errors of exactly 0.30 (and 0.10)
+counted as above the threshold. It now rounds the difference to six decimals; only `share_severity_error_gt_0.10` and
+`share_severity_error_gt_0.30` changed (test: 0.2953 to 0.2785 and 0.2168 to 0.2162); the predicted categories and
+severities are unchanged.
+
+Executed by the AI assistant in a cloud workspace at the author's request. The author re-runs both with
+`python src/04_revision/reproduce.py --only=r03_attack_category_severity` and
+`python src/06_verification/recompute_decision_layer.py`; the report is added to `results/reproduction/`.

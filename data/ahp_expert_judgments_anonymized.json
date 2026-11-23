@@ -331,7 +331,7 @@
     ]
   },
   "revision_log": {
-    "rule": "Fixed in manuscript Section 4.6 before any revised answer arrived: revised answers replace the originals; an expert who does not reply keeps the original answers.",
+    "rule": "Revised answers replace the originals; an expert who does not reply keeps the original answers. The first author reports setting this rule before any revised answer arrived; it was first written into the repository on 20 and 21 October 2026 (manuscript Section 4.5).",
     "E1": "Targeted review of 6 pairs (Tally rDyGR2, submitted 2026-10-18 01:43 +0300); all 6 suggested values accepted.",
     "E2": "Targeted review of 3 pairs (Tally Nq5Mvj, submitted 2026-10-20 23:27 +0300); all 3 suggested values accepted. The form had no name field; it was sent only to E2.",
     "E3": "Full repeat (Tally pexRNB, submitted 2026-10-18 10:04 +0300); 20 of 21 answers = 6 and one = 7 (same-side pattern).",

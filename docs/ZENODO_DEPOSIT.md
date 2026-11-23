@@ -14,3 +14,5 @@ What is not deposited: the original private repository, its Git bundle and the n
 kept unchanged and offline by the first author, under the control of the research ethics determination.
 
 Done on 1 November 2026: release v2.0-revision2 of commit 310b029, DOI 10.5281/zenodo.23856795.
+
+Third revision (November 2026): release v2.1-revision3, title "Third revision, November 2026", created by the first author from `main`; its DOI replaces the one above in the manuscript.
