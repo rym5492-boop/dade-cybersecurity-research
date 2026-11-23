@@ -30,8 +30,8 @@
     },
     "severity_mae": 0.0561,
     "share_severity_exact": 0.7628,
-    "share_severity_error_gt_0.10": 0.2017,
-    "share_severity_error_gt_0.30": 0.0882,
+    "share_severity_error_gt_0.10": 0.1577,
+    "share_severity_error_gt_0.30": 0.0879,
     "attack_given_severity_0 (missed as Normal)": 0.0033,
     "normal_given_severity_gt_0 (false severity)": 0.1783
   },
@@ -66,8 +66,8 @@
     },
     "severity_mae": 0.1064,
     "share_severity_exact": 0.6742,
-    "share_severity_error_gt_0.10": 0.2953,
-    "share_severity_error_gt_0.30": 0.2168,
+    "share_severity_error_gt_0.10": 0.2785,
+    "share_severity_error_gt_0.30": 0.2162,
     "attack_given_severity_0 (missed as Normal)": 0.0029,
     "normal_given_severity_gt_0 (false severity)": 0.4071,
     "confusion_matrix": {

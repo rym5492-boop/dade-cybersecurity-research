@@ -1,4 +1,4 @@
-# Reproducibility record (30 and 31 October 2026)
+# Reproducibility record (30 October to 23 November 2026)
 
 Answers item P0-6 of the supervisor's review of 30 October 2026: data and code provenance, an independent
 re-run from a fresh environment, and a record of who executed what.
@@ -88,6 +88,15 @@ the UNSW-NB15 hashes differ only through line endings (section 1). In the same c
 (3.58 to 40.97 minutes) and `ahp_min_changes.py` (fewest changes 8), with the same results as the stored files; their
 console output was shared as screenshots and is not stored here.
 
+## 2e. Independent recomputation (cloud, 23 November 2026)
+
+For the final supervisory review the AI assistant recomputed Tables 6, 7 and 10 (benign counts and thresholds),
+Section 5.7 and the fixed-cut-off external columns of Table 9 from the raw inputs with code written from the
+manuscript's definitions (`src/06_verification`; output in `results/verification/`), and re-ran r20 in a separate
+copy at full precision; the r20 output file was identical to the stored one. Every value agreed. Three values that
+the manuscript had rounded twice were corrected there (see `src/06_verification/README.md`), and the supplementary
+builder now rounds once, from counts where they are stored.
+
 ## 3. Who executed what
 
 | Work | Executed by | Where |
@@ -106,6 +115,7 @@ console output was shared as screenshots and is not stored here.
 | Recording the specifications of the author's computer (`docs/author_computer_hardware.md`, 4 November 2026) | the author ran the command; the AI assistant transcribed the output | author's computer |
 | Clean-room re-run of r01–r06, r09–r11, r13–r21, r25, r26 with `reproduce.py` (4 November 2026; section 2c) | AI assistant, at the author's request | cloud workspace; report in `results/reproduction/20261104_195135/` |
 | Independent re-run of every analysis script r01–r22, r25, r26, including the CIC scripts, and of `label_timing.py` and `ahp_min_changes.py` (4 November 2026; section 2d) | the author, with `reproduce.py` | author's computer; report in `results/reproduction/20261104_204819/`, committed from his account (ac5f66e) |
+| Independent recomputation of the main decision-layer and base-rate results, and a full-precision re-run of r20 (23 November 2026; section 2e) | AI assistant, at the author's request | cloud workspace; `src/06_verification`, `results/verification/` |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.

@@ -1,12 +1,12 @@
 """Supplementary material (Tables S1 to S10, with parts a to e) generated from the stored result files only.
 
 Every number is read from repo_filtered/results/revision/*.json, from results/ahp_weights_results.json (September
-AHP answers, earlier analysis) or from the coverage-search files in results/manuscript; values are rounded half up. Output: paper2/supplementary/Alenezi_IJCIP_Supplementary.docx
+AHP answers, earlier analysis) or from the coverage-search files in results/manuscript; values are rounded half up, once (from counts where the counts are stored; a stored value exactly halfway at the printed precision is printed at its stored precision). Output: paper2/supplementary/Alenezi_IJCIP_Supplementary.docx
 """
 import csv
 import json
 from collections import Counter
-from decimal import ROUND_HALF_UP, Decimal
+from decimal import ROUND_DOWN, ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 from docx import Document
@@ -24,14 +24,43 @@ OUTFILE = Path(sys.argv[1]) if len(sys.argv) > 1 else MAN / "Alenezi_IJCIP_Suppl
 J = lambda n: json.load(open(RES / n))
 
 
+# A halfway value that is an exact fraction of a count used here (labels, scenarios, raters) was not rounded when
+# stored, so it is rounded normally; any other halfway value is printed at its stored precision.
+EXACT_DENOMINATORS = (20, 30, 40, 60, 80, 120, 240)
+TIES = []
+
+
+def halfway(d, places):
+    """True if the stored value d lies exactly halfway at `places` decimals and is not an exact fraction of a count."""
+    q = Decimal(1).scaleb(-places)
+    return (abs(d) - abs(d).quantize(q, rounding=ROUND_DOWN)) == Decimal(5).scaleb(-(places + 1)) \
+        and not any((d * k) == (d * k).to_integral_value() for k in EXACT_DENOMINATORS)
+
+
 def r(x, nd=2):
+    """Round half up. A stored value that lies exactly halfway at the printed precision (for example 0.0945 printed
+    to three decimals) may itself be rounded, so rounding it again could move the last digit the wrong way; such a
+    value is printed at its stored precision instead (0.0945)."""
     if x is None:
         return ""
-    return str(Decimal(str(x)).quantize(Decimal(1).scaleb(-nd), rounding=ROUND_HALF_UP))
+    d = Decimal(str(x))
+    if halfway(d, nd):
+        TIES.append(str(d.normalize()))
+        return str(d.normalize())
+    return str(d.quantize(Decimal(1).scaleb(-nd), rounding=ROUND_HALF_UP))
 
 
 def pct(x, nd=1):
-    return r(100 * x, nd) + "%"
+    d = Decimal(str(x))
+    if not isinstance(x, Decimal) and halfway(d, nd + 2):       # judged on the stored proportion
+        TIES.append(str(d))
+        return str((d * 100).normalize()) + "%"
+    return str((d * 100).quantize(Decimal(1).scaleb(-nd), rounding=ROUND_HALF_UP)) + "%"
+
+
+def ratio(a, b):
+    """Exact proportion from counts, so that a percentage is rounded once from the counts."""
+    return Decimal(a) / Decimal(b)
 
 
 def rng(lo, hi, nd=2):
@@ -54,7 +83,9 @@ doc.add_paragraph("Intrusion detection and business impact analysis for continui
                   "from the coding check of Table 1 described in Section 2.5 of the paper; every other value is read from the "
                   f"result files of the public repository (commit {FINAL_COMMIT}) by "
                   "src/05_manuscript/build_supplementary.py; "
-                  "the file named under each table gives the source.")
+                  "the file named under each table gives the source. Values are rounded half up once, from counts where "
+                  "counts are stored; a stored value that lies exactly halfway at the printed precision, and so may itself "
+                  "be rounded, is printed at its stored precision (for example 0.0945).")
 
 
 def table(title, header, rows, note=None, widths=None):
@@ -319,8 +350,14 @@ rows = []
 for m in ["LogisticRegression", "RandomForest", "HistGradientBoosting"]:
     for th in ["default_0.5", "val_max_f1", "val_fpr_1pct"]:
         v = t01["models"][m]["test"][th]; c = v.get("confusion", {})
-        rows.append([m, th, r(v["threshold"], 4), pct(v["accuracy"]), pct(v["balanced_accuracy"]), pct(v["attack_recall"]),
-                     pct(v["false_positive_rate"]), pct(v["attack_precision"]), r(v["mcc"], 3), r(v["roc_auc"], 3),
+        if c:   # percentages from the counts, rounded once
+            tn, fp, fn, tp = c["tn"], c["fp"], c["fn"], c["tp"]
+            acc, rec, fpr = ratio(tn + tp, tn + fp + fn + tp), ratio(tp, tp + fn), ratio(fp, fp + tn)
+            vals = [acc, (rec + (1 - fpr)) / 2, rec, fpr, ratio(tp, tp + fp)]
+        else:
+            vals = [v["accuracy"], v["balanced_accuracy"], v["attack_recall"], v["false_positive_rate"], v["attack_precision"]]
+        rows.append([m, th, r(v["threshold"], 4)] + [pct(x) for x in vals] +
+                    [r(v["mcc"], 3), r(v["roc_auc"], 3),
                      f"{c.get('tn', ''):,} / {c.get('fp', ''):,} / {c.get('fn', ''):,} / {c.get('tp', ''):,}" if c else ""])
 table("Table S8b. UNSW-NB15 official test file, all models and thresholds (thresholds chosen on VAL, on each model's uncalibrated score; r01_unsw_detection.json).",
       ["Model", "Threshold rule", "Threshold", "Accuracy", "Balanced acc.", "Recall", "FPR", "Precision", "MCC", "ROC-AUC", "TN / FP / FN / TP"], rows)
@@ -415,3 +452,4 @@ table("Table S10. Leakage audit: agreement with the attack or benign label (accu
 out = OUTFILE
 doc.save(out)
 print("saved", out)
+print("halfway values printed at stored precision:", TIES)

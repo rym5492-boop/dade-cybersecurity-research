@@ -12,7 +12,7 @@ their outputs in `results/revision`,** except the group consistency ratio of the
 (0.050), which comes from the earlier analysis file `results/ahp_weights_results.json`. The thesis also cites a few values of the earlier analysis (files in `results/`), each named where it is used. The figures and related-work coverage records of the manuscript are made
 by `src/05_manuscript`. See `src/04_revision/README.md` for what each script does and the order to run them,
 `docs/REPRODUCIBILITY.md` for dataset hashes, the split manifest, the clean-room re-run and who executed what,
-`docs/PREREGISTRATION_AUDIT.md` for planned versus exploratory analyses, and `docs/COMMIT_MAP.md` for the
+`src/06_verification/README.md` for an independent recomputation of the main results from the raw inputs, `docs/PREREGISTRATION_AUDIT.md` for planned versus exploratory analyses, and `docs/COMMIT_MAP.md` for the
 original commit identifiers quoted in the thesis and the manuscript. The scripts and results of the earlier
 draft (`src/01_*`, `src/02_*`, `src/03_*`, `results/*.json`) are kept unchanged so that every correction can be
 audited; the sections further below describe that earlier draft, and some of its practices were corrected in

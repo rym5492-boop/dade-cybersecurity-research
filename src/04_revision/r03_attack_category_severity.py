@@ -32,7 +32,7 @@ for split_name, df in [("validation", val), ("test", test)]:
     true = df["attack_cat"].values
     ts_true = np.array([SEVERITY_MAP[c] for c in true])
     ts_pred = np.array([SEVERITY_MAP[c] for c in pred])
-    err = np.abs(ts_pred - ts_true)
+    err = np.round(np.abs(ts_pred - ts_true), 6)   # rounded so that a difference of exactly 0.30 is not counted as above 0.30
     rep = classification_report(true, pred, labels=labels, output_dict=True, zero_division=0)
     out[split_name] = {
         "n": int(len(df)),
