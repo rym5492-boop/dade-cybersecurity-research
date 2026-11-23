@@ -1,0 +1,82 @@
+{
+  "seed": 42,
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "datasets": {
+    "UNSW_NB15_training-set.csv": {
+      "sha256": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+      "bytes": 32293018
+    },
+    "UNSW_NB15_testing-set.csv": {
+      "sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+      "bytes": 15380800
+    },
+    "KDDTrain+.txt": {
+      "sha256": "1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95",
+      "bytes": 19109424
+    },
+    "KDDTest+.txt": {
+      "sha256": "fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84",
+      "bytes": 3441513
+    },
+    "cicids2017_cleaned.csv": "not present on this machine",
+    "balanced_7classes_500000_each.csv": "not present on this machine"
+  },
+  "unsw_split": {
+    "file": "results/revision/splits/unsw_fit_val_cal_ids.csv",
+    "column": "id of UNSW_NB15_training-set.csv",
+    "rows": {
+      "FIT": 122738,
+      "VAL": 26301,
+      "CAL": 26302
+    },
+    "attack_share": {
+      "FIT": 0.6806,
+      "VAL": 0.6806,
+      "CAL": 0.6806
+    },
+    "overlap_between_parts": 0
+  },
+  "scenario_test_rows": {
+    "file": "results/revision/r09_scenarios.csv",
+    "column": "test_id (id in UNSW_NB15_testing-set.csv)",
+    "test_ids": [
+      41869,
+      5298,
+      57052,
+      46768,
+      43841,
+      57074,
+      60008,
+      47726,
+      2632,
+      9626,
+      61447,
+      11564,
+      76671,
+      50761,
+      50850,
+      52442,
+      47223,
+      62807,
+      49983,
+      55337,
+      63103,
+      13262,
+      9726,
+      56320,
+      11248,
+      60222,
+      60347,
+      77583,
+      51296,
+      50832
+    ]
+  }
+}

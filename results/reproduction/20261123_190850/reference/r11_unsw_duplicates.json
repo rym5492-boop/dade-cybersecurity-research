@@ -1,0 +1,88 @@
+{
+  "features_compared": 42,
+  "train_rows": 175341,
+  "test_rows": 82332,
+  "train_share_duplicate_of_another_train_row": 0.4238,
+  "train_unique_signatures": 101040,
+  "train_signatures_with_conflicting_labels": 229,
+  "test_share_identical_to_a_train_row": 0.1037,
+  "test_share_duplicate_within_test": 0.3448,
+  "cv5_accuracy_stratified": {
+    "mean": 0.956,
+    "sd": 0.0014
+  },
+  "cv5_accuracy_grouped_by_duplicate": {
+    "mean": 0.9539,
+    "sd": 0.0011
+  },
+  "test_all_rows_at_0.5": {
+    "n": 82332,
+    "prevalence_attack": 0.5506,
+    "majority_baseline_accuracy": 0.5506,
+    "threshold": 0.5,
+    "accuracy": 0.8751,
+    "balanced_accuracy": 0.8626,
+    "macro_f1": 0.8693,
+    "attack_precision": 0.8223,
+    "attack_recall": 0.9863,
+    "attack_f1": 0.8969,
+    "false_positive_rate": 0.2611,
+    "mcc": 0.7617,
+    "roc_auc": 0.986,
+    "pr_auc": 0.9897,
+    "confusion": {
+      "tn": 27339,
+      "fp": 9661,
+      "fn": 622,
+      "tp": 44710
+    }
+  },
+  "test_rows_not_in_train_at_0.5": {
+    "n": 73791,
+    "prevalence_attack": 0.5185,
+    "majority_baseline_accuracy": 0.5185,
+    "threshold": 0.5,
+    "accuracy": 0.8677,
+    "balanced_accuracy": 0.8632,
+    "macro_f1": 0.8645,
+    "attack_precision": 0.8044,
+    "attack_recall": 0.9841,
+    "attack_f1": 0.8852,
+    "false_positive_rate": 0.2576,
+    "mcc": 0.7536,
+    "roc_auc": 0.9837,
+    "pr_auc": 0.9865,
+    "confusion": {
+      "tn": 26375,
+      "fp": 9153,
+      "fn": 610,
+      "tp": 37653
+    }
+  },
+  "test_rows_in_train_at_0.5": {
+    "n": 8541,
+    "prevalence_attack": 0.8277,
+    "majority_baseline_accuracy": 0.8277,
+    "threshold": 0.5,
+    "accuracy": 0.9391,
+    "balanced_accuracy": 0.8266,
+    "macro_f1": 0.876,
+    "attack_precision": 0.9328,
+    "attack_recall": 0.9983,
+    "attack_f1": 0.9645,
+    "false_positive_rate": 0.3451,
+    "mcc": 0.7754,
+    "roc_auc": 0.999,
+    "pr_auc": 0.9998,
+    "confusion": {
+      "tn": 964,
+      "fp": 508,
+      "fn": 12,
+      "tp": 7057
+    }
+  },
+  "cv_minus_test_gap_pp": {
+    "stratified": 8.09,
+    "grouped": 7.88
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "held_out_families": [
+    "Bots",
+    "Brute Force"
+  ],
+  "thresholds_chosen_on_validation": {
+    "default_0.5": 0.5,
+    "val_max_f1": 0.44,
+    "val_fpr_1pct": 0.001387,
+    "val_fpr_5pct": 0.000247
+  },
+  "seen_family_test": {
+    "default_0.5": {
+      "n": 60000,
+      "prevalence_attack": 0.1652,
+      "majority_baseline_accuracy": 0.8348,
+      "threshold": 0.5,
+      "accuracy": 0.9993,
+      "balanced_accuracy": 0.999,
+      "macro_f1": 0.9987,
+      "attack_precision": 0.997,
+      "attack_recall": 0.9986,
+      "attack_f1": 0.9978,
+      "false_positive_rate": 0.0006,
+      "mcc": 0.9973,
+      "roc_auc": 1.0,
+      "pr_auc": 0.9999,
+      "confusion": {
+        "tn": 50058,
+        "fp": 30,
+        "fn": 14,
+        "tp": 9898
+      }
+    },
+    "val_max_f1": {
+      "n": 60000,
+      "prevalence_attack": 0.1652,
+      "majority_baseline_accuracy": 0.8348,
+      "threshold": 0.44,
+      "accuracy": 0.9993,
+      "balanced_accuracy": 0.9991,
+      "macro_f1": 0.9987,
+      "attack_precision": 0.9968,
+      "attack_recall": 0.9988,
+      "attack_f1": 0.9978,
+      "false_positive_rate": 0.0006,
+      "mcc": 0.9973,
+      "roc_auc": 1.0,
+      "pr_auc": 0.9999,
+      "confusion": {
+        "tn": 50056,
+        "fp": 32,
+        "fn": 12,
+        "tp": 9900
+      }
+    },
+    "val_fpr_1pct": {
+      "n": 60000,
+      "prevalence_attack": 0.1652,
+      "majority_baseline_accuracy": 0.8348,
+      "threshold": 0.0014,
+      "accuracy": 0.9913,
+      "balanced_accuracy": 0.9948,
+      "macro_f1": 0.9846,
+      "attack_precision": 0.9501,
+      "attack_recall": 0.9999,
+      "attack_f1": 0.9744,
+      "false_positive_rate": 0.0104,
+      "mcc": 0.9696,
+      "roc_auc": 1.0,
+      "pr_auc": 0.9999,
+      "confusion": {
+        "tn": 49568,
+        "fp": 520,
+        "fn": 1,
+        "tp": 9911
+      }
+    },
+    "val_fpr_5pct": {
+      "n": 60000,
+      "prevalence_attack": 0.1652,
+      "majority_baseline_accuracy": 0.8348,
+      "threshold": 0.0002,
+      "accuracy": 0.9565,
+      "balanced_accuracy": 0.974,
+      "macro_f1": 0.9285,
+      "attack_precision": 0.7916,
+      "attack_recall": 1.0,
+      "attack_f1": 0.8837,
+      "false_positive_rate": 0.0521,
+      "mcc": 0.8663,
+      "roc_auc": 1.0,
+      "pr_auc": 0.9999,
+      "confusion": {
+        "tn": 47479,
+        "fp": 2609,
+        "fn": 0,
+        "tp": 9912
+      }
+    }
+  },
+  "unseen_family_test": {
+    "default_0.5": {
+      "n": 22196,
+      "prevalence_attack": 0.5,
+      "majority_baseline_accuracy": 0.5,
+      "threshold": 0.5,
+      "accuracy": 0.5006,
+      "balanced_accuracy": 0.5006,
+      "macro_f1": 0.3354,
+      "attack_precision": 0.7333,
+      "attack_recall": 0.002,
+      "attack_f1": 0.004,
+      "false_positive_rate": 0.0007,
+      "mcc": 0.0172,
+      "roc_auc": 0.9636,
+      "pr_auc": 0.9526,
+      "confusion": {
+        "tn": 11090,
+        "fp": 8,
+        "fn": 11076,
+        "tp": 22
+      }
+    },
+    "val_max_f1": {
+      "n": 22196,
+      "prevalence_attack": 0.5,
+      "majority_baseline_accuracy": 0.5,
+      "threshold": 0.44,
+      "accuracy": 0.5007,
+      "balanced_accuracy": 0.5007,
+      "macro_f1": 0.3356,
+      "attack_precision": 0.7353,
+      "attack_recall": 0.0023,
+      "attack_f1": 0.0045,
+      "false_positive_rate": 0.0008,
+      "mcc": 0.0184,
+      "roc_auc": 0.9636,
+      "pr_auc": 0.9526,
+      "confusion": {
+        "tn": 11089,
+        "fp": 9,
+        "fn": 11073,
+        "tp": 25
+      }
+    },
+    "val_fpr_1pct": {
+      "n": 22196,
+      "prevalence_attack": 0.5,
+      "majority_baseline_accuracy": 0.5,
+      "threshold": 0.0014,
+      "accuracy": 0.7455,
+      "balanced_accuracy": 0.7455,
+      "macro_f1": 0.7295,
+      "attack_precision": 0.9782,
+      "attack_recall": 0.5023,
+      "attack_f1": 0.6637,
+      "false_positive_rate": 0.0112,
+      "mcc": 0.5621,
+      "roc_auc": 0.9636,
+      "pr_auc": 0.9526,
+      "confusion": {
+        "tn": 10974,
+        "fp": 124,
+        "fn": 5524,
+        "tp": 5574
+      }
+    },
+    "val_fpr_5pct": {
+      "n": 22196,
+      "prevalence_attack": 0.5,
+      "majority_baseline_accuracy": 0.5,
+      "threshold": 0.0002,
+      "accuracy": 0.8846,
+      "balanced_accuracy": 0.8846,
+      "macro_f1": 0.8842,
+      "attack_precision": 0.9369,
+      "attack_recall": 0.8248,
+      "attack_f1": 0.8773,
+      "false_positive_rate": 0.0556,
+      "mcc": 0.7748,
+      "roc_auc": 0.9636,
+      "pr_auc": 0.9526,
+      "confusion": {
+        "tn": 10481,
+        "fp": 617,
+        "fn": 1944,
+        "tp": 9154
+      }
+    }
+  }
+}

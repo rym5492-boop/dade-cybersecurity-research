@@ -1,0 +1,1038 @@
+{
+  "calibration_split_prevalence": 0.6806,
+  "test_prevalence": 0.5506,
+  "models": {
+    "RandomForest": {
+      "uncalibrated": {
+        "brier": 0.0818,
+        "ece_15bins": 0.0864,
+        "log_loss": 0.2454,
+        "ece_95ci": [
+          0.0845,
+          0.0883
+        ]
+      },
+      "sigmoid": {
+        "brier": 0.0937,
+        "ece_15bins": 0.0964,
+        "log_loss": 0.3101,
+        "ece_95ci": [
+          0.0943,
+          0.0986
+        ]
+      },
+      "isotonic": {
+        "brier": 0.0845,
+        "ece_15bins": 0.0916,
+        "log_loss": 0.2576,
+        "ece_95ci": [
+          0.0897,
+          0.0936
+        ]
+      },
+      "reliability_table": {
+        "uncalibrated": [
+          {
+            "bin": [
+              0.0,
+              0.067
+            ],
+            "count": 21225,
+            "mean_predicted": 0.0026,
+            "observed_attack_rate": 0.0007
+          },
+          {
+            "bin": [
+              0.067,
+              0.133
+            ],
+            "count": 318,
+            "mean_predicted": 0.0997,
+            "observed_attack_rate": 0.0283
+          },
+          {
+            "bin": [
+              0.133,
+              0.2
+            ],
+            "count": 392,
+            "mean_predicted": 0.1681,
+            "observed_attack_rate": 0.0357
+          },
+          {
+            "bin": [
+              0.2,
+              0.267
+            ],
+            "count": 692,
+            "mean_predicted": 0.2375,
+            "observed_attack_rate": 0.0549
+          },
+          {
+            "bin": [
+              0.267,
+              0.333
+            ],
+            "count": 1058,
+            "mean_predicted": 0.3025,
+            "observed_attack_rate": 0.0643
+          },
+          {
+            "bin": [
+              0.333,
+              0.4
+            ],
+            "count": 1313,
+            "mean_predicted": 0.365,
+            "observed_attack_rate": 0.0944
+          },
+          {
+            "bin": [
+              0.4,
+              0.467
+            ],
+            "count": 1851,
+            "mean_predicted": 0.4334,
+            "observed_attack_rate": 0.1151
+          },
+          {
+            "bin": [
+              0.467,
+              0.533
+            ],
+            "count": 1903,
+            "mean_predicted": 0.5008,
+            "observed_attack_rate": 0.1618
+          },
+          {
+            "bin": [
+              0.533,
+              0.6
+            ],
+            "count": 2156,
+            "mean_predicted": 0.5655,
+            "observed_attack_rate": 0.2189
+          },
+          {
+            "bin": [
+              0.6,
+              0.667
+            ],
+            "count": 2219,
+            "mean_predicted": 0.6325,
+            "observed_attack_rate": 0.2938
+          },
+          {
+            "bin": [
+              0.667,
+              0.733
+            ],
+            "count": 2070,
+            "mean_predicted": 0.6997,
+            "observed_attack_rate": 0.3565
+          },
+          {
+            "bin": [
+              0.733,
+              0.8
+            ],
+            "count": 2235,
+            "mean_predicted": 0.7658,
+            "observed_attack_rate": 0.4492
+          },
+          {
+            "bin": [
+              0.8,
+              0.867
+            ],
+            "count": 2786,
+            "mean_predicted": 0.8333,
+            "observed_attack_rate": 0.5111
+          },
+          {
+            "bin": [
+              0.867,
+              0.933
+            ],
+            "count": 3338,
+            "mean_predicted": 0.9031,
+            "observed_attack_rate": 0.6597
+          },
+          {
+            "bin": [
+              0.933,
+              1.0
+            ],
+            "count": 38776,
+            "mean_predicted": 0.9917,
+            "observed_attack_rate": 0.9813
+          }
+        ],
+        "sigmoid": [
+          {
+            "bin": [
+              0.0,
+              0.067
+            ],
+            "count": 22200,
+            "mean_predicted": 0.0095,
+            "observed_attack_rate": 0.0023
+          },
+          {
+            "bin": [
+              0.067,
+              0.133
+            ],
+            "count": 1109,
+            "mean_predicted": 0.0994,
+            "observed_attack_rate": 0.0586
+          },
+          {
+            "bin": [
+              0.133,
+              0.2
+            ],
+            "count": 1004,
+            "mean_predicted": 0.1645,
+            "observed_attack_rate": 0.0867
+          },
+          {
+            "bin": [
+              0.2,
+              0.267
+            ],
+            "count": 807,
+            "mean_predicted": 0.2318,
+            "observed_attack_rate": 0.0991
+          },
+          {
+            "bin": [
+              0.267,
+              0.333
+            ],
+            "count": 911,
+            "mean_predicted": 0.2984,
+            "observed_attack_rate": 0.0977
+          },
+          {
+            "bin": [
+              0.333,
+              0.4
+            ],
+            "count": 826,
+            "mean_predicted": 0.3664,
+            "observed_attack_rate": 0.132
+          },
+          {
+            "bin": [
+              0.4,
+              0.467
+            ],
+            "count": 807,
+            "mean_predicted": 0.4327,
+            "observed_attack_rate": 0.1524
+          },
+          {
+            "bin": [
+              0.467,
+              0.533
+            ],
+            "count": 942,
+            "mean_predicted": 0.5027,
+            "observed_attack_rate": 0.1677
+          },
+          {
+            "bin": [
+              0.533,
+              0.6
+            ],
+            "count": 788,
+            "mean_predicted": 0.5686,
+            "observed_attack_rate": 0.2018
+          },
+          {
+            "bin": [
+              0.6,
+              0.667
+            ],
+            "count": 1019,
+            "mean_predicted": 0.6304,
+            "observed_attack_rate": 0.2247
+          },
+          {
+            "bin": [
+              0.667,
+              0.733
+            ],
+            "count": 1156,
+            "mean_predicted": 0.6982,
+            "observed_attack_rate": 0.2673
+          },
+          {
+            "bin": [
+              0.733,
+              0.8
+            ],
+            "count": 1234,
+            "mean_predicted": 0.7673,
+            "observed_attack_rate": 0.2812
+          },
+          {
+            "bin": [
+              0.8,
+              0.867
+            ],
+            "count": 1637,
+            "mean_predicted": 0.8341,
+            "observed_attack_rate": 0.3354
+          },
+          {
+            "bin": [
+              0.867,
+              0.933
+            ],
+            "count": 2818,
+            "mean_predicted": 0.9046,
+            "observed_attack_rate": 0.4326
+          },
+          {
+            "bin": [
+              0.933,
+              1.0
+            ],
+            "count": 45074,
+            "mean_predicted": 0.9859,
+            "observed_attack_rate": 0.9264
+          }
+        ],
+        "isotonic": [
+          {
+            "bin": [
+              0.0,
+              0.067
+            ],
+            "count": 20886,
+            "mean_predicted": 0.0041,
+            "observed_attack_rate": 0.0005
+          },
+          {
+            "bin": [
+              0.067,
+              0.133
+            ],
+            "count": 842,
+            "mean_predicted": 0.0843,
+            "observed_attack_rate": 0.0285
+          },
+          {
+            "bin": [
+              0.133,
+              0.2
+            ],
+            "count": 647,
+            "mean_predicted": 0.1698,
+            "observed_attack_rate": 0.0417
+          },
+          {
+            "bin": [
+              0.2,
+              0.267
+            ],
+            "count": 1511,
+            "mean_predicted": 0.2465,
+            "observed_attack_rate": 0.0649
+          },
+          {
+            "bin": [
+              0.267,
+              0.333
+            ],
+            "count": 121,
+            "mean_predicted": 0.315,
+            "observed_attack_rate": 0.0992
+          },
+          {
+            "bin": [
+              0.333,
+              0.4
+            ],
+            "count": 879,
+            "mean_predicted": 0.3758,
+            "observed_attack_rate": 0.1001
+          },
+          {
+            "bin": [
+              0.4,
+              0.467
+            ],
+            "count": 3077,
+            "mean_predicted": 0.4364,
+            "observed_attack_rate": 0.129
+          },
+          {
+            "bin": [
+              0.467,
+              0.533
+            ],
+            "count": 336,
+            "mean_predicted": 0.5,
+            "observed_attack_rate": 0.1696
+          },
+          {
+            "bin": [
+              0.533,
+              0.6
+            ],
+            "count": 2267,
+            "mean_predicted": 0.5681,
+            "observed_attack_rate": 0.2056
+          },
+          {
+            "bin": [
+              0.6,
+              0.667
+            ],
+            "count": 1610,
+            "mean_predicted": 0.6418,
+            "observed_attack_rate": 0.2745
+          },
+          {
+            "bin": [
+              0.667,
+              0.733
+            ],
+            "count": 2561,
+            "mean_predicted": 0.6968,
+            "observed_attack_rate": 0.3331
+          },
+          {
+            "bin": [
+              0.733,
+              0.8
+            ],
+            "count": 1277,
+            "mean_predicted": 0.7833,
+            "observed_attack_rate": 0.4111
+          },
+          {
+            "bin": [
+              0.8,
+              0.867
+            ],
+            "count": 2584,
+            "mean_predicted": 0.8234,
+            "observed_attack_rate": 0.4783
+          },
+          {
+            "bin": [
+              0.867,
+              0.933
+            ],
+            "count": 4629,
+            "mean_predicted": 0.9134,
+            "observed_attack_rate": 0.6045
+          },
+          {
+            "bin": [
+              0.933,
+              1.0
+            ],
+            "count": 39105,
+            "mean_predicted": 0.9947,
+            "observed_attack_rate": 0.9794
+          }
+        ]
+      },
+      "prevalence_shift": {
+        "attack_prevalence_0.01": {
+          "uncalibrated": {
+            "ece_raw": 0.2461,
+            "ece_prior_corrected": 0.0046,
+            "precision_at_0.5_raw": 0.0358,
+            "recall_at_0.5_raw": 0.9874,
+            "precision_at_0.5_prior_corrected": 0.808,
+            "recall_at_0.5_prior_corrected": 0.5297
+          },
+          "isotonic": {
+            "ece_raw": 0.25,
+            "ece_prior_corrected": 0.0071,
+            "precision_at_0.5_raw": 0.0366,
+            "recall_at_0.5_raw": 0.9853,
+            "precision_at_0.5_prior_corrected": 0.5524,
+            "recall_at_0.5_prior_corrected": 0.7361
+          }
+        },
+        "attack_prevalence_0.05": {
+          "uncalibrated": {
+            "ece_raw": 0.2343,
+            "ece_prior_corrected": 0.0151,
+            "precision_at_0.5_raw": 0.1622,
+            "recall_at_0.5_raw": 0.9877,
+            "precision_at_0.5_prior_corrected": 0.8571,
+            "recall_at_0.5_prior_corrected": 0.7273
+          },
+          "isotonic": {
+            "ece_raw": 0.2382,
+            "ece_prior_corrected": 0.0223,
+            "precision_at_0.5_raw": 0.1654,
+            "recall_at_0.5_raw": 0.9869,
+            "precision_at_0.5_prior_corrected": 0.8051,
+            "recall_at_0.5_prior_corrected": 0.7852
+          }
+        },
+        "attack_prevalence_0.1": {
+          "uncalibrated": {
+            "ece_raw": 0.2196,
+            "ece_prior_corrected": 0.0256,
+            "precision_at_0.5_raw": 0.2903,
+            "recall_at_0.5_raw": 0.9882,
+            "precision_at_0.5_prior_corrected": 0.8736,
+            "recall_at_0.5_prior_corrected": 0.8084
+          },
+          "isotonic": {
+            "ece_raw": 0.2237,
+            "ece_prior_corrected": 0.0353,
+            "precision_at_0.5_raw": 0.2951,
+            "recall_at_0.5_raw": 0.9871,
+            "precision_at_0.5_prior_corrected": 0.8491,
+            "recall_at_0.5_prior_corrected": 0.827
+          }
+        },
+        "attack_prevalence_0.5": {
+          "uncalibrated": {
+            "ece_raw": 0.1013,
+            "ece_prior_corrected": 0.0548,
+            "precision_at_0.5_raw": 0.7861,
+            "recall_at_0.5_raw": 0.9865,
+            "precision_at_0.5_prior_corrected": 0.8655,
+            "recall_at_0.5_prior_corrected": 0.9545
+          },
+          "isotonic": {
+            "ece_raw": 0.1065,
+            "ece_prior_corrected": 0.0638,
+            "precision_at_0.5_raw": 0.79,
+            "recall_at_0.5_raw": 0.9855,
+            "precision_at_0.5_prior_corrected": 0.8471,
+            "recall_at_0.5_prior_corrected": 0.9641
+          }
+        }
+      }
+    },
+    "HistGradientBoosting": {
+      "uncalibrated": {
+        "brier": 0.0809,
+        "ece_15bins": 0.0933,
+        "log_loss": 0.2315,
+        "ece_95ci": [
+          0.0915,
+          0.0952
+        ]
+      },
+      "sigmoid": {
+        "brier": 0.0813,
+        "ece_15bins": 0.0934,
+        "log_loss": 0.2366,
+        "ece_95ci": [
+          0.0916,
+          0.0954
+        ]
+      },
+      "isotonic": {
+        "brier": 0.0831,
+        "ece_15bins": 0.0945,
+        "log_loss": 0.2376,
+        "ece_95ci": [
+          0.0926,
+          0.0965
+        ]
+      },
+      "reliability_table": {
+        "uncalibrated": [
+          {
+            "bin": [
+              0.0,
+              0.067
+            ],
+            "count": 21284,
+            "mean_predicted": 0.0021,
+            "observed_attack_rate": 0.0002
+          },
+          {
+            "bin": [
+              0.067,
+              0.133
+            ],
+            "count": 93,
+            "mean_predicted": 0.0987,
+            "observed_attack_rate": 0.0645
+          },
+          {
+            "bin": [
+              0.133,
+              0.2
+            ],
+            "count": 164,
+            "mean_predicted": 0.1731,
+            "observed_attack_rate": 0.2073
+          },
+          {
+            "bin": [
+              0.2,
+              0.267
+            ],
+            "count": 496,
+            "mean_predicted": 0.2387,
+            "observed_attack_rate": 0.0988
+          },
+          {
+            "bin": [
+              0.267,
+              0.333
+            ],
+            "count": 1271,
+            "mean_predicted": 0.3014,
+            "observed_attack_rate": 0.0763
+          },
+          {
+            "bin": [
+              0.333,
+              0.4
+            ],
+            "count": 1859,
+            "mean_predicted": 0.3681,
+            "observed_attack_rate": 0.1092
+          },
+          {
+            "bin": [
+              0.4,
+              0.467
+            ],
+            "count": 1933,
+            "mean_predicted": 0.4341,
+            "observed_attack_rate": 0.1205
+          },
+          {
+            "bin": [
+              0.467,
+              0.533
+            ],
+            "count": 1957,
+            "mean_predicted": 0.5002,
+            "observed_attack_rate": 0.1446
+          },
+          {
+            "bin": [
+              0.533,
+              0.6
+            ],
+            "count": 1746,
+            "mean_predicted": 0.566,
+            "observed_attack_rate": 0.1712
+          },
+          {
+            "bin": [
+              0.6,
+              0.667
+            ],
+            "count": 1678,
+            "mean_predicted": 0.6327,
+            "observed_attack_rate": 0.1889
+          },
+          {
+            "bin": [
+              0.667,
+              0.733
+            ],
+            "count": 1892,
+            "mean_predicted": 0.7008,
+            "observed_attack_rate": 0.2125
+          },
+          {
+            "bin": [
+              0.733,
+              0.8
+            ],
+            "count": 2102,
+            "mean_predicted": 0.7663,
+            "observed_attack_rate": 0.3002
+          },
+          {
+            "bin": [
+              0.8,
+              0.867
+            ],
+            "count": 2326,
+            "mean_predicted": 0.8359,
+            "observed_attack_rate": 0.4256
+          },
+          {
+            "bin": [
+              0.867,
+              0.933
+            ],
+            "count": 3161,
+            "mean_predicted": 0.9013,
+            "observed_attack_rate": 0.6166
+          },
+          {
+            "bin": [
+              0.933,
+              1.0
+            ],
+            "count": 40370,
+            "mean_predicted": 0.9942,
+            "observed_attack_rate": 0.9867
+          }
+        ],
+        "sigmoid": [
+          {
+            "bin": [
+              0.0,
+              0.067
+            ],
+            "count": 21326,
+            "mean_predicted": 0.0012,
+            "observed_attack_rate": 0.0005
+          },
+          {
+            "bin": [
+              0.067,
+              0.133
+            ],
+            "count": 118,
+            "mean_predicted": 0.1016,
+            "observed_attack_rate": 0.1441
+          },
+          {
+            "bin": [
+              0.133,
+              0.2
+            ],
+            "count": 328,
+            "mean_predicted": 0.1724,
+            "observed_attack_rate": 0.1189
+          },
+          {
+            "bin": [
+              0.2,
+              0.267
+            ],
+            "count": 963,
+            "mean_predicted": 0.2382,
+            "observed_attack_rate": 0.0654
+          },
+          {
+            "bin": [
+              0.267,
+              0.333
+            ],
+            "count": 1424,
+            "mean_predicted": 0.3025,
+            "observed_attack_rate": 0.1229
+          },
+          {
+            "bin": [
+              0.333,
+              0.4
+            ],
+            "count": 1787,
+            "mean_predicted": 0.3668,
+            "observed_attack_rate": 0.0979
+          },
+          {
+            "bin": [
+              0.4,
+              0.467
+            ],
+            "count": 1684,
+            "mean_predicted": 0.4339,
+            "observed_attack_rate": 0.1318
+          },
+          {
+            "bin": [
+              0.467,
+              0.533
+            ],
+            "count": 1724,
+            "mean_predicted": 0.4995,
+            "observed_attack_rate": 0.1491
+          },
+          {
+            "bin": [
+              0.533,
+              0.6
+            ],
+            "count": 1499,
+            "mean_predicted": 0.5667,
+            "observed_attack_rate": 0.1721
+          },
+          {
+            "bin": [
+              0.6,
+              0.667
+            ],
+            "count": 1435,
+            "mean_predicted": 0.6319,
+            "observed_attack_rate": 0.1916
+          },
+          {
+            "bin": [
+              0.667,
+              0.733
+            ],
+            "count": 1629,
+            "mean_predicted": 0.6995,
+            "observed_attack_rate": 0.2149
+          },
+          {
+            "bin": [
+              0.733,
+              0.8
+            ],
+            "count": 2028,
+            "mean_predicted": 0.7679,
+            "observed_attack_rate": 0.2643
+          },
+          {
+            "bin": [
+              0.8,
+              0.867
+            ],
+            "count": 1978,
+            "mean_predicted": 0.8357,
+            "observed_attack_rate": 0.3716
+          },
+          {
+            "bin": [
+              0.867,
+              0.933
+            ],
+            "count": 3084,
+            "mean_predicted": 0.9024,
+            "observed_attack_rate": 0.561
+          },
+          {
+            "bin": [
+              0.933,
+              1.0
+            ],
+            "count": 41325,
+            "mean_predicted": 0.9952,
+            "observed_attack_rate": 0.9798
+          }
+        ],
+        "isotonic": [
+          {
+            "bin": [
+              0.0,
+              0.067
+            ],
+            "count": 21559,
+            "mean_predicted": 0.0006,
+            "observed_attack_rate": 0.0022
+          },
+          {
+            "bin": [
+              0.067,
+              0.133
+            ],
+            "count": 163,
+            "mean_predicted": 0.0754,
+            "observed_attack_rate": 0.0798
+          },
+          {
+            "bin": [
+              0.133,
+              0.2
+            ],
+            "count": 130,
+            "mean_predicted": 0.1713,
+            "observed_attack_rate": 0.1077
+          },
+          {
+            "bin": [
+              0.2,
+              0.267
+            ],
+            "count": 2502,
+            "mean_predicted": 0.2342,
+            "observed_attack_rate": 0.0979
+          },
+          {
+            "bin": [
+              0.267,
+              0.333
+            ],
+            "count": 69,
+            "mean_predicted": 0.2936,
+            "observed_attack_rate": 0.0145
+          },
+          {
+            "bin": [
+              0.333,
+              0.4
+            ],
+            "count": 1055,
+            "mean_predicted": 0.3513,
+            "observed_attack_rate": 0.0986
+          },
+          {
+            "bin": [
+              0.4,
+              0.467
+            ],
+            "count": 1542,
+            "mean_predicted": 0.4195,
+            "observed_attack_rate": 0.118
+          },
+          {
+            "bin": [
+              0.467,
+              0.533
+            ],
+            "count": 1554,
+            "mean_predicted": 0.5219,
+            "observed_attack_rate": 0.1461
+          },
+          {
+            "bin": [
+              0.533,
+              0.6
+            ],
+            "count": 899,
+            "mean_predicted": 0.5721,
+            "observed_attack_rate": 0.1535
+          },
+          {
+            "bin": [
+              0.6,
+              0.667
+            ],
+            "count": 2796,
+            "mean_predicted": 0.6597,
+            "observed_attack_rate": 0.1831
+          },
+          {
+            "bin": [
+              0.667,
+              0.733
+            ],
+            "count": 1594,
+            "mean_predicted": 0.7033,
+            "observed_attack_rate": 0.2139
+          },
+          {
+            "bin": [
+              0.733,
+              0.8
+            ],
+            "count": 660,
+            "mean_predicted": 0.7631,
+            "observed_attack_rate": 0.2167
+          },
+          {
+            "bin": [
+              0.8,
+              0.867
+            ],
+            "count": 3731,
+            "mean_predicted": 0.8042,
+            "observed_attack_rate": 0.3506
+          },
+          {
+            "bin": [
+              0.867,
+              0.933
+            ],
+            "count": 3672,
+            "mean_predicted": 0.901,
+            "observed_attack_rate": 0.5969
+          },
+          {
+            "bin": [
+              0.933,
+              1.0
+            ],
+            "count": 40406,
+            "mean_predicted": 0.9965,
+            "observed_attack_rate": 0.9866
+          }
+        ]
+      },
+      "prevalence_shift": {
+        "attack_prevalence_0.01": {
+          "uncalibrated": {
+            "ece_raw": 0.2481,
+            "ece_prior_corrected": 0.0054,
+            "precision_at_0.5_raw": 0.0366,
+            "recall_at_0.5_raw": 0.9842,
+            "precision_at_0.5_prior_corrected": 0.9957,
+            "recall_at_0.5_prior_corrected": 0.6203
+          },
+          "isotonic": {
+            "ece_raw": 0.246,
+            "ece_prior_corrected": 0.0049,
+            "precision_at_0.5_raw": 0.0337,
+            "recall_at_0.5_raw": 0.9872,
+            "precision_at_0.5_prior_corrected": 0.8664,
+            "recall_at_0.5_prior_corrected": 0.7981
+          }
+        },
+        "attack_prevalence_0.05": {
+          "uncalibrated": {
+            "ece_raw": 0.2367,
+            "ece_prior_corrected": 0.0198,
+            "precision_at_0.5_raw": 0.165,
+            "recall_at_0.5_raw": 0.9832,
+            "precision_at_0.5_prior_corrected": 0.9402,
+            "recall_at_0.5_prior_corrected": 0.832
+          },
+          "isotonic": {
+            "ece_raw": 0.2347,
+            "ece_prior_corrected": 0.0203,
+            "precision_at_0.5_raw": 0.1535,
+            "recall_at_0.5_raw": 0.9864,
+            "precision_at_0.5_prior_corrected": 0.9132,
+            "recall_at_0.5_prior_corrected": 0.8484
+          }
+        },
+        "attack_prevalence_0.1": {
+          "uncalibrated": {
+            "ece_raw": 0.2224,
+            "ece_prior_corrected": 0.0324,
+            "precision_at_0.5_raw": 0.2945,
+            "recall_at_0.5_raw": 0.9837,
+            "precision_at_0.5_prior_corrected": 0.9173,
+            "recall_at_0.5_prior_corrected": 0.864
+          },
+          "isotonic": {
+            "ece_raw": 0.2206,
+            "ece_prior_corrected": 0.034,
+            "precision_at_0.5_raw": 0.2771,
+            "recall_at_0.5_raw": 0.9872,
+            "precision_at_0.5_prior_corrected": 0.8747,
+            "recall_at_0.5_prior_corrected": 0.878
+          }
+        },
+        "attack_prevalence_0.5": {
+          "uncalibrated": {
+            "ece_raw": 0.1077,
+            "ece_prior_corrected": 0.067,
+            "precision_at_0.5_raw": 0.7897,
+            "recall_at_0.5_raw": 0.9832,
+            "precision_at_0.5_prior_corrected": 0.8613,
+            "recall_at_0.5_prior_corrected": 0.9649
+          },
+          "isotonic": {
+            "ece_raw": 0.1087,
+            "ece_prior_corrected": 0.0692,
+            "precision_at_0.5_raw": 0.7752,
+            "recall_at_0.5_raw": 0.9866,
+            "precision_at_0.5_prior_corrected": 0.8521,
+            "recall_at_0.5_prior_corrected": 0.9675
+          }
+        }
+      }
+    }
+  }
+}

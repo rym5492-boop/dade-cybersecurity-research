@@ -1,0 +1,1904 @@
+{
+  "n_labels": 120,
+  "n_scenarios": 30,
+  "n_boot": 2000,
+  "A_metrics_with_ci": {
+    "DADE_AHP": {
+      "quadratic_kappa": {
+        "value": 0.7425,
+        "ci95": [
+          0.5529,
+          0.8555
+        ]
+      },
+      "mean_cost": {
+        "value": 0.6,
+        "ci95": [
+          0.3417,
+          0.8917
+        ]
+      },
+      "high_recall": {
+        "value": 0.7344,
+        "ci95": [
+          0.5319,
+          0.8846
+        ]
+      },
+      "escalation_rate": {
+        "value": 0.45,
+        "ci95": [
+          0.2833,
+          0.6333
+        ]
+      },
+      "under_prioritisation": {
+        "value": 0.175,
+        "ci95": [
+          0.0917,
+          0.275
+        ]
+      },
+      "over_escalation": {
+        "value": 0.075,
+        "ci95": [
+          0.025,
+          0.1333
+        ]
+      }
+    },
+    "B1_ML_only": {
+      "quadratic_kappa": {
+        "value": 0.3178,
+        "ci95": [
+          0.0771,
+          0.5203
+        ]
+      },
+      "mean_cost": {
+        "value": 0.6083,
+        "ci95": [
+          0.4167,
+          0.8167
+        ]
+      },
+      "high_recall": {
+        "value": 0.8906,
+        "ci95": [
+          0.7544,
+          0.9733
+        ]
+      },
+      "escalation_rate": {
+        "value": 0.7333,
+        "ci95": [
+          0.5667,
+          0.9
+        ]
+      },
+      "under_prioritisation": {
+        "value": 0.0583,
+        "ci95": [
+          0.0167,
+          0.1167
+        ]
+      },
+      "over_escalation": {
+        "value": 0.3667,
+        "ci95": [
+          0.2331,
+          0.5
+        ]
+      }
+    },
+    "B2_equal_weight": {
+      "quadratic_kappa": {
+        "value": 0.7411,
+        "ci95": [
+          0.5469,
+          0.8517
+        ]
+      },
+      "mean_cost": {
+        "value": 0.5833,
+        "ci95": [
+          0.3583,
+          0.8333
+        ]
+      },
+      "high_recall": {
+        "value": 0.7344,
+        "ci95": [
+          0.5319,
+          0.8846
+        ]
+      },
+      "escalation_rate": {
+        "value": 0.4667,
+        "ci95": [
+          0.3,
+          0.6333
+        ]
+      },
+      "under_prioritisation": {
+        "value": 0.1667,
+        "ci95": [
+          0.0833,
+          0.25
+        ]
+      },
+      "over_escalation": {
+        "value": 0.1,
+        "ci95": [
+          0.0333,
+          0.175
+        ]
+      }
+    },
+    "B3_BIA_only": {
+      "quadratic_kappa": {
+        "value": 0.5455,
+        "ci95": [
+          0.3513,
+          0.7023
+        ]
+      },
+      "mean_cost": {
+        "value": 1.2833,
+        "ci95": [
+          0.8667,
+          1.7417
+        ]
+      },
+      "high_recall": {
+        "value": 0.4844,
+        "ci95": [
+          0.2666,
+          0.7111
+        ]
+      },
+      "escalation_rate": {
+        "value": 0.3333,
+        "ci95": [
+          0.1667,
+          0.5
+        ]
+      },
+      "under_prioritisation": {
+        "value": 0.4,
+        "ci95": [
+          0.2583,
+          0.55
+        ]
+      },
+      "over_escalation": {
+        "value": 0.075,
+        "ci95": [
+          0.0167,
+          0.15
+        ]
+      }
+    },
+    "B4_severity_x_impact": {
+      "quadratic_kappa": {
+        "value": 0.6983,
+        "ci95": [
+          0.5078,
+          0.8364
+        ]
+      },
+      "mean_cost": {
+        "value": 0.7417,
+        "ci95": [
+          0.4,
+          1.1419
+        ]
+      },
+      "high_recall": {
+        "value": 0.7656,
+        "ci95": [
+          0.58,
+          0.9
+        ]
+      },
+      "escalation_rate": {
+        "value": 0.4667,
+        "ci95": [
+          0.3,
+          0.6333
+        ]
+      },
+      "under_prioritisation": {
+        "value": 0.225,
+        "ci95": [
+          0.1083,
+          0.35
+        ]
+      },
+      "over_escalation": {
+        "value": 0.0917,
+        "ci95": [
+          0.0333,
+          0.1583
+        ]
+      }
+    },
+    "B5_ML_x_impact": {
+      "quadratic_kappa": {
+        "value": 0.7114,
+        "ci95": [
+          0.4988,
+          0.8291
+        ]
+      },
+      "mean_cost": {
+        "value": 0.4167,
+        "ci95": [
+          0.275,
+          0.5667
+        ]
+      },
+      "high_recall": {
+        "value": 0.9219,
+        "ci95": [
+          0.8205,
+          0.9861
+        ]
+      },
+      "escalation_rate": {
+        "value": 0.6667,
+        "ci95": [
+          0.5,
+          0.8333
+        ]
+      },
+      "under_prioritisation": {
+        "value": 0.0667,
+        "ci95": [
+          0.025,
+          0.125
+        ]
+      },
+      "over_escalation": {
+        "value": 0.2333,
+        "ci95": [
+          0.125,
+          0.35
+        ]
+      }
+    }
+  },
+  "A_paired_DADE_minus_baseline": {
+    "B1_ML_only": {
+      "quadratic_kappa": {
+        "diff": 0.4199,
+        "ci95": [
+          0.1786,
+          0.6528
+        ]
+      },
+      "mean_cost": {
+        "diff": -0.0097,
+        "ci95": [
+          -0.3167,
+          0.3167
+        ]
+      },
+      "high_recall": {
+        "diff": -0.1552,
+        "ci95": [
+          -0.3636,
+          0.0282
+        ]
+      },
+      "escalation_rate": {
+        "diff": -0.2814,
+        "ci95": [
+          -0.5,
+          -0.0667
+        ]
+      },
+      "under_prioritisation": {
+        "diff": 0.1157,
+        "ci95": [
+          0.0083,
+          0.225
+        ]
+      },
+      "over_escalation": {
+        "diff": -0.2894,
+        "ci95": [
+          -0.45,
+          -0.1333
+        ]
+      }
+    },
+    "B2_equal_weight": {
+      "quadratic_kappa": {
+        "diff": 0.003,
+        "ci95": [
+          -0.0546,
+          0.0662
+        ]
+      },
+      "mean_cost": {
+        "diff": 0.0178,
+        "ci95": [
+          -0.0583,
+          0.1167
+        ]
+      },
+      "high_recall": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "escalation_rate": {
+        "diff": -0.0163,
+        "ci95": [
+          -0.05,
+          0.0
+        ]
+      },
+      "under_prioritisation": {
+        "diff": 0.0085,
+        "ci95": [
+          0.0,
+          0.025
+        ]
+      },
+      "over_escalation": {
+        "diff": -0.0245,
+        "ci95": [
+          -0.0667,
+          0.0
+        ]
+      }
+    },
+    "B3_BIA_only": {
+      "quadratic_kappa": {
+        "diff": 0.197,
+        "ci95": [
+          0.0791,
+          0.3239
+        ]
+      },
+      "mean_cost": {
+        "diff": -0.6947,
+        "ci95": [
+          -1.1167,
+          -0.3083
+        ]
+      },
+      "high_recall": {
+        "diff": 0.251,
+        "ci95": [
+          0.0597,
+          0.4571
+        ]
+      },
+      "escalation_rate": {
+        "diff": 0.1198,
+        "ci95": [
+          0.0,
+          0.25
+        ]
+      },
+      "under_prioritisation": {
+        "diff": -0.2293,
+        "ci95": [
+          -0.3667,
+          -0.1
+        ]
+      },
+      "over_escalation": {
+        "diff": 0.0009,
+        "ci95": [
+          -0.05,
+          0.05
+        ]
+      }
+    },
+    "B4_severity_x_impact": {
+      "quadratic_kappa": {
+        "diff": 0.0423,
+        "ci95": [
+          -0.0424,
+          0.1268
+        ]
+      },
+      "mean_cost": {
+        "diff": -0.1458,
+        "ci95": [
+          -0.5,
+          0.2
+        ]
+      },
+      "high_recall": {
+        "diff": -0.028,
+        "ci95": [
+          -0.2353,
+          0.1804
+        ]
+      },
+      "escalation_rate": {
+        "diff": -0.0142,
+        "ci95": [
+          -0.2,
+          0.1667
+        ]
+      },
+      "under_prioritisation": {
+        "diff": -0.0514,
+        "ci95": [
+          -0.1917,
+          0.0833
+        ]
+      },
+      "over_escalation": {
+        "diff": -0.0156,
+        "ci95": [
+          -0.0917,
+          0.0583
+        ]
+      }
+    },
+    "B5_ML_x_impact": {
+      "quadratic_kappa": {
+        "diff": 0.035,
+        "ci95": [
+          -0.0872,
+          0.1706
+        ]
+      },
+      "mean_cost": {
+        "diff": 0.1799,
+        "ci95": [
+          -0.0335,
+          0.425
+        ]
+      },
+      "high_recall": {
+        "diff": -0.1855,
+        "ci95": [
+          -0.3651,
+          -0.0435
+        ]
+      },
+      "escalation_rate": {
+        "diff": -0.2122,
+        "ci95": [
+          -0.3667,
+          -0.0833
+        ]
+      },
+      "under_prioritisation": {
+        "diff": 0.1061,
+        "ci95": [
+          0.0167,
+          0.2083
+        ]
+      },
+      "over_escalation": {
+        "diff": -0.1558,
+        "ci95": [
+          -0.275,
+          -0.05
+        ]
+      }
+    }
+  },
+  "A_confusion_vs_labels_rows_label_cols_method_LMH": {
+    "DADE_AHP": [
+      [
+        18,
+        2,
+        1
+      ],
+      [
+        4,
+        25,
+        6
+      ],
+      [
+        1,
+        16,
+        47
+      ]
+    ],
+    "B1_ML_only": [
+      [
+        0,
+        13,
+        8
+      ],
+      [
+        0,
+        12,
+        23
+      ],
+      [
+        0,
+        7,
+        57
+      ]
+    ],
+    "B2_equal_weight": [
+      [
+        17,
+        3,
+        1
+      ],
+      [
+        3,
+        24,
+        8
+      ],
+      [
+        0,
+        17,
+        47
+      ]
+    ],
+    "B3_BIA_only": [
+      [
+        20,
+        0,
+        1
+      ],
+      [
+        15,
+        12,
+        8
+      ],
+      [
+        5,
+        28,
+        31
+      ]
+    ],
+    "B4_severity_x_impact": [
+      [
+        17,
+        4,
+        0
+      ],
+      [
+        12,
+        16,
+        7
+      ],
+      [
+        3,
+        12,
+        49
+      ]
+    ],
+    "B5_ML_x_impact": [
+      [
+        13,
+        7,
+        1
+      ],
+      [
+        3,
+        12,
+        20
+      ],
+      [
+        0,
+        5,
+        59
+      ]
+    ]
+  },
+  "A_confusion_vs_consensus_rows_label_cols_method_LMH": {
+    "DADE_AHP": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        1
+      ],
+      [
+        0,
+        6,
+        13
+      ]
+    ],
+    "B1_ML_only": [
+      [
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        0,
+        3,
+        16
+      ]
+    ],
+    "B2_equal_weight": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        1
+      ],
+      [
+        0,
+        6,
+        13
+      ]
+    ],
+    "B3_BIA_only": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        4,
+        1,
+        1
+      ],
+      [
+        1,
+        9,
+        9
+      ]
+    ],
+    "B4_severity_x_impact": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        2,
+        4,
+        0
+      ],
+      [
+        1,
+        4,
+        14
+      ]
+    ],
+    "B5_ML_x_impact": [
+      [
+        3,
+        2,
+        0
+      ],
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        0,
+        1,
+        18
+      ]
+    ]
+  },
+  "A_by_criticality": {
+    "high": {
+      "n_labels": 40,
+      "n_scenarios": 10,
+      "label_distribution": {
+        "High": 31,
+        "Medium": 8,
+        "Low": 1
+      },
+      "methods": {
+        "DADE_AHP": {
+          "high_recall": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.2,
+            "ci95": [
+              0.075,
+              0.35
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "B1_ML_only": {
+          "high_recall": {
+            "value": 0.8387,
+            "ci95": [
+              0.5769,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.45,
+            "ci95": [
+              0.125,
+              0.85
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.7,
+            "ci95": [
+              0.4,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.125,
+            "ci95": [
+              0.0,
+              0.25
+            ]
+          }
+        },
+        "B2_equal_weight": {
+          "high_recall": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.25,
+            "ci95": [
+              0.075,
+              0.425
+            ]
+          },
+          "escalation_rate": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "B3_BIA_only": {
+          "high_recall": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.25,
+            "ci95": [
+              0.075,
+              0.425
+            ]
+          },
+          "escalation_rate": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "B4_severity_x_impact": {
+          "high_recall": {
+            "value": 0.7419,
+            "ci95": [
+              0.44,
+              0.9459
+            ]
+          },
+          "mean_cost": {
+            "value": 0.65,
+            "ci95": [
+              0.175,
+              1.2
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.6,
+            "ci95": [
+              0.3,
+              0.9
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.2,
+            "ci95": [
+              0.05,
+              0.375
+            ]
+          }
+        },
+        "B5_ML_x_impact": {
+          "high_recall": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.25,
+            "ci95": [
+              0.075,
+              0.425
+            ]
+          },
+          "escalation_rate": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "low": {
+      "n_labels": 40,
+      "n_scenarios": 10,
+      "label_distribution": {
+        "Low": 20,
+        "Medium": 15,
+        "High": 5
+      },
+      "methods": {
+        "DADE_AHP": {
+          "high_recall": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.7,
+            "ci95": [
+              0.35,
+              1.225
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.225,
+            "ci95": [
+              0.1,
+              0.375
+            ]
+          }
+        },
+        "B1_ML_only": {
+          "high_recall": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.975,
+            "ci95": [
+              0.725,
+              1.25
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.6,
+            "ci95": [
+              0.3,
+              0.9
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "B2_equal_weight": {
+          "high_recall": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.6,
+            "ci95": [
+              0.35,
+              0.875
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.2,
+            "ci95": [
+              0.1,
+              0.3
+            ]
+          }
+        },
+        "B3_BIA_only": {
+          "high_recall": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_cost": {
+            "value": 1.5,
+            "ci95": [
+              0.7,
+              2.4
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.5,
+            "ci95": [
+              0.275,
+              0.75
+            ]
+          }
+        },
+        "B4_severity_x_impact": {
+          "high_recall": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_cost": {
+            "value": 1.075,
+            "ci95": [
+              0.4,
+              1.975
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.325,
+            "ci95": [
+              0.125,
+              0.575
+            ]
+          }
+        },
+        "B5_ML_x_impact": {
+          "high_recall": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.7,
+            "ci95": [
+              0.425,
+              0.95
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.2,
+            "ci95": [
+              0.1,
+              0.325
+            ]
+          }
+        }
+      }
+    },
+    "medium": {
+      "n_labels": 40,
+      "n_scenarios": 10,
+      "label_distribution": {
+        "High": 28,
+        "Medium": 12
+      },
+      "methods": {
+        "DADE_AHP": {
+          "high_recall": {
+            "value": 0.5714,
+            "ci95": [
+              0.1739,
+              0.8485
+            ]
+          },
+          "mean_cost": {
+            "value": 0.9,
+            "ci95": [
+              0.375,
+              1.5
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.4,
+            "ci95": [
+              0.1,
+              0.7
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.3,
+            "ci95": [
+              0.125,
+              0.5
+            ]
+          }
+        },
+        "B1_ML_only": {
+          "high_recall": {
+            "value": 0.9286,
+            "ci95": [
+              0.75,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.4,
+            "ci95": [
+              0.125,
+              0.725
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.9,
+            "ci95": [
+              0.7,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.05,
+            "ci95": [
+              0.0,
+              0.15
+            ]
+          }
+        },
+        "B2_equal_weight": {
+          "high_recall": {
+            "value": 0.5714,
+            "ci95": [
+              0.1739,
+              0.8485
+            ]
+          },
+          "mean_cost": {
+            "value": 0.9,
+            "ci95": [
+              0.375,
+              1.5
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.4,
+            "ci95": [
+              0.1,
+              0.7
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.3,
+            "ci95": [
+              0.125,
+              0.5
+            ]
+          }
+        },
+        "B3_BIA_only": {
+          "high_recall": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "mean_cost": {
+            "value": 2.1,
+            "ci95": [
+              1.5,
+              2.625
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.7,
+            "ci95": [
+              0.5,
+              0.875
+            ]
+          }
+        },
+        "B4_severity_x_impact": {
+          "high_recall": {
+            "value": 0.9286,
+            "ci95": [
+              0.76,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.5,
+            "ci95": [
+              0.125,
+              0.9
+            ]
+          },
+          "escalation_rate": {
+            "value": 0.8,
+            "ci95": [
+              0.6,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.15,
+            "ci95": [
+              0.0,
+              0.35
+            ]
+          }
+        },
+        "B5_ML_x_impact": {
+          "high_recall": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "mean_cost": {
+            "value": 0.3,
+            "ci95": [
+              0.125,
+              0.5
+            ]
+          },
+          "escalation_rate": {
+            "value": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "under_prioritisation": {
+            "value": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "B_ablations": {
+    "equal_weights": {
+      "metrics": {
+        "quadratic_kappa": 0.7411,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4667,
+        "under_prioritisation": 0.1667,
+        "over_escalation": 0.1,
+        "mean_cost": 0.5833
+      },
+      "decisions_changed_vs_full": 0.0417,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": 0.003,
+          "ci95": [
+            -0.0546,
+            0.0662
+          ]
+        },
+        "mean_cost": {
+          "diff": 0.0178,
+          "ci95": [
+            -0.0583,
+            0.1167
+          ]
+        },
+        "high_recall": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "without_TS": {
+      "metrics": {
+        "quadratic_kappa": 0.7064,
+        "high_recall": 0.7656,
+        "escalation_rate": 0.4917,
+        "under_prioritisation": 0.2,
+        "over_escalation": 0.0833,
+        "mean_cost": 0.6917
+      },
+      "decisions_changed_vs_full": 0.1167,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": 0.0343,
+          "ci95": [
+            -0.0352,
+            0.1155
+          ]
+        },
+        "mean_cost": {
+          "diff": -0.0913,
+          "ci95": [
+            -0.275,
+            0.0667
+          ]
+        },
+        "high_recall": {
+          "diff": -0.0323,
+          "ci95": [
+            -0.1143,
+            0.0
+          ]
+        }
+      }
+    },
+    "without_AC": {
+      "metrics": {
+        "quadratic_kappa": 0.7643,
+        "high_recall": 0.7031,
+        "escalation_rate": 0.4083,
+        "under_prioritisation": 0.175,
+        "over_escalation": 0.0583,
+        "mean_cost": 0.575
+      },
+      "decisions_changed_vs_full": 0.075,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": -0.0216,
+          "ci95": [
+            -0.0766,
+            0.0268
+          ]
+        },
+        "mean_cost": {
+          "diff": 0.0262,
+          "ci95": [
+            -0.0583,
+            0.1333
+          ]
+        },
+        "high_recall": {
+          "diff": 0.0315,
+          "ci95": [
+            0.0,
+            0.0851
+          ]
+        }
+      }
+    },
+    "without_BI": {
+      "metrics": {
+        "quadratic_kappa": 0.7452,
+        "high_recall": 0.6875,
+        "escalation_rate": 0.4,
+        "under_prioritisation": 0.1833,
+        "over_escalation": 0.0667,
+        "mean_cost": 0.6083
+      },
+      "decisions_changed_vs_full": 0.1083,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": -0.002,
+          "ci95": [
+            -0.0631,
+            0.0541
+          ]
+        },
+        "mean_cost": {
+          "diff": -0.007,
+          "ci95": [
+            -0.1417,
+            0.1333
+          ]
+        },
+        "high_recall": {
+          "diff": 0.0476,
+          "ci95": [
+            -0.0196,
+            0.1406
+          ]
+        }
+      }
+    },
+    "without_HI": {
+      "metrics": {
+        "quadratic_kappa": 0.7585,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4583,
+        "under_prioritisation": 0.1667,
+        "over_escalation": 0.0833,
+        "mean_cost": 0.5667
+      },
+      "decisions_changed_vs_full": 0.025,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": -0.0158,
+          "ci95": [
+            -0.0676,
+            0.0206
+          ]
+        },
+        "mean_cost": {
+          "diff": 0.0342,
+          "ci95": [
+            -0.025,
+            0.125
+          ]
+        },
+        "high_recall": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "without_RTO": {
+      "metrics": {
+        "quadratic_kappa": 0.7618,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4417,
+        "under_prioritisation": 0.1667,
+        "over_escalation": 0.075,
+        "mean_cost": 0.5583
+      },
+      "decisions_changed_vs_full": 0.0333,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": -0.019,
+          "ci95": [
+            -0.0744,
+            0.0276
+          ]
+        },
+        "mean_cost": {
+          "diff": 0.0423,
+          "ci95": [
+            -0.0167,
+            0.1417
+          ]
+        },
+        "high_recall": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "without_RPO": {
+      "metrics": {
+        "quadratic_kappa": 0.7348,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4417,
+        "under_prioritisation": 0.1833,
+        "over_escalation": 0.075,
+        "mean_cost": 0.6167
+      },
+      "decisions_changed_vs_full": 0.025,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": 0.0075,
+          "ci95": [
+            -0.0175,
+            0.0369
+          ]
+        },
+        "mean_cost": {
+          "diff": -0.017,
+          "ci95": [
+            -0.0583,
+            0.0167
+          ]
+        },
+        "high_recall": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "without_MLS": {
+      "metrics": {
+        "quadratic_kappa": 0.6874,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4583,
+        "under_prioritisation": 0.2083,
+        "over_escalation": 0.0833,
+        "mean_cost": 0.725
+      },
+      "decisions_changed_vs_full": 0.0583,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": 0.0536,
+          "ci95": [
+            0.0043,
+            0.1098
+          ]
+        },
+        "mean_cost": {
+          "diff": -0.1251,
+          "ci95": [
+            -0.2833,
+            -0.0083
+          ]
+        },
+        "high_recall": {
+          "diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "without_all_BIA": {
+      "metrics": {
+        "quadratic_kappa": 0.4952,
+        "high_recall": 0.75,
+        "escalation_rate": 0.5333,
+        "under_prioritisation": 0.1583,
+        "over_escalation": 0.2583,
+        "mean_cost": 0.75
+      },
+      "decisions_changed_vs_full": 0.55,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": 0.2523,
+          "ci95": [
+            0.0838,
+            0.4149
+          ]
+        },
+        "mean_cost": {
+          "diff": -0.1531,
+          "ci95": [
+            -0.5167,
+            0.2
+          ]
+        },
+        "high_recall": {
+          "diff": -0.0123,
+          "ci95": [
+            -0.2408,
+            0.2174
+          ]
+        }
+      }
+    },
+    "without_detector_inputs_MLS_TS": {
+      "metrics": {
+        "quadratic_kappa": 0.6543,
+        "high_recall": 0.7656,
+        "escalation_rate": 0.5,
+        "under_prioritisation": 0.25,
+        "over_escalation": 0.0917,
+        "mean_cost": 0.85
+      },
+      "decisions_changed_vs_full": 0.1917,
+      "paired_full_minus_variant": {
+        "quadratic_kappa": {
+          "diff": 0.0852,
+          "ci95": [
+            0.0039,
+            0.1698
+          ]
+        },
+        "mean_cost": {
+          "diff": -0.2526,
+          "ci95": [
+            -0.5333,
+            -0.025
+          ]
+        },
+        "high_recall": {
+          "diff": -0.0323,
+          "ci95": [
+            -0.1143,
+            0.0
+          ]
+        }
+      }
+    },
+    "full": {
+      "metrics": {
+        "quadratic_kappa": 0.7425,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.45,
+        "under_prioritisation": 0.175,
+        "over_escalation": 0.075,
+        "mean_cost": 0.6
+      }
+    }
+  },
+  "C_weight_aggregation": {
+    "AIJ_all_six_used": {
+      "weights": {
+        "TS": 0.2365,
+        "AC": 0.1832,
+        "BI": 0.2346,
+        "HI": 0.0612,
+        "RTO": 0.0944,
+        "RPO": 0.079,
+        "MLS": 0.1111
+      },
+      "scenarios_changed_vs_used": 0,
+      "level_counts": {
+        "Low": 5,
+        "Medium": 11,
+        "High": 14
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7411,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4667,
+        "under_prioritisation": 0.1667,
+        "over_escalation": 0.1,
+        "mean_cost": 0.5833
+      }
+    },
+    "AIP_all_six": {
+      "weights": {
+        "TS": 0.2365,
+        "AC": 0.1832,
+        "BI": 0.2346,
+        "HI": 0.0612,
+        "RTO": 0.0944,
+        "RPO": 0.079,
+        "MLS": 0.1111
+      },
+      "scenarios_changed_vs_used": 0,
+      "level_counts": {
+        "Low": 5,
+        "Medium": 11,
+        "High": 14
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7411,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4667,
+        "under_prioritisation": 0.1667,
+        "over_escalation": 0.1,
+        "mean_cost": 0.5833
+      }
+    },
+    "AIJ_september_answers": {
+      "weights": {
+        "TS": 0.262,
+        "AC": 0.1887,
+        "BI": 0.2108,
+        "HI": 0.0477,
+        "RTO": 0.0826,
+        "RPO": 0.0774,
+        "MLS": 0.1308
+      },
+      "scenarios_changed_vs_used": 1,
+      "level_counts": {
+        "Low": 5,
+        "Medium": 12,
+        "High": 13
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7539,
+        "high_recall": 0.7188,
+        "escalation_rate": 0.4333,
+        "under_prioritisation": 0.175,
+        "over_escalation": 0.075,
+        "mean_cost": 0.5833
+      }
+    },
+    "AIJ_without_E3": {
+      "weights": {
+        "TS": 0.2929,
+        "AC": 0.1966,
+        "BI": 0.2521,
+        "HI": 0.0472,
+        "RTO": 0.0746,
+        "RPO": 0.0566,
+        "MLS": 0.08
+      },
+      "scenarios_changed_vs_used": 2,
+      "level_counts": {
+        "Low": 6,
+        "Medium": 11,
+        "High": 13
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7091,
+        "high_recall": 0.7188,
+        "escalation_rate": 0.4333,
+        "under_prioritisation": 0.1917,
+        "over_escalation": 0.075,
+        "mean_cost": 0.6667
+      }
+    },
+    "equal_weights": {
+      "weights": {
+        "TS": 0.1429,
+        "AC": 0.1429,
+        "BI": 0.1429,
+        "HI": 0.1429,
+        "RTO": 0.1429,
+        "RPO": 0.1429,
+        "MLS": 0.1429
+      },
+      "scenarios_changed_vs_used": 0,
+      "level_counts": {
+        "Low": 5,
+        "Medium": 11,
+        "High": 14
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7411,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4667,
+        "under_prioritisation": 0.1667,
+        "over_escalation": 0.1,
+        "mean_cost": 0.5833
+      }
+    },
+    "single_expert_E1": {
+      "weights": {
+        "TS": 0.2758,
+        "AC": 0.1722,
+        "BI": 0.1852,
+        "HI": 0.1472,
+        "RTO": 0.0624,
+        "RPO": 0.0786,
+        "MLS": 0.0786
+      },
+      "scenarios_changed_vs_used": 2,
+      "level_counts": {
+        "Low": 6,
+        "Medium": 11,
+        "High": 13
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7091,
+        "high_recall": 0.7188,
+        "escalation_rate": 0.4333,
+        "under_prioritisation": 0.1917,
+        "over_escalation": 0.075,
+        "mean_cost": 0.6667
+      }
+    },
+    "single_expert_E2": {
+      "weights": {
+        "TS": 0.2917,
+        "AC": 0.265,
+        "BI": 0.2814,
+        "HI": 0.0422,
+        "RTO": 0.0407,
+        "RPO": 0.0402,
+        "MLS": 0.0388
+      },
+      "scenarios_changed_vs_used": 3,
+      "level_counts": {
+        "Low": 7,
+        "Medium": 10,
+        "High": 13
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.6955,
+        "high_recall": 0.7188,
+        "escalation_rate": 0.4333,
+        "under_prioritisation": 0.2083,
+        "over_escalation": 0.0667,
+        "mean_cost": 0.7167
+      }
+    },
+    "single_expert_E3": {
+      "weights": {
+        "TS": 0.0428,
+        "AC": 0.0678,
+        "BI": 0.0862,
+        "HI": 0.118,
+        "RTO": 0.1615,
+        "RPO": 0.2211,
+        "MLS": 0.3026
+      },
+      "scenarios_changed_vs_used": 2,
+      "level_counts": {
+        "Low": 5,
+        "Medium": 11,
+        "High": 14
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7263,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4667,
+        "under_prioritisation": 0.175,
+        "over_escalation": 0.1083,
+        "mean_cost": 0.6083
+      }
+    },
+    "single_expert_E4": {
+      "weights": {
+        "TS": 0.1623,
+        "AC": 0.2221,
+        "BI": 0.3601,
+        "HI": 0.0284,
+        "RTO": 0.0696,
+        "RPO": 0.0389,
+        "MLS": 0.1186
+      },
+      "scenarios_changed_vs_used": 1,
+      "level_counts": {
+        "Low": 6,
+        "Medium": 10,
+        "High": 14
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7255,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4667,
+        "under_prioritisation": 0.1833,
+        "over_escalation": 0.0917,
+        "mean_cost": 0.6333
+      }
+    },
+    "single_expert_E5": {
+      "weights": {
+        "TS": 0.2437,
+        "AC": 0.1415,
+        "BI": 0.3336,
+        "HI": 0.0356,
+        "RTO": 0.1415,
+        "RPO": 0.071,
+        "MLS": 0.0331
+      },
+      "scenarios_changed_vs_used": 2,
+      "level_counts": {
+        "Low": 7,
+        "Medium": 9,
+        "High": 14
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.6844,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4667,
+        "under_prioritisation": 0.2,
+        "over_escalation": 0.0917,
+        "mean_cost": 0.7167
+      }
+    },
+    "single_expert_E6": {
+      "weights": {
+        "TS": 0.4472,
+        "AC": 0.1352,
+        "BI": 0.1075,
+        "HI": 0.0246,
+        "RTO": 0.0608,
+        "RPO": 0.0439,
+        "MLS": 0.1808
+      },
+      "scenarios_changed_vs_used": 8,
+      "level_counts": {
+        "Low": 4,
+        "Medium": 13,
+        "High": 13
+      },
+      "vs_120_labels": {
+        "quadratic_kappa": 0.7563,
+        "high_recall": 0.7344,
+        "escalation_rate": 0.4333,
+        "under_prioritisation": 0.1583,
+        "over_escalation": 0.1,
+        "mean_cost": 0.5583
+      }
+    }
+  }
+}
