@@ -95,7 +95,19 @@ Section 5.7 and the fixed-cut-off external columns of Table 8 from the raw input
 manuscript's definitions (`src/06_verification`; output in `results/verification/`), and re-ran r20 in a separate
 copy at full precision; the r20 output file was identical to the stored one. Every value agreed. r03 was corrected (a floating-point comparison; `src/06_verification/README.md`). Three values that
 the manuscript had rounded twice were corrected there (see `src/06_verification/README.md`), and the supplementary
-builder now rounds once, from counts where they are stored.
+builder now rounds once, from counts where they are stored (since v2.1.1 also for Tables S8b MCC, S8c, S8e and the
+recall of S9; Table S9 precision is the mean of the per-draw precisions and is printed at stored precision when it
+lies halfway).
+
+## 2f. Author re-run of 23 November 2026
+
+The first author re-ran the corrected r03 with `reproduce.py --only=r03_attack_category_severity` (report in
+`results/reproduction/20261123_190850/`: exit 0, both outputs identical; Python 3.14.7, numpy 2.5.2, pandas 3.0.5,
+scikit-learn 1.9.0, scipy 1.18.0, which differ from the lockfile) and then
+`src/06_verification/recompute_decision_layer.py`, which printed "Table 6 versus r10_stage2.json (stored to 4
+decimals): no difference" and "stored scenario levels reproduced: True". That console output was shared as a
+screenshot and is recorded in the message of commit 3ee2b2e; it is not stored as a file. His UNSW-NB15 copies again
+differed from the recorded ones only in line endings (section 1).
 
 ## 3. Who executed what
 
@@ -116,6 +128,7 @@ builder now rounds once, from counts where they are stored.
 | Clean-room re-run of r01–r06, r09–r11, r13–r21, r25, r26 with `reproduce.py` (4 November 2026; section 2c) | AI assistant, at the author's request | cloud workspace; report in `results/reproduction/20261104_195135/` |
 | Independent re-run of every analysis script r01–r22, r25, r26, including the CIC scripts, and of `label_timing.py` and `ahp_min_changes.py` (4 November 2026; section 2d) | the author, with `reproduce.py` | author's computer; report in `results/reproduction/20261104_204819/`, committed from his account (ac5f66e) |
 | Independent recomputation of the main decision-layer and base-rate results, and a full-precision re-run of r20 (23 November 2026; section 2e) | AI assistant, at the author's request | cloud workspace; `src/06_verification`, `results/verification/` |
+| Re-run of the corrected r03 and of the recomputation (23 November 2026; section 2f) | the author | author's computer; report in `results/reproduction/20261123_190850/` (r03), recomputation output in the message of commit 3ee2b2e |
 
 The manuscript does not claim reproducibility on the strength of its own statements: the re-run reports
 in `results/reproduction/` are the evidence, and the author's re-run is listed separately from the cloud runs.
@@ -140,7 +153,7 @@ stored results are kept.
 
 Until 25 and 28 October 2026 the data files recorded the field and experience band of each expert and
 practitioner code and the sector of each practitioner. These were then reduced to panel totals, but the old versions stayed in the
-history, where a reader could link a code to a person in a small panel. The original repository is therefore
+history, where a code could be linked to a person in a small panel. The original repository is therefore
 kept unchanged and private as evidence (its GitHub-signed commits date the pre-registration), and this public
 repository carries the same history with only those fields removed. `docs/COMMIT_MAP.md` maps every
 original commit to its public counterpart. A Git bundle of the original repository is kept by the author

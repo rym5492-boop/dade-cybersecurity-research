@@ -10,6 +10,6 @@ stored result files and compute no new result.
 | `build_supplementary.py` | Supplementary Tables S1 to S10 (Word file) from the stored result files and the coverage records; usage `python src/05_manuscript/build_supplementary.py [output.docx]`. |
 | `coverage_screening.py` | `results/manuscript/coverage_screening_2026-10-30.csv`: the 146 unique records with the title screening codes. |
 
-Run from the repository root, for example `python src/05_manuscript/make_figures.py`. These scripts were
+Run from the repository root, for example `python src/05_manuscript/make_figures.py`. The figure files used in the manuscript are in `results/manuscript/figures/` (added in v2.1.1; the PNG files are byte-identical to a fresh run of `make_figures.py`). These scripts were
 written and run by the AI assistant (Claude, Anthropic) under the first author's direction, like r17 to r24
 (docs/REPRODUCIBILITY.md).

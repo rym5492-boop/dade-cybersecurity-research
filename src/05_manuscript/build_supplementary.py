@@ -30,21 +30,22 @@ EXACT_DENOMINATORS = (20, 30, 40, 60, 80, 120, 240)
 TIES = []
 
 
-def halfway(d, places):
-    """True if the stored value d lies exactly halfway at `places` decimals and is not an exact fraction of a count."""
+def halfway(d, places, counts=True):
+    """True if the stored value d lies exactly halfway at `places` decimals and is not an exact fraction of a count
+    (the exception is not applied to interval bounds, which are not fractions of counts)."""
     q = Decimal(1).scaleb(-places)
     return (abs(d) - abs(d).quantize(q, rounding=ROUND_DOWN)) == Decimal(5).scaleb(-(places + 1)) \
-        and not any((d * k) == (d * k).to_integral_value() for k in EXACT_DENOMINATORS)
+        and not (counts and any((d * k) == (d * k).to_integral_value() for k in EXACT_DENOMINATORS))
 
 
-def r(x, nd=2):
+def r(x, nd=2, counts=True):
     """Round half up. A stored value that lies exactly halfway at the printed precision (for example 0.0945 printed
     to three decimals) may itself be rounded, so rounding it again could move the last digit the wrong way; such a
     value is printed at its stored precision instead (0.0945)."""
     if x is None:
         return ""
     d = Decimal(str(x))
-    if halfway(d, nd):
+    if halfway(d, nd, counts):
         TIES.append(str(d.normalize()))
         return str(d.normalize())
     return str(d.quantize(Decimal(1).scaleb(-nd), rounding=ROUND_HALF_UP))
@@ -60,11 +61,18 @@ def pct(x, nd=1):
 
 def ratio(a, b):
     """Exact proportion from counts, so that a percentage is rounded once from the counts."""
-    return Decimal(a) / Decimal(b)
+    return Decimal(str(a)) / Decimal(str(b))
 
 
-def rng(lo, hi, nd=2):
-    return f"{r(lo, nd)} to {r(hi, nd)}"
+def mcc(tn, fp, fn, tp):
+    """Matthews correlation coefficient from the confusion counts (exact, rounded once when printed)."""
+    num = Decimal(tp * tn - fp * fn)
+    den = (Decimal(tp + fp) * Decimal(tp + fn) * Decimal(tn + fp) * Decimal(tn + fn)).sqrt()
+    return num / den
+
+
+def rng(lo, hi, nd=2, counts=True):
+    return f"{r(lo, nd, counts)} to {r(hi, nd, counts)}"
 
 
 doc = Document()
@@ -240,7 +248,7 @@ C7 = ["TS", "BI", "AC", "MLS", "RTO", "RPO", "HI"]
 rows = [["AIJ, all six (used; equal to AIP)"] + [r(var["AIJ_all_six (paper)"]["weights"][c], 3) for c in C7] + [r(var["AIJ_all_six (paper)"]["group_CR"], 3)],
         ["AIJ without E3 (consistent experts only)"] + [r(var["AIJ_consistent_only"]["weights"][c], 3) for c in C7] + [r(var["AIJ_consistent_only"]["group_CR"], 3)],
         ["AIJ, September answers (earlier analysis)"] + [r(sept["weights"][c], 3) for c in C7] + [r(sept["CR"], 3)],
-        ["Expert bootstrap 95% interval (all six)"] + [rng(*t06["expert_bootstrap_AIJ"]["weight_95ci"][c], 2) for c in C7] + [""]]
+        ["Expert bootstrap 95% interval (all six)"] + [rng(*t06["expert_bootstrap_AIJ"]["weight_95ci"][c], 2, False) for c in C7] + [""]]
 table("Table S4c. Group AHP weights under aggregation variants, with expert-bootstrap 95% intervals (5,000 resamples; "
       "r06_ahp_robustness.json; September row from results/ahp_weights_results.json of the earlier analysis).",
       ["Variant"] + C7 + ["Group CR"], rows)
@@ -366,15 +374,17 @@ for m in ["LogisticRegression", "RandomForest", "HistGradientBoosting"]:
         else:
             vals = [v["accuracy"], v["balanced_accuracy"], v["attack_recall"], v["false_positive_rate"], v["attack_precision"]]
         rows.append([m, th, r(v["threshold"], 4)] + [pct(x) for x in vals] +
-                    [r(v["mcc"], 3), r(v["roc_auc"], 3),
+                    [r(mcc(c["tn"], c["fp"], c["fn"], c["tp"]) if c else v["mcc"], 3), r(v["roc_auc"], 3),
                      f"{c.get('tn', ''):,} / {c.get('fp', ''):,} / {c.get('fn', ''):,} / {c.get('tp', ''):,}" if c else ""])
 table("Table S8b. UNSW-NB15 official test file, all models and thresholds (thresholds chosen on VAL, on each model's uncalibrated score; r01_unsw_detection.json).",
       ["Model", "Threshold rule", "Threshold", "Accuracy", "Balanced acc.", "Recall", "FPR", "Precision", "MCC", "ROC-AUC", "TN / FP / FN / TP"], rows)
 rows = []
 for th in ["default_0.5", "val_max_f1", "val_fpr_1pct", "val_fpr_5pct"]:
     v = t08["unseen_family_test"][th]; c = v["confusion"]
-    rows.append([th, str(t08["thresholds_chosen_on_validation"][th]), pct(v["attack_recall"]), pct(v["false_positive_rate"], 2), pct(v["attack_precision"]),
-                 pct(v["balanced_accuracy"]), f"{c['tn']:,} / {c['fp']:,} / {c['fn']:,} / {c['tp']:,}"])
+    rec_, fpr_ = ratio(c["tp"], c["tp"] + c["fn"]), ratio(c["fp"], c["fp"] + c["tn"])   # from the counts, rounded once
+    prec_ = ratio(c["tp"], c["tp"] + c["fp"]) if c["tp"] + c["fp"] else Decimal(0)
+    rows.append([th, str(t08["thresholds_chosen_on_validation"][th]), pct(rec_), pct(fpr_, 2), pct(prec_),
+                 pct((rec_ + 1 - fpr_) / 2), f"{c['tn']:,} / {c['fp']:,} / {c['fn']:,} / {c['tp']:,}"])
 table("Table S8c. CICIDS2017 unseen-family test (11,098 withheld Bots and Brute Force flows + 11,098 benign flows; thresholds "
       "chosen on seen-family validation data; r08_cicids2017_holdout_v2.json, run by the first author on his computer).",
       ["Threshold rule", "Threshold", "Recall", "FPR", "Precision", "Balanced acc.", "TN / FP / FN / TP"], rows)
@@ -390,8 +400,9 @@ rows = []
 for k, nm in [("A_hgb_all_features", "HGB, all features"), ("A_hgb_without_ttl", "HGB without sttl, dttl, ct_state_ttl"),
               ("A_tree_depth4_ttl_only", "Depth-4 tree on the three TTL features only")]:
     for th in ["default_0.5", "val_fpr_1pct"]:
-        v = t26[k]["test"][th]
-        rows.append([nm, th, r(v["threshold"], 4), r(t26[k]["test_roc_auc"], 3), pct(v["accuracy"]), pct(v["attack_recall"]), pct(v["false_positive_rate"])])
+        v = t26[k]["test"][th]; c = v["confusion"]
+        rows.append([nm, th, r(v["threshold"], 4), r(t26[k]["test_roc_auc"], 3), pct(ratio(c["tn"] + c["tp"], v["n"])),
+                     pct(ratio(c["tp"], c["tp"] + c["fn"])), pct(ratio(c["fp"], c["fp"] + c["tn"]))])
 lc = t26["B_label_conflicts"]
 table("Table S8e. UNSW-NB15 testbed TTL features and label conflicts between the training and test files "
       "(r26_ttl_and_label_conflicts.json, exploratory, 31 October 2026; FIT for training, thresholds on VAL).",
@@ -420,7 +431,8 @@ for prev, v in t17["prevalence"].items():
                else r(pi * (1 - prior) / (pi * (1 - prior) + prior * (1 - pi)), 3) + ("*" if p.startswith("P3") else ""))
         rows.append([f"{prev} ({v['n_attacks_per_draw']:,} attacks, {v['n_flows_per_draw']:,} flows)", nm, thr,
                      f"{pct(q['precision']['mean'])} ({pct(q['precision']['min'])} to {pct(q['precision']['max'])})",
-                     f"{pct(q['recall']['mean'])} ({pct(q['recall']['min'])} to {pct(q['recall']['max'])})",
+                     f"{pct(ratio(q['tp']['mean'], v['n_attacks_per_draw']))} ({pct(ratio(q['tp']['min'], v['n_attacks_per_draw']))} to "
+                     f"{pct(ratio(q['tp']['max'], v['n_attacks_per_draw']))})",
                      pct(q["fpr"]["mean"], 2), r(q["alerts_per_1000_flows"]["mean"], 1),
                      f"{r(q['tp']['mean'],1)} / {r(q['fp']['mean'],1)} / {r(q['fn']['mean'],1)} / {r(q['tn']['mean'],1)}"])
 eq = "; ".join(f"{k}: {v['equivalent_uncorrected_threshold_of_P2']}" for k, v in t17["prevalence"].items())

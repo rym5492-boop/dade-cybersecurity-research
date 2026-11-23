@@ -1,5 +1,5 @@
 {
-  "title": "DADE: code, data and results for a leakage-audited evaluation of intrusion detection and business impact analysis for continuity prioritization (revision 3)",
+  "title": "DADE: code, data and results for a leakage-audited evaluation of intrusion detection and business impact analysis for continuity prioritization",
   "upload_type": "software",
   "description": "<p>Code, coded rating data, results, reproduction reports and the full text of the expert judgment forms and consent statements (Arabic with English translation; docs/forms) for the manuscript \"Intrusion detection and business impact analysis for continuity prioritization: a leakage-audited evaluation of an analytic hierarchy process rule against simpler baselines\" and for the MSc thesis on the same study, \"Developing an Intelligent Predictive Framework for Integrating Dynamic Cyber Risk Management and Business Continuity Using Machine Learning Techniques: A Mixed-Method Approach\" (Northern Border University). The four public datasets are not included; see README.md for their sources and docs/REPRODUCIBILITY.md for their SHA-256 hashes. Code is under the MIT licence; results, documentation and forms are under CC BY 4.0 (LICENSES.md). The rating files contain coded raters only; the named form exports are not deposited.</p>",
   "creators": [
@@ -29,5 +29,5 @@
       "scheme": "url"
     }
   ],
-  "version": "v2.1-revision3"
+  "version": "v2.1.1"
 }

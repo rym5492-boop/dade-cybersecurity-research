@@ -20,7 +20,7 @@ the revision (see "What changed").
 
 ## Forms, licences and citation
 
-Archived version: release v2.0-revision2 (commit 310b029) on Zenodo, https://doi.org/10.5281/zenodo.23856795.
+Archived versions on Zenodo: all versions https://doi.org/10.5281/zenodo.23856794 (this DOI always resolves to the latest); v2.0-revision2 (commit 310b029) https://doi.org/10.5281/zenodo.23856795; v2.1-revision3 (commit 3ee2b2e) https://doi.org/10.5281/zenodo.24472918; v2.1.1 (supplementary builder and metadata corrections of 23 November 2026, no result changed) is the version cited by the manuscript.
 
 The full text of every expert judgment form and consent statement (Arabic original with English
 translation, thesis Appendix F) is in `docs/forms/`. Code under `src/` is under the MIT licence (`LICENSE`);
